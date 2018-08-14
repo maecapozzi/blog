@@ -9,7 +9,9 @@ const Header = () => (
   <div
     style={{
       background: '#272B2E',
-      marginBottom: '1.45rem'
+      marginBottom: '1.45rem',
+      borderBottom: '5px solid pink',
+      zIndex: '1'
     }}
   >
     <div
@@ -30,6 +32,17 @@ const Header = () => (
           Mae Capozzi
         </Link>
       </h1>
+
+      <Link
+        style={{
+          color: '#FFBAC8',
+          textDecoration: 'none'
+        }}
+        to='/about'
+      >
+        About
+      </Link>
+
     </div>
   </div>
 )
@@ -39,8 +52,14 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title='Mae Capozzi'
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' }
+        {
+          name: 'description',
+          content: 'Mae Capozzi writes about web development and software engineering ethics.'
+        },
+        {
+          name: 'keywords',
+          content: 'reactjs, software, coding, technology, web development, ethics'
+        }
       ]}
     />
     <Header />
