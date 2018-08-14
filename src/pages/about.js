@@ -4,7 +4,7 @@ const AboutPage = () => (
   <div
     style={{
       position: 'absolute',
-      top: '125',
+      top: '110',
       left: '0',
       bottom: '0',
       right: '0',
@@ -23,7 +23,7 @@ const AboutPage = () => (
         margin: '10px'
       }}
     >
-      <h1 style={{ fontSize: '100px' }}>Mae Capozzi</h1>
+      <h1 style={{ fontSize: '75px' }}>Mae Capozzi</h1>
     </section>
     <section
       style={{
