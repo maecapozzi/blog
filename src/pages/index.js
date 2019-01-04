@@ -2,8 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import Layout from "../components/layout";
-
-// import '../css/index.css'; // add some style if you want!
+import { graphql } from "gatsby";
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
