@@ -36,4 +36,4 @@ When you open the page at [http://localhost:3000/](http://localhost:3000/), you 
 
 ![](https://cdn-images-1.medium.com/max/2878/1*WD68a43ZF_CtJYyagPmsEg.png)
 
-Thanks for following this tutorial so far! If you see the screen above, you’ve correctly set up the project, and you’re ready to move on to [Part 2](https://medium.com/@MCapoz/tutorial-how-to-make-http-requests-in-react-part-2-4cfdba3ec65) of this tutorial.
+Thanks for following this tutorial so far! If you see the screen above, you’ve correctly set up the project, and you’re ready to move on to [Part 2](http://maecapozzi.com/how-to-make-http-requests-part-2/) of this tutorial.

@@ -6,7 +6,7 @@ title: "How to Make HTTP Requests in React, Part 3"
 
 ![](https://cdn-images-1.medium.com/max/2820/1*Or6XtSXzdl2IdJ7aM6dfdQ.png)
 
-*If you haven’t completed [part 1](https://medium.com/@MCapoz/tutorial-how-to-make-http-requests-in-react-part-1-f7afa3cd0cc8) and [part 2](https://medium.com/@MCapoz/tutorial-how-to-make-http-requests-in-react-part-2-4cfdba3ec65) of this tutorial, please do so before starting part 3.*
+_If you haven’t completed [part 1](https://medium.com/@MCapoz/tutorial-how-to-make-http-requests-in-react-part-1-f7afa3cd0cc8) and [part 2](https://medium.com/@MCapoz/tutorial-how-to-make-http-requests-in-react-part-2-4cfdba3ec65) of this tutorial, please do so before starting part 3._
 
 Now we’re getting to the good part! So far, we’ve set up a new React application using `create-react-app`, and we’ve wired up our component to log ‘Success!’ when we click the button. Now, we need to make the actual HTTP request.
 
@@ -26,14 +26,16 @@ As a quick reminder, our goal is to get back a user’s name from the `/users/:u
 
 First, let’s add state to our component. We’ll add a `username` attribute to it and set it as an empty string. Once we add state, our constructor will look like this:
 
-    constructor () {
-      super()
-      this.state = {
-        username: ''
-      }
+```jsx
+constructor () {
+  super()
+  this.state = {
+    username: ''
+  }
 
-      this.handleClick = this.handleClick.bind(this)
-    }
+  this.handleClick = this.handleClick.bind(this)
+}
+```
 
 Next, in our `handleClick` function, we’ll make a call to Github to get back the users.
 
@@ -43,10 +45,12 @@ First, we need to import `axios` into the file, so that we can use it. Put this 
 
 Then, we can begin to construct our request inside of the `handleClick` function.
 
-    handleClick () {
-      axios.get('https://api.github.com/users/maecapozzi')
-        .then(response => console.log(response))
-    }
+```js
+handleClick () {
+  axios.get('https://api.github.com/users/maecapozzi')
+    .then(response => console.log(response))
+}
+```
 
 Let’s dissect what I’ve written above a bit. I’m following the syntax set out by `axios` and making a `get` request to Github’s `/users` endpoint. That endpoint looks like this:
 
@@ -64,37 +68,40 @@ Now, I need to display this data in a way that is meaningful to my user. I want 
 
 My `handleClick` function will look like this:
 
-    handleClick () {
-      axios.get('https://api.github.com/users/maecapozzi')
-        .then(response => this.setState({username: response.data.name}))
-      }
+```js
+handleClick () {
+  axios.get('https://api.github.com/users/maecapozzi')
+    .then(response => this.setState({username: response.data.name}))
+}
+```
 
 My `render` function will look like this:
 
-    render () {
-      return (
-        <div className='button__container'>
-          <button className='button' onClick={this.handleClick}>
-            Click Me
-          </button>
-          <p>{this.state.username}</p>
-        </div>
-      )
-    }
+```jsx
+render () {
+  return (
+    <div className='button__container'>
+      <button className='button' onClick={this.handleClick}>
+        Click Me
+      </button>
+      <p>{this.state.username}</p>
+    </div>
+  )
+}
+```
 
 Let me run through how this application works.
 
- 1. User clicks a button. Button has an `onClick` event on it.
+1. User clicks a button. Button has an `onClick` event on it.
 
- 2. `onClick` event triggers the `handleClick` function.
+2. `onClick` event triggers the `handleClick` function.
 
- 3. `handleClick` function makes a request to the Github API, asking for user data for the username sent to it. In this example, it gets back data for the username “maecapozzi.”
+3. `handleClick` function makes a request to the Github API, asking for user data for the username sent to it. In this example, it gets back data for the username “maecapozzi.”
 
- 4. `handleClick` waits for data to come back from Github using a `Promise`.
+4. `handleClick` waits for data to come back from Github using a `Promise`.
 
- 5. `handleClick` updates the username attribute on state with the name returned from the Github API.
+5. `handleClick` updates the username attribute on state with the name returned from the Github API.
 
- 6. `<p>` tag displays whatever `this.state.username` is. When the button has not been clicked, it will return an empty string, but once the button has been clicked and the request has been completed, it will show the user’s name.
+6. `<p>` tag displays whatever `this.state.username` is. When the button has not been clicked, it will return an empty string, but once the button has been clicked and the request has been completed, it will show the user’s name.
 
 And there you have it! You’ve made your first HTTP request in React! I’m including a gist of the entire component below. You can also find this code [here](https://github.com/maecapozzi/tutorial-http-requests-in-react), in case you’d like to clone it.
-

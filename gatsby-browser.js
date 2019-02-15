@@ -2,3 +2,5 @@
 import "typeface-inconsolata";
 import "typeface-montserrat";
 import "typeface-roboto";
+
+require("prismjs/themes/prism.css");

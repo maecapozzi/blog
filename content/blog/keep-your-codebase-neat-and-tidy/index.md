@@ -4,7 +4,6 @@ date: "2018-02-10"
 title: "Keep Your Codebase Neat and Tidy with prettier-standard, lint-staged, and husky"
 ---
 
-
 ![Your codebase could look like this.](https://cdn-images-1.medium.com/max/10944/1*ukARbkiZ76U0wsvq9JdA9g.jpeg)
 
 Developers tend to have opinions on style. If you’ve been in the industry for more than 15 minutes, you’ve at least heard about the arguments over spaces or tabs. And don’t even get me started on whether JavaScript needs semi-colons or not.
@@ -23,9 +22,11 @@ Start by installing prettier-standard:
 
 Then, you can set up a script that will run prettier-standard for you in your package.json file like this:
 
-    "scripts": {
-      "format": "prettier-standard 'src/**/*.js'"
-    }
+```json
+"scripts": {
+  "format": "prettier-standard 'src/**/*.js'"
+}
+```
 
 Once you have this set up, you can run npm run format from the command line and prettier-standard will format your whole codebase for you.
 
@@ -39,18 +40,22 @@ First, let’s install all three packages into our project. (If you’ve already
 
 Next, let’s make sure we have a precommit script that runs lint-staged set up in the "scripts" section of our package.json file.
 
-    "scripts": {
-      "precommit": "lint-staged"
-    }
+```json
+"scripts": {
+    "precommit": "lint-staged"
+}
+```
 
 Finally, we’ll set up what we want to run when we call the precommit script.
 
-    "lint-staged": {
-      "*.js": [
-        "prettier-standard",
-        "git add"
-      ]
-    }
+```json
+"lint-staged": {
+  "*.js": [
+    "prettier-standard",
+    "git add"
+  ]
+}
+```
 
 The above code tells our project to run prettier-standard on all staged JavaScript files when we commit our changes.
 
@@ -58,10 +63,12 @@ Now, we just need to go ahead and make sure we’ve set this up successfully.
 
 Go ahead and git add your changes. Then git commit them. If you’ve done this right, you should see the feedback below in your terminal.
 
-    husky > npm run -s precommit (node v7.7.4)
+```bash
+husky > npm run -s precommit (node v7.7.4)
 
-    ↓ Running tasks for *.js [skipped]
-       → No staged files match *.js
+↓ Running tasks for *.js [skipped]
+    → No staged files match *.js
+```
 
 Adding prettier-standard to your codebase isn’t going to immediately improve your code’s performance or make a difference in how your app functions. It’s unlikely to directly impact the bottom line, and forget about explaining the benefits of setting up git hooks for linting and formatting to non-technical stakeholders.
 

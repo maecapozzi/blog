@@ -6,11 +6,9 @@ title: "Passing Data in React with Prop Drilling"
 
 ![Drill](https://thepracticaldev.s3.amazonaws.com/i/m24vqp67i5vunluip6uy.jpg)
 
-
 The React ecosystem offers multiple ways to pass data and manage state in a client-side application. A developer might choose between prop drilling, redux, MobX, and the new Context API introduced in React 16 depending on the size and complexity of the application they are developing.
 
 A developer can use prop drilling (or threading) to pass data from a component higher up in the component hierarchy to a child component further down. It allows developers to access state at different levels of the component hierarchy in small applications that aren't large or complex enough to warrant a third-party state management solution or Context.
-
 
 ---
 
@@ -19,8 +17,9 @@ Dan Abramov recommends that developers separate stateful and stateless component
 Let's start by looking at how props are passed from a Parent to a Child component in React.
 
 #### Basic prop drilling
-```
-// <Mother /> is a container component that holds the 
+
+```jsx
+// <Mother /> is a container component that holds the
 // application's state.
 // In this case, <Mother /> holds the family's lastName.
 
@@ -31,13 +30,13 @@ class Mother extends React.Component {
 
   render () {
     // Mother passes the lastName down one
-    // level to the <Child /> 
+    // level to the <Child />
     <Child lastName={this.state.lastName} />
   }
 }
 
 
-// <Child /> is a presentational component that 
+// <Child /> is a presentational component that
 // displays the lastName.
 const Child = ({ lastName }) => <p>{lastName}>/p>
 ```
@@ -45,26 +44,27 @@ const Child = ({ lastName }) => <p>{lastName}>/p>
 In this example, `<Mother />` is the container component that holds the application's state. `<Mother />` passes the lastName as a prop to `<Child />`. `<Child />` then displays the lastName.This pattern gets much more complicated when the application grows in size and complexity.
 
 #### More complex prop drilling
-```
-const App = () => <Grandmother />
-      
+
+```jsx
+const App = () => <Grandmother />;
+
 class Grandmother extends React.Component {
   state = {
     lastName: "Sanchez"
-  }
-  
+  };
+
   render() {
-    return <Mother lastName={this.state.lastName} />
+    return <Mother lastName={this.state.lastName} />;
   }
 }
 
 const Mother = ({ lastName }) => {
-  return <Child lastName={lastName} />
-}
+  return <Child lastName={lastName} />;
+};
 
 const Child = ({ lastName }) => {
-  return <p>{lastName}</p>
-}
+  return <p>{lastName}</p>;
+};
 ```
 
 In the above example, the Grandmother component manages the application's state. It holds the lastName attribute on its state. The Child component displays the lastName. In this case, the Child only knows about the lastName because the prop has been passed down (drilled) through the component tree from Grandmother to Mother to Child. It's like a game of telephone.
@@ -74,27 +74,28 @@ In the above example, the Grandmother component manages the application's state.
 The major benefit of prop drilling is that even as state changes, it updates all of its children with that new state. For example, what if the Grandmother immigrated to the United States, and the immigration officers changed her last name to Smith, from Sanchez.
 
 ####Prop Drilling with a State Change
-```
+
+```jsx
 class Grandmother extends React.Component {
   state = {
-    lastName: 'Sanchez'
-  }
-  
-  // When this function is called, the 
+    lastName: "Sanchez"
+  };
+
+  // When this function is called, the
   // Grandmother's last name is updated
   immigrateTo = (country, newLastName) => {
-    this.setState({ lastName: newLastName })
-  }
-  
+    this.setState({ lastName: newLastName });
+  };
+
   componentDidMount() {
-    this.immigrateTo('US', 'Smith')
+    this.immigrateTo("US", "Smith");
   }
 
-  render () {
+  render() {
     // Even though the Grandmother's last name
-    // was Sanchez, once her name is changed, 
+    // was Sanchez, once her name is changed,
     // the Mother inherits the name "Smith."
-    <Mother lastName={this.state.lastName} />
+    <Mother lastName={this.state.lastName} />;
   }
 }
 ```
