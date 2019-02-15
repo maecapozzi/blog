@@ -44,7 +44,7 @@ A library on its own doesn’t directly impact the bottom line. You will eventua
 
 Once you have a library, you’ll start to ship more quickly. Consider how many buttons you have on your site. How much time have your developers spent building the same button over and over again.
 
-Then, think about the many ways to build a button. You can use a <button /> tag, or style an <a /> tag. Buttons can also manage different states, like hover and loading. You don’t want your developers wasting time making these tiny decisions every time you need to use a button.
+Then, think about the many ways to build a button. You can use a `<button />` tag, or style an `<a />` tag. Buttons can also manage different states, like hover and loading. You don’t want your developers wasting time making these tiny decisions every time you need to use a button.
 
 When you free your developers up to focus on more challenging ideas, they can spend less time bikeshedding and more time focusing on the tricky features.
 

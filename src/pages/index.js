@@ -4,13 +4,13 @@ import "typeface-inconsolata";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Header } from '../components/Header'
-import { Text } from '../components/Text'
-import styled from 'styled-components';
+import { Header } from "../components/Header";
+import { Text } from "../components/Text";
+import styled from "styled-components";
 
 const StyledLink = styled(Link)`
-  color: #0482E3;
-`
+  color: #0482e3;
+`;
 
 class BlogIndex extends React.Component {
   render() {
