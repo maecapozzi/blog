@@ -1,13 +1,13 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
-import { Text } from '../components/Text'
-import { Link } from '../components/Link'
-import styled from 'styled-components';
+import { Text } from "../components/Text";
+import { Link } from "../components/Link";
+import styled from "styled-components";
 
 const StyledLink = styled(Link)`
-  color: #0482E3;
-`
+  color: #0482e3;
+`;
 
 function Bio() {
   return (
@@ -20,7 +20,7 @@ function Bio() {
             style={{
               display: `flex`,
               marginBottom: `20px`,
-              width: `100%`,
+              width: `100%`
             }}
           >
             <Image
@@ -37,12 +37,18 @@ function Bio() {
               }}
             />
             <Text>
-              Written by <strong>{author}</strong>. Currently a senior software
-              engineer at Harry's building design systems.
+              Blog by <strong>{author}</strong>. You can
               {` `}
               <Link href={`https://twitter.com/${social.twitter}`}>
-                You should follow her on Twitter
+                follow her on twitter
               </Link>
+              {` `}
+              or
+              {` `}
+              <Link href={`https://github.com/${social.github}`}>
+                find her on Github
+              </Link>
+              .
             </Text>
           </div>
         );

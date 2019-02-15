@@ -5,7 +5,8 @@ module.exports = {
     description: `Mae Capozzi writes about web development and software engineering ethics.`,
     siteUrl: `https://maecapozzi.com`,
     social: {
-      twitter: `@MCapoz`
+      twitter: `@MCapoz`,
+      github: `maecapozzi`
     }
   },
   plugins: [
@@ -64,8 +65,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`
+        display: `minimal-ui`
       }
     },
     `gatsby-plugin-offline`,
