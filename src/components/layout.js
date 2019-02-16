@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from 'styled-components';
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 import { Link as FooterLink } from '../components/Link'
 
 const Header = styled('h1')`
@@ -21,28 +21,25 @@ const Main = styled('main')`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #2A3132;
+  color: #2a3132;
 `
 
 const Footer = styled('footer')`
   text-align: center;
 `
 
-
 class Layout extends React.Component {
-  render() {
-    const { title, children } = this.props;
-    const rootPath = `${__PATH_PREFIX__}/`;
-    let header;
+  render () {
+    const { title, children } = this.props
+
+    let header
 
     header = (
       <Header>
-        <StyledLink to="/">
-          {title}
-        </StyledLink>
+        <StyledLink to='/'>{title}</StyledLink>
       </Header>
-    );
-    
+    )
+
     return (
       <Page>
         <header>{header}</header>
@@ -50,11 +47,11 @@ class Layout extends React.Component {
         <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <FooterLink href="https://www.gatsbyjs.org">Gatsby</FooterLink>
+          <FooterLink href='https://www.gatsbyjs.org'>Gatsby</FooterLink>
         </Footer>
       </Page>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout
