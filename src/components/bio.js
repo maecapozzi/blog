@@ -33,7 +33,7 @@ function Bio () {
               }}
             />
             <Text>
-              Hi! <Emoji symbol='👋' />
+              Hi! <Emoji symbol='👋' /> {` `}
               I'm <strong>{author}</strong>. You can find me
               {` `}
               <Link href={`https://twitter.com/${social.twitter}`}>

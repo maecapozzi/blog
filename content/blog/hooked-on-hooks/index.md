@@ -36,7 +36,7 @@ function useBreakpoints() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, []);
 
   return setBreakpoints(width);
 }
