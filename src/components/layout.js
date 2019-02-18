@@ -21,7 +21,7 @@ const Main = styled('main')`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #2a3132;
+  color: #0482e3;
 `
 
 const Footer = styled('footer')`

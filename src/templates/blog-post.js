@@ -1,22 +1,21 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const BlogTitle = styled('h1')`
-  font-size: 50px;
-  color: #0482E3;
+  font-size: 2em;
+  color: #0482e3;
 `
 
 const StyledLink = styled(Link)`
-  color: #0482E3;
+  color: #0482e3;
 `
 
 class BlogPostTemplate extends React.Component {
-  render() {
+  render () {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
@@ -42,19 +41,19 @@ class BlogPostTemplate extends React.Component {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
             {previous && (
-              <StyledLink to={previous.fields.slug} rel="prev">
+              <StyledLink to={previous.fields.slug} rel='prev'>
                 ← {previous.frontmatter.title}
               </StyledLink>
             )}
           </li>
           <li>
             {next && (
-              <StyledLink to={next.fields.slug} rel="next">
+              <StyledLink to={next.fields.slug} rel='next'>
                 {next.frontmatter.title} →
               </StyledLink>
             )}

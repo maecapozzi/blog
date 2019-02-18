@@ -1,5 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Header = styled('h1')`
-  color: #0482E3;
+  color: #0482e3;
 `
