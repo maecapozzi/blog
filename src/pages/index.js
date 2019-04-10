@@ -12,6 +12,9 @@ const StyledLink = styled(Link)`
   color: #0482e3;
 `;
 
+const DateWrapper = styled("div")`
+  margin-bottom: 20px;
+`;
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
@@ -34,7 +37,9 @@ class BlogIndex extends React.Component {
                   {title}
                 </StyledLink>
               </Header>
-              <small>{node.frontmatter.date}</small>
+              <DateWrapper>
+                <small>{node.frontmatter.date}</small>
+              </DateWrapper>
               <Text dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           );
