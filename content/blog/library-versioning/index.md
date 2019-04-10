@@ -103,7 +103,7 @@ Conventional commits helps you write your commit messages in a machine-readable 
 
 You can use a tool commitzen if you want a tool to help you manage writing conventional commit-friendly messages. If you follow their instructions, when you run yarn commit, you'll see something that looks like this:
 
-![Commitzen example](../../assets/add-commit.png)
+![Commitzen example](https://i.imgur.com/BiYHvx6.png)
 
 If you follow the commands, they'll guide you to write a commit message that will allow conventional commits to automatically version your package according to SemVer.
 
