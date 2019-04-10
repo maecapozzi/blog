@@ -1,7 +1,7 @@
 ---
 path: "/library-versioning"
 date: "2019-04-02"
-title: "Before You Build Your Component Library: How to Version your Library"
+title: "Before You Build A Component Library: Versioning"
 ---
 
 ![People pairing](https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=18512df4d8ec00f8a1cd5f950111ac2c&w=1000&q=80)
