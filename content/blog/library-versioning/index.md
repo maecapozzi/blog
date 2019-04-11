@@ -1,6 +1,6 @@
 ---
 path: "/library-versioning"
-date: "2019-04-02"
+date: "2019-04-10"
 title: "Before You Build A Component Library: Versioning"
 ---
 
@@ -101,7 +101,7 @@ Conventional commits helps you write your commit messages in a machine-readable 
 
 ## Commitzen
 
-You can use a tool commitzen if you want a tool to help you manage writing conventional commit-friendly messages. If you follow their instructions, when you run yarn commit, you'll see something that looks like this:
+You can use commitzen if you want a tool to help you manage writing conventional commit-friendly messages. If you follow their instructions, when you run yarn commit, you'll see something that looks like this:
 
 ![Commitzen example](https://i.imgur.com/BiYHvx6.png)
 
