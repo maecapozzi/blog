@@ -9,7 +9,16 @@ import { Text } from "../components/Text";
 import styled from "styled-components";
 
 const StyledLink = styled(Link)`
-  color: #0482e3;
+  text-decoration: none;
+  color: #2a3132;
+
+  &:hover {
+    color: #0482e3;
+  }
+`;
+
+const PostWrapper = styled("div")`
+  padding: 20px 0;
 `;
 
 const DateWrapper = styled("div")`
@@ -31,7 +40,7 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
-            <div key={node.fields.slug}>
+            <PostWrapper key={node.fields.slug}>
               <Header>
                 <StyledLink style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
@@ -41,7 +50,7 @@ class BlogIndex extends React.Component {
                 <small>{node.frontmatter.date}</small>
               </DateWrapper>
               <Text dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
+            </PostWrapper>
           );
         })}
       </Layout>

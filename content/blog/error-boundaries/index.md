@@ -4,13 +4,13 @@ date: "2017-12-20"
 title: "Shining a Spotlight on Error Boundaries in React 16"
 ---
 
-
 ![](https://cdn-images-1.medium.com/max/10368/1*fQhvR9UVrNLee-95ZCNcXQ.jpeg)
 
 React 16 has better error handling than previous React versions. If an error occurred inside of a component, it would “[corrupt React’s internal state](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html).” Then, we would end up with “cryptic” error messages, or just a blank screen. React lacked a way to expressively and eloquently handle these errors.
 
 That has changed in React 16, thanks to Error Boundaries. [The React Docs](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html) explain how they work:
->  Error boundaries are React components that **catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI** instead of the component tree that crashed.
+
+> Error boundaries are React components that **catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI** instead of the component tree that crashed.
 
 I’ve developed a real-life scenario that can describe how Error Boundaries work:
 
@@ -48,9 +48,9 @@ I’ve removed a lot of the boilerplate code that create-react-app includes, so 
     class App extends Component {
       render () {
         return (
-          <div className='App'>      
+          <div className='App'>
             <h1>Hello World</h1>
-          </div>    
+          </div>
         )
       }
     }
@@ -125,7 +125,7 @@ Now, I’m going to throw an error in the constructor of our Child component so 
 In Child.js add `throw new Error('This is an error')` to your constructor function.
 
     constructor () {
-      super() 
+      super()
       throw new Error('This is an error')
     }
 
@@ -140,7 +140,7 @@ If we remove the error by clicking the ‘x’ in the upper right corner, all we
 Here’s an example of an Error Boundary component:
 
     import React, { Component } from 'react'
-      
+
     class ErrorBoundary extends Component {
       constructor (props) {
         super(props)
@@ -164,13 +164,13 @@ Here’s an example of an Error Boundary component:
 
 Let’s walk through how this component works:
 
- 1. In the constructor, I set an attribute on `state` called `hasError`. I initialized it to false.
+1.  In the constructor, I set an attribute on `state` called `hasError`. I initialized it to false.
 
- 2. I use the `componentDidCatch` lifecycle method, which can take two arguments, `error` and `info`. 
-If `componentDidCatch` is triggered, I set the `state` of `hasError` to true.
+2.  I use the `componentDidCatch` lifecycle method, which can take two arguments, `error` and `info`.
+    If `componentDidCatch` is triggered, I set the `state` of `hasError` to true.
 
- 3. In the render method, I say that if `hasError` is true, let the user know that “**Something went wrong**.” 
-Else, continue to operate as usual.
+3.  In the render method, I say that if `hasError` is true, let the user know that “**Something went wrong**.”
+    Else, continue to operate as usual.
 
 ## 4. Set the Error Boundary
 

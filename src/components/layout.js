@@ -1,44 +1,55 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import { Link as FooterLink } from '../components/Link'
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { Link as FooterLink } from "../components/Link";
 
-const Header = styled('h1')`
+const Header = styled("h1")`
   font-size: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-`
+  padding: 20px 0;
+  font-family: "Major Mono Display";
+`;
 
-const Page = styled('div')`
-  margin: 0 auto;
-  padding: 2em;
-`
-
-const Main = styled('main')`
+const HeaderWrapper = styled("div")`
   margin: 0 auto;
   max-width: 800px;
-`
+`;
+
+const Page = styled("div")`
+  margin: 0 auto;
+  padding: 2em;
+`;
+
+const Main = styled("main")`
+  margin: 0 auto;
+  max-width: 800px;
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #0482e3;
-`
+  color: #2a3132;
 
-const Footer = styled('footer')`
+  &:hover {
+    color: #0482e3;
+  }
+`;
+
+const Footer = styled("footer")`
   text-align: center;
-`
+`;
 
 class Layout extends React.Component {
-  render () {
-    const { title, children } = this.props
+  render() {
+    const { title, children } = this.props;
 
-    let header
+    let header;
 
     header = (
-      <Header>
-        <StyledLink to='/'>{title}</StyledLink>
-      </Header>
-    )
+      <HeaderWrapper>
+        <Header>
+          <StyledLink to="/">{title}</StyledLink>
+        </Header>
+      </HeaderWrapper>
+    );
 
     return (
       <Page>
@@ -47,11 +58,11 @@ class Layout extends React.Component {
         <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <FooterLink href='https://www.gatsbyjs.org'>Gatsby</FooterLink>
+          <FooterLink href="https://www.gatsbyjs.org">Gatsby</FooterLink>
         </Footer>
       </Page>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;

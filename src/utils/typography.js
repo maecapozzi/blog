@@ -1,18 +1,18 @@
-import Typography from "typography"
+import Typography from "typography";
 
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
   headerFontFamily: [
+    "Montserrat",
     "Roboto",
     "Helvetica Neue",
     "Segoe UI",
     "Helvetica",
     "Arial",
-    "sans-serif",
+    "sans-serif"
   ],
-  bodyFontFamily: ["Montserrat", "serif"],
-})
+  bodyFontFamily: ["Inconsolata", "serif"]
+});
 
-
-export default typography
+export default typography;
