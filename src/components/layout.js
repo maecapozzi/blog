@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { Link as FooterLink } from "../components/Link";
+import Emoji from "../components/Emoji";
+import { Link as NavLink } from "../components/Link";
 
 const Header = styled("h1")`
   font-size: 50px;
@@ -37,6 +39,10 @@ const Footer = styled("footer")`
   text-align: center;
 `;
 
+const Nav = styled("nav")`
+  text-align: right;
+`;
+
 class Layout extends React.Component {
   render() {
     const { title, children } = this.props;
@@ -53,10 +59,15 @@ class Layout extends React.Component {
 
     return (
       <Page>
+        <Nav>
+          <NavLink href="/">Home</NavLink>
+          {` `}
+          <NavLink href="/about">About Me</NavLink>
+        </Nav>
         <header>{header}</header>
         <Main>{children}</Main>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Built with <Emoji symbol="❤️" /> and
           {` `}
           <FooterLink href="https://www.gatsbyjs.org">Gatsby</FooterLink>
         </Footer>
