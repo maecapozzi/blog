@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Layout from "../components/layout";
 import Bio from "../components/bio";
 import SEO from "../components/seo";
@@ -6,7 +7,8 @@ import { Link } from "../components/Link";
 
 const socials = [
   { name: "Github", url: "https://github.com/maecapozzi" },
-  { name: "Twitter", url: "https://twitter.com/MCapoz" }
+  { name: "Twitter", url: "https://twitter.com/MCapoz" },
+  { name: "Email", url: "mailto:maecapozzi@gmail.com" }
 ];
 
 const posts = [
@@ -21,6 +23,12 @@ const posts = [
       "https://medium.com/harrys-engineering/how-we-used-gatsby-js-to-build-a-blazing-fast-e-commerce-site-a9818145c67b"
   }
 ];
+
+const Page = styled("div")`
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2em;
+`;
 
 const buildList = links =>
   links.map(link => {
@@ -38,17 +46,19 @@ const AboutPage = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title="About me"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
-      <Bio />
-      <section>
-        <h3>Find me on the internet</h3>
-        {buildList(socials)}
-        <h3>Writing</h3>
-        {buildList(posts)}
-      </section>
+      <Page>
+        <SEO
+          title="About me"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        />
+        <Bio />
+        <section>
+          <h3>Find me on the internet</h3>
+          {buildList(socials)}
+          <h3>Writing</h3>
+          {buildList(posts)}
+        </section>
+      </Page>
     </Layout>
   );
 };
