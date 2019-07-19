@@ -1,16 +1,16 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
-import { Text } from '../components/Text'
-import { Link } from '../components/Link'
-import Emoji from '../components/Emoji'
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
+import { Text } from "../components/Text";
+import { StyledGatsbyLink } from "../components/Link";
+import Emoji from "../components/Emoji";
 
-function Bio () {
+function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author, social } = data.site.siteMetadata;
         return (
           <div
             style={{
@@ -33,25 +33,25 @@ function Bio () {
               }}
             />
             <Text>
-              Hi! <Emoji symbol='👋' /> {` `}
+              Hi! <Emoji symbol="👋" /> {` `}
               I'm <strong>{author}</strong>. You can find me
               {` `}
-              <Link href={`https://twitter.com/${social.twitter}`}>
+              <StyledGatsbyLink href={`https://twitter.com/${social.twitter}`}>
                 on Twitter
-              </Link>
+              </StyledGatsbyLink>
               {` `}
               and
               {` `}
-              <Link href={`https://github.com/${social.github}`}>
+              <StyledGatsbyLink href={`https://github.com/${social.github}`}>
                 on Github
-              </Link>
+              </StyledGatsbyLink>
               .
             </Text>
           </div>
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 const bioQuery = graphql`
@@ -73,6 +73,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;

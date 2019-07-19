@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-export const Link = styled('a')`
+export const StyledGatsbyLink = styled(Link)`
   color: #0482e3;
-`
+`;

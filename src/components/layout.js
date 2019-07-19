@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
-import { Link as NavLink } from "../components/Link";
+import { StyledGatsbyLink } from "../components/Link";
 import Contact from "../components/Contact";
 
 const Header = styled("h1")`
@@ -26,7 +25,7 @@ const Main = styled("main")`
   max-width: 800px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(StyledGatsbyLink)`
   text-decoration: none;
   color: #2a3132;
 
@@ -64,9 +63,9 @@ class Layout extends React.Component {
     return (
       <Page>
         <Nav>
-          <NavLink href="/">Home</NavLink>
+          <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
           {` `}
-          <NavLink href="/about">About Me</NavLink>
+          <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
         </Nav>
         <header>{header}</header>
         <Main>{children}</Main>
