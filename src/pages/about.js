@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import Bio from "../components/bio";
 import SEO from "../components/seo";
-import { StyledGatsbyLink } from "../components/Link";
+import { StyledExternalLink } from "../components/Link";
 
 const socials = [
   { name: "Github", url: "https://github.com/maecapozzi" },
@@ -35,7 +35,7 @@ const buildList = links =>
     const { url, name } = link;
     return (
       <li key={url}>
-        <StyledGatsbyLink href={url}>{name}</StyledGatsbyLink>
+        <StyledExternalLink href={url}>{name}</StyledExternalLink>
       </li>
     );
   });

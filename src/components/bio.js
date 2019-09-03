@@ -2,7 +2,7 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 import { Text } from "../components/Text";
-import { StyledGatsbyLink } from "../components/Link";
+import { StyledExternalLink } from "../components/Link";
 import Emoji from "../components/Emoji";
 
 function Bio() {
@@ -36,15 +36,17 @@ function Bio() {
               Hi! <Emoji symbol="👋" /> {` `}
               I'm <strong>{author}</strong>. You can find me
               {` `}
-              <StyledGatsbyLink href={`https://twitter.com/${social.twitter}`}>
+              <StyledExternalLink
+                href={`https://twitter.com/${social.twitter}`}
+              >
                 on Twitter
-              </StyledGatsbyLink>
+              </StyledExternalLink>
               {` `}
               and
               {` `}
-              <StyledGatsbyLink href={`https://github.com/${social.github}`}>
+              <StyledExternalLink href={`https://github.com/${social.github}`}>
                 on Github
-              </StyledGatsbyLink>
+              </StyledExternalLink>
               .
             </Text>
           </div>
