@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 import styled from "styled-components";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
@@ -13,55 +14,60 @@ const StyledLink = styled(Link)`
   color: #0482e3;
 `;
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+const BlogPostTemplate = props => {
+  const post = props.data.markdownRemark;
+  const siteTitle = props.data.site.siteMetadata.title;
+  const { previous, next } = props.pageContext;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <BlogTitle>{post.frontmatter.title}</BlogTitle>
-        <p
-          style={{
-            display: `block`
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <Bio />
+  return (
+    <Layout location={props.location} title={siteTitle}>
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <BlogTitle>{post.frontmatter.title}</BlogTitle>
+      {props.data.allImageSharp.edges.forEach(image => {
+        return (
+          image.node.fluid.originalName === post.frontmatter.img && (
+            <Img fluid={image.node.fluid} />
+          )
+        );
+      })}
+      <p
+        style={{
+          display: `block`
+        }}
+      >
+        {post.frontmatter.date}
+      </p>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr />
+      <Bio />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0
-          }}
-        >
-          <li>
-            {previous && (
-              <StyledLink to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </StyledLink>
-            )}
-          </li>
-          <li>
-            {next && (
-              <StyledLink to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </StyledLink>
-            )}
-          </li>
-        </ul>
-      </Layout>
-    );
-  }
-}
+      <ul
+        style={{
+          display: `flex`,
+          flexWrap: `wrap`,
+          justifyContent: `space-between`,
+          listStyle: `none`,
+          padding: 0
+        }}
+      >
+        <li>
+          {previous && (
+            <StyledLink to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </StyledLink>
+          )}
+        </li>
+        <li>
+          {next && (
+            <StyledLink to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </StyledLink>
+          )}
+        </li>
+      </ul>
+    </Layout>
+  );
+};
 
 export default BlogPostTemplate;
 
@@ -80,6 +86,28 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        img
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          id
+          fluid {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
+        }
       }
     }
   }

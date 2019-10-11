@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "mae-capozzi-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Mae Capozzi's Blog",
+  "version": "2.3.0",
+  "author": "Mae Capozzi",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -26,7 +26,7 @@
     "gatsby-remark-smartypants": "^2.0.8",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-remark": "^2.2.5",
-    "gatsby-transformer-sharp": "^2.1.13",
+    "gatsby-transformer-sharp": "^2.2.21",
     "prismjs": "^1.15.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

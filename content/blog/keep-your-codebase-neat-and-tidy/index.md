@@ -2,9 +2,8 @@
 path: "/keep-your-code-base-neat-and-tidy"
 date: "2018-02-10"
 title: "Keep Your Codebase Neat and Tidy with prettier-standard, lint-staged, and husky"
+img: "libary.png"
 ---
-
-![Your codebase could look like this.](https://cdn-images-1.medium.com/max/10944/1*ukARbkiZ76U0wsvq9JdA9g.jpeg)
 
 Developers tend to have opinions on style. If you’ve been in the industry for more than 15 minutes, you’ve at least heard about the arguments over spaces or tabs. And don’t even get me started on whether JavaScript needs semi-colons or not.
 

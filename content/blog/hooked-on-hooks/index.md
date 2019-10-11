@@ -4,8 +4,6 @@ date: "2019-02-15"
 title: "useBreakpoints: a hook"
 ---
 
-![](https://media.giphy.com/media/27IUxvAIYL4SHcSGxy/giphy.gif)
-
 I built my first hook a few months ago, and figured I should get it up on the blog. It's a replacement for a Higher Order Component that exists in a codebase I'm working on. That HoC passes a breakpoint to a component that dictates how the component renders across different breakpoints.
 
 If you want to play around with the component, [you can find it on Code Sandbox](https://codesandbox.io/s/20m9wn47p). I'll also briefly walk you through how it works.

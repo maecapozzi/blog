@@ -4,8 +4,6 @@ date: "2017-12-09"
 title: "From Callbacks to Async Await"
 ---
 
-![](https://cdn-images-1.medium.com/max/2000/1*H-25KB7EbSHjv70HXrdl6w.png)
-
 I built the same program 4 different ways. I started with callbacks, moved on to Promises, used generators, and finished up with async/await.
 
 The program:

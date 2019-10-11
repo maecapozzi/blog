@@ -2,9 +2,8 @@
 path: "/passing-data-in-react-with-prop-drilling"
 date: "2018-08-14"
 title: "Passing Data in React with Prop Drilling"
+img: "drill.png"
 ---
-
-![Drill](https://thepracticaldev.s3.amazonaws.com/i/m24vqp67i5vunluip6uy.jpg)
 
 The React ecosystem offers multiple ways to pass data and manage state in a client-side application. A developer might choose between prop drilling, redux, MobX, and the new Context API introduced in React 16 depending on the size and complexity of the application they are developing.
 

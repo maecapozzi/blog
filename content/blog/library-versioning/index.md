@@ -2,9 +2,8 @@
 path: "/library-versioning"
 date: "2019-04-10"
 title: "Before You Build A Component Library: Versioning"
+img: "pairing.png"
 ---
-
-![People pairing](https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=18512df4d8ec00f8a1cd5f950111ac2c&w=1000&q=80)
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library. Stay tuned for more topics!_
 

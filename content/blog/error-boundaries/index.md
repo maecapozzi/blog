@@ -2,9 +2,8 @@
 path: "/shining-a-spotlight-on-error-boundaries-in-react-16"
 date: "2017-12-20"
 title: "Shining a Spotlight on Error Boundaries in React 16"
+img: "error-boundaries.png"
 ---
-
-![](https://cdn-images-1.medium.com/max/10368/1*fQhvR9UVrNLee-95ZCNcXQ.jpeg)
 
 React 16 has better error handling than previous React versions. If an error occurred inside of a component, it would “[corrupt React’s internal state](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html).” Then, we would end up with “cryptic” error messages, or just a blank screen. React lacked a way to expressively and eloquently handle these errors.
 

@@ -2,9 +2,8 @@
 path: "/set-up-d3js-with-webpack-and-babel"
 date: "2017-02-21"
 title: "How To Set Up D3.js with webpack and babel"
+img: "d3.png"
 ---
-
-![three orange squares](https://cdn-images-1.medium.com/max/2000/1*LMaqrprrDK_KCxxaw9IByQ.png)
 
 _Before you begin, make sure you have node and npm installed. Use a node version higher than 6. Also, note that all terminal commands are for Mac. Please use the equivalent commands for your OS._
 
