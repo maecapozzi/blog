@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
-import Contact from "../components/Contact";
 
 const Header = styled("h1")`
   font-size: 50px;
@@ -34,14 +33,6 @@ const StyledLink = styled(StyledGatsbyLink)`
   }
 `;
 
-const Footer = styled("footer")`
-  text-align: center;
-  position: sticky;
-  bottom: 0;
-  background-color: #0482e3;
-  color: white;
-`;
-
 const Nav = styled("nav")`
   text-align: right;
 `;
@@ -69,9 +60,6 @@ class Layout extends React.Component {
         </Nav>
         <header>{header}</header>
         <Main>{children}</Main>
-        <Footer>
-          <Contact />
-        </Footer>
       </Page>
     );
   }
