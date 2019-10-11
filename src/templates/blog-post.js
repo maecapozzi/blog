@@ -23,12 +23,11 @@ const BlogPostTemplate = props => {
     <Layout location={props.location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <BlogTitle>{post.frontmatter.title}</BlogTitle>
-      {props.data.allImageSharp.edges.forEach(image => {
-        return (
-          image.node.fluid.originalName === post.frontmatter.img && (
-            <Img fluid={image.node.fluid} />
-          )
-        );
+      {props.data.allImageSharp.edges.map(image => {
+        if (image.node.fluid.originalName === post.frontmatter.img) {
+          return <Img key={post.frontmatter.img} fluid={image.node.fluid} />;
+        }
+        return undefined;
       })}
       <p
         style={{

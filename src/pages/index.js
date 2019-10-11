@@ -25,6 +25,11 @@ const PostWrapper = styled("div")`
 const DateWrapper = styled("div")`
   margin-bottom: 20px;
 `;
+
+const StyledImage = styled(Img)`
+  margin-bottom: 20px;
+`;
+
 const BlogIndex = props => {
   const { data } = props;
   const siteTitle = data.site.siteMetadata.title;
@@ -59,7 +64,7 @@ const BlogIndex = props => {
             </DateWrapper>
             {headerImage && (
               <Link to={node.fields.slug}>
-                <Img fluid={headerImage.node.fluid} />
+                <StyledImage fluid={headerImage.node.fluid} />
               </Link>
             )}
             <Text dangerouslySetInnerHTML={{ __html: node.excerpt }} />
