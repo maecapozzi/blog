@@ -85,6 +85,13 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`
       }
+    },
+    {
+      resolve: `gatsby-theme-about-me`,
+      options: {
+        contentPath: `data`,
+        imagePath: `images`
+      }
     }
   ]
 };
