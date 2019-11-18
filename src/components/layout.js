@@ -56,7 +56,7 @@ class Layout extends React.Component {
         <Nav>
           <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
           {` `}
-          <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
+          <StyledGatsbyLink to="/about-me">About Me</StyledGatsbyLink>
         </Nav>
         <header>{header}</header>
         <Main>{children}</Main>
