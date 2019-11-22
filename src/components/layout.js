@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { ThemeProvider } from "theme-ui";
+import theme from "../theme";
 import { StyledGatsbyLink } from "../components/Link";
 
 const Header = styled("h1")`
@@ -52,6 +54,7 @@ class Layout extends React.Component {
     );
 
     return (
+      // <ThemeProvider theme={theme}>
       <Page>
         <Nav>
           <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
@@ -61,6 +64,7 @@ class Layout extends React.Component {
         <header>{header}</header>
         <Main>{children}</Main>
       </Page>
+      // </ThemeProvider>
     );
   }
 }

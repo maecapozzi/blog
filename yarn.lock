@@ -5716,10 +5716,10 @@ gatsby-telemetry@^1.1.39:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-about-me@^1.0.0-beta.0:
-  version "1.0.0-beta.3"
-  resolved "https://registry.npmjs.org/gatsby-theme-about-me/-/gatsby-theme-about-me-1.0.0-beta.3.tgz#3d0f316f7b1611f9c5b64484227606125ac8f97b"
-  integrity sha512-A5WNqcaByl+S1vx0y+4elB7HfA7LiroTrMMAgVSfHLdVTixt/Sjhwiw+AHWnD0kY/zptHo3kgWwQWS1JCx1wwg==
+gatsby-theme-about-me@^1.0.0-beta.4:
+  version "1.0.0-beta.4"
+  resolved "https://registry.npmjs.org/gatsby-theme-about-me/-/gatsby-theme-about-me-1.0.0-beta.4.tgz#421174036185329a625c4f197dbde8a867139c1c"
+  integrity sha512-OLfmNZBhKlR1Q9m+wJ+ukAQelznvCDfBUDvbZtR5C64hWxFd6ay0AOlRjWZd1OdpRm/MEj4NCLsYiRjDHlFbtA==
   dependencies:
     gatsby-image "^2.2.33"
     gatsby-plugin-sharp "^2.3.0"
