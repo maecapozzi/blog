@@ -29,7 +29,7 @@ const StyledLink = styled(StyledGatsbyLink)`
   color: #2a3132;
 
   &:hover {
-    color: #0482e3;
+    color: #5746e7;
   }
 `;
 

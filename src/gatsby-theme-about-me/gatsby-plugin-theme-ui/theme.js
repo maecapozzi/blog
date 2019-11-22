@@ -4,7 +4,7 @@ export default {
   ...base,
   colors: {
     ...base.colors,
-    secondary: "#469AE7",
+    secondary: "#5746e7",
     tertiary: "#3A3A3A"
   }
 };

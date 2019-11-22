@@ -11,7 +11,7 @@ const BlogTitle = styled("h1")`
 `;
 
 const StyledLink = styled(Link)`
-  color: #0482e3;
+  color: #5746e7;
 `;
 
 const BlogPostTemplate = props => {
