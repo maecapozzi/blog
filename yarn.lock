@@ -5716,15 +5716,16 @@ gatsby-telemetry@^1.1.39:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-about-me@^1.0.0-beta.5:
-  version "1.0.0-beta.5"
-  resolved "https://registry.npmjs.org/gatsby-theme-about-me/-/gatsby-theme-about-me-1.0.0-beta.5.tgz#a06df1179b259f7f5b955bc0d96d465a909c7e74"
-  integrity sha512-Y7vwnM5MazjYFVWGXXMGgMT7MvZ6MGlSaZ6koskgSyVrdaS+PbP2kemeGWsIQbTSO3WMcZ5qjtxYG49bZkq4FQ==
+gatsby-theme-about-me@^1.0.0-beta.8:
+  version "1.0.0-beta.8"
+  resolved "https://registry.npmjs.org/gatsby-theme-about-me/-/gatsby-theme-about-me-1.0.0-beta.8.tgz#868744f3724f4745783459241e58377e9f30cdf4"
+  integrity sha512-8LX2jcLJVs57Rlab5sZRx7BufXqQutn0eoVUb+cIw+0K/rMp9e9+3SNndBQSvn+8B1G13grNnb3W0lnkPi7gXQ==
   dependencies:
     gatsby-image "^2.2.33"
     gatsby-source-filesystem "^2.1.36"
     gatsby-transformer-json "^2.2.17"
     gatsby-transformer-sharp "^2.3.5"
+    react-helmet "^5.2.1"
 
 gatsby-transformer-json@^2.2.17:
   version "2.2.19"
@@ -10514,7 +10515,7 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-helmet@^5.2.0:
+react-helmet@^5.2.0, react-helmet@^5.2.1:
   version "5.2.1"
   resolved "https://registry.npmjs.org/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
   integrity sha512-CnwD822LU8NDBnjCpZ4ySh8L6HYyngViTZLfBBb3NjtrpN8m49clH8hidHouq20I51Y6TpCTISCBbqiY5GamwA==
