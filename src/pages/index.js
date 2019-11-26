@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Bio from "../components/bio";
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Header } from "../components/Header";
 import { Text } from "../components/Text";
@@ -30,18 +29,27 @@ const StyledImage = styled(Img)`
   margin-bottom: 20px;
 `;
 
+const Main = styled("main")`
+  margin: 0 auto;
+  max-width: 800px;
+`;
+
 const BlogIndex = props => {
   const { data } = props;
-  const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
   const images = data.allImageSharp.edges;
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Main>
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
+      <Header>
+        <h1>
+          <Link to="/">Home</Link>
+        </h1>
+      </Header>
       <Bio />
       {posts.map(({ node }) => {
         let headerImage;
@@ -71,7 +79,7 @@ const BlogIndex = props => {
           </PostWrapper>
         );
       })}
-    </Layout>
+    </Main>
   );
 };
 

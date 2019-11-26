@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Bio from "../components/bio";
-import Layout from "../components/layout";
+
 import SEO from "../components/seo";
 
 const BlogTitle = styled("h1")`
@@ -14,13 +14,17 @@ const StyledLink = styled(Link)`
   color: #5746e7;
 `;
 
+const Main = styled("main")`
+  margin: 0 auto;
+  max-width: 800px;
+`;
+
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark;
-  const siteTitle = props.data.site.siteMetadata.title;
   const { previous, next } = props.pageContext;
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Main>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <BlogTitle>{post.frontmatter.title}</BlogTitle>
       {props.data.allImageSharp.edges.map(image => {
@@ -64,7 +68,7 @@ const BlogPostTemplate = props => {
           )}
         </li>
       </ul>
-    </Layout>
+    </Main>
   );
 };
 

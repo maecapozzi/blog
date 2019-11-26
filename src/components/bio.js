@@ -16,6 +16,7 @@ function Bio() {
             style={{
               display: `flex`,
               marginBottom: `20px`,
+              marginTop: `2em`,
               width: `100%`
             }}
           >
