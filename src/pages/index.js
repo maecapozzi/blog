@@ -34,6 +34,12 @@ const Main = styled("main")`
   max-width: 800px;
 `;
 
+const Heading = styled("h1")`
+  color: #5746e7;
+  margin: 0;
+  font-size: 75px;
+`;
+
 const BlogIndex = props => {
   const { data } = props;
   const posts = data.allMarkdownRemark.edges;
@@ -45,11 +51,7 @@ const BlogIndex = props => {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <Header>
-        <h1>
-          <Link to="/">Home</Link>
-        </h1>
-      </Header>
+      <Heading>Home</Heading>
       <Bio />
       {posts.map(({ node }) => {
         let headerImage;

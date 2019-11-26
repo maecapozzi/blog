@@ -5594,10 +5594,10 @@ gatsby-telemetry@^1.1.40:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-about-me@^1.0.0-beta.13:
-  version "1.0.0-beta.13"
-  resolved "https://registry.npmjs.org/gatsby-theme-about-me/-/gatsby-theme-about-me-1.0.0-beta.13.tgz#7f41203de59f9ea99daa414f223234b7ddbc47fe"
-  integrity sha512-jO1CkJ39RDOC4VVcbVp6K202kH4JsHRRoOq3+VKd1jCYjs4ad7Czvp6cVvwsrNeDOO+1PJF9KjlnWq7Tfgbvqw==
+gatsby-theme-about-me@^1.0.0-beta.14:
+  version "1.0.0-beta.14"
+  resolved "https://registry.npmjs.org/gatsby-theme-about-me/-/gatsby-theme-about-me-1.0.0-beta.14.tgz#854e841781220f963d878c99d94cc5734e80327e"
+  integrity sha512-E0KSD4GgG/E/AGvCYjEVvxIpFdkPx9Ho9u8oPWhaPglr70fLJrYF6c3fyEuSfMj/tLwnXLQ9rlSZqrBKD7PejA==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@mdx-js/react" "^1.5.1"
