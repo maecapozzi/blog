@@ -32,6 +32,7 @@ const StyledImage = styled(Img)`
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
+  padding: 20px;
 `;
 
 const Heading = styled("h1")`

@@ -13,12 +13,17 @@ const StyledLink = styled(Link)`
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
+  padding: 20px;
 `;
 
 const Heading = styled("h1")`
   color: #5746e7;
-  margin: 1em 0 0 0;
-  font-size: 75px;
+  margin: 1em 0 1em 0;
+  font-size: 40px;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+  }
 `;
 
 const BlogPostTemplate = props => {
