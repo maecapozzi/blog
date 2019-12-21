@@ -48,7 +48,7 @@
     "typography-theme-wordpress-2016": "^0.16.18"
   },
   "devDependencies": {
-    "gatsby-plugin-sharp": "2.3.3-sharp-cache.43"
+    "gatsby-plugin-sharp": "2.3.10"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
