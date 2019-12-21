@@ -19,6 +19,12 @@ const Main = styled("main")`
   max-width: 800px;
 `;
 
+const Heading = styled("h1")`
+  color: #5746e7;
+  margin: 1em 0 0 0;
+  font-size: 75px;
+`;
+
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark;
   const { previous, next } = props.pageContext;
@@ -26,7 +32,7 @@ const BlogPostTemplate = props => {
   return (
     <Main>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <BlogTitle>{post.frontmatter.title}</BlogTitle>
+      <Heading>{post.frontmatter.title}</Heading>
       {props.data.allImageSharp.edges.map(image => {
         if (image.node.fluid.originalName === post.frontmatter.img) {
           return <Img key={post.frontmatter.img} fluid={image.node.fluid} />;

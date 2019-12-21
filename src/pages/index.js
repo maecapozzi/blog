@@ -5,6 +5,8 @@ import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Bio from "../components/bio";
 import SEO from "../components/seo";
+import Aside from "../components/aside";
+import MainSection from "../components/MainSection";
 import { Header } from "../components/Header";
 import { Text } from "../components/Text";
 
@@ -36,7 +38,7 @@ const Main = styled("main")`
 
 const Heading = styled("h1")`
   color: #5746e7;
-  margin: 0;
+  margin: 1em 0 0 0;
   font-size: 75px;
 `;
 
@@ -49,7 +51,7 @@ const BlogIndex = props => {
     <Main>
       <SEO
         title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
       />
       <Heading>Home</Heading>
       <Bio />

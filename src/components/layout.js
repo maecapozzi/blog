@@ -3,10 +3,14 @@ import styled from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
 
 const Nav = styled("nav")`
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
+  background: #f7f5fe;
+  display: flex;
   height: 3em;
+  justify-content: flex-end;
+  padding: 20px;
+  border-bottom: 1px solid #3a3a3a69;
+}
 `;
 
 const Space = styled("span")`
