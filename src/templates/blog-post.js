@@ -6,10 +6,6 @@ import Bio from "../components/bio";
 
 import SEO from "../components/seo";
 
-const BlogTitle = styled("h1")`
-  font-size: 2em;
-`;
-
 const StyledLink = styled(Link)`
   color: #5746e7;
 `;

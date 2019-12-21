@@ -6,6 +6,7 @@ import Img from "gatsby-image";
 import Bio from "../components/bio";
 import SEO from "../components/seo";
 import { Header } from "../components/Header";
+import { Text } from "../components/Text";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
