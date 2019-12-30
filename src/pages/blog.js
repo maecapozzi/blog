@@ -3,42 +3,51 @@ import React from "react";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
-import Bio from "../components/bio";
 import SEO from "../components/seo";
-import { Header } from "../components/Header";
 import { Text } from "../components/Text";
+import { theme } from "../styles/theme";
+import { Main } from "../components/Main";
+import { Header, HeadingWrapper } from "../components/Header";
+
+const LinkWrapper = styled(`div`)`
+  margin: ${theme.spacing["6"]} 0px 0px ${theme.spacing["6"]};
+`;
 
 const StyledLink = styled(Link)`
+  color: ${theme.colors.tertiary};
+  font-size: ${theme.fontSizes["7"]};
+  font-weight: ${theme.fontWeight.heavy};
   text-decoration: none;
-  color: #2a3132;
 
   &:hover {
-    color: #5746e7;
+    color: ${theme.colors.tertiary};
   }
 `;
 
-const PostWrapper = styled("div")`
-  padding: 20px 0;
-`;
-
 const DateWrapper = styled("div")`
-  margin-bottom: 20px;
+  margin-bottom: ${theme.spacing["6"]};
+  margin-left: ${theme.spacing["6"]};
+  font-size: ${theme.fontSizes["3"]};
+  font-weight: ${theme.fontWeight.light};
+  font-style: italic;
 `;
 
 const StyledImage = styled(Img)`
-  margin-bottom: 20px;
+  border-radius: 6px;
+  margin-top: ${theme.spacing["6"]};
 `;
 
-const Main = styled("main")`
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
+const Card = styled(`div`)`
+  margin: ${theme.spacing["6"]};
+  padding-top: ${theme.spacing["3"]};
+  border-radius: 5px;
+  background: ${theme.colors.gray1};
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 `;
 
-const Heading = styled("h1")`
-  color: #5746e7;
-  margin: 1em 0 0 0;
-  font-size: 75px;
+const TextWrapper = styled(`div`)`
+  padding: ${theme.spacing["5"]};
+  background: #ffffff;
 `;
 
 const BlogIndex = props => {
@@ -52,8 +61,9 @@ const BlogIndex = props => {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
       />
-      <Heading>Home</Heading>
-      <Bio />
+      <HeadingWrapper>
+        <Header>Blog</Header>
+      </HeadingWrapper>
       {posts.map(({ node }) => {
         let headerImage;
         images.forEach(image => {
@@ -64,22 +74,20 @@ const BlogIndex = props => {
 
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <PostWrapper key={node.fields.slug}>
-            <Header>
-              <StyledLink style={{ boxShadow: `none` }} to={node.fields.slug}>
-                {title}
-              </StyledLink>
-            </Header>
-            <DateWrapper>
-              <small>{node.frontmatter.date}</small>
-            </DateWrapper>
+          <Card>
+            <LinkWrapper>
+              <StyledLink to={node.fields.slug}>{title}</StyledLink>
+            </LinkWrapper>
+            <DateWrapper>{node.frontmatter.date}</DateWrapper>
             {headerImage && (
               <Link to={node.fields.slug}>
                 <StyledImage fluid={headerImage.node.fluid} />
               </Link>
             )}
-            <Text dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </PostWrapper>
+            <TextWrapper>
+              <Text>{node.excerpt}</Text>
+            </TextWrapper>
+          </Card>
         );
       })}
     </Main>
@@ -98,7 +106,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 300)
           fields {
             slug
           }

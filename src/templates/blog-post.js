@@ -2,55 +2,43 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
-import Bio from "../components/bio";
-
 import SEO from "../components/seo";
+import { theme } from "../styles/theme";
+import { Date } from "../components/Date";
+import { Header, HeadingWrapper } from "../components/Header";
 
 const StyledLink = styled(Link)`
-  color: #5746e7;
+  color: ${theme.colors.tertiary};
 `;
 
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
-  padding: 20px;
-`;
-
-const Heading = styled("h1")`
-  color: #5746e7;
-  margin: 1em 0 1em 0;
-  font-size: 40px;
-
-  @media (min-width: 768px) {
-    font-size: 60px;
-  }
+  padding: ${theme.spacing["5"]};
 `;
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark;
   const { previous, next } = props.pageContext;
+  const { title, img, date } = post.frontmatter;
+  const { edges } = props.data.allImageSharp;
 
   return (
     <Main>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <Heading>{post.frontmatter.title}</Heading>
-      {props.data.allImageSharp.edges.map(image => {
-        if (image.node.fluid.originalName === post.frontmatter.img) {
-          return <Img key={post.frontmatter.img} fluid={image.node.fluid} />;
+      <SEO title={title} description={post.excerpt} />
+      <HeadingWrapper>
+        <Header>{title}</Header>
+        <Date>{date}</Date>
+      </HeadingWrapper>
+      <hr />
+      {edges.map(image => {
+        if (image.node.fluid.originalName === img) {
+          return <Img key={img} fluid={image.node.fluid} />;
         }
         return undefined;
       })}
-      <p
-        style={{
-          display: `block`
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <p dangerouslySetInnerHTML={{ __html: post.html }}></p>
       <hr />
-      <Bio />
-
       <ul
         style={{
           display: `flex`,
@@ -91,7 +79,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 250)
       html
       frontmatter {
         title

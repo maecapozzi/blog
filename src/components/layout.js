@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
+import { theme } from "../styles/theme";
 
 const Nav = styled("nav")`
   align-items: center;
-  background: #f7f5fe;
+  background: ${theme.colors.gray1};
   display: flex;
-  height: 3em;
+  height: ${theme.spacing["8"]};
   justify-content: flex-end;
   padding: 20px;
-  border-bottom: 1px solid #3a3a3a69;
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
 `;
 
 const Space = styled("span")`
-  margin 10px;
+  margin: ${theme.spacing["2"]};
 `;
 
 class Layout extends React.Component {
@@ -24,9 +25,10 @@ class Layout extends React.Component {
     return (
       <>
         <Nav>
-          <Space>
-            <StyledGatsbyLink to="/">Home</StyledGatsbyLink>{" "}
-          </Space>
+          <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
+          <Space></Space>
+          <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
+          <Space></Space>
           <StyledGatsbyLink to="/about-me">About Me</StyledGatsbyLink>
         </Nav>
         {children}
