@@ -1,40 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
 import { theme } from "../styles/theme";
+import * as menu from "../../images/menu.svg";
 
 const Nav = styled("nav")`
-  align-items: center;
-  background: ${theme.colors.gray1};
+  background: ${theme.colors.tertiary};
   display: flex;
-  height: ${theme.spacing["8"]};
-  justify-content: flex-end;
-  padding: 20px;
+  height: ${theme.spacings["8"]};
+  justify-content: flex-start;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 `;
 
-const Space = styled("span")`
-  margin: ${theme.spacing["2"]};
+const Hamburger = styled("button")`
+  padding: ${theme.spacings["4"]};
+  border: none;
+  background: ${theme.colors.tertiary};
 `;
 
-class Layout extends React.Component {
-  render() {
-    const { children } = this.props;
+const MenuDropdown = styled("div")`
+  background: ${theme.colors.gray1};
+  height: 100vh;
+  width: ${theme.spacings["11"]};
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  position: fixed;
+  margin-top: ${theme.spacings["8"]};
+  display: ${props => (props.show ? "block" : "none")};
+  padding: ${theme.spacings["4"]};
+  z-index: 1;
+`;
 
-    return (
-      <>
-        <Nav>
-          <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
-          <Space></Space>
-          <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
-          <Space></Space>
-          <StyledGatsbyLink to="/about-me">About Me</StyledGatsbyLink>
-        </Nav>
-        {children}
-      </>
-    );
+const toggleMenu = (menuState, setMenuState, e) => {
+  e.preventDefault();
+  if (menuState === "open") {
+    setMenuState("closed");
+  } else {
+    setMenuState("open");
   }
-}
+};
+
+const Layout = ({ children }) => {
+  const [menuState, setMenuState] = useState("closed");
+
+  return (
+    <>
+      <Nav>
+        <Hamburger onClick={e => toggleMenu(menuState, setMenuState, e)}>
+          <img
+            src={menu}
+            alt="A hamburger menu. When selected, it expands to reveal the rest of the menu."
+          ></img>
+        </Hamburger>
+        <MenuDropdown show={menuState === "open"}>
+          <div>
+            <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
+          </div>
+          <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
+        </MenuDropdown>
+      </Nav>
+      {children}
+    </>
+  );
+};
 
 export default Layout;

@@ -3,16 +3,8 @@ import Typography from "typography";
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
-  headerFontFamily: [
-    "Montserrat",
-    "Roboto",
-    "Helvetica Neue",
-    "Segoe UI",
-    "Helvetica",
-    "Arial",
-    "sans-serif"
-  ],
-  bodyFontFamily: ["Inconsolata", "serif"]
+  headerFontFamily: ["Inconsolata", "serif"],
+  bodyFontFamily: ["Nunito", "sans-serif"]
 });
 
 export default typography;

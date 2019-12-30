@@ -1,53 +1,43 @@
-import "typeface-inconsolata";
 import React from "react";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../components/seo";
-import { Text } from "../components/Text";
+import { Text, TextWrapper } from "../components/Text";
 import { theme } from "../styles/theme";
 import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
+import { Card } from "../components/Card";
+import Bio from "../components/bio";
 
 const LinkWrapper = styled(`div`)`
-  margin: ${theme.spacing["6"]} 0px 0px ${theme.spacing["6"]};
+  margin: ${theme.spacings["6"]} ${theme.spacings["6"]} 0 ${theme.spacings["6"]};
 `;
 
 const StyledLink = styled(Link)`
   color: ${theme.colors.tertiary};
   font-size: ${theme.fontSizes["7"]};
-  font-weight: ${theme.fontWeight.heavy};
+  font-weight: ${theme.fontWeights.heavy};
   text-decoration: none;
+  line-height: ${theme.fontSizes["2"]};
 
   &:hover {
-    color: ${theme.colors.tertiary};
+    color: ${theme.colors.primary};
   }
 `;
 
 const DateWrapper = styled("div")`
-  margin-bottom: ${theme.spacing["6"]};
-  margin-left: ${theme.spacing["6"]};
+  margin-bottom: ${theme.spacings["6"]};
+  margin-left: ${theme.spacings["6"]};
   font-size: ${theme.fontSizes["3"]};
-  font-weight: ${theme.fontWeight.light};
+  font-weight: ${theme.fontWeights.light};
   font-style: italic;
+  font-family: ${theme.fonts.secondary};
 `;
 
 const StyledImage = styled(Img)`
   border-radius: 6px;
-  margin-top: ${theme.spacing["6"]};
-`;
-
-const Card = styled(`div`)`
-  margin: ${theme.spacing["6"]};
-  padding-top: ${theme.spacing["3"]};
-  border-radius: 5px;
-  background: ${theme.colors.gray1};
-  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
-`;
-
-const TextWrapper = styled(`div`)`
-  padding: ${theme.spacing["5"]};
-  background: #ffffff;
+  margin-top: ${theme.spacings["6"]};
 `;
 
 const BlogIndex = props => {
@@ -64,6 +54,7 @@ const BlogIndex = props => {
       <HeadingWrapper>
         <Header>Blog</Header>
       </HeadingWrapper>
+      <Bio />
       {posts.map(({ node }) => {
         let headerImage;
         images.forEach(image => {

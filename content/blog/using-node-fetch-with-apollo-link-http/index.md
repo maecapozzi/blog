@@ -4,9 +4,9 @@ date: "2019-05-23"
 title: "Using node-fetch with apollo-link-http"
 ---
 
-I'm building a [Gatsby](https://www.gatsbyjs.org/) app that consumes data from a graphQL service with the help of apollo-client and TypeScript. Because Gatsby creates static assets at build time, I needed a data-fetching tool that would work on the client-side and the server-side. apollo-client recommends using  [node-fetch](https://github.com/bitinn/node-fetch) for the task.
+I'm building a [Gatsby](https://www.gatsbyjs.org/) app that consumes data from a graphQL service with the help of apollo-client and TypeScript. Because Gatsby creates static assets at build time, I needed a data-fetching tool that would work on the client-side and the server-side. apollo-client recommends using [node-fetch](https://github.com/bitinn/node-fetch) for the task.
 
-When I installed node-fetch and tried it out, I got this TypeScript error:
+When I installed `node-fetch` and tried it out, I got this TypeScript error:
 
 ```bash
 error TS7016: Could not find a declaration file for module 'node-fetch'. '/Users/mae.capozzi/Desktop/Codes/project/packages/client/node_modules/node-fetch/lib/index.js' implicitly has an 'any' type.
@@ -15,7 +15,7 @@ error TS7016: Could not find a declaration file for module 'node-fetch'. '/Users
 8 import fetch from 'node-fetch';
 ```
 
-Naturally, I installed @types/node-fetch. Rather than solving my problem, it led me to another one:
+Naturally, I installed `@types/node-fetch`. Rather than solving my problem, it led me to another one:
 
 ```bash
 error TS2345: Argument of type '{ uri: string | undefined; credentials: string; fetch: typeof fetch; }' is not assignable to parameter of type 'Options'.

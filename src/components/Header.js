@@ -3,12 +3,11 @@ import { theme } from "../styles/theme";
 
 export const Header = styled("h1")`
   font-size: ${theme.fontSizes["9"]};
-  font-weight: ${theme.fontWeight.heavy};
+  font-weight: ${theme.fontWeights.heavy};
   text-decoration: none;
-  line-height: ${theme.spacing["6"]};
-  margin-bottom: none;
+  line-height: ${theme.spacings["7"]};
 `;
 
 export const HeadingWrapper = styled(`div`)`
-  margin: ${theme.spacing["8"]} ${theme.spacing["6"]};
+  margin-top: ${theme.spacings["9"]};
 `;

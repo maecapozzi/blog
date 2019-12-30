@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import { theme } from "../styles/theme";
 import { Date } from "../components/Date";
 import { Header, HeadingWrapper } from "../components/Header";
+import { Text } from "../components/Text";
 
 const StyledLink = styled(Link)`
   color: ${theme.colors.tertiary};
@@ -14,7 +15,7 @@ const StyledLink = styled(Link)`
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
-  padding: ${theme.spacing["5"]};
+  padding: ${theme.spacings["5"]};
 `;
 
 const BlogPostTemplate = props => {
@@ -42,17 +43,17 @@ const BlogPostTemplate = props => {
       <ul
         style={{
           display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
           listStyle: `none`,
-          padding: 0
+          justifyContent: `space-between`
         }}
       >
         <li>
           {previous && (
-            <StyledLink to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </StyledLink>
+            <Text>
+              <StyledLink to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </StyledLink>
+            </Text>
           )}
         </li>
         <li>

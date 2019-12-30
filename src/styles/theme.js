@@ -5,12 +5,7 @@ export const theme = {
     tertiary: `#5746e7`,
     gray1: `#f1f1f1`
   },
-  fontSizes: {
-    xs: `12px`,
-    sm: `14px`,
-    md: `16px`
-  },
-  spacing: {
+  spacings: {
     "1": `4px`,
     "2": `8px`,
     "3": `12px`,
@@ -40,9 +35,13 @@ export const theme = {
     "9": `48px`,
     "10": `60px`
   },
-  fontWeight: {
+  fontWeights: {
     light: 200,
     medium: 400,
     heavy: 600
+  },
+  fonts: {
+    primary: `Nunito`,
+    secondary: `Inconsolata`
   }
 };

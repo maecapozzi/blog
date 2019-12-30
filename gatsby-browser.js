@@ -4,12 +4,11 @@ import "./src/styles/global.css";
 
 // custom typefaces
 import "typeface-inconsolata";
+import "typeface-nunito";
 import "typeface-montserrat";
 import "typeface-roboto";
 import "typeface-major-mono-display";
 import "typeface-quicksand";
-
-require("prismjs/themes/prism-tomorrow.css");
 
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
