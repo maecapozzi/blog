@@ -43,6 +43,11 @@ const toggleMenu = (menuState, setMenuState, e) => {
   }
 };
 
+const Footer = styled.footer`
+  text-align: center;
+  padding: ${theme.spacings["4"]};
+`;
+
 const Layout = ({ children }) => {
   const [menuState, setMenuState] = useState("closed");
 
@@ -63,6 +68,7 @@ const Layout = ({ children }) => {
         </MenuDropdown>
       </Nav>
       {children}
+      <Footer>All content © Mae Capozzi</Footer>
     </>
   );
 };
