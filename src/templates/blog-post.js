@@ -18,6 +18,14 @@ const Main = styled("main")`
   padding: ${theme.spacings["5"]};
 `;
 
+const BlogHeader = styled(Header)`
+  font-weight: ${theme.fontWeights.heavy};
+  margin: 0;
+  font-size: ${theme.fontSizes["8"]};
+  color: ${theme.colors.tertiary};
+  font-family: ${theme.fonts.primary};
+`;
+
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark;
   const { previous, next } = props.pageContext;
@@ -28,7 +36,7 @@ const BlogPostTemplate = props => {
     <Main>
       <SEO title={title} description={post.excerpt} />
       <HeadingWrapper>
-        <Header>{title}</Header>
+        <BlogHeader>{title}</BlogHeader>
         <Date>{date}</Date>
       </HeadingWrapper>
       <hr />

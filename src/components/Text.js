@@ -7,8 +7,3 @@ export const Text = styled("p")`
   margin-top: ${theme.spacings["5"]};
   margin: 0;
 `;
-
-export const TextWrapper = styled(`div`)`
-  padding: ${theme.spacings["6"]};
-  background: #ffffff;
-`;

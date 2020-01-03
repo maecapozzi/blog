@@ -3,11 +3,12 @@ import { Link } from "gatsby";
 import { theme } from "../styles/theme";
 
 export const StyledGatsbyLink = styled(Link)`
-  color: ${theme.colors.tertiary};
-  font-size: ${theme.fontSizes["6"]};
+  color: #ffffff;
+  font-size: ${theme.fontSizes["5"]};
+  text-decoration: none;
 
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.gray1};
   }
 `;
 

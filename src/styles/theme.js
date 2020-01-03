@@ -3,7 +3,8 @@ export const theme = {
     primary: `#2A3132`,
     secondary: `#f7f5fe`,
     tertiary: `#5746e7`,
-    gray1: `#f1f1f1`
+    gray1: `#f1f1f1`,
+    gray2: `#cecdd3`
   },
   spacings: {
     "1": `4px`,
@@ -36,9 +37,10 @@ export const theme = {
     "10": `60px`
   },
   fontWeights: {
-    light: 200,
-    medium: 400,
-    heavy: 600
+    extraLight: 200,
+    light: 400,
+    medium: 600,
+    heavy: 700
   },
   fonts: {
     primary: `Nunito`,

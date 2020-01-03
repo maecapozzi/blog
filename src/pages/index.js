@@ -15,14 +15,14 @@ const LinkWrapper = styled(`div`)`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${theme.colors.tertiary};
+  color: ${theme.colors.primary};
   font-size: ${theme.fontSizes["7"]};
   font-weight: ${theme.fontWeights.heavy};
   text-decoration: none;
   line-height: ${theme.fontSizes["2"]};
 
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.gray2};
   }
 `;
 
@@ -65,16 +65,23 @@ const BlogIndex = props => {
 
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <Card>
-            <LinkWrapper>
-              <StyledLink to={node.fields.slug}>{title}</StyledLink>
-            </LinkWrapper>
-            <DateWrapper>{node.frontmatter.date}</DateWrapper>
+          <Card
+            img={headerImage && headerImage.node.fluid}
+            title={title}
+            content={node.excerpt}
+            slug={node.fields.slug}
+            date={node.frontmatter.date}
+          >
             {headerImage && (
               <Link to={node.fields.slug}>
                 <StyledImage fluid={headerImage.node.fluid} />
               </Link>
             )}
+            <LinkWrapper>
+              <StyledLink to={node.fields.slug}>{title}</StyledLink>
+            </LinkWrapper>
+            <DateWrapper>{node.frontmatter.date}</DateWrapper>
+
             <TextWrapper>
               <Text>{node.excerpt}</Text>
             </TextWrapper>
