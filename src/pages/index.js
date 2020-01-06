@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../components/seo";
-import { Text, TextWrapper } from "../components/Text";
+import { Text } from "../components/Text";
 import { theme } from "../styles/theme";
 import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
@@ -82,9 +82,7 @@ const BlogIndex = props => {
             </LinkWrapper>
             <DateWrapper>{node.frontmatter.date}</DateWrapper>
 
-            <TextWrapper>
-              <Text>{node.excerpt}</Text>
-            </TextWrapper>
+            <Text>{node.excerpt}</Text>
           </Card>
         );
       })}

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Header } from "../components/Header";
 import { Main } from "../components/Main";
 import { HeadingWrapper } from "../components/Header";
-import { TextWrapper } from "../components/Text";
 import { StyledExternalLink } from "../components/Link";
 import { theme } from "../styles/theme";
 import Bio from "../components/bio";

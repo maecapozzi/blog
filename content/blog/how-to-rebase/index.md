@@ -8,7 +8,7 @@ _In this post, I'm using vim. But you can use a different editor if you want! Yo
 
 Developers have different opinions about whether to rebase or not. Some feel strongly about not modifying commit history, even if the commit log looks something like this:
 
-```
+```bash
 commit 795b95f7b824242588db10bef13c59f3b09a762f (HEAD -> master, origin/master, origin/HEAD)
 Author: maecapozzi <maecapozzi@gmail.com>
 Date:   Fri Jan 3 12:47:15 2020 -0500
@@ -38,7 +38,7 @@ I'd prefer it if my teammates didn't see all of my embarrassing commit messages,
 
 This allows me to write clear, detailed commits like this one, even though my commit log looks like the one above most of the time:
 
-```
+```bash
 commit 57fe4d23d8f685cab9e186c72770f78e1f1d2158
 Author: maecapozzi <maecapozzi@gmail.com>
 Date:   Tue Dec 3 10:59:51 2019 -0500
