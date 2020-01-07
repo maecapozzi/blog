@@ -32,6 +32,10 @@ const BlogPostTemplate = props => {
   const { title, img, date } = post.frontmatter;
   const { edges } = props.data.allImageSharp;
 
+  function parseHtml() {
+    return { __html: post.html };
+  }
+
   return (
     <Main>
       <SEO title={title} description={post.excerpt} />
@@ -46,7 +50,7 @@ const BlogPostTemplate = props => {
         }
         return undefined;
       })}
-      <p dangerouslySetInnerHTML={{ __html: post.html }}></p>
+      <div dangerouslySetInnerHTML={parseHtml()} />
       <hr />
       <ul
         style={{
