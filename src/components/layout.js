@@ -7,7 +7,7 @@ const Nav = styled("nav")`
   background: ${theme.colors.primary};
   display: flex;
   height: ${theme.spacings["8"]};
-  justify-content: flex-end;
+  justify-content: flex-start;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
   position: fixed;
   width: 100%;

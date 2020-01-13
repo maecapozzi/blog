@@ -12,6 +12,10 @@ const StyledLink = styled(Link)`
   color: ${theme.colors.tertiary};
 `;
 
+const BodyWrapper = styled("div")`
+  margin-top: ${theme.spacings["4"]};
+`;
+
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
@@ -43,14 +47,15 @@ const BlogPostTemplate = props => {
         <BlogHeader>{title}</BlogHeader>
         <Date>{date}</Date>
       </HeadingWrapper>
-      <hr />
       {edges.map(image => {
         if (image.node.fluid.originalName === img) {
           return <Img key={img} fluid={image.node.fluid} />;
         }
         return undefined;
       })}
-      <div dangerouslySetInnerHTML={parseHtml()} />
+      <BodyWrapper>
+        <div dangerouslySetInnerHTML={parseHtml()} />
+      </BodyWrapper>
       <hr />
       <ul
         style={{

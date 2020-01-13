@@ -4,11 +4,11 @@ import { theme } from "../styles/theme";
 
 export const StyledGatsbyLink = styled(Link)`
   color: #ffffff;
-  font-size: ${theme.fontSizes["5"]};
+  font-size: ${theme.fontSizes["4"]};
   text-decoration: none;
 
   &:hover {
-    color: ${theme.colors.gray1};
+    color: ${theme.colors.tertiary};
   }
 `;
 
