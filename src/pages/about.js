@@ -32,7 +32,6 @@ const About = () => {
       <Bio />
       <Content>
         <SectionHeadings>Find me on the internet</SectionHeadings>
-
         <ul>
           <List>
             <StyledExternalLink href="https://github.com/maecapozzi">
@@ -46,8 +45,35 @@ const About = () => {
           </List>
         </ul>
 
-        <SectionHeadings>Open Source</SectionHeadings>
+        <SectionHeadings>Talks</SectionHeadings>
+        <ul>
+          <List>
+            <StyledExternalLink href="https://www.youtube.com/watch?v=cp6nWSBEM0o">
+              How Flamingo Got 5x Faster Page Loads with Gatsby
+            </StyledExternalLink>
+          </List>
+          <List>
+            <StyledExternalLink href="https://www.youtube.com/watch?v=PHi2lohuXvo">
+              Building a Reusable Component Library
+            </StyledExternalLink>
+          </List>
+        </ul>
 
+        <SectionHeadings>Published Work</SectionHeadings>
+        <ul>
+          <List>
+            <StyledExternalLink href="https://medium.com/harrys-engineering/how-we-used-gatsby-js-to-build-a-blazing-fast-e-commerce-site-a9818145c67b">
+              How We Used Gatsby.js to Build a Blazing Fast E-Commerce Site
+            </StyledExternalLink>
+          </List>
+          <List>
+            <StyledExternalLink href="https://www.designsystems.com/the-forge-harrys-approach-to-multi-brand-design-systems/">
+              The Forge: Harry’s approach to the multi-brand component library
+            </StyledExternalLink>
+          </List>
+        </ul>
+
+        <SectionHeadings>Open Source</SectionHeadings>
         <ul>
           <List>
             <StyledExternalLink href="https://github.com/maecapozzi/gatsby-theme-about-me">
