@@ -38,7 +38,7 @@ If you're using React version `16.0.1`, and the authors introduce a minor versio
 
 #### 3. Major
 
-A minor version represents new functionality that is not backwards-compatible. This means that the way the library is consumed changes from the consumer's perspective. If you upgrade the library, you'll need to change the code that consumes it to use the new API.
+A major version represents new functionality that is not backwards-compatible. This means that the way the library is consumed changes from the consumer's perspective. If you upgrade the library, you'll need to change the code that consumes it to use the new API.
 
 If you're using React version `16.1.1`, and the authors introduce a major version, they'll release version `17.0.0`. Note that both the minor and patch versions reset to 0.
 
