@@ -7,7 +7,7 @@ import { StyledExternalLink } from "../components/Link";
 import { theme } from "../styles/theme";
 import Bio from "../components/bio";
 
-const SectionHeadings = styled(`h3`)`
+export const SectionHeadings = styled(`h3`)`
   color: ${theme.colors.primary};
   font-size: ${theme.fontSizes["7"]};
   font-weight: ${theme.fontWeights.heavy};
@@ -15,11 +15,11 @@ const SectionHeadings = styled(`h3`)`
   font-family: ${theme.fonts.primary};
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   padding-top: ${theme.spacings["6"]};
 `;
 
-const List = styled(`li`)`
+export const List = styled(`li`)`
   color: ${theme.colors.primary};
 `;
 
@@ -86,12 +86,6 @@ const About = () => {
             </StyledExternalLink>
           </List>
         </ul>
-
-        <SectionHeadings>Work</SectionHeadings>
-        <List>Senior Software Engineer @ Harry's</List>
-        <List>Software Engineer @ InRhythm</List>
-        <List>Technical Project Manager & Frontend Dev @ Thrive Global</List>
-        <List>Junior Developer @ 501 Auctions</List>
       </Content>
     </Main>
   );
