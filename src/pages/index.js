@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../components/seo";
-import { Text } from "../components/Text";
 import { theme } from "../styles/theme";
 import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
@@ -68,7 +67,7 @@ const BlogIndex = props => {
           <Card
             img={headerImage && headerImage.node.fluid}
             title={title}
-            content={node.excerpt}
+            content={node.frontmatter.excerpt || node.excerpt}
             slug={node.fields.slug}
             date={node.frontmatter.date}
           >
@@ -81,8 +80,6 @@ const BlogIndex = props => {
               <StyledLink to={node.fields.slug}>{title}</StyledLink>
             </LinkWrapper>
             <DateWrapper>{node.frontmatter.date}</DateWrapper>
-
-            <Text>{node.excerpt}</Text>
           </Card>
         );
       })}
@@ -110,6 +107,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             img
+            excerpt
           }
         }
       }

@@ -2,6 +2,18 @@ html {
   background: #ffffff;
 }
 
+blockquote {
+  font-style: italic;
+  border-left: 3px solid #5746e7;
+  background-color: #f1f1f1;
+  margin: 2em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+  display: inline;
+}
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner
  */

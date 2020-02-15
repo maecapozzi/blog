@@ -3,9 +3,13 @@ path: "/library-versioning"
 date: "2019-04-10"
 title: "Before You Build A Component Library: Versioning"
 img: "pairing.png"
+excerpt: "Versioning is one of the most challenging aspects to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning."
 ---
 
-_This post is part of an ongoing series about the problems you'll need to solve before you start building a component library. Stay tuned for more topics!_
+_This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._
+
+- [Before You Build A Component Library: Monorepo or Multirepo?](../monorepo-or-multrepo)
+- [Before You Build A Component Library: Monorepo Versioning](../lerna-monorepo-versioning)
 
 Versioning is one of the most challenging aspects to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning.
 
@@ -119,6 +123,7 @@ Alternatively, if you're using a tool like lerna to manage a monorepo and handle
 ```
 
 When you commit, make sure to follow conventional commit conventions. If you do this correctly, when you run lerna publish, your package will be automatically versioned according to SemVer standards.
-Challenges with SemVer
+
+## Challenges with SemVer
 
 SemVer helps us to make sure that we're communicating with our users, but it has its flaws. Most notably, it can be very difficult to determine whether a change breaks compatibility. It's impossible for a library author to know every single way a component is being used. Some of its flaws have been discussed here. But for all its flaws, until we have something better it makes sense to stick to it as closely as we can, and make sure to over-communicate when we can't.

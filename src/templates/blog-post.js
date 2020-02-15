@@ -31,6 +31,7 @@ const BlogHeader = styled(Header)`
 `;
 
 const BlogPostTemplate = props => {
+  console.log(props);
   const post = props.data.markdownRemark;
   const { previous, next } = props.pageContext;
   const { title, img, date } = post.frontmatter;
