@@ -1,9 +1,8 @@
 ---
 path: "/lerna-monorepo-versioning"
-date: "2020-02-15"
+date: "2020-02-17"
 title: "Before You Build A Component Library: Monorepo Versioning"
-img: "lerna.png"
-excerpt: "It sounds to me like people are really unclear on the capabilities of monorepos! Before we go any further. You can 💯percent version packages in a monorepo!"
+excerpt: "We can use Lerna with Yarn Workspaces develop across multiple components without having to publish them to a registry or rely on `yarn link`."
 ---
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._
