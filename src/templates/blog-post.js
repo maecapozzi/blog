@@ -32,58 +32,62 @@ const BlogHeader = styled(Header)`
 
 const BlogPostTemplate = props => {
   console.log(props);
-  const post = props.data.markdownRemark;
-  const { previous, next } = props.pageContext;
-  const { title, img, date } = post.frontmatter;
-  const { edges } = props.data.allImageSharp;
+  if (props.data.markdownRemark) {
+    const post = props.data.markdownRemark;
+    const { previous, next } = props.pageContext;
+    const { title, img, date } = post.frontmatter;
+    const { edges } = props.data.allImageSharp;
 
-  function parseHtml() {
-    return { __html: post.html };
+    function parseHtml() {
+      return { __html: post.html };
+    }
+
+    return (
+      <Main>
+        <SEO title={title} description={post.excerpt} />
+        <HeadingWrapper>
+          <BlogHeader>{title}</BlogHeader>
+          <Date>{date}</Date>
+        </HeadingWrapper>
+        {edges.map(image => {
+          if (image.node.fluid.originalName === img) {
+            return <Img key={img} fluid={image.node.fluid} />;
+          }
+          return undefined;
+        })}
+        <BodyWrapper>
+          <div dangerouslySetInnerHTML={parseHtml()} />
+        </BodyWrapper>
+        <hr />
+        <ul
+          style={{
+            display: `flex`,
+            listStyle: `none`,
+            justifyContent: `space-between`
+          }}
+        >
+          <li>
+            {previous && (
+              <Text>
+                <StyledLink to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </StyledLink>
+              </Text>
+            )}
+          </li>
+          <li>
+            {next && (
+              <StyledLink to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </StyledLink>
+            )}
+          </li>
+        </ul>
+      </Main>
+    );
   }
 
-  return (
-    <Main>
-      <SEO title={title} description={post.excerpt} />
-      <HeadingWrapper>
-        <BlogHeader>{title}</BlogHeader>
-        <Date>{date}</Date>
-      </HeadingWrapper>
-      {edges.map(image => {
-        if (image.node.fluid.originalName === img) {
-          return <Img key={img} fluid={image.node.fluid} />;
-        }
-        return undefined;
-      })}
-      <BodyWrapper>
-        <div dangerouslySetInnerHTML={parseHtml()} />
-      </BodyWrapper>
-      <hr />
-      <ul
-        style={{
-          display: `flex`,
-          listStyle: `none`,
-          justifyContent: `space-between`
-        }}
-      >
-        <li>
-          {previous && (
-            <Text>
-              <StyledLink to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </StyledLink>
-            </Text>
-          )}
-        </li>
-        <li>
-          {next && (
-            <StyledLink to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </StyledLink>
-          )}
-        </li>
-      </ul>
-    </Main>
-  );
+  return null;
 };
 
 export default BlogPostTemplate;
