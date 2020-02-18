@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
-import window from "window-or-global";
 
 const Nav = styled("nav")`
   background: ${props => props.theme.colors.background};
@@ -50,23 +49,13 @@ const ThemeButton = styled.button`
 const Layout = ({ children }) => {
   const originalTheme = Object.keys(themes)[0];
   const [themeIndex, setThemeIndex] = useState(1);
-  const [theme, setTheme] = useState(
-    (window &&
-      window.sessionStorage &&
-      JSON.parse(sessionStorage.getItem("theme"))) ||
-      themes[originalTheme]
-  );
-  const [themeName, setThemeName] = useState(
-    (window &&
-      window.sessionStorage &&
-      JSON.parse(sessionStorage.getItem("themeName"))) ||
-      originalTheme
-  );
+  const [theme, setTheme] = useState(themes[originalTheme]);
+  const [themeName, setThemeName] = useState(originalTheme);
 
-  if (window && window.sessionStorage) {
+  useEffect(() => {
     sessionStorage.setItem("theme", JSON.stringify(theme));
     sessionStorage.setItem("themeName", JSON.stringify(themeName));
-  }
+  });
 
   const getTheme = () => {
     Object.keys(themes).map((themeName, index) => {
