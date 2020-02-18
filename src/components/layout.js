@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
+import window from "window-or-global";
 
 const Nav = styled("nav")`
   background: ${props => props.theme.colors.background};
@@ -50,14 +51,22 @@ const Layout = ({ children }) => {
   const originalTheme = Object.keys(themes)[0];
   const [themeIndex, setThemeIndex] = useState(1);
   const [theme, setTheme] = useState(
-    JSON.parse(sessionStorage.getItem("theme")) || themes[originalTheme]
+    (window &&
+      window.sessionStorage &&
+      JSON.parse(sessionStorage.getItem("theme"))) ||
+      themes[originalTheme]
   );
   const [themeName, setThemeName] = useState(
-    JSON.parse(sessionStorage.getItem("themeName")) || originalTheme
+    (window &&
+      window.sessionStorage &&
+      JSON.parse(sessionStorage.getItem("themeName"))) ||
+      originalTheme
   );
 
-  sessionStorage.setItem("theme", JSON.stringify(theme));
-  sessionStorage.setItem("themeName", JSON.stringify(themeName));
+  if (window && window.sessionStorage) {
+    sessionStorage.setItem("theme", JSON.stringify(theme));
+    sessionStorage.setItem("themeName", JSON.stringify(themeName));
+  }
 
   const getTheme = () => {
     Object.keys(themes).map((themeName, index) => {
