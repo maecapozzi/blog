@@ -4,10 +4,9 @@ import { Main } from "../components/Main";
 import { HeadingWrapper, Header } from "../components/Header";
 import Bio from "../components/bio";
 import { List, Content } from "./about";
-import { theme } from "../styles/theme";
 
 const Headings = styled.h3`
-  color: ${theme.colors.tertiary};
+  color: ${props => props.theme.colors.primary};
 `;
 
 const Work = () => (

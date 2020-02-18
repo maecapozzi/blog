@@ -4,23 +4,32 @@ import { Header } from "../components/Header";
 import { Main } from "../components/Main";
 import { HeadingWrapper } from "../components/Header";
 import { StyledExternalLink } from "../components/Link";
-import { theme } from "../styles/theme";
 import Bio from "../components/bio";
 
 export const SectionHeadings = styled(`h3`)`
-  color: ${theme.colors.primary};
-  font-size: ${theme.fontSizes["7"]};
-  font-weight: ${theme.fontWeights.heavy};
-  margin-top: ${theme.spacings["4"]};
-  font-family: ${theme.fonts.primary};
+  color: ${props => props.theme.colors.primary};
+  font-size: ${props => props.theme.fontSizes["7"]};
+  font-weight: ${props => props.theme.fontWeights.heavy};
+  margin-top: ${props => props.theme.spacings["4"]};
+  font-family: ${props => props.theme.fonts.primary};
 `;
 
 export const Content = styled.div`
-  padding-top: ${theme.spacings["6"]};
+  padding-top: ${props => props.theme.spacings["6"]};
+  li {
+    color: ${props => props.theme.colors.text};
+  }
+  a {
+    color: ${props => props.theme.colors.primary};
+
+    &:hover {
+      color: ${props => props.theme.colors.highlight};
+    }
+  }
 `;
 
 export const List = styled(`li`)`
-  color: ${theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
 `;
 
 const About = () => {

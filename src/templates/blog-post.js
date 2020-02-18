@@ -3,35 +3,41 @@ import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import SEO from "../components/seo";
-import { theme } from "../styles/theme";
 import { Date } from "../components/Date";
 import { Header, HeadingWrapper } from "../components/Header";
 import { Text } from "../components/Text";
 
 const StyledLink = styled(Link)`
-  color: ${theme.colors.tertiary};
+  color: ${props => props.theme.colors.primary};
 `;
 
 const BodyWrapper = styled("div")`
-  margin-top: ${theme.spacings["4"]};
+  margin-top: ${props => props.theme.spacings["4"]};
+  color: ${props => props.theme.colors.text};
+  a {
+    color: ${props => props.theme.colors.primary};
+
+    &:hover {
+      color: ${props => props.theme.colors.highlight};
+    }
+  }
 `;
 
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
-  padding: ${theme.spacings["5"]};
+  padding: ${props => props.theme.spacings["5"]};
 `;
 
 const BlogHeader = styled(Header)`
-  font-weight: ${theme.fontWeights.heavy};
+  font-weight: ${props => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${theme.fontSizes["8"]};
-  color: ${theme.colors.tertiary};
-  font-family: ${theme.fonts.primary};
+  font-size: ${props => props.theme.fontSizes["8"]};
+  color: ${props => props.theme.colors.primary};
+  font-family: ${props => props.theme.fonts.primary};
 `;
 
 const BlogPostTemplate = props => {
-  console.log(props);
   if (props.data.markdownRemark) {
     const post = props.data.markdownRemark;
     const { previous, next } = props.pageContext;

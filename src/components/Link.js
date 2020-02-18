@@ -1,22 +1,21 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { theme } from "../styles/theme";
 
 export const StyledGatsbyLink = styled(Link)`
-  color: #ffffff;
-  font-size: ${theme.fontSizes["4"]};
+  color: ${props => props.theme.colors.primary};
+  font-size: ${props => props.theme.fontSizes["4"]};
   text-decoration: none;
 
   &:hover {
-    color: ${theme.colors.tertiary};
+    color: ${props => props.theme.colors.highlight};
   }
 `;
 
 export const StyledExternalLink = styled("a")`
-  color: ${theme.colors.tertiary};
-  font-size: ${theme.fontSizes["4"]};
+  color: ${props => props.theme.colors.primary};
+  font-size: ${props => props.theme.fontSizes["4"]};
 
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${props => props.theme.colors.highlight};
   }
 `;

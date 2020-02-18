@@ -3,40 +3,41 @@ import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../components/seo";
-import { theme } from "../styles/theme";
 import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
 import { Card } from "../components/Card";
 import Bio from "../components/bio";
 
 const LinkWrapper = styled(`div`)`
-  margin: ${theme.spacings["6"]} ${theme.spacings["6"]} 0 ${theme.spacings["6"]};
+  margin: ${props => props.theme.spacings["6"]}
+    ${props => props.theme.spacings["6"]} 0
+    ${props => props.theme.spacings["6"]};
 `;
 
 const StyledLink = styled(Link)`
-  color: ${theme.colors.primary};
-  font-size: ${theme.fontSizes["7"]};
-  font-weight: ${theme.fontWeights.heavy};
+  color: ${props => props.theme.colors.primary};
+  font-size: ${props => props.theme.fontSizes["7"]};
+  font-weight: ${props => props.theme.fontWeights.heavy};
   text-decoration: none;
-  line-height: ${theme.fontSizes["2"]};
+  line-height: ${props => props.theme.fontSizes["2"]};
 
   &:hover {
-    color: ${theme.colors.gray2};
+    color: ${props => props.theme.colors.gray2};
   }
 `;
 
 const DateWrapper = styled("div")`
-  margin-bottom: ${theme.spacings["6"]};
-  margin-left: ${theme.spacings["6"]};
-  font-size: ${theme.fontSizes["3"]};
-  font-weight: ${theme.fontWeights.light};
+  margin-bottom: ${props => props.theme.spacings["6"]};
+  margin-left: ${props => props.theme.spacings["6"]};
+  font-size: ${props => props.theme.fontSizes["3"]};
+  font-weight: ${props => props.theme.fontWeights.light};
   font-style: italic;
-  font-family: ${theme.fonts.secondary};
+  font-family: ${props => props.theme.fonts.secondary};
 `;
 
 const StyledImage = styled(Img)`
   border-radius: 6px;
-  margin-top: ${theme.spacings["6"]};
+  margin-top: ${props => props.theme.spacings["6"]};
 `;
 
 const BlogIndex = props => {
