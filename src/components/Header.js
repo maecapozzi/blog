@@ -6,7 +6,6 @@ export const Header = styled("h1")`
   font-weight: ${props => props.theme.fontWeights.heavy};
   font-family: ${props => props.theme.fonts.secondary};
   text-decoration: none;
-  line-height: ${props => props.theme.spacings["7"]};
 `;
 
 export const HeadingWrapper = styled(`div`)`

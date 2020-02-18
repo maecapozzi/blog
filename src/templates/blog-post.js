@@ -28,6 +28,10 @@ const BodyWrapper = styled("div")`
       color: ${props => props.theme.colors.highlight};
     }
   }
+
+  p {
+    font-size: ${props => props.theme.fontSizes["4"]};
+  }
 `;
 
 const Main = styled("main")`

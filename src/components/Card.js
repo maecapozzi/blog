@@ -27,7 +27,7 @@ const Title = styled(`h2`)`
   margin: 0;
   font-size: ${props => props.theme.fontSizes["8"]};
   color: ${props => props.theme.colors.primary};
-  font-family: ${props => props.theme.fonts.secondary};
+  font-family: ${props => props.theme.fonts.primary};
 
   &:hover {
     color: ${props => props.theme.colors.primary};

@@ -97,8 +97,8 @@ export const dark = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `Roboto`,
+    secondary: `Nunito`
   }
 };
 
@@ -287,16 +287,16 @@ export const tosh = {
     "16": `768px`
   },
   fontSizes: {
-    "1": `12px`,
-    "2": `14px`,
-    "3": `16px`,
-    "4": `18px`,
-    "5": `20px`,
-    "6": `24px`,
-    "7": `30px`,
-    "8": `36px`,
-    "9": `48px`,
-    "10": `60px`
+    "1": `0.422em`,
+    "2": `0.563em`,
+    "3": `0.75em`,
+    "4": `1em`,
+    "5": `1.333em`,
+    "6": `1.777em`,
+    "7": `2.369em`,
+    "8": `3.157em`,
+    "9": `4.209em`,
+    "10": `5.61em`
   },
   fontWeights: {
     extraLight: 200,
@@ -306,7 +306,7 @@ export const tosh = {
   },
   fonts: {
     primary: `Poppins`,
-    secondary: `Poppins`
+    secondary: `Open Sans`
   }
 };
 
@@ -373,22 +373,16 @@ export const inverseCalm = {
     gray1: `#B8BFD3`
   },
   spacings: {
-    "1": `4px`,
-    "2": `8px`,
-    "3": `12px`,
-    "4": `16px`,
-    "5": `24px`,
-    "6": `32px`,
-    "7": `48px`,
-    "8": `64px`,
-    "9": `96px`,
-    "10": `128px`,
-    "11": `192px`,
-    "12": `256px`,
-    "13": `384px`,
-    "14": `512px`,
-    "15": `640px`,
-    "16": `768px`
+    "1": `1em`,
+    "2": `1.2em`,
+    "3": `1.44em`,
+    "4": `1.728em`,
+    "5": `2.074em`,
+    "6": `2.488em`,
+    "7": `2.986em`,
+    "8": `3.583em`,
+    "9": `4.3em`,
+    "10": `5.16em`
   },
   fontSizes: {
     "1": `12px`,
@@ -443,16 +437,16 @@ export const gatsby = {
     "16": `768px`
   },
   fontSizes: {
-    "1": `12px`,
-    "2": `14px`,
-    "3": `16px`,
-    "4": `18px`,
-    "5": `20px`,
-    "6": `24px`,
-    "7": `30px`,
-    "8": `36px`,
-    "9": `48px`,
-    "10": `60px`
+    "1": `0.422em`,
+    "2": `0.563em`,
+    "3": `0.75em`,
+    "4": `1em`,
+    "5": `1.333em`,
+    "6": `1.777em`,
+    "7": `2.369em`,
+    "8": `3.157em`,
+    "9": `4.209em`,
+    "10": `5.61em`
   },
   fontWeights: {
     extraLight: 200,
@@ -472,27 +466,21 @@ export const calm = {
     background: `#2F3444`,
     primary: `#8F9DC6`,
     secondary: `#1E3888`,
-    muted: `#B8BFD3`,
+    muted: `#8F9DC6`,
     highlight: `#8F9DC6`,
     gray1: `#B8BFD3`
   },
   spacings: {
-    "1": `4px`,
-    "2": `8px`,
-    "3": `12px`,
-    "4": `16px`,
-    "5": `24px`,
-    "6": `32px`,
-    "7": `48px`,
-    "8": `64px`,
-    "9": `96px`,
-    "10": `128px`,
-    "11": `192px`,
-    "12": `256px`,
-    "13": `384px`,
-    "14": `512px`,
-    "15": `640px`,
-    "16": `768px`
+    "1": `1em`,
+    "2": `1.2em`,
+    "3": `1.44em`,
+    "4": `1.728em`,
+    "5": `2.074em`,
+    "6": `2.488em`,
+    "7": `2.986em`,
+    "8": `3.583em`,
+    "9": `4.3em`,
+    "10": `5.16em`
   },
   fontSizes: {
     "1": `12px`,
@@ -513,20 +501,20 @@ export const calm = {
     heavy: 700
   },
   fonts: {
-    primary: `Poppins`,
-    secondary: `Open Sans`
+    primary: `Nunito`,
+    secondary: `Inconsolata`
   }
 };
 
 export const themes = {
   calm,
+  "inverse-calm": inverseCalm,
   base,
+  tosh,
   dark,
   deep,
   bulma,
   swiss,
-  polaris,
-  tosh,
-  "inverse-calm": inverseCalm,
-  gatsby
+  gatsby,
+  polaris
 };
