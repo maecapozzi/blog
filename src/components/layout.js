@@ -8,6 +8,7 @@ import window from "window-or-global";
 const Nav = styled("nav")`
   background: ${props => props.theme.colors.background};
   display: flex;
+  font-family: ${props => props.theme.fonts.primary};
   height: ${props => props.theme.spacings["8"]};
   box-shadow: 0 1px 3px ${props => props.theme.colors.primary};
   position: fixed;
@@ -45,6 +46,7 @@ const ThemeButton = styled.button`
   border: 1px solid ${props => props.theme.colors.primary};
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.primary};
+  font-family: ${props => props.theme.fonts.primary};
 `;
 
 const Layout = ({ children }) => {

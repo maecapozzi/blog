@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledLink = styled("a")`
   color: white;
+  font-family: ${props => props.fonts.primary};
 `;
 
 const Contact = () => (

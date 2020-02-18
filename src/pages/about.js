@@ -16,8 +16,14 @@ export const SectionHeadings = styled(`h3`)`
 
 export const Content = styled.div`
   padding-top: ${props => props.theme.spacings["6"]};
+
+  h3 {
+    font-family: ${props => props.theme.fonts.secondary};
+  }
+
   li {
     color: ${props => props.theme.colors.text};
+    font-family: ${props => props.theme.fonts.secondary};
   }
   a {
     color: ${props => props.theme.colors.primary};

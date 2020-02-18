@@ -14,6 +14,13 @@ const StyledLink = styled(Link)`
 const BodyWrapper = styled("div")`
   margin-top: ${props => props.theme.spacings["4"]};
   color: ${props => props.theme.colors.text};
+  font-family: ${props => props.theme.fonts.secondary};
+
+  h2,
+  h3 {
+    font-family: ${props => props.theme.fonts.primary};
+  }
+
   a {
     color: ${props => props.theme.colors.primary};
 

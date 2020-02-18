@@ -11,17 +11,16 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.text};
   }
 
-  blockquote {
-    font-style: italic;
-    border-left: 3px solid #5746e7;
-    background-color: #f1f1f1;
-    margin: 2em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
-  }
-
   blockquote p {
     display: inline;
+  }
+
+  blockquote {
+    font-style: italic;
+    border-left: 3px solid ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.muted};
+    margin: 2em 10px;
+    padding: 0.5em 10px;
   }
 
   a {

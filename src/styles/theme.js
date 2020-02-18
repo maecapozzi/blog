@@ -45,8 +45,8 @@ export const base = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `system-ui`,
+    secondary: `system-ui`
   }
 };
 
@@ -149,8 +149,8 @@ export const deep = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `Roboto`,
+    secondary: `Nunito`
   }
 };
 
@@ -201,8 +201,8 @@ export const swiss = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `system-ui`,
+    secondary: `system-ui`
   }
 };
 
@@ -254,7 +254,7 @@ export const polaris = {
   },
   fonts: {
     primary: `Nunito`,
-    secondary: `Inconsolata`
+    secondary: `Roboto`
   }
 };
 
@@ -305,8 +305,8 @@ export const tosh = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `Poppins`,
+    secondary: `Poppins`
   }
 };
 
@@ -357,8 +357,8 @@ export const bulma = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `Open Sans`,
+    secondary: `Lora`
   }
 };
 
@@ -461,8 +461,8 @@ export const gatsby = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `Open Sans`,
+    secondary: `Nunito`
   }
 };
 
@@ -513,8 +513,8 @@ export const calm = {
     heavy: 700
   },
   fonts: {
-    primary: `Nunito`,
-    secondary: `Inconsolata`
+    primary: `Poppins`,
+    secondary: `Open Sans`
   }
 };
 
