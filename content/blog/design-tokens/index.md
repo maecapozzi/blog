@@ -1,8 +1,7 @@
 ---
 path: "/design-tokens"
 date: "2020-04-03"
-title: "The Benefits of Design Tokens"
-img: "design-tokens.png"
+title: "Design Tokens"
 excerpt: "Design tokens are an approach to storing style attributes like color, typography, and spacing in a pre-determined structure. They are an alternative to directly hard-coding style data that allow designers and developers to build consistent, pleasing layouts, quickly accomplish redesigns, and add a theming layer to their applications."
 ---
 

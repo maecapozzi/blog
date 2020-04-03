@@ -3,11 +3,6 @@ import Layout from "./src/components/layout";
 import "./src/styles/global.css";
 
 // custom typefaces
-import "typeface-inconsolata";
-import "typeface-nunito";
-import "typeface-poppins";
-import "typeface-open-sans";
-import "typeface-lora";
 import "typeface-roboto";
 
 export const wrapPageElement = ({ element, props }) => {
