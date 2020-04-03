@@ -214,7 +214,7 @@ export const tosh = {
     secondary: `#3F3F3F`,
     muted: `#011627`,
     highlight: `#f02bcc`,
-    gray1: `#6C6C6C`
+    gray1: `#ececec`
   },
   spacings: {
     "1": `4px`,
