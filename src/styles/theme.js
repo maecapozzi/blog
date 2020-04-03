@@ -212,8 +212,8 @@ export const tosh = {
     background: `#FFFFFF`,
     primary: `#000000`,
     secondary: `#3F3F3F`,
-    muted: `#E0E0E0`,
-    highlight: `#9F9F9F`,
+    muted: `#011627`,
+    highlight: `#f02bcc`,
     gray1: `#6C6C6C`
   },
   spacings: {
@@ -264,9 +264,9 @@ export const dark = {
     background: `#000000`,
     primary: `#FFFFFF`,
     secondary: `#FFFFFFF`,
-    muted: `#000000`,
-    highlight: `#9F9F9F`,
-    gray1: `#6C6C6C`
+    muted: `#1e1e1e`,
+    highlight: `#f02bcc`,
+    gray1: `#1e1e1e`
   },
   spacings: {
     "1": `4px`,

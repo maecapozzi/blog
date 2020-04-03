@@ -17,15 +17,12 @@ export const GlobalStyle = createGlobalStyle`
 
   blockquote {
     font-style: italic;
-    border-left: 3px solid ${props => props.theme.colors.primary};
+    border-left: 3px solid ${props => props.theme.colors.highlight};
     background-color: ${props => props.theme.colors.muted};
     margin: 2em 10px;
     padding: 0.5em 10px;
   }
 
-  a {
-    color: ${props => props.theme.colors.primary};
-  }
 
   code[class*="language-"],
 pre[class*="language-"] {
@@ -163,7 +160,7 @@ pre[data-line] {
 .gatsby-highlight {
   margin: 48px 1.3125rem;
   border-radius: 10px;
-  background: #011627;
+  background: ${props => props.theme.colors.muted};
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }

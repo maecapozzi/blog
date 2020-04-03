@@ -30,7 +30,7 @@ const Title = styled(`h2`)`
   font-family: ${props => props.theme.fonts.primary};
 
   &:hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.highlight};
   }
 `;
 

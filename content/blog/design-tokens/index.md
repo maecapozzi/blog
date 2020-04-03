@@ -17,8 +17,6 @@ That worked for smaller systems that didn't need a theming layer and weren't und
 
 Invented by [@jina](https://www.sushiandrobots.com/) for the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/), design tokens are an approach to storing style attributes like color, typography, and spacing in a pre-determined structure. They are an alternative to directly hard-coding style data that allow designers and developers to build consistent, pleasing layouts, quickly accomplish redesigns, and add a theming layer to their applications.
 
-# Diving into an example
-
 If a designer uses Figma, their design tokens might be represented like this:
 
 ![](../../assets/figma-design-tokens.png)
@@ -52,7 +50,7 @@ const PrimaryButton = styled(Button)`
 `;
 ```
 
-# Levels of Design Tokens
+## Levels of Design Token Usage
 
 I've seen three different levels of design token usage across sites.
 
@@ -92,15 +90,15 @@ const theme = {
 
 Using design tokens can improve a number of common workflows. There are many cases where having design tokens improve design and developer experience while also providing business value. Let's walk through a couple of these common scenarios, and how they're different for sites that use no design tokens, unstructured design tokens, and structured design tokens.
 
-### Site Redesigns
+## 1. Site Redesigns
 
-#### No design tokens
+**No design tokens**
 
 A site’s color palette is primarily blue. If a designer is working in a tool that doesn’t support a shared color library, (like Sketch), if they want they need to update each instance of the color blue in all of their files
 
 It's probably not much better on the code side. A developer will have to look in look through every individual design file that indicates where that color has been changed to orange, and replace the hardcoded blue with orange across the site.
 
-#### Unstructured design tokens
+**Unstructured design tokens**
 
 Then, there's the scenario in which design tokens are leveraged, but tokens are named according to the originally-assigned value.
 
@@ -124,7 +122,7 @@ const theme = {
 
 But now in the codebase, we’re using the token `babyBlue` to represent orange, which is really confusing! So a developer really needs to also change the name of the design token, which kind of defeats the purpose.
 
-### Structured design tokens
+**Structured design tokens**
 
 A designer is using a tool that supports shared color libraries like Figma. If they want `primary1` to be orange instead of blue, all they need to do is change the hex code of `primary`, and all of their designs will automatically update with the new color.
 
@@ -140,47 +138,47 @@ const theme = {
 
 In this case, all the developer needs to do is change `primary1` to orange and the whole codebase will automatically update in the right places with orange instead of blue.
 
-### Design / Dev Collaboration
+## 2. Design / Dev Collaboration
 
 Among other benefits, design tokens introduce a common vocabulary that designers and developers can both use when referring to styles, which improves collaboration and reduces back-and-forth, saving time and money.
 
-#### No design tokens
+**No design tokens**
 
 Designers have static mocks that have to be updated by hand everywhere. They might not even know what colors are in the codebase. On the code side, it's hard to audit what colors are part of the site, and whether they match the designs. Everyone resorts to guessing, which causes a lack of UI consistency.
 
-#### Unstructured design tokens
+**Unstructured design tokens**
 
 The design tokens are named differently by the designers and the developers. The designers call the blue blue1 while the developers call it babyBlue. It’s hard to communicate about what needs to be changed. Eventually, they figure it out.
 
-#### Structured design tokens
+**Structured design tokens**
 
 Designers and developers both call the blue `primary1`. Now, when designers want to update a color in their mocks across the whole site, all they need to do is tell a developer to update `primary1` from blue to orange.
 
-### Theming
+## 3. Theming
 
-#### No design tokens
+**No design tokens**
 
 As far as I know, it's not possible.
 
-#### Unstructured design tokens
+**Unstructured design tokens**
 
 If your tokens have names like `babyBlue`, it's going to get weird when `babyBlue` is red.
 
-#### Structured design tokens
+**Structured design tokens**
 
 This will be really straightforward, as long as all of the themes follow the rules of the design tokens.
 
-### Consistent UI Experience
+## 4.Consistent UI Experience
 
-#### No design tokens
+**No design tokens**
 
 Having hard-coded values across the site makes it nearly impossible to maintain consistency. There's no way to constrain the number of styles, and there's no shared language between designers and developers.
 
-#### Unstructured design tokens
+**Unstructured design tokens**
 
 This is much better than not having design tokens! At least developers have a good sense of how many different styles they are applying, and an audit is pretty easy.
 
-#### Structured design tokens
+**Structured design tokens**
 
 This is ideal, since the structure of the design tokens can be shared between developers and designers, and site redesigns will be straightforward and consistent.
 

@@ -10,7 +10,7 @@ const Nav = styled("nav")`
   display: flex;
   font-family: ${props => props.theme.fonts.primary};
   height: ${props => props.theme.spacings["8"]};
-  box-shadow: 0 1px 3px ${props => props.theme.colors.primary};
+  box-shadow: 0 0.5px 1px ${props => props.theme.colors.highlight};
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -42,11 +42,17 @@ const ButtonWrapper = styled.div`
 `;
 
 const ThemeButton = styled.button`
+  cursor: pointer;
   border-radius: 0.25em;
   border: 1px solid ${props => props.theme.colors.primary};
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.primary};
   font-family: ${props => props.theme.fonts.primary};
+  font-size: ${props => props.theme.fontSizes["2"]};
+
+  &:hover {
+    background: ${props => props.theme.colors.highlight};
+  }
 `;
 
 const Layout = ({ children }) => {
