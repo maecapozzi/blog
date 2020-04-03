@@ -12,13 +12,11 @@ _This post is part of an ongoing series about the problems you'll need to solve 
 
 I was scrolling through twitter the other day and I saw a joke [tweet](https://twitter.com/markdalgleish/status/1227104671812112385) about design systems:
 
-It read:
+![](../../assets/design-system-tweet.png)
 
 > "We're introducing a design system so that when we make a change, it'll go everywhere."  
 > "Cool, so we'd like to change this component."  
 > "Don't do that—it'll go _everywhere!_"
-
-![](../../assets/design-system-tweet.png)
 
 I was thinking about the joke a bit more. I think it taps into a fear that a lot of developers have about design systems and component libraries.I think some of that fear stems from a misunderstanding of how versioning works.
 
