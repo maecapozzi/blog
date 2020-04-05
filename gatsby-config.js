@@ -6,8 +6,8 @@ module.exports = {
     siteUrl: `https://maecapozzi.com`,
     social: {
       twitter: `@MCapoz`,
-      github: `maecapozzi`
-    }
+      github: `maecapozzi`,
+    },
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -16,55 +16,68 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`
-      }
+        name: `blog`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
-        path: `${__dirname}/content/assets/`
-      }
+        path: `${__dirname}/content/assets/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`
-      }
+        name: `assets`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              // Optional:
+
+              // the github handler whose gists are to be accessed
+              username: "maecapozzi",
+
+              // a flag indicating whether the github default gist css should be included or not
+              // default: true
+              includeDefaultCss: true,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590
-            }
+              maxWidth: 590,
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           {
             resolve: "gatsby-remark-prismjs",
             options: {
-              inlineCodeMarker: "÷"
-            }
+              inlineCodeMarker: "÷",
+            },
           },
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
           {
             resolve: "gatsby-remark-external-links",
             options: {
-              target: "_blank"
-            }
-          }
-        ]
-      }
+              target: "_blank",
+            },
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -74,8 +87,8 @@ module.exports = {
         trackingId: `UA-110148418-1`,
         head: false,
         anonymize: true,
-        respectDNT: true
-      }
+        respectDNT: true,
+      },
     },
     `gatsby-plugin-feed`,
     {
@@ -86,16 +99,16 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`
-      }
+        display: `minimal-ui`,
+      },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
-    }
-  ]
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+  ],
 };

@@ -7,40 +7,41 @@ import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
 import { Card } from "../components/Card";
 import Bio from "../components/bio";
+import { Date } from "../components/Date";
 
 const LinkWrapper = styled(`div`)`
-  margin: ${props => props.theme.spacings["6"]}
-    ${props => props.theme.spacings["6"]} 0
-    ${props => props.theme.spacings["6"]};
+  margin: ${(props) => props.theme.spacings["6"]}
+    ${(props) => props.theme.spacings["6"]} 0
+    ${(props) => props.theme.spacings["6"]};
 `;
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.colors.primary};
-  font-size: ${props => props.theme.fontSizes["7"]};
-  font-weight: ${props => props.theme.fontWeights.heavy};
+  color: ${(props) => props.theme.colors.primary};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
+  font-weight: ${(props) => props.theme.fontWeights.heavy};
   text-decoration: none;
-  line-height: ${props => props.theme.fontSizes["2"]};
+  line-height: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
-    color: ${props => props.theme.colors.gray2};
+    color: ${(props) => props.theme.colors.gray2};
   }
 `;
 
 const DateWrapper = styled("div")`
-  margin-bottom: ${props => props.theme.spacings["6"]};
-  margin-left: ${props => props.theme.spacings["6"]};
-  font-size: ${props => props.theme.fontSizes["3"]};
-  font-weight: ${props => props.theme.fontWeights.light};
+  margin-bottom: ${(props) => props.theme.spacings["6"]};
+  margin-left: ${(props) => props.theme.spacings["6"]};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-weight: ${(props) => props.theme.fontWeights.light};
   font-style: italic;
-  font-family: ${props => props.theme.fonts.secondary};
+  font-family: ${(props) => props.theme.fonts.secondary};
 `;
 
 const StyledImage = styled(Img)`
   border-radius: 6px;
-  margin-top: ${props => props.theme.spacings["6"]};
+  margin-top: ${(props) => props.theme.spacings["6"]};
 `;
 
-const BlogIndex = props => {
+const BlogIndex = (props) => {
   const { data } = props;
   const posts = data.allMarkdownRemark.edges;
   const images = data.allImageSharp.edges;
@@ -57,7 +58,7 @@ const BlogIndex = props => {
       <Bio />
       {posts.map(({ node }) => {
         let headerImage;
-        images.forEach(image => {
+        images.forEach((image) => {
           if (image.node.fluid.originalName === node.frontmatter.img) {
             headerImage = image;
           }
@@ -71,17 +72,7 @@ const BlogIndex = props => {
             content={node.frontmatter.excerpt || node.excerpt}
             slug={node.fields.slug}
             date={node.frontmatter.date}
-          >
-            {headerImage && (
-              <Link to={node.fields.slug}>
-                <StyledImage fluid={headerImage.node.fluid} />
-              </Link>
-            )}
-            <LinkWrapper>
-              <StyledLink to={node.fields.slug}>{title}</StyledLink>
-            </LinkWrapper>
-            <DateWrapper>{node.frontmatter.date}</DateWrapper>
-          </Card>
+          ></Card>
         );
       })}
     </Main>
