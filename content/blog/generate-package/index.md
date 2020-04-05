@@ -10,13 +10,11 @@ When you're working on a component library for your organization, you want your 
 2. It's too difficult to get started
 3. The organization is prioritizing short-term wins over long-term wins, and PMS / engineering managers are not supporting developers' efforts to contribute
 
-As an individual contributor, you might not be able to solve problems #1 and #3, but by making it easier to contribute to your library, you can reduce the friction of contributing. It can make your teammates more likely to at least dip their toe into contributing, and reduce the likelihood that they'll give up because the barrier to entry is too high.
+As an individual contributor, you might not be able to solve problems #1 and #3, but you can make it easier to contribute to your library by providing developers with tools to get up and running more quickly. By simplifying the process, you're also positively impacting problems #1 and #3 indirectly.
 
-As a maintainer of the library, you can improve their developer experience but providing them with tools to get up and running more quickly. Start looking for tasks that people repeat often.
+An example is package creation. Every single person who adds a component to your library needs to create a new package.
 
-One task is package creation. Every single person needs to create a new package when they're adding a component to your library.
-
-Imagine that you're using TypeScript. To create a new package, a contributor needs to set up their `package.json`, `tsconfig.json`, and a `README.md` that matches the conventions you have in your project. Not only is this something that you can easily automate, configuring a new TypeScript package (if you're unfamiliar with TypeScript), can take a while and be discouraging for new contributors.
+When using TypeScript, a contributor needs to set up a `package.json`, `tsconfig.json`, and a `README.md` that matches the conventions you have in your project. This can be time-consuming, depending on how familiar the contributor is with the library. It's also something that you can automate in an afternoon. It's a high-value, low-effort win.
 
 You should start by creating an example package that can serve as a guide for people new to the repo. It'll probably have a `package.json` with some commonly used scripts, and a `tsconfig.json` file with common defaults set.
 
