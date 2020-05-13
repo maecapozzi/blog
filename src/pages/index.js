@@ -26,6 +26,7 @@ const StyledButton = styled(Link)`
 `;
 
 const Content = styled.div`
+  font-family: ${(props) => props.theme.fonts.secondary};
   && {
     a {
       color: ${(props) => props.theme.colors.primary};
@@ -50,8 +51,13 @@ const Index = () => {
       <Bio />
       <hr />
       <Content>
-        <SectionHeadings>Top Posts</SectionHeadings>
+        <SectionHeadings>My Favorites</SectionHeadings>
         <ul>
+          <List>
+            <StyledGatsbyLink to="/progressive-disclosure-of-complexity/">
+              Building a multi-brand design system in layers
+            </StyledGatsbyLink>
+          </List>
           <List>
             <StyledGatsbyLink to="/design-tokens">
               Design Tokens

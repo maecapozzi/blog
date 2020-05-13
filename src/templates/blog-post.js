@@ -17,16 +17,21 @@ const BodyWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fonts.secondary};
 
-  h2,
+  h2 {
+    margin-top: 62px;
+    font-family: ${(props) => props.theme.fonts.primary};
+  }
+
   h3 {
+    margin-top: 62px;
     font-family: ${(props) => props.theme.fonts.primary};
   }
 
   a {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.highlight};
 
     &:hover {
-      color: ${(props) => props.theme.colors.highlight};
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 
