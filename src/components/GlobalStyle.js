@@ -2,13 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
   }
   
   html {
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
   }
 
   blockquote p {
@@ -17,8 +17,8 @@ export const GlobalStyle = createGlobalStyle`
 
   blockquote {
     font-style: italic;
-    border-left: 3px solid ${props => props.theme.colors.highlight};
-    background-color: ${props => props.theme.colors.gray1};
+    border-left: 3px solid ${(props) => props.theme.colors.highlight};
+    background-color: ${(props) => props.theme.colors.gray1};
     margin: 2em 10px;
     padding: 0.5em 10px;
   }
@@ -160,7 +160,7 @@ pre[data-line] {
 .gatsby-highlight {
   margin: 48px 1.3125rem;
   border-radius: 10px;
-  background: ${props => props.theme.colors.muted};
+  background: ${(props) => props.theme.colors.muted};
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }

@@ -13,7 +13,7 @@ export const CardWrapper = styled(`div`)`
 `;
 
 const StyledImage = styled(Img)`
-  border-radius: 6px;
+  border-radius: 5px 5px 0px 0px;
   margin-top: ${(props) => props.theme.spacings["6"]};
 `;
 
@@ -52,7 +52,7 @@ export const Card = ({ img, title, content, slug, date }) => {
     <CardWrapper>
       {img && (
         <Link to={slug}>
-          <StyledImage fluid={img} />
+          <StyledImage fluid={img} fadeIn={false} />
         </Link>
       )}
       <TitleWrapper>

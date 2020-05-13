@@ -49,7 +49,7 @@
     "window-or-global": "^1.0.1"
   },
   "devDependencies": {
-    "gatsby-plugin-sharp": "2.3.10"
+    "gatsby-plugin-sharp": "^2.6.3"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
