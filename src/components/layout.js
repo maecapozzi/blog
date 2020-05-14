@@ -6,18 +6,18 @@ import { GlobalStyle } from "../components/GlobalStyle";
 import window from "window-or-global";
 
 const Nav = styled("nav")`
-  background: ${props => props.theme.colors.background};
+  background: ${(props) => props.theme.colors.background};
   display: flex;
-  font-family: ${props => props.theme.fonts.primary};
-  height: ${props => props.theme.spacings["8"]};
-  box-shadow: 0 0.5px 1px ${props => props.theme.colors.highlight};
+  font-family: ${(props) => props.theme.fonts.primary};
+  height: ${(props) => props.theme.spacings["8"]};
+  box-shadow: 0 0.5px 1px ${(props) => props.theme.colors.highlight};
   position: fixed;
   width: 100%;
   z-index: 1;
   align-items: center;
 
   a {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
   
 }
@@ -25,33 +25,33 @@ const Nav = styled("nav")`
 
 const Footer = styled.footer`
   text-align: center;
-  padding: ${props => props.theme.spacings["4"]};
+  padding: ${(props) => props.theme.spacings["4"]};
 `;
 
 const Space = styled.span`
-  margin: ${props => props.theme.spacings["2"]};
+  margin: ${(props) => props.theme.spacings["2"]};
 `;
 
 const NavItems = styled.div`
-  margin: 0 ${props => props.theme.spacings["5"]};
+  margin: 0 ${(props) => props.theme.spacings["5"]};
 `;
 
 const ButtonWrapper = styled.div`
   margin-left: auto;
-  margin-right: ${props => props.theme.spacings["5"]};
+  margin-right: ${(props) => props.theme.spacings["5"]};
 `;
 
 const ThemeButton = styled.button`
   cursor: pointer;
   border-radius: 0.25em;
-  border: 1px solid ${props => props.theme.colors.primary};
-  background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.primary};
-  font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes["2"]};
+  border: 1px solid ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.primary};
+  font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
-    background: ${props => props.theme.colors.highlight};
+    background: ${(props) => props.theme.colors.highlight};
   }
 `;
 
@@ -95,6 +95,8 @@ const Layout = ({ children }) => {
               <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
               <Space></Space>
               <StyledGatsbyLink to="/work">Work</StyledGatsbyLink>
+              <Space></Space>
+              <StyledGatsbyLink to="/newsletter">Newsletter</StyledGatsbyLink>
             </NavItems>
             <ButtonWrapper>
               <ThemeButton
