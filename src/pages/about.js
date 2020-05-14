@@ -5,37 +5,38 @@ import { Main } from "../components/Main";
 import { HeadingWrapper } from "../components/Header";
 import { StyledExternalLink } from "../components/Link";
 import Bio from "../components/bio";
+import { NewsletterSignup } from "../components/NewsletterSignup";
 
 export const SectionHeadings = styled(`h3`)`
-  color: ${props => props.theme.colors.primary};
-  font-size: ${props => props.theme.fontSizes["7"]};
-  font-weight: ${props => props.theme.fontWeights.heavy};
-  margin-top: ${props => props.theme.spacings["4"]};
-  font-family: ${props => props.theme.fonts.primary};
+  color: ${(props) => props.theme.colors.primary};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
+  font-weight: ${(props) => props.theme.fontWeights.heavy};
+  margin-top: ${(props) => props.theme.spacings["4"]};
+  font-family: ${(props) => props.theme.fonts.primary};
 `;
 
 export const Content = styled.div`
-  padding-top: ${props => props.theme.spacings["6"]};
+  padding-top: ${(props) => props.theme.spacings["6"]};
 
   h3 {
-    font-family: ${props => props.theme.fonts.secondary};
+    font-family: ${(props) => props.theme.fonts.secondary};
   }
 
   li {
-    color: ${props => props.theme.colors.text};
-    font-family: ${props => props.theme.fonts.secondary};
+    color: ${(props) => props.theme.colors.text};
+    font-family: ${(props) => props.theme.fonts.secondary};
   }
   a {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
 
     &:hover {
-      color: ${props => props.theme.colors.highlight};
+      color: ${(props) => props.theme.colors.highlight};
     }
   }
 `;
 
 export const List = styled(`li`)`
-  color: ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const About = () => {
@@ -102,6 +103,7 @@ const About = () => {
           </List>
         </ul>
       </Content>
+      <NewsletterSignup />
     </Main>
   );
 };

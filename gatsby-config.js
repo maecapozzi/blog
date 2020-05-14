@@ -82,6 +82,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://maecapozzi.us18.list-manage.com/subscribe/post?u=caeffe8eb28719ac766187ed1&amp;id=ac0242dc64",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-110148418-1`,

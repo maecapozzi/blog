@@ -6,49 +6,50 @@ import SEO from "../components/seo";
 import { Date } from "../components/Date";
 import { Header, HeadingWrapper } from "../components/Header";
 import { Text } from "../components/Text";
+import { NewsletterSignup } from "../components/NewsletterSignup";
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const BodyWrapper = styled("div")`
-  margin-top: ${props => props.theme.spacings["4"]};
-  color: ${props => props.theme.colors.text};
-  font-family: ${props => props.theme.fonts.secondary};
+  margin-top: ${(props) => props.theme.spacings["4"]};
+  color: ${(props) => props.theme.colors.text};
+  font-family: ${(props) => props.theme.fonts.secondary};
 
   h2,
   h3 {
-    font-family: ${props => props.theme.fonts.primary};
+    font-family: ${(props) => props.theme.fonts.primary};
   }
 
   a {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
 
     &:hover {
-      color: ${props => props.theme.colors.highlight};
+      color: ${(props) => props.theme.colors.highlight};
     }
   }
 
   p {
-    font-size: ${props => props.theme.fontSizes["4"]};
+    font-size: ${(props) => props.theme.fontSizes["4"]};
   }
 `;
 
 const Main = styled("main")`
   margin: 0 auto;
   max-width: 800px;
-  padding: ${props => props.theme.spacings["5"]};
+  padding: ${(props) => props.theme.spacings["5"]};
 `;
 
 const BlogHeader = styled(Header)`
-  font-weight: ${props => props.theme.fontWeights.heavy};
+  font-weight: ${(props) => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${props => props.theme.fontSizes["8"]};
-  color: ${props => props.theme.colors.primary};
-  font-family: ${props => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["8"]};
+  color: ${(props) => props.theme.colors.primary};
+  font-family: ${(props) => props.theme.fonts.primary};
 `;
 
-const BlogPostTemplate = props => {
+const BlogPostTemplate = (props) => {
   if (props.data.markdownRemark) {
     const post = props.data.markdownRemark;
     const { previous, next } = props.pageContext;
@@ -66,7 +67,7 @@ const BlogPostTemplate = props => {
           <BlogHeader>{title}</BlogHeader>
           <Date>{date}</Date>
         </HeadingWrapper>
-        {edges.map(image => {
+        {edges.map((image) => {
           if (image.node.fluid.originalName === img) {
             return <Img key={img} fluid={image.node.fluid} />;
           }
@@ -76,11 +77,12 @@ const BlogPostTemplate = props => {
           <div dangerouslySetInnerHTML={parseHtml()} />
         </BodyWrapper>
         <hr />
+        <NewsletterSignup />
         <ul
           style={{
             display: `flex`,
             listStyle: `none`,
-            justifyContent: `space-between`
+            justifyContent: `space-between`,
           }}
         >
           <li>

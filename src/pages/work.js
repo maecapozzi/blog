@@ -4,9 +4,10 @@ import { Main } from "../components/Main";
 import { HeadingWrapper, Header } from "../components/Header";
 import Bio from "../components/bio";
 import { List, Content } from "./about";
+import { NewsletterSignup } from "../components/NewsletterSignup";
 
 const Headings = styled.h3`
-  color: ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const Work = () => (
@@ -74,6 +75,7 @@ const Work = () => (
         </List>
       </ul>
     </Content>
+    <NewsletterSignup />
   </Main>
 );
 

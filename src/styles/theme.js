@@ -208,13 +208,13 @@
 
 export const tosh = {
   colors: {
-    text: `#000000`,
+    text: `#131415`,
     background: `#FFFFFF`,
-    primary: `#000000`,
+    primary: `#131415`,
     secondary: `#3F3F3F`,
     muted: `#011627`,
     highlight: `#f02bcc`,
-    gray1: `#ececec`
+    gray1: `#ececec`,
   },
   spacings: {
     "1": `4px`,
@@ -232,7 +232,7 @@ export const tosh = {
     "13": `384px`,
     "14": `512px`,
     "15": `640px`,
-    "16": `768px`
+    "16": `768px`,
   },
   fontSizes: {
     "1": `12px`,
@@ -244,29 +244,29 @@ export const tosh = {
     "7": `30px`,
     "8": `36px`,
     "9": `48px`,
-    "10": `60px`
+    "10": `60px`,
   },
   fontWeights: {
     extraLight: 200,
     light: 400,
     medium: 600,
-    heavy: 700
+    heavy: 700,
   },
   fonts: {
     primary: `Roboto`,
-    secondary: `Roboto`
-  }
+    secondary: `Roboto`,
+  },
 };
 
 export const dark = {
   colors: {
     text: `#FFFFFF`,
-    background: `#000000`,
+    background: `#131415`,
     primary: `#FFFFFF`,
     secondary: `#FFFFFFF`,
     muted: `#1e1e1e`,
     highlight: `#f02bcc`,
-    gray1: `#1e1e1e`
+    gray1: `#1e1e1e`,
   },
   spacings: {
     "1": `4px`,
@@ -284,7 +284,7 @@ export const dark = {
     "13": `384px`,
     "14": `512px`,
     "15": `640px`,
-    "16": `768px`
+    "16": `768px`,
   },
   fontSizes: {
     "1": `12px`,
@@ -296,21 +296,21 @@ export const dark = {
     "7": `30px`,
     "8": `36px`,
     "9": `48px`,
-    "10": `60px`
+    "10": `60px`,
   },
   fontWeights: {
     extraLight: 200,
     light: 400,
     medium: 600,
-    heavy: 700
+    heavy: 700,
   },
   fonts: {
     primary: `Roboto`,
-    secondary: `Roboto`
-  }
+    secondary: `Roboto`,
+  },
 };
 
 export const themes = {
   tosh,
-  dark
+  dark,
 };
