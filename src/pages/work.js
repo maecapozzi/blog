@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Main } from "../components/Main";
 import { HeadingWrapper, Header } from "../components/Header";
-import Bio from "../components/bio";
 import { List, Content } from "./about";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 
@@ -15,7 +14,6 @@ const Work = () => (
     <HeadingWrapper>
       <Header>Work</Header>
     </HeadingWrapper>
-    <Bio />
     <Content>
       <Headings>Harry's // Senior Software Engineer</Headings>
       <ul>

@@ -92,6 +92,8 @@ const Layout = ({ children }) => {
             <NavItems>
               <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
               <Space></Space>
+              <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
+              <Space></Space>
               <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
               <Space></Space>
               <StyledGatsbyLink to="/work">Work</StyledGatsbyLink>

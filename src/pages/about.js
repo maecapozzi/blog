@@ -4,7 +4,6 @@ import { Header } from "../components/Header";
 import { Main } from "../components/Main";
 import { HeadingWrapper } from "../components/Header";
 import { StyledExternalLink } from "../components/Link";
-import Bio from "../components/bio";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 
 export const SectionHeadings = styled(`h3`)`
@@ -45,7 +44,6 @@ const About = () => {
       <HeadingWrapper>
         <Header>About Me</Header>
       </HeadingWrapper>
-      <Bio />
       <Content>
         <SectionHeadings>Find me on the internet</SectionHeadings>
         <ul>

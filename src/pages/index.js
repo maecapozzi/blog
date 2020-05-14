@@ -1,103 +1,78 @@
 import React from "react";
+import styled from "styled-components";
+import Bio from "../components/Bio";
 import SEO from "../components/seo";
+import { Link } from "gatsby";
 import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
-import { Card } from "../components/Card";
-import Bio from "../components/bio";
 import { NewsletterSignup } from "../components/NewsletterSignup";
+import { List, SectionHeadings } from "./about";
+import { StyledGatsbyLink } from "../components/Link";
 
-const loopThroughPosts = (posts, images) => {
-  return posts.map(({ node }) => {
-    let headerImage;
-    images.forEach((image) => {
-      if (image.node.fluid.originalName === node.frontmatter.img) {
-        headerImage = image;
-      }
-    });
+const StyledButton = styled(Link)`
+  background-color: ${(props) => props.theme.colors.highlight};
+  font-family: ${(props) => props.theme.fonts.primary};
+  text-decoration: none;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 5px;
+  margin-left: 40px;
 
-    const title = node.frontmatter.title || node.fields.slug;
-    return (
-      <Card
-        img={headerImage && headerImage.node.fluid}
-        title={title}
-        content={node.frontmatter.excerpt || node.excerpt}
-        slug={node.fields.slug}
-        date={node.frontmatter.date}
-      ></Card>
-    );
-  });
-};
+  &:hover {
+    color: white;
+    background-color: ${(props) => props.theme.colors.primary};
+  }
+`;
 
-const BlogIndex = (props) => {
-  const { data } = props;
-  const posts = data.allMarkdownRemark.edges;
-  const images = data.allImageSharp.edges;
+const Content = styled.div`
+  && {
+    a {
+      color: ${(props) => props.theme.colors.primary};
 
-  const preNewsletterPosts = posts.slice(0, 3);
-  const postNewsletterPosts = posts.slice(4);
-
-  return (
-    <Main>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
-      />
-      <HeadingWrapper>
-        <Header>Blog</Header>
-      </HeadingWrapper>
-      <Bio />
-      {loopThroughPosts(preNewsletterPosts, images)}
-      <NewsletterSignup />
-      {loopThroughPosts(postNewsletterPosts, images)}
-    </Main>
-  );
-};
-
-export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt(pruneLength: 300)
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            img
-            excerpt
-          }
-        }
-      }
-    }
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid {
-            base64
-            tracedSVG
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            srcSetWebp
-            sizes
-            originalImg
-            originalName
-            presentationWidth
-            presentationHeight
-          }
-        }
+      &:hover {
+        color: ${(props) => props.theme.colors.highlight};
       }
     }
   }
 `;
+
+const Index = () => {
+  return (
+    <Main>
+      <SEO
+        title="Home"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
+      />
+      <HeadingWrapper>
+        <Header>Home</Header>
+      </HeadingWrapper>
+      <Bio />
+      <hr />
+      <Content>
+        <SectionHeadings>Top Posts</SectionHeadings>
+        <ul>
+          <List>
+            <StyledGatsbyLink to="/design-tokens">
+              Design Tokens
+            </StyledGatsbyLink>
+          </List>
+          <List>
+            <StyledGatsbyLink to="/how-to-make-http-requests-part-1">
+              How to Make HTTP Requests in React
+            </StyledGatsbyLink>
+          </List>
+          <List>
+            <StyledGatsbyLink to="/lerna-monorepo-versioning/">
+              Before You Build A Component Library: Monorepo Versioning
+            </StyledGatsbyLink>
+          </List>
+        </ul>
+      </Content>
+      <StyledButton to="/blog">See all posts</StyledButton>
+      <NewsletterSignup />
+    </Main>
+  );
+};
+
+export default Index;
