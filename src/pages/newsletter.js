@@ -7,14 +7,10 @@ const StyledPage = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 48px;
-
-  @media screen and (min-width: 900px) {
-    height: 100vh;
-  }
 `;
 
 const NewsletterWrapper = styled.div`
-  width: 800px;
+  max-width: 800px;
   padding: 16px;
 `;
 

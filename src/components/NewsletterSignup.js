@@ -14,7 +14,7 @@ const FormWrapper = styled.div`
     0 4px 6px 1px rgba(0, 0, 0, 0.05);
 `;
 
-const NewsletterHeader = styled.h3`
+const NewsletterHeader = styled.h2`
   font-family: ${(props) => props.theme.fonts.primary};
 `;
 
@@ -27,6 +27,8 @@ const StyledForm = styled.form`
 const StyledLabel = styled.label`
   font-family: ${(props) => props.theme.fonts.primary};
   margin-top: 16px;
+  font-weight: ${(props) => props.theme.fontWeights.regular};
+  letter-spacing: 0.5px;
 `;
 
 const StyledInput = styled.input`
@@ -50,17 +52,22 @@ const StyledTextArea = styled.textarea`
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 16px 0;
+  margin-top: 16px;
 `;
 
 const StyledButton = styled.button`
   font-family: ${(props) => props.theme.fonts.primary};
+  cursor: pointer;
   color: white;
   border-radius: 5px;
   width: 88px;
   padding: 8px;
   border: none;
   background-color: ${(props) => props.theme.colors.highlight};
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 const StyledMessage = styled.div`
@@ -80,6 +87,7 @@ const Error = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const NewsletterSignup = () => {
