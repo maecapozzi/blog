@@ -8,7 +8,7 @@ If you're anything like me, there are few things as frustrating as when you need
 
 This blog post is for people who use [styled-components](https://styled-components.com/). I'm sure other CSS-in-JS solutions have this functionality too, but this post won't delve into that!
 
-Let's take a look at a simple example: A `Tabs` component:
+Let's take a look at a `Tabs` component for an example:
 
 ## Implementation
 
@@ -59,4 +59,4 @@ const StyledTabs = styled(Tabs)`
 `;
 ```
 
-Using `&& {}` allows you to increase the specificity of the styles and allows them to override the base styles the library author applied. This way,
+Using `&& {}` allows you to increase the specificity of the styles and allows them to override the base styles the library author applied.
