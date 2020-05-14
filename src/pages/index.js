@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Bio from "../components/Bio";
+import Bio from "../components/bio";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
 import { Main } from "../components/Main";
