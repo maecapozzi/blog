@@ -16,7 +16,7 @@
     "formik": "^2.1.4",
     "gatsby": "^2.17.15",
     "gatsby-image": "^2.0.29",
-    "gatsby-plugin-feed": "^2.0.13",
+    "gatsby-plugin-feed": "^2.5.1",
     "gatsby-plugin-google-analytics": "^2.0.13",
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-manifest": "^2.0.17",
