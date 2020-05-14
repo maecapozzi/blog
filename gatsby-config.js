@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Mae Capozzi`,
+    title: `Mae Capozzi's Blog`,
     author: `Mae Capozzi`,
-    description: `Mae Capozzi writes about web development and software engineering ethics.`,
+    description: `Read Mae Capozzi writes about React, building component libraries, the JAMStack, and what it's like to be a software engineer.`,
     siteUrl: `https://maecapozzi.com`,
     social: {
       twitter: `@MCapoz`,
