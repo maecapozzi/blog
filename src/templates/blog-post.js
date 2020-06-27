@@ -47,9 +47,8 @@ const Main = styled("main")`
 `;
 
 const BlogHeader = styled(Header)`
-  font-weight: ${(props) => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["8"]};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fonts.primary};
 `;

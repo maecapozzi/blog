@@ -8,8 +8,8 @@ import { NewsletterSignup } from "../components/NewsletterSignup";
 
 export const SectionHeadings = styled(`h3`)`
   color: ${(props) => props.theme.colors.primary};
-  font-size: ${(props) => props.theme.fontSizes["7"]};
-  font-weight: ${(props) => props.theme.fontWeights.heavy};
+  font-size: ${(props) => props.theme.fontSizes["6"]};
+  font-weight: ${(props) => props.theme.fontWeights.medium};
   margin-top: ${(props) => props.theme.spacings["4"]};
   font-family: ${(props) => props.theme.fonts.primary};
 `;
@@ -22,6 +22,7 @@ export const Content = styled.div`
   }
 
   li {
+    font-size: ${(props) => props.theme.fontSizes["4"]};
     color: ${(props) => props.theme.colors.text};
     font-family: ${(props) => props.theme.fonts.secondary};
   }

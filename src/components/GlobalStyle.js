@@ -181,7 +181,17 @@ li {
 }
 
 h1 {
-  font-family: Roboto;
+  font-family: Inter;
+}
+
+h2 {
+  font-family: Inter;
+  font-size: ${(props) => props.theme.fontSizes["7"]}
+}
+
+h3 {
+  font-family: Inter;
+  font-size: ${(props) => props.theme.fontSizes["6"]}
 }
 
 `;

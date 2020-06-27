@@ -16,6 +16,7 @@ const FormWrapper = styled.div`
 
 const NewsletterHeader = styled.h2`
   font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
 `;
 
 const StyledForm = styled.form`
@@ -29,6 +30,7 @@ const StyledLabel = styled.label`
   margin-top: 16px;
   font-weight: ${(props) => props.theme.fontWeights.regular};
   letter-spacing: 0.5px;
+  font-size: ${(props) => props.theme.fontSizes["4"]};
 `;
 
 const StyledInput = styled.input`
@@ -38,6 +40,7 @@ const StyledInput = styled.input`
   drop-shadow: none;
   border: none;
   border-radius: 5px;
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 `;
 
 const StyledTextArea = styled.textarea`
@@ -64,6 +67,7 @@ const StyledButton = styled.button`
   padding: 8px;
   border: none;
   background-color: ${(props) => props.theme.colors.highlight};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
@@ -88,6 +92,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+const NewsletterText = styled.p`
+  font-size: ${(props) => props.theme.fontSizes["4"]};
 `;
 
 export const NewsletterSignup = () => {
@@ -145,11 +153,11 @@ export const NewsletterSignup = () => {
       }) => (
         <FormWrapper>
           <NewsletterHeader>Let's talk coding.</NewsletterHeader>
-          <p>
+          <NewsletterText>
             I send articles about working as a software engineer, tips and
             tricks about React and building component libraries, and the
             occasional personal post. You can unsubscribe at any time.
-          </p>
+          </NewsletterText>
           {message !== null && <StyledMessage>{message}</StyledMessage>}
           <StyledForm onSubmit={handleSubmit}>
             <Wrapper>

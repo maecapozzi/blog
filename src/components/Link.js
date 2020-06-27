@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 export const StyledGatsbyLink = styled(Link)`
   color: ${(props) => props.theme.colors.highlight};
   font-size: ${(props) => props.theme.fontSizes["4"]};
+  font-family: ${(props) => props.theme.fonts.primary};
   text-decoration: none;
 
   &:hover {

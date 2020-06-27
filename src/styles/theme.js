@@ -27,17 +27,17 @@
 //     "16": `768px`
 //   },
 //   fontSizes: {
-//     "1": `12px`,
-//     "2": `14px`,
-//     "3": `16px`,
-//     "4": `18px`,
-//     "5": `20px`,
-//     "6": `24px`,
-//     "7": `30px`,
-//     "8": `36px`,
-//     "9": `48px`,
-//     "10": `60px`
-//   },
+//   "1": `8px`,
+//   "2": `12px`,
+//   "3": `14px`,
+//   "4": `16px`,
+//   "5": `18px`,
+//   "6": `20px`,
+//   "7": `24px`,
+//   "8": `30px`,
+//   "9": `36px`,
+//   "10": `48px`,
+// },
 //   fontWeights: {
 //     extraLight: 200,
 //     light: 400,
@@ -45,8 +45,8 @@
 //     heavy: 700
 //   },
 //   fonts: {
-//     primary: `Roboto`,
-//     secondary: `Roboto`
+//     primary: `Inter`,
+//     secondary: `Inter`
 //   }
 // };
 
@@ -79,17 +79,17 @@
 //     "16": `768px`
 //   },
 //   fontSizes: {
-//     "1": `12px`,
-//     "2": `14px`,
-//     "3": `16px`,
-//     "4": `18px`,
-//     "5": `20px`,
-//     "6": `24px`,
-//     "7": `30px`,
-//     "8": `36px`,
-//     "9": `48px`,
-//     "10": `60px`
-//   },
+//   "1": `8px`,
+//   "2": `12px`,
+//   "3": `14px`,
+//   "4": `16px`,
+//   "5": `18px`,
+//   "6": `20px`,
+//   "7": `24px`,
+//   "8": `30px`,
+//   "9": `36px`,
+//   "10": `48px`,
+// },
 //   fontWeights: {
 //     extraLight: 200,
 //     light: 400,
@@ -97,8 +97,8 @@
 //     heavy: 700
 //   },
 //   fonts: {
-//     primary: `Roboto`,
-//     secondary: `Roboto`
+//     primary: `Inter`,
+//     secondary: `Inter`
 //   }
 // };
 
@@ -131,17 +131,17 @@
 //     "16": `768px`
 //   },
 //   fontSizes: {
-//     "1": `12px`,
-//     "2": `14px`,
-//     "3": `16px`,
-//     "4": `18px`,
-//     "5": `20px`,
-//     "6": `24px`,
-//     "7": `30px`,
-//     "8": `36px`,
-//     "9": `48px`,
-//     "10": `60px`
-//   },
+//   "1": `8px`,
+//   "2": `12px`,
+//   "3": `14px`,
+//   "4": `16px`,
+//   "5": `18px`,
+//   "6": `20px`,
+//   "7": `24px`,
+//   "8": `30px`,
+//   "9": `36px`,
+//   "10": `48px`,
+// },
 //   fontWeights: {
 //     extraLight: 200,
 //     light: 400,
@@ -149,8 +149,8 @@
 //     heavy: 700
 //   },
 //   fonts: {
-//     primary: `Roboto`,
-//     secondary: `Roboto`
+//     primary: `Inter`,
+//     secondary: `Inter`
 //   }
 // };
 
@@ -183,17 +183,17 @@
 //     "16": `768px`
 //   },
 //   fontSizes: {
-//     "1": `12px`,
-//     "2": `14px`,
-//     "3": `16px`,
-//     "4": `18px`,
-//     "5": `20px`,
-//     "6": `24px`,
-//     "7": `30px`,
-//     "8": `36px`,
-//     "9": `48px`,
-//     "10": `60px`
-//   },
+//   "1": `8px`,
+//   "2": `12px`,
+//   "3": `14px`,
+//   "4": `16px`,
+//   "5": `18px`,
+//   "6": `20px`,
+//   "7": `24px`,
+//   "8": `30px`,
+//   "9": `36px`,
+//   "10": `48px`,
+// },
 //   fontWeights: {
 //     extraLight: 200,
 //     light: 400,
@@ -201,8 +201,8 @@
 //     heavy: 700
 //   },
 //   fonts: {
-//     primary: `Roboto`,
-//     secondary: `Roboto`
+//     primary: `Inter`,
+//     secondary: `Inter`
 //   }
 // };
 
@@ -235,16 +235,16 @@ export const tosh = {
     "16": `768px`,
   },
   fontSizes: {
-    "1": `12px`,
-    "2": `14px`,
-    "3": `16px`,
-    "4": `18px`,
-    "5": `20px`,
-    "6": `24px`,
-    "7": `30px`,
-    "8": `36px`,
-    "9": `48px`,
-    "10": `60px`,
+    "1": `8px`,
+    "2": `12px`,
+    "3": `14px`,
+    "4": `16px`,
+    "5": `18px`,
+    "6": `20px`,
+    "7": `24px`,
+    "8": `30px`,
+    "9": `36px`,
+    "10": `48px`,
   },
   fontWeights: {
     extraLight: 200,
@@ -253,8 +253,8 @@ export const tosh = {
     heavy: 700,
   },
   fonts: {
-    primary: `Roboto`,
-    secondary: `Roboto`,
+    primary: `Inter`,
+    secondary: `Inter`,
   },
 };
 
@@ -287,16 +287,16 @@ export const dark = {
     "16": `768px`,
   },
   fontSizes: {
-    "1": `12px`,
-    "2": `14px`,
-    "3": `16px`,
-    "4": `18px`,
-    "5": `20px`,
-    "6": `24px`,
-    "7": `30px`,
-    "8": `36px`,
-    "9": `48px`,
-    "10": `60px`,
+    "1": `8px`,
+    "2": `12px`,
+    "3": `14px`,
+    "4": `16px`,
+    "5": `18px`,
+    "6": `20px`,
+    "7": `24px`,
+    "8": `30px`,
+    "9": `36px`,
+    "10": `48px`,
   },
   fontWeights: {
     extraLight: 200,
@@ -305,8 +305,8 @@ export const dark = {
     heavy: 700,
   },
   fonts: {
-    primary: `Roboto`,
-    secondary: `Roboto`,
+    primary: `Inter`,
+    secondary: `Inter`,
   },
 };
 

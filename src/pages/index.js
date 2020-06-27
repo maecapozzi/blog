@@ -18,6 +18,7 @@ const StyledButton = styled(Link)`
   color: white;
   border-radius: 5px;
   margin-left: 40px;
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 
   &:hover {
     color: white;

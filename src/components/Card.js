@@ -26,7 +26,7 @@ const TitleWrapper = styled.div`
 const Title = styled(`h2`)`
   font-weight: ${(props) => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["8"]};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fonts.primary};
 
@@ -41,6 +41,7 @@ const Content = styled(`p`)`
     ${(props) => props.theme.spacings["5"]};
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["4"]};
 `;
 
 const StyledLink = styled(Link)`

@@ -9,8 +9,8 @@ const Nav = styled("nav")`
   background: ${(props) => props.theme.colors.background};
   display: flex;
   font-family: ${(props) => props.theme.fonts.primary};
+  
   height: ${(props) => props.theme.spacings["8"]};
-  box-shadow: 0 0.5px 1px ${(props) => props.theme.colors.highlight};
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -26,6 +26,8 @@ const Nav = styled("nav")`
 const Footer = styled.footer`
   text-align: center;
   padding: ${(props) => props.theme.spacings["4"]};
+  font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 `;
 
 const Space = styled.span`
@@ -90,7 +92,9 @@ const Layout = ({ children }) => {
           <GlobalStyle />
           <Nav>
             <NavItems>
-              <StyledGatsbyLink to="/">Home</StyledGatsbyLink>
+              <StyledGatsbyLink to="/">
+                <u>Mae Capozzi</u>
+              </StyledGatsbyLink>
               <Space></Space>
               <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
               <Space></Space>
