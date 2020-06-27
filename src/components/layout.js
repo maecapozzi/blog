@@ -57,6 +57,7 @@ const ThemeButton = styled.button`
 `;
 
 const Layout = ({ children }) => {
+  const [mode, setMode] = useState("light");
   return (
     <>
       <ThemeProvider theme={themes.tosh}>
@@ -81,15 +82,17 @@ const Layout = ({ children }) => {
               onClick={() => {
                 const doc = document.documentElement;
                 if (doc.classList.value === "inverted rotated") {
+                  setMode("dark");
                   doc.classList.remove("inverted");
                   doc.classList.remove("rotated");
                 } else {
+                  setMode("light");
                   doc.classList.add("inverted");
                   doc.classList.add("rotated");
                 }
               }}
             >
-              click me
+              {mode} mode
             </ThemeButton>
           </ButtonWrapper>
         </Nav>

@@ -178,6 +178,8 @@ pre[data-line] {
 
 li {
   margin-left: 24px;
+  font-family: Inter;
+  font-size: ${(props) => props.theme.fontSizes["4"]}
 }
 
 h1 {
