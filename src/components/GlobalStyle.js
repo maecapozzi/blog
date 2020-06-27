@@ -194,4 +194,26 @@ h3 {
   font-size: ${(props) => props.theme.fontSizes["6"]}
 }
 
+.inverted {
+  filter: invert(90%);
+  background-color: #333;
+
+  img {
+    filter: none;
+  }
+}
+
+.inverted.rotated {
+  filter: invert(90%) hue-rotate(60deg);
+
+
+  img, [role=img] {
+    filter: invert(90%) hue-rotate(-60deg);
+  }
+  
+
+  .gatsby-highlight {
+    filter: invert(80%) hue-rotate(-60deg);
+  }
+}
 `;

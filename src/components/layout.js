@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { StyledGatsbyLink } from "../components/Link";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
-import window from "window-or-global";
 
 const Nav = styled("nav")`
   background: ${(props) => props.theme.colors.background};
@@ -58,74 +57,47 @@ const ThemeButton = styled.button`
 `;
 
 const Layout = ({ children }) => {
-  const originalTheme = Object.keys(themes)[0];
-  const [themeIndex, setThemeIndex] = useState(1);
-  const [theme, setTheme] = useState(
-    (window &&
-      window.sessionStorage &&
-      JSON.parse(window.sessionStorage.getItem("theme"))) ||
-      themes[originalTheme]
+  return (
+    <>
+      <ThemeProvider theme={themes.tosh}>
+        <GlobalStyle />
+        <Nav>
+          <NavItems>
+            <StyledGatsbyLink to="/">
+              <u>Mae Capozzi</u>
+            </StyledGatsbyLink>
+            <Space></Space>
+            <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
+            <Space></Space>
+            <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
+            <Space></Space>
+            <StyledGatsbyLink to="/work">Work</StyledGatsbyLink>
+            <Space></Space>
+            <StyledGatsbyLink to="/newsletter">Newsletter</StyledGatsbyLink>
+          </NavItems>
+          <ButtonWrapper>
+            <ThemeButton
+              aria-label="Select a theme"
+              onClick={() => {
+                const doc = document.documentElement;
+                if (doc.classList.value === "inverted rotated") {
+                  doc.classList.remove("inverted");
+                  doc.classList.remove("rotated");
+                } else {
+                  doc.classList.add("inverted");
+                  doc.classList.add("rotated");
+                }
+              }}
+            >
+              click me
+            </ThemeButton>
+          </ButtonWrapper>
+        </Nav>
+        {children}
+        <Footer>All content © Mae Capozzi</Footer>
+      </ThemeProvider>
+    </>
   );
-  const [themeName, setThemeName] = useState(
-    (window &&
-      window.sessionStorage &&
-      JSON.parse(window.sessionStorage.getItem("themeName"))) ||
-      originalTheme
-  );
-
-  if (window && window.sessionStorage) {
-    window.sessionStorage.setItem("theme", JSON.stringify(theme));
-    window.sessionStorage.setItem("themeName", JSON.stringify(themeName));
-
-    const getTheme = () => {
-      Object.keys(themes).map((themeName, index) => {
-        if (themeIndex === index) {
-          setTheme(themes[themeName]);
-          setThemeName(themeName);
-        }
-      });
-    };
-
-    return (
-      <>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Nav>
-            <NavItems>
-              <StyledGatsbyLink to="/">
-                <u>Mae Capozzi</u>
-              </StyledGatsbyLink>
-              <Space></Space>
-              <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
-              <Space></Space>
-              <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
-              <Space></Space>
-              <StyledGatsbyLink to="/work">Work</StyledGatsbyLink>
-              <Space></Space>
-              <StyledGatsbyLink to="/newsletter">Newsletter</StyledGatsbyLink>
-            </NavItems>
-            <ButtonWrapper>
-              <ThemeButton
-                aria-label="Select a theme"
-                onClick={() => {
-                  themeIndex < Object.keys(themes).length - 1
-                    ? setThemeIndex(themeIndex + 1)
-                    : setThemeIndex(0);
-
-                  getTheme(themeIndex + 1);
-                }}
-              >
-                {themeName}
-              </ThemeButton>
-            </ButtonWrapper>
-          </Nav>
-          {children}
-          <Footer>All content © Mae Capozzi</Footer>
-        </ThemeProvider>
-      </>
-    );
-  }
-  return null;
 };
 
 export default Layout;
