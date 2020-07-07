@@ -1,6 +1,6 @@
 ---
 path: "/using-node-fetch-with-apollo-link-http"
-date: "2020-07-27"
+date: "2020-06-27"
 title: "Should you version components separately or as a unified system?"
 ---
 
