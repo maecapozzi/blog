@@ -5,10 +5,8 @@ import { Link } from "gatsby";
 import { Date } from "../components/Date";
 
 export const CardWrapper = styled(`div`)`
-  margin: ${(props) => props.theme.spacings["6"]} 0;
-  border-radius: 5px;
-  box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.1),
-    0 4px 6px 1px rgba(0, 0, 0, 0.05);
+  margin: ${(props) =>
+    `${props.theme.spacings["4"]} 0 ${props.theme.spacings["8"]} 0`};
   background: ${(props) => props.theme.colors.background};
 `;
 
@@ -18,15 +16,13 @@ const StyledImage = styled(Img)`
 `;
 
 const TitleWrapper = styled.div`
-  padding: ${(props) => props.theme.spacings["5"]}
-    ${(props) => props.theme.spacings["5"]} 0
-    ${(props) => props.theme.spacings["5"]};
+  padding: ${(props) => `${props.theme.spacings["2"]} 0 0 0`};
 `;
 
 const Title = styled(`h2`)`
   font-weight: ${(props) => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["7"]};
+  font-size: ${(props) => props.theme.fontSizes["5"]};
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fonts.primary};
 
@@ -36,12 +32,9 @@ const Title = styled(`h2`)`
 `;
 
 const Content = styled(`p`)`
-  padding: 0 ${(props) => props.theme.spacings["5"]}
-    ${(props) => props.theme.spacings["5"]}
-    ${(props) => props.theme.spacings["5"]};
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["4"]};
+  font-size: ${(props) => props.theme.fontSizes["2"]};
 `;
 
 const StyledLink = styled(Link)`

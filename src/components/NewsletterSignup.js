@@ -30,7 +30,7 @@ const StyledLabel = styled.label`
   margin-top: 16px;
   font-weight: ${(props) => props.theme.fontWeights.regular};
   letter-spacing: 0.5px;
-  font-size: ${(props) => props.theme.fontSizes["4"]};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 `;
 
 const StyledInput = styled.input`
@@ -40,7 +40,7 @@ const StyledInput = styled.input`
   drop-shadow: none;
   border: none;
   border-radius: 5px;
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["2"]};
 `;
 
 const StyledTextArea = styled.textarea`
@@ -67,7 +67,7 @@ const StyledButton = styled.button`
   padding: 8px;
   border: none;
   background-color: ${(props) => props.theme.colors.highlight};
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
@@ -95,7 +95,7 @@ const Wrapper = styled.div`
 `;
 
 const NewsletterText = styled.p`
-  font-size: ${(props) => props.theme.fontSizes["4"]};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 `;
 
 export const NewsletterSignup = () => {

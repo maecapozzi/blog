@@ -7,6 +7,8 @@ import { Date } from "../components/Date";
 import { Header, HeadingWrapper } from "../components/Header";
 import { Text } from "../components/Text";
 import { NewsletterSignup } from "../components/NewsletterSignup";
+import { Grid } from "../components/Grid";
+import { Main } from "../components/Main";
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.primary};
@@ -36,14 +38,8 @@ const BodyWrapper = styled("div")`
   }
 
   p {
-    font-size: ${(props) => props.theme.fontSizes["4"]};
+    font-size: ${(props) => props.theme.fontSizes["3"]};
   }
-`;
-
-const Main = styled("main")`
-  margin: 0 auto;
-  max-width: 800px;
-  padding: ${(props) => props.theme.spacings["5"]};
 `;
 
 const BlogHeader = styled(Header)`
@@ -65,48 +61,50 @@ const BlogPostTemplate = (props) => {
     }
 
     return (
-      <Main>
-        <SEO title={title} description={post.excerpt} />
-        <HeadingWrapper>
-          <BlogHeader>{title}</BlogHeader>
-          <Date>{date}</Date>
-        </HeadingWrapper>
-        {edges.map((image) => {
-          if (image.node.fluid.originalName === img) {
-            return <Img key={img} fluid={image.node.fluid} />;
-          }
-          return undefined;
-        })}
-        <BodyWrapper>
-          <div dangerouslySetInnerHTML={parseHtml()} />
-        </BodyWrapper>
-        <hr />
-        <NewsletterSignup />
-        <ul
-          style={{
-            display: `flex`,
-            listStyle: `none`,
-            justifyContent: `space-between`,
-          }}
-        >
-          <li>
-            {previous && (
-              <Text>
-                <StyledLink to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+      <Grid>
+        <Main>
+          <SEO title={title} description={post.excerpt} />
+          <HeadingWrapper>
+            <BlogHeader>{title}</BlogHeader>
+            <Date>{date}</Date>
+          </HeadingWrapper>
+          {edges.map((image) => {
+            if (image.node.fluid.originalName === img) {
+              return <Img key={img} fluid={image.node.fluid} />;
+            }
+            return undefined;
+          })}
+          <BodyWrapper>
+            <div dangerouslySetInnerHTML={parseHtml()} />
+          </BodyWrapper>
+          <hr />
+          <NewsletterSignup />
+          <ul
+            style={{
+              display: `flex`,
+              listStyle: `none`,
+              justifyContent: `space-between`,
+            }}
+          >
+            <li>
+              {previous && (
+                <Text>
+                  <StyledLink to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </StyledLink>
+                </Text>
+              )}
+            </li>
+            <li>
+              {next && (
+                <StyledLink to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
                 </StyledLink>
-              </Text>
-            )}
-          </li>
-          <li>
-            {next && (
-              <StyledLink to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </StyledLink>
-            )}
-          </li>
-        </ul>
-      </Main>
+              )}
+            </li>
+          </ul>
+        </Main>
+      </Grid>
     );
   }
 

@@ -8,6 +8,7 @@ import { Header, HeadingWrapper } from "../components/Header";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { List, SectionHeadings } from "./about";
 import { StyledGatsbyLink } from "../components/Link";
+import { Grid } from "../components/Grid";
 
 const StyledButton = styled(Link)`
   background-color: ${(props) => props.theme.colors.highlight};
@@ -18,7 +19,7 @@ const StyledButton = styled(Link)`
   color: white;
   border-radius: 5px;
   margin-left: 40px;
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
     color: white;
@@ -28,6 +29,8 @@ const StyledButton = styled(Link)`
 
 const Content = styled.div`
   font-family: ${(props) => props.theme.fonts.secondary};
+  font-size: ${(props) => props.theme.fontSizes["2"]};
+
   && {
     a {
       color: ${(props) => props.theme.colors.primary};
@@ -41,44 +44,46 @@ const Content = styled.div`
 
 const Index = () => {
   return (
-    <Main>
-      <SEO
-        title="Home"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
-      />
-      <HeadingWrapper>
-        <Header>Home</Header>
-      </HeadingWrapper>
-      <Bio />
-      <hr />
-      <Content>
-        <SectionHeadings>My Favorites</SectionHeadings>
-        <ul>
-          <List>
-            <StyledGatsbyLink to="/progressive-disclosure-of-complexity/">
-              Building a multi-brand design system in layers
-            </StyledGatsbyLink>
-          </List>
-          <List>
-            <StyledGatsbyLink to="/design-tokens">
-              Design Tokens
-            </StyledGatsbyLink>
-          </List>
-          <List>
-            <StyledGatsbyLink to="/how-to-make-http-requests-part-1">
-              How to Make HTTP Requests in React
-            </StyledGatsbyLink>
-          </List>
-          <List>
-            <StyledGatsbyLink to="/lerna-monorepo-versioning/">
-              Before You Build A Component Library: Monorepo Versioning
-            </StyledGatsbyLink>
-          </List>
-        </ul>
-      </Content>
-      <StyledButton to="/blog">See all posts</StyledButton>
-      <NewsletterSignup />
-    </Main>
+    <Grid>
+      <Main>
+        <SEO
+          title="Home"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
+        />
+        <HeadingWrapper>
+          <Header>Home</Header>
+        </HeadingWrapper>
+        <Bio />
+        <hr />
+        <Content>
+          <SectionHeadings>Recent thoughts</SectionHeadings>
+          <ul>
+            <List>
+              <StyledGatsbyLink to="/progressive-disclosure-of-complexity/">
+                Building a multi-brand design system in layers
+              </StyledGatsbyLink>
+            </List>
+            <List>
+              <StyledGatsbyLink to="/design-tokens">
+                Design Tokens
+              </StyledGatsbyLink>
+            </List>
+            <List>
+              <StyledGatsbyLink to="/how-to-make-http-requests-part-1">
+                How to Make HTTP Requests in React
+              </StyledGatsbyLink>
+            </List>
+            <List>
+              <StyledGatsbyLink to="/lerna-monorepo-versioning/">
+                Before You Build A Component Library: Monorepo Versioning
+              </StyledGatsbyLink>
+            </List>
+          </ul>
+        </Content>
+        <StyledButton to="/blog">See all posts</StyledButton>
+        <NewsletterSignup />
+      </Main>
+    </Grid>
   );
 };
 

@@ -8,7 +8,7 @@ import { StyledGatsbyLink, StyledExternalLink } from "../components/Link";
 const BioWrapper = styled.div``;
 
 const Wrapper = styled.div`
-  margin: 40px 0px;
+  margin: 24px 0px;
 `;
 
 function Bio() {
@@ -29,17 +29,11 @@ function Bio() {
               </Wrapper>
               <Wrapper>
                 <Text>
-                  I'm a Brooklyn-based software engineer interested in design
-                  systems, component libraries, and the JAMStack. Before that, I
-                  was an English major at Skidmore College in upstate New York.
-                  Big transition, right?
-                </Text>
-              </Wrapper>
-              <Wrapper>
-                <Text>
-                  You've stumbled on my personal site! I'm so happy that you're
-                  here. You'll mostly find React coding tips, thoughts on design
-                  systems, and the occasional personal post.
+                  I'm a software engineer interested in design systems,
+                  component libraries, and the JAMStack. You've stumbled on my
+                  personal site! I'm so happy that you're here. You'll mostly
+                  find React coding tips, thoughts on design systems, and the
+                  occasional personal post.
                 </Text>
               </Wrapper>
               <Wrapper>

@@ -4,6 +4,7 @@ import { Main } from "../components/Main";
 import { Header, HeadingWrapper } from "../components/Header";
 import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
+import { Grid } from "../components/Grid";
 
 const loopThroughPosts = (posts, images) => {
   return posts.map(({ node }) => {
@@ -36,18 +37,20 @@ const BlogIndex = (props) => {
   const postNewsletterPosts = posts.slice(3);
 
   return (
-    <Main>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
-      />
-      <HeadingWrapper>
-        <Header>Blog</Header>
-      </HeadingWrapper>
-      {loopThroughPosts(preNewsletterPosts, images)}
-      <NewsletterSignup />
-      {loopThroughPosts(postNewsletterPosts, images)}
-    </Main>
+    <Grid>
+      <Main>
+        <SEO
+          title="All posts"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
+        />
+        <HeadingWrapper>
+          <Header>Blog</Header>
+        </HeadingWrapper>
+        {loopThroughPosts(preNewsletterPosts, images)}
+        <NewsletterSignup />
+        {loopThroughPosts(postNewsletterPosts, images)}
+      </Main>
+    </Grid>
   );
 };
 

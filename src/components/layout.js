@@ -1,81 +1,71 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import styled, { ThemeProvider } from "styled-components";
-import { StyledGatsbyLink } from "../components/Link";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
+import { GridStyles } from "../components/Grid";
+import mediaQueries from "../utils/mediaQueries";
 
-const Nav = styled("nav")`
-  background: ${(props) => props.theme.colors.background};
-  display: flex;
+const List = styled.ul`
+  ${GridStyles};
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  line-height: ${(props) => props.theme.fontSizes["3"]};
+`;
+
+const NavLink = styled(Link)`
+  color: ${(props) => props.theme.colors.text};
+  font-size: ${(props) => props.theme.fontSizes[`${props.fontSize}`]};
+  padding-right: 8px;
   font-family: ${(props) => props.theme.fonts.primary};
-  
-  height: ${(props) => props.theme.spacings["8"]};
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  align-items: center;
+`;
 
+const Nav = styled.nav`
+  display: flex;
+  justify-content: flex-start;
+  grid-column: 2 / span 10;
   a {
-    color: ${(props) => props.theme.colors.primary};
+    text-decoration: none;
   }
-  
-}
+`;
+
+const Logo = styled.li`
+  padding: 16px 0px 0px 0px;
+  margin-left: 0px;
+  grid-column: 2 / span 10;
+  display: flex;
 `;
 
 const Footer = styled.footer`
   text-align: center;
   padding: ${(props) => props.theme.spacings["4"]};
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["3"]};
-`;
-
-const Space = styled.span`
-  margin: ${(props) => props.theme.spacings["1"]};
-`;
-
-const NavItems = styled.div`
-  margin: 0 ${(props) => props.theme.spacings["5"]};
-`;
-
-const ButtonWrapper = styled.div`
-  margin-left: auto;
-  margin-right: ${(props) => props.theme.spacings["5"]};
-`;
-
-const ThemeButton = styled.button`
-  cursor: pointer;
-  border-radius: 0.25em;
-  border: 1px solid ${(props) => props.theme.colors.primary};
-  background: ${(props) => props.theme.colors.background};
-  color: ${(props) => props.theme.colors.primary};
-  font-family: ${(props) => props.theme.fonts.primary};
   font-size: ${(props) => props.theme.fontSizes["2"]};
-
-  &:hover {
-    background: ${(props) => props.theme.colors.highlight};
-  }
 `;
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <ThemeProvider theme={themes.tosh}>
-        <GlobalStyle />
+    <ThemeProvider theme={themes.tosh}>
+      <GlobalStyle />
+      <List>
+        <Logo>
+          <NavLink to="/" fontSize="3">
+            Mae Capozzi
+          </NavLink>
+        </Logo>
         <Nav>
-          <NavItems>
-            <StyledGatsbyLink to="/">
-              <u>Mae Capozzi</u>
-            </StyledGatsbyLink>
-            <Space></Space>
-            <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
-            <Space></Space>
-            <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
-          </NavItems>
+          <NavLink to="/blog" fontSize="3">
+            Posts
+          </NavLink>
+          <NavLink to="/about" fontSize="3">
+            About
+          </NavLink>
         </Nav>
-        {children}
-        <Footer>All content © Mae Capozzi</Footer>
-      </ThemeProvider>
-    </>
+      </List>
+      {children}
+      <Footer>All content © Mae Capozzi</Footer>
+    </ThemeProvider>
   );
 };
 
