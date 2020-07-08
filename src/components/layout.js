@@ -30,7 +30,7 @@ const Footer = styled.footer`
 `;
 
 const Space = styled.span`
-  margin: ${(props) => props.theme.spacings["2"]};
+  margin: ${(props) => props.theme.spacings["1"]};
 `;
 
 const NavItems = styled.div`
@@ -57,7 +57,6 @@ const ThemeButton = styled.button`
 `;
 
 const Layout = ({ children }) => {
-  const [mode, setMode] = useState("light");
   return (
     <>
       <ThemeProvider theme={themes.tosh}>
@@ -71,30 +70,7 @@ const Layout = ({ children }) => {
             <StyledGatsbyLink to="/blog">Blog</StyledGatsbyLink>
             <Space></Space>
             <StyledGatsbyLink to="/about">About Me</StyledGatsbyLink>
-            <Space></Space>
-            <StyledGatsbyLink to="/work">Work</StyledGatsbyLink>
-            <Space></Space>
-            <StyledGatsbyLink to="/newsletter">Newsletter</StyledGatsbyLink>
           </NavItems>
-          <ButtonWrapper>
-            <ThemeButton
-              aria-label="Select a theme"
-              onClick={() => {
-                const doc = document.documentElement;
-                if (doc.classList.value === "inverted rotated") {
-                  setMode("dark");
-                  doc.classList.remove("inverted");
-                  doc.classList.remove("rotated");
-                } else {
-                  setMode("light");
-                  doc.classList.add("inverted");
-                  doc.classList.add("rotated");
-                }
-              }}
-            >
-              {mode} mode
-            </ThemeButton>
-          </ButtonWrapper>
         </Nav>
         {children}
         <Footer>All content © Mae Capozzi</Footer>
