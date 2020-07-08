@@ -35,9 +35,9 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1;
   margin-bottom: 0;
-
+  font-size: ${(props) => props.theme.fontSizes["3"]};
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -174,12 +174,13 @@ pre[data-line] {
 .gatsby-highlight pre[class*="language-"] {
   float: left;
   min-width: 100%;
+
 }
 
 li {
   margin-left: 24px;
   font-family: Inter;
-  font-size: ${(props) => props.theme.fontSizes["4"]}
+  font-size: ${(props) => props.theme.fontSizes["3"]}
 }
 
 h1 {
@@ -194,28 +195,4 @@ h2 {
 h3 {
   font-family: Inter;
   font-size: ${(props) => props.theme.fontSizes["6"]}
-}
-
-.inverted {
-  filter: invert(90%);
-  background-color: #333;
-
-  img {
-    filter: none;
-  }
-}
-
-.inverted.rotated {
-  filter: invert(90%) hue-rotate(60deg);
-
-
-  img, [role=img] {
-    filter: invert(90%) hue-rotate(-60deg);
-  }
-  
-
-  .gatsby-highlight {
-    filter: invert(80%) hue-rotate(-60deg);
-  }
-}
-`;
+}`;

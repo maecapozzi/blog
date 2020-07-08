@@ -12,7 +12,9 @@ export const CardWrapper = styled(`div`)`
 
 const StyledImage = styled(Img)`
   border-radius: 5px 5px 0px 0px;
+  height: 500px;
   margin-top: ${(props) => props.theme.spacings["6"]};
+  margin-bottom: ${(props) => props.theme.spacings["6"]};
 `;
 
 const TitleWrapper = styled.div`
@@ -22,7 +24,7 @@ const TitleWrapper = styled.div`
 const Title = styled(`h2`)`
   font-weight: ${(props) => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["5"]};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fonts.primary};
 
@@ -34,7 +36,7 @@ const Title = styled(`h2`)`
 const Content = styled(`p`)`
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["2"]};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
 `;
 
 const StyledLink = styled(Link)`
