@@ -179,6 +179,14 @@ You'll have to name the package some randomly generated words, since npm definit
 
 If you run `yarn publish`, you should be able to increment the package's version as well as publish it to npm.
 
+## Hungry for more?
+
+- [Parallel builds in lerna](/parallel-builds-in-lerna)
+- [Should you version components separately or as a unified system?](/version-bundling)
+- [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)
+- [Before you build a component library: versioning](/library-versioning)
+- [What is Lerna?](/what-is-lerna)
+
 ---
 
 I hope you enjoyed this post! If you have any questions or comments, feel free to reach out to me on [Twitter](https://twitter.com/MCapoz).

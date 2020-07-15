@@ -31,3 +31,11 @@ All you have to do is be a little less fancy:
   "build": "lerna exec -- yarn run build",
 }
 ```
+
+## Hungry for more?
+
+- [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
+- [Should you version components separately or as a unified system?](/version-bundling)
+- [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)
+- [Before you build a component library: versioning](/library-versioning)
+- [What is Lerna?](/what-is-lerna)

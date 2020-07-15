@@ -127,3 +127,7 @@ When you commit, make sure to follow conventional commit conventions. If you do 
 ## Challenges with SemVer
 
 SemVer helps us to make sure that we're communicating with our users, but it has its flaws. Most notably, it can be very difficult to determine whether a change breaks compatibility. It's impossible for a library author to know every single way a component is being used. Some of its flaws have been discussed here. But for all its flaws, until we have something better it makes sense to stick to it as closely as we can, and make sure to over-communicate when we can't.
+
+## Talk to me!
+
+Are you researching monorepos and Lerna for something you're building? What are you stuck on? I'd love to hear from you. You can reach me on [Twitter](https://twitter.com/MCapoz) or by responding to any of my newsletter messages. (Seriously, I really want to hear from you.)

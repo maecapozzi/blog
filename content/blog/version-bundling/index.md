@@ -21,3 +21,11 @@ Additionally, you always have the option of bundling up your separately-versione
 you might have a `button` and a `link` package. You can version each one individually, and have a third package called `base-components` that contains `button@1.0.0` and `link@2.0.0`.
 
 There's really only one wrong answer to this question in my opinion, and its to not version your packages at all. It's important to communicate to your stakeholders how stable your packages are and whether or not upgrading them is going to mean a breaking change. You also want to make sure it's easy for them to downgrade if your new version isn't working for them. If you don't version them and you introduce a breaking change or a bug they can't downgrade out of you might be negatively affecting a team's ability to ship. That's the exact opposite of what a library should strive to do.
+
+## Hungry for more?
+
+- [Parallel builds in lerna](/parallel-builds-in-lerna)
+- [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)
+- [Before you build a component library: versioning](/library-versioning)
+- [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
+- [What is Lerna?](/what-is-lerna)

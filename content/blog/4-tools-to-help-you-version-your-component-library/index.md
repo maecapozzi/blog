@@ -46,3 +46,11 @@ Lerna has a flag that will automatically configure conventional commits for you.
 ## 4. @changesets/cli
 
 [@changesets/cli](https://www.npmjs.com/package/@changesets/cli) is the only tool on the list that I haven't used, but I've heard it mentioned enough times that I think it's worth adding to the list. It's a tool that can help you manage versioning and changelogs in monorepos.
+
+## Hungry for more?
+
+- [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
+- [Should you version components separately or as a unified system?](/version-bundling)
+- [Parallel builds in lerna](/parallel-builds-in-lerna)
+- [Before you build a component library: versioning](/library-versioning)
+- [What is Lerna?](/what-is-lerna)

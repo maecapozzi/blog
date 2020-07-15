@@ -71,3 +71,11 @@ You'll probably end up with something different from what we have at Harry's, bu
 You can use it to link all of your dependencies so that it's easier to develop across packages, and you can use it along with Conventional Commits to version and publish your libraries to a private or a public registry.
 
 Are you researching monorepos and Lerna for something you're building? What are you stuck on? I'd love to hear from you. You can reach me on [Twitter](https://twitter.com/MCapoz) or by responding to any of my newsletter messages. (Seriously, I really want to hear from you.)
+
+## Hungry for more?
+
+- [Parallel builds in lerna](/parallel-builds-in-lerna)
+- [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)
+- [Before you build a component library: versioning](/library-versioning)
+- [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
+- [Should you version components separately or as a unified system?](/version-bundling)
