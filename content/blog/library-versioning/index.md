@@ -8,7 +8,7 @@ excerpt: "Versioning is one of the most challenging aspects to building and main
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._
 
-- [Before You Build A Component Library: Monorepo or Multirepo?](../monorepo-or-multrepo)
+- [[Should my component library be a monorepo?](../monorepo-or-multrepo)
 - [Before You Build A Component Library: Monorepo Versioning](../lerna-monorepo-versioning)
 
 Versioning is one of the most challenging aspects to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning.

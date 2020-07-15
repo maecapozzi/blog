@@ -1,9 +1,9 @@
 ---
 path: "/choosing-a-monorepo-or-a-multirepo"
 date: "2020-07-15"
-title: "Before You Build A Component Library: Monorepo or Multirepo?"
+title: "Should my component library be a monorepo?"
 img: "monorepo-or-multirepo.jpg"
-excerpt: "If you're going to build a component library, you need to decide how to store your components. Most teams choose between two options: you can store each component separately in its own repo, or you can store all of your components together in a monorepo."
+excerpt: "tldr; Your component library should be a monorepo."
 ---
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._

@@ -7,7 +7,7 @@ excerpt: "We can use Lerna with Yarn Workspaces develop across multiple componen
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._
 
-- [Before You Build A Component Library: Monorepo or Multirepo?](../monorepo-or-multirepo)
+- [Should my component library be a monorepo?](../monorepo-or-multirepo)
 - [Before You Build A Component Library: Versioning](../library-versioning)
 
 I was scrolling through twitter the other day and I saw a joke [tweet](https://twitter.com/markdalgleish/status/1227104671812112385) about design systems:
