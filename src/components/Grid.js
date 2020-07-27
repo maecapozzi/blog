@@ -11,7 +11,7 @@ export const GridStyles = css`
   `}
 
   ${mediaQueries.DESKTOP`
-     grid-template-columns: [left] 35% repeat(10, minmax(16px, 1fr)) 35%[right];
+     grid-template-columns: [left] 1fr repeat(10, minmax(16px, 60px)) 1fr [right];
   `}
 `;
 
