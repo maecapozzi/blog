@@ -48,3 +48,11 @@ always-auth=true
 ```
 
 Now, when you run `npm install` or `yarn install`, your `.npmrc` tells your computer to download open-source libraries from the public npm registry and `@grapevine` packages on your private registry.
+
+## Hungry for more?
+
+- [Before you build a component library: monorepo versioning](https://maecapozzi.com/lerna-monorepo-versioning)
+- [Should you version components separately or as a unified system?](https://maecapozzi.com/version-bundling)
+- [4 tools to help you version your component library](https://maecapozzi.com/4-tools-to-help-you-version-your-component-library)
+- [Before you build a component library: versioning](https://maecapozzi.com/library-versioning)
+- [What is Lerna?](https://maecapozzi.com/what-is-lerna)
