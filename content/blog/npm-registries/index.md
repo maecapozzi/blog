@@ -4,8 +4,6 @@ date: "2020-08-10"
 title: "How to switch npm registries"
 ---
 
-Companies want to share code between internal teams without giving access to people all over the world. They manage to keep private packages private by publishing their packages to a private registry. [JFrog](https://jfrog.com/) is a popular tool they use to do that. Developers use a compbination of public and private dependencies when building an application.
-
 ### What is a registry?
 
 I like to think of a registry like a brick-and-mortar library. When you go to the library, you can check out books that you'd like to take home. Some libraries are public while others are private. If you'd like to check out a book from a private library, you need special permission. It's the same way with registries. While anyone can check out public packages from a public registry, developers need special privileges to check out a package from a private registry.
