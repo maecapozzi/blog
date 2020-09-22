@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { StaticQuery, graphql } from "gatsby";
 import { Text } from "../components/Text";
-import Emoji from "../components/Emoji";
 import { StyledGatsbyLink, StyledExternalLink } from "../components/Link";
 
 const BioWrapper = styled.div``;
@@ -11,39 +10,54 @@ const Wrapper = styled.div`
   margin: 24px 0px;
 `;
 
+const OrderedList = styled.ol`
+  font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
+  margin-bottom: 0px;
+`;
+
+const Pink = styled.span`
+  color: ${(props) => props.theme.colors.highlight};
+`;
+
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={(data) => {
-        const { author } = data.site.siteMetadata;
         return (
           <>
             <BioWrapper>
               <Wrapper>
                 <Text>
-                  Hi! <Emoji symbol="👋" /> {` `}
-                  I'm <strong>{author}</strong>. Welcome to my corner of the
-                  internet.
+                  <span>
+                    <h1>
+                      Hey, I'm Mae<Pink>.</Pink>
+                    </h1>
+                  </span>
                 </Text>
               </Wrapper>
               <Wrapper>
                 <Text>
-                  I'm a software engineer interested in design systems,
-                  component libraries, and the JAMStack. You've stumbled on my
-                  personal site! I'm so happy that you're here. You'll mostly
-                  find React coding tips, thoughts on design systems, and the
-                  occasional personal post.
+                  I’m a software developer, writer, and design systems advocate.
+                  If the title existed, I’d call myself a{" "}
+                  <b>frontend infrastructure engineeer</b>. This is my personal
+                  blog where I write about problems that meet two requirements.
                 </Text>
               </Wrapper>
               <Wrapper>
+                <OrderedList>1. The problem interests me.</OrderedList>
+                <OrderedList>
+                  2. One or more people have expressed they have the problem on
+                  the internet.
+                </OrderedList>
+              </Wrapper>
+              <Wrapper>
                 <Text>
-                  Sometimes, you might come to the site and the design will look
-                  wonky, posts will be half-finished, or it'll just be totally
-                  broken. I hope you don't mind <em>too</em> much! I spend a lot
-                  of time writing sturdy code for Harry's––I like to have a
-                  place where I can fool around and try out new concepts without
-                  worrying too much.
+                  I try to post often and I’m not too precious about my drafts.
+                  Sometimes you’ll see unfinished work, or something won’t look
+                  quite right. I spend a lot of time writing sturdy code for
+                  better.com. This blog is my space to explore and share ideas.
                 </Text>
               </Wrapper>
               <Wrapper>

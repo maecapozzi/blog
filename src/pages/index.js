@@ -50,9 +50,6 @@ const Index = () => {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
         />
-        <HeadingWrapper>
-          <Header>Home</Header>
-        </HeadingWrapper>
         <Bio />
         <hr />
         <Content>
