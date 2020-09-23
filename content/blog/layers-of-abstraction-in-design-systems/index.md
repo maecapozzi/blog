@@ -153,6 +153,9 @@ Some examples include:
 - CheckoutPage
 - HomePage
 
+Let’s reiterate a bit. By the time we’ve reached the Layout level, we have an entire, customized <Survey /> that’s living on a site somewhere. But that <Survey /> is composed from many different levels (some of which live in application code, and others of which live in the design system).
+The <Survey /> is made up of multiple <SurveyQuestion /> features. Each <SurveyQuestion /> is made up of multiple <RadioList /> patterns. <RadioList /> patterns are made from multiple <RadioButton /> elements. And RadioButtons know how to read the design tokens.
+
 ## Hungry for more?
 
 - [Design Tokens](/design-tokens)

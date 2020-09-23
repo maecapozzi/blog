@@ -13,6 +13,12 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-twitter`,
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://maecapozzi.com`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
