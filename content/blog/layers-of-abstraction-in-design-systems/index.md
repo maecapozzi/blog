@@ -6,9 +6,11 @@ title: "The 5 layers of a design system"
 
 Picture a fully-fledged design system. You can bootstrap a new project, pull a bunch of components from the system, and have a page in minutes instead of days. When you're first starting to build your own, it seems too good to be true. You might be asking yourself, "how do I get from _nothing_ to a system that supports multiple teams and hundreds of happy engineers?"
 
-There's a lot to consider, but in this post we're going to talk about design system architecture, and specifically the concept of **component hierarchies**.
+There's a lot to consider, but in this post we're going to talk about design system architecture, or the five layers in a design system's **component hierarchy**.
 
-We can use the metaphor of a wedding cake to understand this a little better. When you see a wedding cake, your brain first thinks, "oh look, a cake." As you look closer, you start to see that it consists multiple layers and elements.
+We can use the metaphor of a wedding cake to understand this a little better. When you see a wedding cake, your brain first thinks, "oh look, a cake." As you look closer, you start to see that it consists of multiple layers and elements.
+
+![A wedding cake](../../assets/wedding-cake.jpg)
 
 Design systems are the same way. At first glance, a design system might seem like a single, monolithic library. In reality, a good design system is a series of layers that build on each other, ideally using [progressive disclosure of complexity](/progressive-disclosure-of-complexity) as a guiding principle.
 
@@ -33,7 +35,7 @@ Brad Frost's language is really good, and very commonly used across teams. It's 
 
 ![An image representing the component hierarchy](../../assets/component-hierarchy.svg)
 
-This diagram is from the [Radius](https://radius-ds.netlify.app/?path=/docs/guides-creating-components--page) storybook.
+<p align="center"><em>This diagram is from the <a href="https://radius-ds.netlify.app/?path=/docs/guides-creating-components--page">Radius</a> storybook.</em></p>
 
 1. Design tokens
 2. Elements
