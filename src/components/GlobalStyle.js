@@ -35,7 +35,7 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 0;
   font-size: ${(props) => props.theme.fontSizes["3"]};
   -moz-tab-size: 4;
