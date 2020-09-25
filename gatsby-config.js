@@ -4,6 +4,7 @@ module.exports = {
     author: `Mae Capozzi`,
     description: `Read Mae Capozzi writes about React, building component libraries, the JAMStack, and what it's like to be a software engineer.`,
     siteUrl: `https://maecapozzi.com`,
+    canonicalUrl: `https://maecapozzi.com`,
     social: {
       twitter: `@MCapoz`,
       github: `maecapozzi`,
@@ -12,12 +13,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-twitter`,
-    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
-      options: {
-        siteUrl: `https://maecapozzi.com`,
-      },
+      resolve: `gatsby-plugin-sitemap`,
+      exclide: [
+        `/dev-404-page/`,
+        `/404/`,
+        `/offline-plugin-app-shell-fallback/`,
+      ],
     },
     {
       resolve: `gatsby-source-filesystem`,

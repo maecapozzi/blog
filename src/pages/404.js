@@ -1,21 +1,24 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Text } from "../components/Text";
 import { Header } from "../components/Header";
+import styled from "styled-components";
+
+const Centered = styled.div`
+  margin-top: 40vh;
+  margin-bottom: 40vh;
+  text-align: center;
+`;
 
 class NotFoundPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Centered>
         <SEO title="404: Not Found" />
-        <Header>Not Found</Header>
-        <Text>Looks like you landed on a page that doesn&#39;t exist!</Text>
-      </Layout>
+        <Header>Oops! Not Found</Header>
+        <Text>Something went wrong. Sorry about that!</Text>
+      </Centered>
     );
   }
 }
