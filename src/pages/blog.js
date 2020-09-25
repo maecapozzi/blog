@@ -43,9 +43,6 @@ const BlogIndex = (props) => {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
         />
-        <HeadingWrapper>
-          <Header>Blog</Header>
-        </HeadingWrapper>
         {loopThroughPosts(preNewsletterPosts, images)}
         <NewsletterSignup />
         {loopThroughPosts(postNewsletterPosts, images)}

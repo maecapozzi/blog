@@ -6,7 +6,7 @@ import { Date } from "../components/Date";
 
 export const CardWrapper = styled(`div`)`
   margin: ${(props) =>
-    `${props.theme.spacings["4"]} 0 ${props.theme.spacings["8"]} 0`};
+    `${props.theme.spacings["4"]} 0 ${props.theme.spacings["2"]} 0`};
   background: ${(props) => props.theme.colors.background};
 `;
 
@@ -18,13 +18,13 @@ const StyledImage = styled(Img)`
 `;
 
 const TitleWrapper = styled.div`
-  padding: ${(props) => `${props.theme.spacings["2"]} 0 0 0`};
+  padding: ${(props) => `${props.theme.spacings["6"]} 0 0 0`};
 `;
 
-const Title = styled(`h2`)`
+export const Title = styled(`h2`)`
   font-weight: ${(props) => props.theme.fontWeights.heavy};
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["7"]};
+  font-size: ${(props) => props.theme.fontSizes["6"]};
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fonts.primary};
 
@@ -37,9 +37,19 @@ const Content = styled(`p`)`
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: ${(props) => props.theme.fontSizes["3"]};
+  margin-top: ${(props) => props.theme.spacings["4"]};
+  margin-bottom: 0;
 `;
 
 const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+const ReadMoreLink = styled(Link)`
+  font-weight: ${(props) => props.theme.fontWeights.light};
+  font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
+  color: ${(props) => props.theme.colors.highlight};
   text-decoration: none;
 `;
 
@@ -58,6 +68,7 @@ export const Card = ({ img, title, content, slug, date }) => {
         <Date>{date}</Date>
       </TitleWrapper>
       <Content>{content}</Content>
+      <ReadMoreLink to={slug}>Read more</ReadMoreLink>
     </CardWrapper>
   );
 };

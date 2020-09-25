@@ -4,18 +4,19 @@ import Img from "gatsby-image";
 import styled from "styled-components";
 import SEO from "../components/seo";
 import { Date } from "../components/Date";
-import { Header, HeadingWrapper } from "../components/Header";
+import { HeadingWrapper } from "../components/Header";
 import { Text } from "../components/Text";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { Grid } from "../components/Grid";
 import { Main } from "../components/Main";
+import { Title } from "../components/Card";
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.primary};
 `;
 
 const BodyWrapper = styled("div")`
-  margin-top: ${(props) => props.theme.spacings["4"]};
+  margin-top: ${(props) => props.theme.spacings["7"]};
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fonts.secondary};
 
@@ -37,16 +38,20 @@ const BodyWrapper = styled("div")`
     }
   }
 
-  p {
+  p,
+  ol,
+  li {
     font-size: ${(props) => props.theme.fontSizes["3"]};
+    line-height: 1.5;
   }
-`;
 
-const BlogHeader = styled(Header)`
-  margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["7"]};
-  color: ${(props) => props.theme.colors.primary};
-  font-family: ${(props) => props.theme.fonts.primary};
+  img {
+    border-radius: 5px;
+  }
+
+  .language-text {
+    padding: 2px 8px;
+  }
 `;
 
 const BlogPostTemplate = (props) => {
@@ -65,7 +70,7 @@ const BlogPostTemplate = (props) => {
         <Main>
           <SEO title={title} description={post.excerpt} />
           <HeadingWrapper>
-            <BlogHeader>{title}</BlogHeader>
+            <Title>{title}</Title>
             <Date>{date}</Date>
           </HeadingWrapper>
           {edges.map((image) => {

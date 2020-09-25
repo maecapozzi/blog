@@ -58,7 +58,7 @@ const ButtonWrapper = styled.div`
   margin-top: 16px;
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   font-family: ${(props) => props.theme.fonts.primary};
   cursor: pointer;
   color: white;
