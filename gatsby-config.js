@@ -12,8 +12,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-twitter`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-canonical-urls`,
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
         siteUrl: `https://maecapozzi.com`,
       },
