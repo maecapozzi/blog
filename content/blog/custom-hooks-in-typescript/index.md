@@ -27,8 +27,6 @@ I tried to use the hook, and I got a typescript error:
 const [selectedValue, updateSelectedValue] = useRadioList("first-option");
 ```
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1848e59d-725a-454b-9f83-d93a2fae22da/image.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1848e59d-725a-454b-9f83-d93a2fae22da/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200925%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200925T122832Z&X-Amz-Expires=86400&X-Amz-Signature=4091a3250a1956c84073c86d3b59c47e4ee5989b75d721b06787ac00d298b292&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22image.png%22)
-
 ```tsx
 This expression is not callable.
   Not all constituents of type 'string | ((value: string) => void)' are callable.
