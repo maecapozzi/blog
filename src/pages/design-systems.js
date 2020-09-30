@@ -14,11 +14,15 @@ const StyledHeading = styled.h2`
   padding: 0;
 `;
 
+const StyledTitle = styled(Title)`
+  font-weight: ${(props) => props.theme.fontWeights.light};
+`;
+
 const Card = ({ slug, title }) => {
   return (
     <StyledCard>
       <StyledLink to={slug}>
-        <Title>{title}</Title>
+        <StyledTitle>{title}</StyledTitle>
       </StyledLink>
     </StyledCard>
   );
@@ -66,23 +70,8 @@ const DesignSystems = () => {
           <StyledHeading>Versioning and Publishing</StyledHeading>
           <Card
             readMore={false}
-            title="How to configure canary builds for your component library"
-            slug="/component-library-canary-builds"
-          ></Card>
-          <Card
-            readMore={false}
-            title="Monorepo Versioning"
-            slug="/lerna-monorepo-versioning"
-          ></Card>
-          <Card
-            readMore={false}
-            title="Versioning"
+            title="What is versioning?"
             slug="/library-versioning"
-          ></Card>
-          <Card
-            readMore={false}
-            title="A short explanation of semantic versioning"
-            slug="/short-explanation-of-semver"
           ></Card>
           <Card
             readMore={false}
@@ -91,8 +80,24 @@ const DesignSystems = () => {
           ></Card>
           <Card
             readMore={false}
+            title="A short explanation of semantic versioning"
+            slug="/short-explanation-of-semver"
+          ></Card>
+
+          <Card
+            readMore={false}
             title="What is Lerna?"
             slug="/what-is-lerna"
+          ></Card>
+          <Card
+            readMore={false}
+            title="Monorepo Versioning"
+            slug="/lerna-monorepo-versioning"
+          ></Card>
+          <Card
+            readMore={false}
+            title="How to configure canary builds for your component library"
+            slug="/component-library-canary-builds"
           ></Card>
         </CourseSection>
         <CourseSection>
