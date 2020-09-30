@@ -16,7 +16,7 @@ Versioning is one of the most challenging aspects to building and maintaining an
 First of all, incremental versioning (with clear upgrade steps) helps you to build trust with your library's consumers. It allows people to opt-in to your new changes when they're ready to upgrade, not on your timeline. And it's a way to communicate with your users what kind of changes you've made in the last release. 
 There are multiple ways to version a library, but this post will focus on publishing to npm and using semantic versioning. This is common web development practice.
 
-## Semantic Versioning
+### Semantic Versioning
 
 Semantic versioning provides you with rules for how to version your packages. Your library's consumers are used to seeing packages versioned like this, so they'll understand how bumping a library to 1.0.1 is different from 1.1.0.
 We can use a fake package called components to illustrate how semantic versioning works.
@@ -96,13 +96,13 @@ import { Button } from "components";
 
 When you implement this feature, you'll change the version number to 2.0.0. Because you made incompatible API changes, you need to let your users know this is a MAJOR version.
 
-## Conventional Commits
+### Conventional Commits
 
 While it's possible to update your version manually every time you publish, you might prefer tying the version to your commits. That's where Conventional Commits comes in. This becomes especially important when you're working with a team and you want to make it as easy as possible to version your library correctly.
 
 Conventional commits helps you write your commit messages in a machine-readable and human-readable way so that you can automate versioning your package.
 
-## Commitzen
+### Commitzen
 
 You can use commitzen if you want a tool to help you manage writing conventional commit-friendly messages. If you follow their instructions, when you run yarn commit, you'll see something that looks like this:
 
@@ -110,7 +110,7 @@ You can use commitzen if you want a tool to help you manage writing conventional
 
 If you follow the commands, they'll guide you to write a commit message that will allow conventional commits to automatically version your package according to SemVer.
 
-## Lerna
+### Lerna
 
 Alternatively, if you're using a tool like lerna to manage a monorepo and handle publishing, you can automate this in your lerna.json file by setting the conventionalCommits flag to true.
 
@@ -124,10 +124,10 @@ Alternatively, if you're using a tool like lerna to manage a monorepo and handle
 
 When you commit, make sure to follow conventional commit conventions. If you do this correctly, when you run lerna publish, your package will be automatically versioned according to SemVer standards.
 
-## Challenges with SemVer
+### Challenges with SemVer
 
 SemVer helps us to make sure that we're communicating with our users, but it has its flaws. Most notably, it can be very difficult to determine whether a change breaks compatibility. It's impossible for a library author to know every single way a component is being used. Some of its flaws have been discussed here. But for all its flaws, until we have something better it makes sense to stick to it as closely as we can, and make sure to over-communicate when we can't.
 
-## Talk to me!
+### Talk to me!
 
 Are you researching monorepos and Lerna for something you're building? What are you stuck on? I'd love to hear from you. You can reach me on [Twitter](https://twitter.com/MCapoz) or by responding to any of my newsletter messages. (Seriously, I really want to hear from you.)

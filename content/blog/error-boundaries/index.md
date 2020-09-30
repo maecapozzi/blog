@@ -13,7 +13,7 @@ That has changed in React 16, thanks to Error Boundaries. [The React Docs](https
 
 I’ve developed a real-life scenario that can describe how Error Boundaries work:
 
-## A Real Life Scenario
+### A Real Life Scenario
 
 Imagine that you are a parent at a swimming pool, and you have one child. The swimming pool represents the app, you represent a Parent component, and your child represents a Child component.
 
@@ -31,13 +31,13 @@ Because this is React 16, the lifeguard has been watching everything ensue. Afte
 
 Now, it’s easy to tell what actually caused the error. The establishment that owns the swimming pool (the developer), can now easily mitigate future risk by making sure only one person stands on the diving board at a time.
 
-## Step 1: Spin up a React application using create-react-app
+### Step 1: Spin up a React application using create-react-app
 
 We’ll start by spinning up a React application using create-react-app. If you haven’t done this before, I’ve written up a [cheatsheet](https://gist.github.com/maecapozzi/41e249c24e683647babf451c675b22c8) that you can follow. If you need a bit more guidance, you can follow the instructions in [Tutorial: How to Make HTTP Requests in React, Part 1.](https://hackernoon.com/tutorial-how-to-make-http-requests-in-react-part-1-f7afa3cd0cc8)
 
 Once you’ve set up your application and know that it runs locally, we can get started with the actual coding.
 
-## Step 2: Start building out components
+### Step 2: Start building out components
 
 I’ve removed a lot of the boilerplate code that create-react-app includes, so my App.js file looks like this:
 
@@ -117,7 +117,7 @@ On your screen, you should see this:
 
 ![](https://cdn-images-1.medium.com/max/2776/1*dYGGyoi8QVKpESM32mLweQ.png)
 
-## Step 3: Throw an error in the Child component
+### Step 3: Throw an error in the Child component
 
 Now, I’m going to throw an error in the constructor of our Child component so that we can see what happens when we get that kind of error when we aren’t using Error Boundaries.
 
@@ -134,7 +134,7 @@ If we refresh our page, we’ll see an error message like this in development:
 
 If we remove the error by clicking the ‘x’ in the upper right corner, all we see is a blank screen!
 
-## Step 4: Build an Error Boundary component
+### Step 4: Build an Error Boundary component
 
 Here’s an example of an Error Boundary component:
 

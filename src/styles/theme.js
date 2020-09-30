@@ -213,7 +213,7 @@ export const tosh = {
     primary: `#131415`,
     secondary: `#3F3F3F`,
     muted: `#011627`,
-    highlight: `#f02bcc`,
+    highlight: `#7766d7`,
     gray1: `#ececec`,
   },
   spacings: {

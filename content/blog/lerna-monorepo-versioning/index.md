@@ -30,21 +30,21 @@ If you're sitting there wondering what a monorepo is, go read this [post](../mon
 
 Still with me? Great!
 
-## Versioning
+### Versioning
 
 When you modify a package, you need to signal to its consumers that you've made changes. You normally do this by incrementing the version number of your package. Most open-source JavaScript and TypeScript libraries use [Semantic Versioning](https://semver.org/) to express the different types of changes a maintainer has made to a package.
 
 I've written about this topic elsewhere, so I'm not going to spend a lot of time reexplaining it. If you'd like to know more, I'd recommend reading [Before You Build A Component Library: Versioning](../library-versioning) before continuing.
 
-## Lerna with Yarn Workspaces
+### Lerna with Yarn Workspaces
 
 We can use [Lerna](https://github.com/lerna/lerna#lernajson) with [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) to make it possible to develop across multiple components without having to publish them to a registry or rely on `yarn link`.
 
-### Yarn Workspaces
+#### Yarn Workspaces
 
 Yarn workspaces allow you to link your packages togethe so that you can use up-to-date code without relying on `yarn link`.
 
-### Lerna
+#### Lerna
 
 Lerna is a great open-source tool for managing projects with multiple packages. Both [Gatsby](https://github.com/gatsbyjs/gatsby) and [Babel](https://github.com/babel/babel) are open-source monorepos using Lerna behind the scenes.
 
@@ -64,11 +64,11 @@ The other option is independent versioning. It allows you to increment package v
 
 If your monorepo only consists of components and they are often or always used together, fixed versioning should work nicely for your needs. On the other hand, if your monorepo contains unrelated packages, you might prefer independent versioning. You probably don't want to increment the version of your A/B testing tool just because you made changes to the `<Card />` component.
 
-## An Example Case
+### An Example Case
 
 Imagine that you're working on a project that involves UI components, TypeScript libraries, and starter kits. After doing some research you decide to use a monorepo. You choose a monorepo for a couple of reasons: you want to make sure that it's easy for your teammates to find what they need, you want to easily coordinate changes across modules, and you'd like to maintain a single lint, build, test, and release process.
 
-### 1. Create a new directory
+#### 1. Create a new directory
 
 Create a new directory called `monorepo` in your terminal.
 
@@ -76,7 +76,7 @@ Create a new directory called `monorepo` in your terminal.
 mkdir monorepo
 ```
 
-### 2. Configure yarn workspaces
+#### 2. Configure yarn workspaces
 
 Create a **package.json** file and add the following:
 
@@ -91,7 +91,7 @@ The workspaces key lets you tell yarn which packages you want to link together. 
 
 We might as well create a directory called `/packages` while we're at it!
 
-### 3. Configure lerna
+#### 3. Configure lerna
 
 - Install `lerna` as a `devDependency`
 
@@ -142,7 +142,7 @@ This script will be useful later in case you want your CI tool to automate publi
 
 This way you'll be able to call `yarn bootstrap` and `yarn publish` later.
 
-### 4. Decide between fixed and independent versioning
+#### 4. Decide between fixed and independent versioning
 
 You know that not all of these packages will rely on each other. You don't want to increment each package's version every time you make a change in any individual package. It seems like the best approach for this particular project is to use Lerna's independent versioning.
 
@@ -158,7 +158,7 @@ You know that not all of these packages will rely on each other. You don't want 
 }
 ```
 
-### 5. Create a new package
+#### 5. Create a new package
 
 Let's create a package that we can test our configuration on. Create a new directory called `button` under `/packages`. Inside of the `button` directory, create a new `package.json` file and paste:
 
@@ -173,13 +173,13 @@ Let's create a package that we can test our configuration on. Create a new direc
 
 You'll have to name the package some randomly generated words, since npm definitely already has a package on it called `button`. I called mine `functionnuclearscholarbroadcast`!
 
-### 6. Run `yarn publish`
+#### 6. Run `yarn publish`
 
 **For this step, you'll have to create an npm account if you don't already have one.**
 
 If you run `yarn publish`, you should be able to increment the package's version as well as publish it to npm.
 
-## Hungry for more?
+### Hungry for more?
 
 - [Parallel builds in lerna](/parallel-builds-in-lerna)
 - [Should you version components separately or as a unified system?](/version-bundling)

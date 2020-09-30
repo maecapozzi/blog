@@ -7,7 +7,7 @@ img: "hoisting.png"
 
 Hoisting remains one of the quirkier aspects of JavaScript. When a developer declares a variable in JavaScript, that variable *behaves *as if it’s been lifted to the top of it’s available scope. This article isn’t going to concern itself with what actually happens behind the scenes to cause this behavior. Instead, I hope to provide a simple explanation of hoisting that will make sense to new users of JavaScript.
 
-## Hoisting in ES5
+### Hoisting in ES5
 
 I went about 1.5 years without really understanding hoisting. I just stuck to a general rule — I always declared and assigned all of my variables at the top of the file. Before ES6 came out, that looked something like the code below:
 
@@ -16,7 +16,7 @@ var a = 1;
 var b = 2;
 var c = 3;
 
-var adder = function(a, b, c) {
+var adder = function (a, b, c) {
   return a + b + c;
 };
 
@@ -32,7 +32,7 @@ var a;
 var b;
 var c;
 
-var adder = function(a, b, c) {
+var adder = function (a, b, c) {
   console.log(a + b + c);
 };
 
@@ -76,11 +76,11 @@ Got it? OK, I’ll share the answer with you.
 
 `console.log(a)` will return 1. On the other hand, `console.log(b)` will come back with `ReferenceError: b is not defined`. Both a and b are hoisted to the top of their scope, but because b was declared inside of the hoist() function, it’s not available to the global scope.
 
-## Hoisting in ES6
+### Hoisting in ES6
 
 `let` and `const` introduce a different way of handling hoisting.
 
-### Let
+#### Let
 
 We’ll start with `let`. In the example below, I’m trying to log the hoist variable, and then declaring and assigning it:
 
@@ -93,7 +93,7 @@ In this case, I got a ReferenceError. This is different from what I would have g
 
 `var` and `let` throw different errors because JavaScript initializes them differently. When `var` is declared, JavaScript sets it to `undefined`. `let`, on the other hand, remains uninitialized. That way, it throws a helpful error rather than just returning `undefined`.
 
-### Const
+#### Const
 
 Let’s try this with `const`:
 
@@ -104,11 +104,11 @@ const hoist = "hoisted";
 
 Like let, we get an explicit error telling us that hoist was not defined before it was called.
 
-## Functions
+### Functions
 
 JavaScript will hoist function declarations, but not function expressions. I’ll provide some examples:
 
-### Function Declaration
+#### Function Declaration
 
 If a function is declared but isn’t assigned to a variable, it will be hoisted to the top of it’s scope.
 
@@ -120,21 +120,21 @@ function hoister() {
 }
 ```
 
-### Function Expression
+#### Function Expression
 
 A function expression, on the other hand, will not be hoisted, so the below code returns a `TypeError`.
 
 ```js
 hoister(); // TypeError: hoister is not a function
 
-var hoister = function() {
+var hoister = function () {
   console.log("hoists");
 };
 ```
 
 Hopefully this post has helped you to make a bit more sense of hoisting. Of course, there’s always more to learn.
 
-## Keep Reading
+### Keep Reading
 
 - [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
 

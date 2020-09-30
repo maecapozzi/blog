@@ -14,7 +14,7 @@ We can use the metaphor of a wedding cake to understand this a little better. Wh
 
 Design systems are the same way. At first glance, a design system might seem like a single, monolithic library. In reality, a good design system is a series of layers that build on each other, ideally using [progressive disclosure of complexity](/progressive-disclosure-of-complexity) as a guiding principle.
 
-## The 5 layers
+### The 5 layers
 
 When a design system reaches maturity, it should have five layers, with the first three living in the design files and component library, and the last two living in the application code.
 
@@ -46,7 +46,7 @@ Brad Frost's language is really good, and very commonly used across teams. It's 
 4. Features
 5. Layouts
 
-## Design Tokens
+### Design Tokens
 
 Design tokens are the most abstract layer of the system. They are an approach to storing style attributes like color, typography, and spacing in a pre-determined structure. While not particularly useful on their own, they are a critical part of a design system. They allow designers and developers to quickly ship redesigns, add theming to their applications, and build consistent layouts.
 
@@ -68,7 +68,7 @@ const theme = {
 };
 ```
 
-### Elements
+#### Elements
 
 Now that we've covered design tokens, let's move up a level to elements. In my experience, this is what people usually think about when they imagine a design system. They're certainly a foundational part!
 
@@ -92,7 +92,7 @@ Some other examples include:
 - Grid
 - Box
 
-### Patterns
+#### Patterns
 
 Patterns consist of two or more elements. They are more opinionated than elements. As design system maintainers, we make decisions about how elements are combined to create patterns. If consumers don’t like they way we have created a pattern, they are welcome to drop down a layer of abstraction and combine elements in a new way.
 
@@ -125,7 +125,7 @@ Some other examples include:
 - Form
 - NavBar
 
-### Features
+#### Features
 
 Features consist of two or more patterns. They are more opinionated and specific than patterns. As usual, consumers can drop down into the level of abstraction that’s right for their needs. Normally, features will live in application code, not in the design system.
 We can use a `SurveyQuestion` as an example! A `SurveyQuestion` might combine a `RadioList` with a `Text` component.
@@ -145,7 +145,7 @@ Some other examples include:
 - ShippingAddressForm
 - CrossSellModule
 
-### Layouts
+#### Layouts
 
 Layouts consist of two or more features. These are the most opinionated layer of the system, and are usually so custom that it wouldn't make sense for them to live in the design system.
 
@@ -158,7 +158,7 @@ Some examples include:
 Let’s reiterate a bit. By the time we’ve reached the Layout level, we have an entire, customized <Survey /> that’s living on a site somewhere. But that <Survey /> is composed from many different levels (some of which live in application code, and others of which live in the design system).
 The <Survey /> is made up of multiple <SurveyQuestion /> features. Each <SurveyQuestion /> is made up of multiple <RadioList /> patterns. <RadioList /> patterns are made from multiple <RadioButton /> elements. And RadioButtons know how to read the design tokens.
 
-## Hungry for more?
+### Hungry for more?
 
 - [Design Tokens](/design-tokens)
 - [Should you version components separately or as a unified system?](/version-bundling)

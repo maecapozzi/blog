@@ -13,7 +13,7 @@ At the end of this tutorial, you’ll be able to click a button, feed Github you
 
 Let’s begin.
 
-## **Step 1: Set up a new application**
+### **Step 1: Set up a new application**
 
 First, we need to set up our project. We will begin by navigating to the [create-react-app](https://github.com/facebookincubator/create-react-app) repository on Github.
 
@@ -25,7 +25,7 @@ To create a new project using create-react-app, head over to your terminal. cd i
 
 In the command above, github-requester is the name I’ve chosen to give my application. You’re welcome to name your application anything you’d like.
 
-## Step 2: Start your server
+### Step 2: Start your server
 
 Next, cd into your application, and type npm start. This will start your server, so that you can view your application locally in your browser at [http://localhost:3000/](http://localhost:3000/).
 

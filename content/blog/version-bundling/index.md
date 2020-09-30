@@ -22,7 +22,7 @@ you might have a `button` and a `link` package. You can version each one individ
 
 There's really only one wrong answer to this question in my opinion, and its to not version your packages at all. It's important to communicate to your stakeholders how stable your packages are and whether or not upgrading them is going to mean a breaking change. You also want to make sure it's easy for them to downgrade if your new version isn't working for them. If you don't version them and you introduce a breaking change or a bug they can't downgrade out of you might be negatively affecting a team's ability to ship. That's the exact opposite of what a library should strive to do.
 
-## Hungry for more?
+### Hungry for more?
 
 - [Parallel builds in lerna](/parallel-builds-in-lerna)
 - [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)

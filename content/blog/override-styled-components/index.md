@@ -10,7 +10,7 @@ This blog post is for people who use [styled-components](https://styled-componen
 
 Let's take a look at a `Tabs` component for an example:
 
-## Implementation
+### Implementation
 
 ```tsx
 import React from "react";
@@ -43,7 +43,7 @@ When you implement the component, the library author needs to make sure to pass 
 
 The [`classnames`](https://www.npmjs.com/package/classnames) library allows you to pass multiple `className`s to a React component. You can use it to add your own `className` to it, as well as pass any `className`s that are passed into the `Tabs` component. **You must remember to add a `className` prop to the `Tabs` component and pass it to the styled component.** If you forget this step, you won't be able to override the the styles the library author has applied.
 
-## Usage
+### Usage
 
 Now, consumers of this component can override the `baseTabStyles` in the following way:
 

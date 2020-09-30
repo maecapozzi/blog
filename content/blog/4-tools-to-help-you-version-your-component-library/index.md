@@ -23,7 +23,7 @@ Milo can jump right into googling, but it's not going to be easy for him to find
 
 There's a lot of jargon out there that can be difficult to sift through, and it's hard for even an experienced dev to know what questions to ask. I compiled this list of tools for you to look into to get you started as you research how to go about versioning your component library so you don't have to do what I did!
 
-## 1. Semantic versioning
+### 1. Semantic versioning
 
 [Semantic versioning](https://semver.org/) is a way for you to communicate to your library's consumers that you've released a new version and information about the kind of version you've published. I've written about this in more depth [before](https://maecapozzi.com/library-versioning/), but here's the gist:
 
@@ -33,21 +33,21 @@ If you start at version `1.0.0` and you added a feature that doesn't break the a
 
 If you start at version `1.0.0` and change your library's API so that your consumers need to rewrite their code to continue using your library, that's a `MAJOR` change. You'll need to bump the first number, and you'll end up with `2.0.0`.
 
-## 2. Conventional Commits
+### 2. Conventional Commits
 
 [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) is a specification that will help you to automate the versioning process. It's a way to make semantic versioning a bit more human-readable and easier to work with. For example, if you include the words `BREAKING CHANGE:` in your commit message, your package will be automatically bumped a `MAJOR` version, or you'll go from `1.0.0` to `2.0.0`.
 
-## 3. Lerna
+### 3. Lerna
 
 [Lerna](https://github.com/lerna/lerna) is a set of scripts that make it easier to version and publish your libraries that live in monorepos. It contains commands like `lerna boostrap`, which will link all of the dependencies in your monorepo for you, and `lerna publish` which will publish your packages to a registry. If it didn't exist, you'd have to write these scripts from scratch, so it's a great timesaver.
 
 Lerna has a flag that will automatically configure conventional commits for you. It'll also auto-generate Changelogs for you
 
-## 4. @changesets/cli
+### 4. @changesets/cli
 
 [@changesets/cli](https://www.npmjs.com/package/@changesets/cli) is the only tool on the list that I haven't used, but I've heard it mentioned enough times that I think it's worth adding to the list. It's a tool that can help you manage versioning and changelogs in monorepos.
 
-## Hungry for more?
+### Hungry for more?
 
 - [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
 - [Should you version components separately or as a unified system?](/version-bundling)

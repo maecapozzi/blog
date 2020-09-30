@@ -28,7 +28,7 @@ Now...even if you totally buy what I'm saying, you can't just go back to your te
 
 I don't want you to have to go off and do a ton of research to justify building a monorepo. To save you some of that time and stress, I compiled a pros/cons list for both approaches.
 
-## Multirepos
+### Multirepos
 
 #### Multirepo Pros
 
@@ -42,7 +42,7 @@ I don't want you to have to go off and do a ton of research to justify building 
 - Multiple repositories add friction. Every repo you add means there's another package you have to keep in sync
 - It can be annoying to `npm link` components that rely on each other across repos
 
-## Monorepos
+### Monorepos
 
 In this section, you can assume I'm talking about [lerna-managed](https://github.com/lerna/lerna) monorepos. Lerna provides two versioning schemes, fixed and independent. I'll note below whether any of the points refer to one or the other. If you're unfamiliar with Lerna, you can read a bit more about it.
 

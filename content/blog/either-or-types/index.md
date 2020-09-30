@@ -25,7 +25,7 @@ const properties = { one: "hi" }; // Valid
 const properties = { theOther: "bye" }; // Valid
 ```
 
-## When we don't enforce the "either/or" type
+### When we don't enforce the "either/or" type
 
 We'll start by writing out an example that doesn't prevent consumers from passing a parameter that includes both `one` and `theOther`.
 
@@ -52,7 +52,7 @@ In our initial example, if we try to call `oneOrTheOther` with a parameter that 
 oneOrTheOther({ one: "hi", theOther: "bye" }); // No TypeScript error, `one` is returned
 ```
 
-## When we enforce the "either/or" type
+### When we enforce the "either/or" type
 
 We can use a combination of TypeScript's `never` and `union` types to enforce that a parameter can _either include `one`, or `theOther`, and never both._
 

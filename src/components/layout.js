@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import styled, { ThemeProvider } from "styled-components";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
 import { GridStyles } from "../components/Grid";
-import mediaQueries from "../utils/mediaQueries";
 
 const List = styled.ul`
   ${GridStyles};

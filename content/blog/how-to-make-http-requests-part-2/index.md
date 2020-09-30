@@ -9,7 +9,7 @@ _If you haven’t completed [part 1](https://medium.com/@MCapoz/tutorial-how-to-
 
 Now that we’ve set up our project using create-react-app, we can start writing some code. Open your project into your editor of choice, and let’s start removing some of the boilerplate that create-react-app adds for you, since we won’t need it.
 
-## **Step 1: Remove create-react-app boilerplate**
+### **Step 1: Remove create-react-app boilerplate**
 
 When you go into your App.js file, it will look something like this:
 
@@ -56,7 +56,7 @@ You can also delete the logo.svg file, since we won’t be using it. Now, when y
 
 ![](https://cdn-images-1.medium.com/max/2000/1*GBYgJkuhgT7XwR8jALBDag.png)
 
-## **Step 2: Wire up the handleClick function**
+### **Step 2: Wire up the handleClick function**
 
 Our next step will be set up a function that is triggered when a user clicks the button. We’ll start by adding an onClick event to our button, like this:
 

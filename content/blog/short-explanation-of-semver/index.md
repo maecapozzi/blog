@@ -12,7 +12,7 @@ Semantic versioning is a way for library authors to communicate to consumers tha
 
 When you're installing open-source packages, check the version number. The authors of the component library are trying to communicate details about the package's stability to you.
 
-## Hungry for more?
+### Hungry for more?
 
 - [Parallel builds in lerna](/parallel-builds-in-lerna)
 - [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)

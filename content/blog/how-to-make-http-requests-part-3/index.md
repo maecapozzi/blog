@@ -11,7 +11,7 @@ Now we’re getting to the good part! So far, we’ve set up a new React applica
 
 When I was first learning React, I wasn’t sure whether there was a built-in way to make HTTP requests. There isn’t. We’ll have to rely on third-party services to make our requests. I prefer axios, but there are other options, like Superagent or fetch. We’ll be using axios in this tutorial.
 
-## Step 1: Install axios
+### Step 1: Install axios
 
 We’ll install `axios` using npm:
 
@@ -21,7 +21,7 @@ Once we’ve installed it, we can take a look at the [docs](https://github.com/a
 
 As a quick reminder, our goal is to get back a user’s name from the `/users/:username` endpoint.
 
-## **Step 2: Write a get request**
+### **Step 2: Write a get request**
 
 First, let’s add state to our component. We’ll add a `username` attribute to it and set it as an empty string. Once we add state, our constructor will look like this:
 

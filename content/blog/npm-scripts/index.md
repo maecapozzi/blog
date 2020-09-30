@@ -8,7 +8,7 @@ Early on in my career, I found myself at a total loss about the command to start
 
 What I needed was a list of commands. The good news is, this list exists in every JavaScript and TypeScript codebase! Let's dig in! ⛏️
 
-## **What are npm scripts?**
+### **What are npm scripts?**
 
 A **script** executes a series of actions when called.
 
@@ -59,7 +59,7 @@ When you start working on a new project, you can peek at the package.json. There
 
 A trick you can use is that if you forget exactly where the scripts live, you can always search the whole project for these types of names. That'll probably help you stumble on these scripts.
 
-## **How to run npm scripts**
+### **How to run npm scripts**
 
 If you went to your terminal and typed build, you'd get an error:
 
@@ -84,7 +84,7 @@ yarn build
 
 One of the benefits of leveraging npm scripts is that you can run them in your CI pipeline.
 
-## **Write your own**
+### **Write your own**
 
 You're also welcome to add your own npm scripts to your projects. Let's say that you're configuring jest for a project, and you've been running yarn jest to run your tests. Let's imagine that you want to rename the command to test so that it's easier to remember. You can add a key to scripts called test:
 
@@ -115,7 +115,7 @@ You want jest to watch for changes to your tests. You don't want to keep rerunni
 
 Now, we've added a second script called test:watch, which runs Jest with a --watch flag.
 
-## **In Review**
+### **In Review**
 
 - NPM scripts are the scripts defined in the scripts section of an app's package.json file
 - Always check out the package.json to find the scripts available to you
@@ -123,7 +123,7 @@ Now, we've added a second script called test:watch, which runs Jest with a --wat
 - Use NPM scripts in your CI pipeline to automate common tasks
 - Write your own NPM scripts to automate tasks with many steps that you perform often
 
-# **Hungry for more?**
+### **Hungry for more?**
 
 - [Before you build a component library: monorepo versioning](https://maecapozzi.com/lerna-monorepo-versioning)
 - [Should you version components separately or as a unified system?](https://maecapozzi.com/version-bundling)

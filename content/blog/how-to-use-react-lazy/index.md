@@ -10,7 +10,7 @@ React 16.6.0 introduced `React.lazy`, which allows you to code-split using the n
 
 I’ve built a Github clone based off of Siddharth’s example. Hopefully this will help people who prefer reading to watching videos, or who to be walked through it step by step!
 
-# Why would I use React.lazy?
+### Why would I use React.lazy?
 
 React.lazy allows developers to block UI from rendering until a pre-determined condition is met. For example, maybe you don’t want your component to render until you get a response back from an endpoint.
 
@@ -30,7 +30,7 @@ You might be wondering how lazy() is different from react-loadable, for example.
 
 `lazy()` lets you code-split without adding another dependency to your codebase. It makes a best practice (code-splitting) easier, which will encourage developer to use it, and will make writing performant React apps more seamless.
 
-# Let’s Take a Look at an Example
+### Let’s Take a Look at an Example
 
 I built a demo of code-splitting with `React.lazy` using Github’s API to show you exactly how to implement it in your own application.
 
@@ -59,7 +59,7 @@ On the other hand, when we implement code-splitting, we load two chunks initiall
 
 ![](https://cdn-images-1.medium.com/max/800/1*69anCVxxnu2f3DOgROkDlw.png)
 
-# How Does It Work?
+### How Does It Work?
 
 The best part about this React feature is how easy it is to implement.
 

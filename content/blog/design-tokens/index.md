@@ -34,8 +34,8 @@ const theme = {
     secondary2: "#3CA6E0",
     secondary3: "#C17259",
     secondary4: "#0E78B2",
-    secondary5: "#00875E"
-  }
+    secondary5: "#00875E",
+  },
 };
 ```
 
@@ -46,11 +46,11 @@ import styled from "styled-components";
 import { Button } from "@harrysforge/button";
 
 const PrimaryButton = styled(Button)`
-  background-color: ${props => props.theme.colors.primary1};
+  background-color: ${(props) => props.theme.colors.primary1};
 `;
 ```
 
-## Levels of Design Token Usage
+### Levels of Design Token Usage
 
 I've seen three different levels of design token usage across sites.
 
@@ -64,7 +64,7 @@ In my experience, this is the most common level of design token usage. There is 
 
 ```ts
 const theme = {
-  babyBlue: `blue`
+  babyBlue: `blue`,
 };
 ```
 
@@ -81,16 +81,16 @@ const theme = {
     secondary2: "#3CA6E0",
     secondary3: "#C17259",
     secondary4: "#0E78B2",
-    secondary5: "#00875E"
-  }
+    secondary5: "#00875E",
+  },
 };
 ```
 
-## Common Workflows
+### Common Workflows
 
 Using design tokens can improve a number of common workflows. There are many cases where having design tokens improve design and developer experience while also providing business value. Let's walk through a couple of these common scenarios, and how they're different for sites that use no design tokens, unstructured design tokens, and structured design tokens.
 
-## 1. Site Redesigns
+### 1. Site Redesigns
 
 **No design tokens**
 
@@ -105,8 +105,8 @@ Then, there's the scenario in which design tokens are leveraged, but tokens are 
 ```ts
 const theme = {
   colors: {
-    babyBlue: "blue"
-  }
+    babyBlue: "blue",
+  },
 };
 ```
 
@@ -115,8 +115,8 @@ In this case, a developer can change `babyBlue` to orange.
 ```ts
 const theme = {
   colors: {
-    babyBlue: "orange"
-  }
+    babyBlue: "orange",
+  },
 };
 ```
 
@@ -131,14 +131,14 @@ In the code, the design tokens look like this:
 ```ts
 const theme = {
   colors: {
-    primary1: "blue"
-  }
+    primary1: "blue",
+  },
 };
 ```
 
 In this case, all the developer needs to do is change `primary1` to orange and the whole codebase will automatically update in the right places with orange instead of blue.
 
-## 2. Design / Dev Collaboration
+### 2. Design / Dev Collaboration
 
 Among other benefits, design tokens introduce a common vocabulary that designers and developers can both use when referring to styles, which improves collaboration and reduces back-and-forth, saving time and money.
 
@@ -154,7 +154,7 @@ The design tokens are named differently by the designers and the developers. The
 
 Designers and developers both call the blue `primary1`. Now, when designers want to update a color in their mocks across the whole site, all they need to do is tell a developer to update `primary1` from blue to orange.
 
-## 3. Theming
+### 3. Theming
 
 **No design tokens**
 
@@ -168,7 +168,7 @@ If your tokens have names like `babyBlue`, it's going to get weird when `babyBlu
 
 This will be really straightforward, as long as all of the themes follow the rules of the design tokens.
 
-## 4.Consistent UI Experience
+### 4.Consistent UI Experience
 
 **No design tokens**
 
@@ -182,7 +182,7 @@ This is much better than not having design tokens! At least developers have a go
 
 This is ideal, since the structure of the design tokens can be shared between developers and designers, and site redesigns will be straightforward and consistent.
 
-## A Shared Design Token Specification
+### A Shared Design Token Specification
 
 As companies grow, they start to maintain multiple applications at once. A company can begin to address some of the pain points that develop when this starts to happening by agreeing on a shared design token specification.
 

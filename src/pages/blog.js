@@ -1,7 +1,6 @@
 import React from "react";
 import SEO from "../components/seo";
 import { Main } from "../components/Main";
-import { Header, HeadingWrapper } from "../components/Header";
 import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { Grid } from "../components/Grid";

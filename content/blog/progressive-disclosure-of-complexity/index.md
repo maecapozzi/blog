@@ -18,7 +18,7 @@ I figured that the audience members would be looking for a solution to specific 
 
 I realized I couldn't tell the audience what I thought they really wanted to hear. But I could share the core concept that we constantly return to as we think through how to structure our design system: **progressive disclosure of complexity**.
 
-## Progressive Disclosure of Complexity
+### Progressive Disclosure of Complexity
 
 [Progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/) is a design term that describes when a designer “defers advanced or rarely used features to a secondary screen, making applications easier to learn and less error-prone<sup>\*</sup>.”
 
@@ -28,13 +28,13 @@ As I was reading Jason Lengstorf's [blog](lengstorf.com), I stumbled upon his po
 
 My main takeaway from his blog post is that you should allow your users to trade complexity for flexibility.
 
-## Trading Complexity for Flexibility
+### Trading Complexity for Flexibility
 
 Let's step back and think about what it means to trade complexity for flexibility for a moment.
 
 When we think about building a design system, we want to provide our users with **sane defaults** that they can opt-out of when they need more advanced features. When users feel like they need more flexibility, they should be able to drop down into a lower level of abstraction instead of ejecting out of the system.
 
-## Layers of Abstraction
+### Layers of Abstraction
 
 On the Forge team at Harry's, we organize our system into four different layers of abstraction. All work takes place on a spectrum from **least complex / least flexible** to **most complex / most flexible**.
 
@@ -54,29 +54,29 @@ In the example above, the layout component consists of two base components, a qu
 
 ![A generic page for a fake t-shirt brand made out of multiple layout components.](../../assets/starterkitpage.png)
 
-### Least Complex / Least Flexible 🚀
+#### Least Complex / Least Flexible 🚀
 
 A team that was happy with the defaults set by the starter kit would opt into this layer if they did not want to spend a lot of time, effort, or money customizing a site further.
 
 In this case, a designer would apply the brands colors, typography, and imagery to the Figma kit. Then, a developer would apply the design tokens to the codebase.
 
-### Less Complex / Less Flexible 🚢
+#### Less Complex / Less Flexible 🚢
 
 Let’s say that a product manager realizes that users aren't adding as many items to the cart as they would like. They might decide to rearrange the layout components on the product display page to A/B test a new experience.
 
 A designer would rearrange the layout components in Figma, and a developer would move the layout components from our component library to match.
 
-### More Complex / More Flexible 🚗
+#### More Complex / More Flexible 🚗
 
 Now, the product manager notices that a lot of people are confused about how to use the product. They decide that it'd be useful to have a carousel on the PDP page to show the product being used in different ways. But we don't have a carousel in our design system yet!
 
 The designer would use the existing button, slider, and card base components to create a carousel. Then, the developer would use the existing base components to build a carousel.
 
-### Most Complex / Most Flexible 🚴‍♀️
+#### Most Complex / Most Flexible 🚴‍♀️
 
 Ultimately, a product manager is allowed to rewrite the whole PDP from scratch if they feel that’s appropriate. But even if the whole PDP is custom, the team still doesn’t need to leave the system––they can still leverage the cart and checkout from the starter kit at the “least complex / least flexible” level while opting into the “most complex / most flexible” level on the PDP.
 
-## Reach out to me
+### Reach out to me
 
 I hope this was a helpful explanation of progressive disclosure of complexity! Feel free to [reach out to me](https://twitter.com/MCapoz) on Twitter if you have any questions or suggestions about this post.
 

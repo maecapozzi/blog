@@ -10,7 +10,7 @@ There's a tendency when you're working on something to let your dependencies sit
 
 **TLDR; You can quickly catch security vulnerabilities in your dependencies by adding `yarn audit` to your CI pipeline.**
 
-## Semantic Versioning
+### Semantic Versioning
 
 Most JS libraries use [semantic versioning](https://semver.org/) (semver) to signal to consumers what kind of change they are introducing in a release. If you try to read the spec for semver, it can seem overwhelming, but there are only three main concepts you need to remember as a library consumer: patch, minor, and major.
 
@@ -46,13 +46,13 @@ If you're using React version `16.1.1`, and the authors introduce a major versio
 
 ![Example of release notes for a major](https://i.ibb.co/9pQgQQH/Screen-Shot-2020-01-12-at-4-44-22-PM.png)
 
-## Why you should keep up to date
+### Why you should keep up to date
 
 Now imagine that you have 10 libraries in your project. Four have introduced patch versions, three have introduced minor versions, and three have introduced major versions. The path to upgrade the libraries that have introduced patch and minor versions will be straightforward -- you'll get bug fixes and new features without needing to change your code. On the other hand, upgrading the libraries with major versions could be time-consuming, especially if the library you're upgrading is as integral to your codebase as `react`, `react-dom`, or `gatsby`. And remember, most projects use way more than just 10 libraries -- you're probably looking at 50+.
 
 More importantly, some of the packages you're relying on may have security vulnerabilities, which you want to handle as soon as possible. Keeping your dependencies up to date will keep your app more secure.
 
-## How to upgrade your dependencies
+### How to upgrade your dependencies
 
 You can use some handy commands to take a look at what dependencies need to be upgraded by running `npm outdated` or [`yarn outdated`](https://yarnpkg.com/lang/en/docs/cli/outdated/).
 
@@ -62,7 +62,7 @@ If you do this often and keep your dependencies upgraded, you'll only see a coup
 
 For this example, I'll need to upgrade each dependency by hand, which will take a long time. I can pick a dependency and run: `yarn add gatsby@latest`, and it'll bump me to the latest version. (It will not include alpha or beta versions, so if you want that, you'll need to do it by hand).
 
-## How to stay up to date
+### How to stay up to date
 
 OK, so obviously we don't want to be in the situation above since it's bound to be time-consuming. You should work with your team to figure out the best way to keep your dependencies upgraded. At Harry's, I'm in the on-call rotation for [shopflamingo.com](https://www.shopflamingo.com/), and we've agreed that the on-call person has to bump the dependencies, so we try to upgrade them every week. This means we don't end up spending a couple of days every quarter upgrading our dependencies.
 

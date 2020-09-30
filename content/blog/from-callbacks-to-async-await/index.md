@@ -16,7 +16,7 @@ The program:
 
 Here’s what I came up with.
 
-## Callbacks
+### Callbacks
 
 I struggled to make an HTTP request using callbacks. I’ve mostly used Promises to write asynchronous JavaScript. I generally use [axios](https://github.com/axios/axios) or [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) in my applications, which are both Promise-based.
 
@@ -34,7 +34,7 @@ const makeHTTPRequest = (url, methodType, callback) => {
   xhr.send();
 };
 
-const getLogin = response => {
+const getLogin = (response) => {
   console.log(JSON.parse(response));
 };
 
@@ -52,16 +52,16 @@ I’ll walk you through what this code does:
 
 4. I pass `getLogin` into `makeHTTPRequest` as callback. That means `getLogin` will take the response from Github has it’s argument.
 
-## Promises
+### Promises
 
 After achieving my goals with callbacks, I attempted with promises. This felt straightforward, since I’ve done it many times before.
 
 ```js
-const makeHTTPRequest = username => {
+const makeHTTPRequest = (username) => {
   const url = "https://api.github.com/users/" + username;
   fetch(url)
-    .then(response => response.json())
-    .then(response => console.log(response));
+    .then((response) => response.json())
+    .then((response) => console.log(response));
 };
 
 makeHTTPRequest("maecapozzi");
@@ -75,7 +75,7 @@ makeHTTPRequest("maecapozzi");
 
 4. I log the response
 
-## Generators
+### Generators
 
 This was my first foray into generators. The syntax and concept were totally foreign to me upon approaching this challenge.
 
@@ -96,12 +96,12 @@ getUser("maecapozzi");
 
 3. I follow the same pattern again when I set `parsedResponse` equal to `response.json(`). I have to wait for the Promise to resolve before I can set my variable. If I don’t use `yield`, when I try to log `parsedResponse`, I get: `Promise {<pending>}` back.
 
-## Async/Await
+### Async/Await
 
 Finally, I wrote the application once more using ES7 async/await. Since I did this after building the same application with generators, it became really obvious how async/await is built on top of generators.
 
 ```js
-const getUser = async username => {
+const getUser = async (username) => {
   const uri = "https://api.github.com/users/" + username;
   const response = await fetch(uri);
   const parsedResponse = await response.json();
@@ -119,7 +119,7 @@ getUser("maecapozzi");
 
 4. Then I log the parsed response.
 
-## Takeaways
+### Takeaways
 
 This was a worthy endeavor for a few reasons. First of all, I hadn’t used callbacks much, so I didn’t really know how big of a deal Promises were. I also had been taking fetch and axios for granted, since they made making HTTP requests so much more straightforward.
 

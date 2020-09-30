@@ -23,6 +23,7 @@ const BodyWrapper = styled("div")`
   h2 {
     margin-top: 62px;
     font-family: ${(props) => props.theme.fonts.primary};
+    font-size: ${(props) => props.theme.fontSizes["7"]};
   }
 
   h3 {

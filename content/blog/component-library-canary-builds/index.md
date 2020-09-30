@@ -21,7 +21,7 @@ You can get really fancy with this if you tell lerna to allow you to publish fro
 
 Are you researching monorepos and Lerna for something you're building? What are you stuck on? I'd love to hear from you. You can reach me on [Twitter](https://twitter.com/MCapoz) or by responding to any of my newsletter messages. (Seriously, I really want to hear from you.)
 
-## Hungry for more?
+### Hungry for more?
 
 - [What is Lerna?](/what-is-lerna)
 - [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
