@@ -4,9 +4,7 @@ import { NewsletterSignup } from "../components/NewsletterSignup";
 
 const StyledPage = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 48px;
 `;
 
 const NewsletterWrapper = styled.div`

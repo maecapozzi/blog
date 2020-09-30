@@ -35,7 +35,7 @@ const BodyWrapper = styled("div")`
     color: ${(props) => props.theme.colors.highlight};
 
     &:hover {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.secondary};
     }
   }
 

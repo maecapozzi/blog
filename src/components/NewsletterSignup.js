@@ -29,7 +29,6 @@ const StyledLabel = styled.label`
   font-family: ${(props) => props.theme.fonts.primary};
   margin-top: 16px;
   font-weight: ${(props) => props.theme.fontWeights.regular};
-  letter-spacing: 0.5px;
   font-size: ${(props) => props.theme.fontSizes["3"]};
 `;
 
@@ -70,7 +69,7 @@ export const StyledButton = styled.button`
   font-size: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.secondary};
   }
 `;
 
@@ -86,6 +85,7 @@ const StyledMessage = styled.div`
 const Error = styled.div`
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: ${(props) => props.theme.fontSizes["2"]};
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 const Wrapper = styled.div`

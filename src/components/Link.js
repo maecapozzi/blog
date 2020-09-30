@@ -8,7 +8,7 @@ export const StyledGatsbyLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
   }
 `;
 
@@ -18,6 +18,6 @@ export const StyledExternalLink = styled("a")`
   text-decoration: none;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
   }
 `;
