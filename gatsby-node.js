@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 img
                 excerpt
+                
               }
             }
           }
@@ -63,7 +64,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };
