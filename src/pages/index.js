@@ -4,7 +4,6 @@ import Bio from "../components/bio";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
 import { Main } from "../components/Main";
-import { Header, HeadingWrapper } from "../components/Header";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { List, SectionHeadings } from "./about";
 import { StyledGatsbyLink } from "../components/Link";
