@@ -11,7 +11,7 @@ import { Grid } from "../components/Grid";
 import { Main } from "../components/Main";
 import { Title } from "../components/Card";
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.primary};
 `;
 

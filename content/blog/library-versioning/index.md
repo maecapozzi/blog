@@ -1,17 +1,12 @@
 ---
 path: "/library-versioning"
 date: "2019-04-10"
-title: "Before You Build A Component Library: Versioning"
+title: "How to version a component library"
 img: "pairing.png"
 excerpt: "Versioning is one of the most challenging aspects to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning."
 ---
 
-_This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._
-
-- [[Should my component library be a monorepo?](../monorepo-or-multrepo)
-- [Before You Build A Component Library: Monorepo Versioning](../lerna-monorepo-versioning)
-
-Versioning is one of the most challenging aspects to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning.
+Versioning is a challenging aspect to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning.
 
 First of all, incremental versioning (with clear upgrade steps) helps you to build trust with your library's consumers. It allows people to opt-in to your new changes when they're ready to upgrade, not on your timeline. And it's a way to communicate with your users what kind of changes you've made in the last release. 
 There are multiple ways to version a library, but this post will focus on publishing to npm and using semantic versioning. This is common web development practice.

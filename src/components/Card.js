@@ -41,7 +41,7 @@ const Content = styled(`p`)`
   margin-bottom: 0;
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
@@ -53,7 +53,7 @@ const ReadMoreLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const Card = ({ img, title, content, slug, date }) => {
+export const Card = ({ img, title, content, slug, date, readMore = true }) => {
   return (
     <CardWrapper>
       {img && (
@@ -65,10 +65,10 @@ export const Card = ({ img, title, content, slug, date }) => {
         <StyledLink to={slug}>
           <Title>{title}</Title>
         </StyledLink>
-        <Date>{date}</Date>
+        {date && <Date>{date}</Date>}
       </TitleWrapper>
-      <Content>{content}</Content>
-      <ReadMoreLink to={slug}>Read more</ReadMoreLink>
+      {content && <Content>{content}</Content>}
+      {readMore && <ReadMoreLink to={slug}>Read more</ReadMoreLink>}
     </CardWrapper>
   );
 };

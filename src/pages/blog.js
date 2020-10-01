@@ -40,7 +40,17 @@ const BlogIndex = (props) => {
       <Main>
         <SEO
           title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
+          keywords={[
+            `blog`,
+            `design systems`,
+            `react`,
+            `javascript`,
+            `typescript`,
+            `figma`,
+            `frontend`,
+            `lerna`,
+            `monorepo`,
+          ]}
         />
         {loopThroughPosts(preNewsletterPosts, images)}
         <NewsletterSignup />
