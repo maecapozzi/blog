@@ -12,7 +12,7 @@ Let's take a look at a `Tabs` component for an example:
 
 ### Implementation
 
-```tsx
+```typescript
 import React from "react";
 import { css } from "styled-components";
 

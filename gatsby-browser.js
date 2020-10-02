@@ -1,8 +1,9 @@
-import React from "react";
-import Layout from "./src/components/layout";
+const React = require("react");
+const Layout = require("./src/components/layout").default;
 
 // custom typefaces
-import "typeface-inter";
+require("./src/styles/prism.css");
+require("typeface-inter");
 
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get

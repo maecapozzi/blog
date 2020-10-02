@@ -1,36 +1,30 @@
 import React from "react";
 import SEO from "../components/seo";
+import { graphql } from "gatsby";
 import { Main } from "../components/Main";
 import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { Grid } from "../components/Grid";
 
-const loopThroughPosts = (posts, images) => {
+const loopThroughPosts = (posts) => {
   return posts.map(({ node }) => {
-    let headerImage;
-    images.forEach((image) => {
-      if (image.node.fluid.originalName === node.frontmatter.img) {
-        headerImage = image;
-      }
-    });
-
-    const title = node.frontmatter.title || node.fields.slug;
+    const title = node.title;
     return (
       <Card
-        img={headerImage && headerImage.node.fluid}
+        img={
+          node.featureImageSharp && node.featureImageSharp.childImageSharp.fluid
+        }
         title={title}
-        content={node.frontmatter.excerpt || node.excerpt}
-        slug={node.fields.slug}
-        date={node.frontmatter.date}
+        content={node.excerpt}
+        slug={`/${node.slug}`}
+        date={node.published_at_pretty}
       ></Card>
     );
   });
 };
 
-const BlogIndex = (props) => {
-  const { data } = props;
-  const posts = data.allMarkdownRemark.edges;
-  const images = data.allImageSharp.edges;
+const BlogIndex = ({ data }) => {
+  const posts = data.allGhostPost.edges;
 
   const preNewsletterPosts = posts.slice(0, 3);
   const postNewsletterPosts = posts.slice(3);
@@ -42,9 +36,9 @@ const BlogIndex = (props) => {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
         />
-        {loopThroughPosts(preNewsletterPosts, images)}
+        {loopThroughPosts(preNewsletterPosts)}
         <NewsletterSignup />
-        {loopThroughPosts(postNewsletterPosts, images)}
+        {loopThroughPosts(postNewsletterPosts)}
       </Main>
     </Grid>
   );
@@ -59,39 +53,24 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allGhostPost(sort: { order: DESC, fields: [published_at] }) {
       edges {
         node {
-          excerpt(pruneLength: 300)
-          fields {
-            slug
+          excerpt
+          title
+          feature_image
+          featureImageSharp {
+            childImageSharp {
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            img
-            excerpt
-          }
-        }
-      }
-    }
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid {
-            base64
-            tracedSVG
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            srcSetWebp
-            sizes
-            originalImg
-            originalName
-            presentationWidth
-            presentationHeight
+          created_at
+          slug
+          published_at_pretty: published_at(formatString: "MMMM DD, YYYY")
+          childHtmlRehype {
+            html
           }
         }
       }
