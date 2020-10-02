@@ -1,8 +1,8 @@
 ---
 path: "/why-you-shouldn't-build-a-design-system"
-date: "2020-10-1"
+date: "2020-10-01"
 title: "Why you shouldn't build a design system"
-img: ""
+excerpt: "It turns out design systems require a lot of upfront investment."
 ---
 
 The other day I tweeted:
