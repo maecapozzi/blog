@@ -1,7 +1,7 @@
 ---
 path: "/why-you-shouldn't-build-a-design-system"
 date: "2020-10-1"
-title: "Why you shouldn't build a design system",
+title: "Why you shouldn't build a design system"
 img: ""
 ---
 
