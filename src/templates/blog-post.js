@@ -1,22 +1,17 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import SEO from "../components/seo";
 import { Date } from "../components/Date";
 import { HeadingWrapper } from "../components/Header";
-import { Text } from "../components/Text";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { Grid } from "../components/Grid";
 import { Main } from "../components/Main";
 import { Title } from "../components/Card";
 
-const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.primary};
-`;
-
 const BodyWrapper = styled("div")`
-  margin-top: ${(props) => props.theme.spacings["7"]};
+  margin-top: ${(props) => props.theme.spacings["5"]};
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fonts.secondary};
 
@@ -55,16 +50,11 @@ const BodyWrapper = styled("div")`
   }
 `;
 
-const BlogPostTemplate = (props) => {
-  if (props.data.markdownRemark) {
-    const post = props.data.markdownRemark;
-    const { previous, next } = props.pageContext;
-    const { title, img, date } = post.frontmatter;
-    const { edges } = props.data.allImageSharp;
+const BlogPostTemplate = ({ data }) => {
+  if (data.ghostPost) {
+    const post = data.ghostPost;
 
-    function parseHtml() {
-      return { __html: post.html };
-    }
+    const { title } = post;
 
     return (
       <Grid>
@@ -72,16 +62,21 @@ const BlogPostTemplate = (props) => {
           <SEO title={title} description={post.excerpt} />
           <HeadingWrapper>
             <Title>{title}</Title>
-            <Date>{date}</Date>
+            <Date>{post.published_at_pretty}</Date>
           </HeadingWrapper>
-          {edges.map((image) => {
-            if (image.node.fluid.originalName === img) {
-              return <Img key={img} fluid={image.node.fluid} />;
+          <Img
+            key={post.feature_image}
+            fluid={
+              post.featureImageSharp &&
+              post.featureImageSharp.childImageSharp.fluid
             }
-            return undefined;
-          })}
+          />
           <BodyWrapper>
-            <div dangerouslySetInnerHTML={parseHtml()} />
+            <div
+              dangerouslySetInnerHTML={{
+                __html: post.childHtmlRehype.html,
+              }}
+            />
           </BodyWrapper>
           <hr />
           <NewsletterSignup />
@@ -91,24 +86,7 @@ const BlogPostTemplate = (props) => {
               listStyle: `none`,
               justifyContent: `space-between`,
             }}
-          >
-            <li>
-              {previous && (
-                <Text>
-                  <StyledLink to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </StyledLink>
-                </Text>
-              )}
-            </li>
-            <li>
-              {next && (
-                <StyledLink to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </StyledLink>
-              )}
-            </li>
-          </ul>
+          ></ul>
         </Main>
       </Grid>
     );
@@ -119,44 +97,103 @@ const BlogPostTemplate = (props) => {
 
 export default BlogPostTemplate;
 
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
+export const ghostPostFields = graphql`
+  fragment GhostPostFields on GhostPost {
+    # Main fields
+    id
+    title
+    slug
+    featured
+    feature_image
+    excerpt
+    custom_excerpt
+    visibility
+    # Dates formatted
+    created_at_pretty: created_at(formatString: "DD MMMM, YYYY")
+    published_at_pretty: published_at(formatString: "MMMM DD, YYYY")
+    updated_at_pretty: updated_at(formatString: "DD MMMM, YYYY")
+    # Dates unformatted
+    created_at
+    published_at
+    updated_at
+    # SEO
+    meta_title
+    meta_description
+    og_description
+    og_image
+    og_title
+    twitter_description
+    twitter_image
+    twitter_title
+    # Authors
+    authors {
+      name
+      slug
+      bio
+      # email
+      profile_image
+      twitter
+      facebook
+      website
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 250)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        img
-      }
+    primary_author {
+      name
+      slug
+      bio
+      # email
+      profile_image
+      twitter
+      facebook
+      website
     }
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid {
-            base64
-            tracedSVG
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            srcSetWebp
-            sizes
-            originalImg
-            originalName
-            presentationWidth
-            presentationHeight
-          }
+    # Tags
+    primary_tag {
+      name
+      slug
+      description
+      feature_image
+      meta_description
+      meta_title
+      visibility
+    }
+    tags {
+      name
+      slug
+      description
+      feature_image
+      meta_description
+      meta_title
+      visibility
+    }
+    # Content
+    plaintext
+    html
+    featureImageSharp {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
+    }
+    childHtmlRehype {
+      html
+    }
+    # Additional fields
+    url
+    canonical_url
+    uuid
+    codeinjection_foot
+    codeinjection_head
+    codeinjection_styles
+    comment_id
+    reading_time
+  }
+`;
+
+export const postQuery = graphql`
+  query($slug: String!) {
+    ghostPost(slug: { eq: $slug }) {
+      ...GhostPostFields
     }
   }
 `;

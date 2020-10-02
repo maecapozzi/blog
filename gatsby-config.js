@@ -29,20 +29,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `img`,
-        path: `${__dirname}/content/assets/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -71,13 +57,22 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: `gatsby-transformer-rehype`,
             options: {
-              inlineCodeMarker: "÷",
+              // 2. - Ensure these only apply to type
+              filter: (node) =>
+                node.internal.type === `GhostPost` ||
+                node.internal.type === `GhostPage`,
+              plugins: [
+                {
+                  // 3. - Add syntax highlight for code block.
+                  resolve: `gatsby-rehype-prismjs`,
+                },
+              ],
             },
           },
-          "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
           {
             resolve: "gatsby-remark-external-links",
@@ -86,6 +81,20 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `jamify-source-ghost`,
+      options: {
+        ghostConfig: {
+          apiUrl: `https://maecapozzi.ghost.io`,
+          contentApiKey: `5f7ea6b609d395b34f0dfb92e9`,
+          version: `v3`,
+        },
+        // Use cache (optional, default: true)
+        cacheResponse: true,
+        // Show info messages (optional, default: true)
+        verbose: false,
       },
     },
     `gatsby-transformer-sharp`,
@@ -98,60 +107,33 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-ghost-images`,
       options: {
-        query: `
+        // An array of node types and image fields per node
+        // Image fields must contain a valid absolute path to the image to be downloaded
+        lookup: [
           {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
+            type: `GhostPost`,
+            imgTags: [`feature_image`],
+          },
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                });
-              });
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  limit: 3,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: `/rss.xml`,
-            title: `RSS feed name`,
+            type: `GhostPage`,
+            imgTags: [`feature_image`],
+          },
+          {
+            type: `GhostSettings`,
+            imgTags: [`cover_image`],
           },
         ],
+        // Additional condition to exclude nodes
+        // Takes precedence over lookup
+        exclude: (node) => node.ghostId === undefined,
+        // Additional information messages useful for debugging
+        verbose: true,
+        // Option to disable the module (default: false)
+        disable: false,
       },
     },
-
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -162,17 +144,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-      },
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
