@@ -143,7 +143,6 @@ module.exports = {
         respectDNT: true,
       },
     },
-    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
