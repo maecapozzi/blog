@@ -41,16 +41,8 @@ function Bio() {
                 <Text>
                   I’m a software developer, writer, and design systems advocate.
                   If the title existed, I’d call myself a{" "}
-                  <b>frontend infrastructure engineeer</b>. This is my personal
-                  blog where I write about problems that meet two requirements.
+                  <b>frontend infrastructure engineer</b>.
                 </Text>
-              </Wrapper>
-              <Wrapper>
-                <OrderedList>1. The problem interests me.</OrderedList>
-                <OrderedList>
-                  2. One or more people have expressed they have the problem on
-                  the internet.
-                </OrderedList>
               </Wrapper>
               <Wrapper>
                 <Text>

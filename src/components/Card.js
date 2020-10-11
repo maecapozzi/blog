@@ -11,14 +11,12 @@ export const CardWrapper = styled(`div`)`
 `;
 
 const StyledImage = styled(Img)`
-  border-radius: 5px 5px 0px 0px;
-  height: 500px;
+  border-radius: 8px;
   margin-top: ${(props) => props.theme.spacings["6"]};
-  margin-bottom: ${(props) => props.theme.spacings["6"]};
 `;
 
 const TitleWrapper = styled.div`
-  padding: ${(props) => `${props.theme.spacings["6"]} 0 0 0`};
+  padding: ${(props) => `${props.theme.spacings["4"]} 0 0 0`};
 `;
 
 export const Title = styled(`h2`)`
