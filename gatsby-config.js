@@ -70,6 +70,9 @@ module.exports = {
                   // 3. - Add syntax highlight for code block.
                   resolve: `gatsby-rehype-prismjs`,
                 },
+                {
+                  resolve: `gatsby-rehype-ghost-links`,
+                },
               ],
             },
           },
