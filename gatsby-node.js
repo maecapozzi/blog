@@ -11,7 +11,9 @@ exports.createPages = async ({ graphql, actions }) => {
             id
             slug
             title
-            html
+            childHtmlRehype {
+              html
+            }
             published_at_pretty: published_at(formatString: "MMMM DD, YYYY")
             feature_image
           }
@@ -21,7 +23,12 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   if (result.errors) {
-    throw new Error(result.errors);
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
+
+  if (!result.data.allGhostPost) {
+    return;
   }
 
   const posts = result.data.allGhostPost.edges;

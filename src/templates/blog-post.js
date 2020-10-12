@@ -64,13 +64,15 @@ const BlogPostTemplate = ({ data }) => {
             <Title>{title}</Title>
             <Date>{post.published_at_pretty}</Date>
           </HeadingWrapper>
-          <Img
-            key={post.feature_image}
-            fluid={
-              post.featureImageSharp &&
-              post.featureImageSharp.childImageSharp.fluid
-            }
-          />
+          {post.featureImageSharp && (
+            <Img
+              key={post.feature_image}
+              fluid={
+                post.featureImageSharp &&
+                post.featureImageSharp.childImageSharp.fluid
+              }
+            />
+          )}
           <BodyWrapper>
             <div
               dangerouslySetInnerHTML={{

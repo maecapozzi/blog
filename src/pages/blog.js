@@ -9,6 +9,7 @@ import { Grid } from "../components/Grid";
 const loopThroughPosts = (posts) => {
   return posts.map(({ node }) => {
     const title = node.title;
+
     return (
       <Card
         img={
@@ -58,6 +59,7 @@ export const pageQuery = graphql`
         node {
           excerpt
           title
+          slug
           feature_image
           featureImageSharp {
             childImageSharp {
@@ -67,7 +69,6 @@ export const pageQuery = graphql`
             }
           }
           created_at
-          slug
           published_at_pretty: published_at(formatString: "MMMM DD, YYYY")
           childHtmlRehype {
             html
