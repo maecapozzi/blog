@@ -1,8 +1,8 @@
 ---
 path: "/why-you-shouldn't-build-a-design-system"
-date: "2020-10-1"
-title: "Why you shouldn't build a design system",
-img: ""
+date: "2020-10-01"
+title: "Why you shouldn't build a design system"
+tags: ["design systems", "component libraries"]
 ---
 
 The other day I tweeted:
