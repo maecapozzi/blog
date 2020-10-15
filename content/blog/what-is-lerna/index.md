@@ -2,6 +2,7 @@
 path: "/what-is-lerna"
 date: "2020-07-10"
 title: "What is Lerna?"
+tags: [{ name: "component libraries" }, { name: "lerna" }]
 ---
 
 Imagine that you've been doing a bunch of research, and you've decided to structure your team's component library as a monorepo. You're probably feeling excited -- you've finally made a decision! And then it hits you -- now you have to make another decision:

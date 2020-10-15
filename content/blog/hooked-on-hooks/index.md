@@ -2,6 +2,7 @@
 path: "/hooked-on-hooks"
 date: "2019-02-15"
 title: "useBreakpoints: a hook"
+tags: [{ name: "react" }]
 ---
 
 I built my first hook a few months ago, and figured I should get it up on the blog. It's a replacement for a Higher Order Component that exists in a codebase I'm working on. That HoC passes a breakpoint to a component that dictates how the component renders across different breakpoints.
@@ -12,7 +13,7 @@ If you want to play around with the component, [you can find it on Code Sandbox]
 import { useState, useEffect } from "react";
 import { debounce } from "./debounce";
 
-const setBreakpoints = width => {
+const setBreakpoints = (width) => {
   if (width < 768) {
     return "isMobile";
   } else if (width >= 768 && width <= 1024) {

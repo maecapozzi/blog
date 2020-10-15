@@ -2,6 +2,7 @@
 path: "/how-to-use-react-lazy"
 date: "2018-10-29"
 title: "How to use React.Lazy"
+tags: [{ name: "react" }]
 ---
 
 React 16.6.0 introduced `React.lazy`, which allows you to code-split using the new Suspense API.

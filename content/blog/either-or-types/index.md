@@ -3,6 +3,7 @@ path: "/either-or-types"
 date: "2020-09-25"
 title: "Either/Or types in TypeScript"
 excerpt: "How to enforce that a function expects 'one property or the other' in TypeScript."
+tags: [{ name: "typescript" }]
 ---
 
 TypeScript lets us communicate to other users of a function what can be passed to it. Sometimes, it's straightforward to apply types to the parameter of a function.

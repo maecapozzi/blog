@@ -3,6 +3,7 @@ path: "/custom-hooks-in-typescript"
 date: "2020-09-25"
 title: "Custom hooks in TypeScript"
 excerpt: "What to do when TypeScript complains about the return type of your custom hook."
+tags: [{ name: "typescript" }, { name: "react" }]
 ---
 
 I learned a cool TypeScript tip while I was trying to write a hook to manage the state of a `RadioList` component.

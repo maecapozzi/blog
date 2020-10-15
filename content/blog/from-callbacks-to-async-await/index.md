@@ -2,6 +2,7 @@
 path: "/from-callbacks-to-async-await"
 date: "2017-12-09"
 title: "From Callbacks to Async Await"
+tags: [{ name: "javascript" }]
 ---
 
 I built the same program 4 different ways. I started with callbacks, moved on to Promises, used generators, and finished up with async/await.

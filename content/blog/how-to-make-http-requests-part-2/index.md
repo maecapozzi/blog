@@ -3,6 +3,7 @@ path: "/how-to-make-http-requests-in-react-part-2"
 date: "2017-12-09"
 title: "How to Make HTTP Requests in React, Part 2"
 img: "http-part-2.png"
+tags: [{ name: "react" }]
 ---
 
 _If you haven’t completed [part 1](https://medium.com/@MCapoz/tutorial-how-to-make-http-requests-in-react-part-1-f7afa3cd0cc8) of this tutorial, do so before starting part 2._

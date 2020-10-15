@@ -53,7 +53,19 @@ const ReadMoreLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const Card = ({ img, title, content, slug, date }) => {
+export const Badge = styled("span")`
+  background: ${(props) => props.theme.colors.gray1};
+  margin-right: ${(props) => props.theme.spacings["3"]};
+  padding: ${(props) => props.theme.spacings["1"]}
+    ${(props) => props.theme.spacings["3"]};
+  border-radius: ${(props) => props.theme.spacings["1"]};
+  font-weight: ${(props) => props.theme.fontWeights.light};
+  font-family: ${(props) => props.theme.fonts.primary};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
+  color: ${(props) => props.theme.colors.highlight};
+`;
+
+export const Card = ({ img, title, content, slug, date, tags }) => {
   return (
     <CardWrapper>
       {img && (
@@ -67,6 +79,7 @@ export const Card = ({ img, title, content, slug, date }) => {
         </StyledLink>
         <Date>{date}</Date>
       </TitleWrapper>
+      {tags && tags.map((tag) => <Badge>{tag.name}</Badge>)}
       <Content>{content}</Content>
       <ReadMoreLink to={slug}>Read more</ReadMoreLink>
     </CardWrapper>

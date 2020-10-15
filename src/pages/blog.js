@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../components/seo";
+import { graphql } from "gatsby";
 import { Main } from "../components/Main";
 import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
@@ -22,6 +23,7 @@ const loopThroughPosts = (posts, images) => {
         content={node.frontmatter.excerpt || node.excerpt}
         slug={node.fields.slug}
         date={node.frontmatter.date}
+        tags={node.frontmatter.tags}
       ></Card>
     );
   });
@@ -71,6 +73,9 @@ export const pageQuery = graphql`
             title
             img
             excerpt
+            tags {
+              name
+            }
           }
         }
       }

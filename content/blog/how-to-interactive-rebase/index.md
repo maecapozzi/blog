@@ -2,6 +2,7 @@
 path: "/how-to-interactive-rebase"
 date: "2020-01-06"
 title: "How to Interactive Rebase"
+tags: [{ name: "git" }]
 ---
 
 _In this post, I'm using vim. But you can use a different editor if you want! You'll need to figure out how to use your editor as your machine's default git commit/diff tool. You can find instructions for configuring this with VS Code [here](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git)._

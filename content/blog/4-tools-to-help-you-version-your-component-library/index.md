@@ -3,6 +3,7 @@ path: "/4-tools-to-help-you-version-your-component-library"
 date: "2020-07-07"
 title: "4 tools to help you version your component library"
 excerpt: "As I've been wandering around the internet during quarantine, I've noticed a lot of people asking about how to version a component library. It seems like devs who are starting to work on component libraries understand that they should version their libraries, but they're not sure where to start."
+tags: [{ name: "component libraries" }]
 ---
 
 If you're on my blog, you've probably overheard (or been part of or started) a version of this conversation.

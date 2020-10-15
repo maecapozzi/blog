@@ -2,6 +2,7 @@
 path: "/override-styled-components"
 date: "2020-05-13"
 title: "Build overrideable styled components"
+tags: [{ name: "pro tips" }]
 ---
 
 If you're anything like me, there are few things as frustrating as when you need to customize a third-party component's styles and _you just cant_. Now that I'm actually working on building a component library myself, I want to share with you how you can build components that can be overridden and how to override them.

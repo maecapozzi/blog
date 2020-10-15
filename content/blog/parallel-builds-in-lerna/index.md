@@ -2,6 +2,7 @@
 path: "/parallel-builds-in-lerna"
 date: "2019-02-15"
 title: "Why you should avoid the --parallel flag in lerna build scripts"
+tags: [{ name: "lerna" }]
 ---
 
 When you're configuring a monorepo with lerna, you might consider writing your build scripts like this:

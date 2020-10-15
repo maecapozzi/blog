@@ -2,6 +2,7 @@
 path: "/npm-scripts"
 date: "2020-07-26"
 title: "NPM scripts and how to use them"
+tags: [{ name: "pro tips" }]
 ---
 
 Early on in my career, I found myself at a total loss about the command to start a new project's development server. At my first job, we used the script `npm develop` to run the app. I tried to run `npm develop` on this new project, but it just wouldn't work. I felt embarrassed that I couldn't figure out how to run the app! (It turned out the command was `npm dev`).

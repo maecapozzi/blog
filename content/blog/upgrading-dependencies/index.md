@@ -2,6 +2,7 @@
 path: "/upgrading-dependencies"
 date: "2020-01-12"
 title: "Use your CI Pipeline to Address Security Vulnerabilities"
+tags: [{ name: "pro tips" }]
 ---
 
 When leveraging the npm ecosystem, you inevitably add dependencies to your codebase. That's great –– we're lucky to have a robust open-source culture. Strangers have solved many problems you might run into! But there's a catch...all the libraries you depend on are bound to evolve, which means you need to keep your dependencies up to date!

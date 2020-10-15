@@ -2,6 +2,7 @@
 path: "/should-you-build-a-reusable-component-library"
 date: "2018-06-12"
 title: "Should You Build a Reusable Component Library?"
+tags: [{ name: "component libraries" }]
 ---
 
 Modular frontends are all the rage these days, especially with the rise of React.js. Large companies have begun open-sourcing their frameworks,. Google has Material UI, Shopify has Polaris, and Palantir has Blueprint. You, (or your boss), might be thinking that it’s time for your company to get in on the action.

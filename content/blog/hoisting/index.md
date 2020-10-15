@@ -3,6 +3,7 @@ path: "/hoisting"
 date: "2017-10-24"
 title: "Simplified JavaScript: Hoisting"
 img: "hoisting.png"
+tags: [{ name: "javascript" }]
 ---
 
 Hoisting remains one of the quirkier aspects of JavaScript. When a developer declares a variable in JavaScript, that variable *behaves *as if it’s been lifted to the top of it’s available scope. This article isn’t going to concern itself with what actually happens behind the scenes to cause this behavior. Instead, I hope to provide a simple explanation of hoisting that will make sense to new users of JavaScript.

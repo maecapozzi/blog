@@ -2,6 +2,7 @@
 path: "/short-explanation-of-semver"
 date: "2020-08-10"
 title: "A short explanation of semantic versioning"
+tags: [{ name: "component libraries" }]
 ---
 
 Semantic versioning is a way for library authors to communicate to consumers that you’ve released a new version and information about the kind of version you’ve published. I’ve written about this in more depth before, but here’s the gist:

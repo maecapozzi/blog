@@ -2,6 +2,7 @@
 path: "/version-bundling"
 date: "2020-06-27"
 title: "Should you version components separately or as a unified system?"
+tags: [{ name: "component libraries" }, { name: "lerna" }]
 ---
 
 Are you struggling to make sense of whether you should version your components as a unified system, like [Babel](https://github.com/babel/babel) or to version them separately, like [Gatsby](https://github.com/gatsbyjs/gatsby)? Well, you're certainly not alone. It can seem like there really is no right answer, and you might even start wondering why you need to version your components at all, especially if you're building an internal library.

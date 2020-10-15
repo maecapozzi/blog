@@ -9,7 +9,7 @@ import { Text } from "../components/Text";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { Grid } from "../components/Grid";
 import { Main } from "../components/Main";
-import { Title } from "../components/Card";
+import { Title, Badge } from "../components/Card";
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.primary};
@@ -59,7 +59,7 @@ const BlogPostTemplate = (props) => {
   if (props.data.markdownRemark) {
     const post = props.data.markdownRemark;
     const { previous, next } = props.pageContext;
-    const { title, img, date } = post.frontmatter;
+    const { title, img, date, tags } = post.frontmatter;
     const { edges } = props.data.allImageSharp;
 
     function parseHtml() {
@@ -73,6 +73,7 @@ const BlogPostTemplate = (props) => {
           <HeadingWrapper>
             <Title>{title}</Title>
             <Date>{date}</Date>
+            {tags && tags.map((tag) => <Badge>{tag.name}</Badge>)}
           </HeadingWrapper>
           {edges.map((image) => {
             if (image.node.fluid.originalName === img) {
@@ -135,6 +136,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         img
+        tags {
+          name
+        }
       }
     }
     allImageSharp {

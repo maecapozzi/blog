@@ -4,6 +4,7 @@ date: "2020-07-15"
 title: "Should my component library be a monorepo?"
 img: "monorepo-or-multirepo.jpg"
 excerpt: "tldr; Your component library should be a monorepo."
+tags: [{ name: "component libraries" }, { name: "lerna" }]
 ---
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._

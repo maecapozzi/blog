@@ -2,6 +2,7 @@
 path: "/using-node-fetch-with-apollo-link-http"
 date: "2019-05-23"
 title: "Using node-fetch with apollo-link-http"
+tags: [{ name: "typescript" }]
 ---
 
 I'm building a [Gatsby](https://www.gatsbyjs.org/) app that consumes data from a GraphQL service with the help of apollo-client and TypeScript. Because Gatsby creates static assets at build time, I needed a data-fetching tool that would work on the client-side and the server-side. apollo-client recommends using [node-fetch](https://github.com/bitinn/node-fetch) for the task.

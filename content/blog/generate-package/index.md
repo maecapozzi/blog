@@ -2,6 +2,7 @@
 path: "/generate-packages-script"
 date: "2020-04-05"
 title: "Reduce Friction with Automated Package Generation"
+tags: [{ name: "component libraries" }]
 ---
 
 When you're working on a component library for your organization, you want your teammates to contribute. If your teammates aren't contributing to your efforts, it could mean a couple of different things.

@@ -4,6 +4,7 @@ date: "2020-05-15"
 title: "Building a multi-brand design system in layers"
 img: "forest-design-system.png"
 excerpt: "A blog post to accompany my talk for Figma on using the concept of progressive disclosure of complexity to guide multi-brand design system architecture"
+tags: [{ name: "design systems" }]
 ---
 
 _If you'd rather watch than read, check out [In the file: Creating multi-brand design systems](https://www.youtube.com/watch?v=tuKjwceTvDM)._

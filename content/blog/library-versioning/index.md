@@ -4,6 +4,7 @@ date: "2019-04-10"
 title: "Before You Build A Component Library: Versioning"
 img: "pairing.png"
 excerpt: "Versioning is one of the most challenging aspects to building and maintaining any library. It's also one of the most crucial. If you want people to use your library, you need to worry about versioning."
+tags: [{ name: "component libraries" }]
 ---
 
 _This post is part of an ongoing series about the problems you'll need to solve before you start building a component library._

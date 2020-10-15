@@ -3,6 +3,7 @@ path: "/component-library-canary-builds"
 date: "2020-07-17"
 title: "How to configure canary builds for your component library"
 excerpt: "Learn how to use canary builds to validate the quality of your component library's components."
+tags: [{ name: "component libraries" }]
 ---
 
 Most product teams in engineering organizations control multiple environments. It's common to have a dev, a staging, and a production environment. Teams use these environments to validate that the code they are shipping to production is high-quality, and to reduce the number of bugs being shipped. If you're a component library maintainer, you can apply this practice to your releases by publishing **canary builds** of your packages that you choose not to share with all/many of your consumers.

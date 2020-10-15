@@ -3,6 +3,7 @@ path: "/getting-started-with-closures"
 date: "2017-10-22"
 title: "Simplified JavaScript: Getting Started with Closures"
 img: "closures.png"
+tags: [{ name: "javascript" }]
 ---
 
 Eric Elliot, in his Medium article [Master the JavaScript Interview: What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36), explains that when he interviews candidates for JavaScript jobs, he always asks questions about closures. He writes:

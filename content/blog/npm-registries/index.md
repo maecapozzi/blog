@@ -2,6 +2,7 @@
 path: "/npm-registries"
 date: "2020-08-10"
 title: "How to switch npm registries"
+tags: [{ name: "pro tips" }]
 ---
 
 ### What is a registry?
