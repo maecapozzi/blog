@@ -4,7 +4,7 @@ import { Header, HeadingWrapper } from "../components/Header";
 import { Grid } from "../components/Grid";
 import { Main } from "../components/Main";
 import { Text } from "../components/Text";
-import { Link } from "gatsby";
+import { StyledGatsbyLink, StyledExternalLink } from "../components/Link";
 
 const Checkbox = ({ children }) => {
   return (
@@ -23,14 +23,6 @@ const Section = styled("div")`
 `;
 const StyledCheckbox = styled(Checkbox)`
   margin: 20px;
-
-  a {
-    color: ${(props) => props.theme.colors.highlight};
-
-    &:hover {
-      color: ${(props) => props.theme.colors.secondary};
-    }
-  }
 `;
 
 const StyledList = styled("li")`
@@ -80,9 +72,9 @@ const DSChecklist = () => {
         </HeadingWrapper>
         <StyledCheckbox>
           Decide if a design system is the{" "}
-          <a href="https://gist.github.com/alanbsmith/b61a9881d79484c790a39f573061ea1a">
+          <StyledExternalLink href="https://gist.github.com/alanbsmith/b61a9881d79484c790a39f573061ea1a">
             right tool for the job
-          </a>
+          </StyledExternalLink>
         </StyledCheckbox>
         <StyledCheckbox>
           Find out if your company will invest in a design system
@@ -93,9 +85,9 @@ const DSChecklist = () => {
         <StyledCheckbox>
           <em>
             Decide how people will{" "}
-            <a href="https://bradfrost.com/blog/post/a-design-system-governance-process/">
+            <StyledExternalLink href="https://bradfrost.com/blog/post/a-design-system-governance-process/">
               contribute to your design system
-            </a>
+            </StyledExternalLink>
           </em>
         </StyledCheckbox>
         <HeadingWrapper>
@@ -103,28 +95,32 @@ const DSChecklist = () => {
         </HeadingWrapper>
         <StyledCheckbox>
           Learn about the{" "}
-          <Link to="/layers-of-abstraction-in-design-systems/">
+          <StyledGatsbyLink to="/layers-of-abstraction-in-design-systems/">
             5 layers of a design system
-          </Link>{" "}
+          </StyledGatsbyLink>{" "}
           and decide which layers you need to support
         </StyledCheckbox>
         <StyledCheckbox> Research Accessibility</StyledCheckbox>
         <StyledList>
           Read my{" "}
-          <a href="https://madalyn.dev/blog/a11y-testing-coffee/">
+          <StyledExternalLink href="https://madalyn.dev/blog/a11y-testing-coffee/">
             favorite resource on accessibility testing
-          </a>
+          </StyledExternalLink>
         </StyledList>
         <StyledList>
           <em>
             Learn about{" "}
-            <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 Guidelines</a>
+            <StyledExternalLink href="https://www.w3.org/TR/WCAG21/">
+              WCAG 2.1 Guidelines
+            </StyledExternalLink>
           </em>
         </StyledList>
         <StyledList>
           <em>
             Consider using an automated testing tool like{" "}
-            <a href="https://wave.webaim.org/">WAVE</a>
+            <StyledExternalLink href="https://wave.webaim.org/">
+              WAVE
+            </StyledExternalLink>
           </em>
         </StyledList>
         <StyledCheckbox>
@@ -147,9 +143,9 @@ const DSChecklist = () => {
         <StyledCheckbox>
           {" "}
           Research{" "}
-          <a href="https://www.w3.org/WAI/WCAG2AA-Conformance.html">
+          <StyledExternalLink href="https://www.w3.org/WAI/WCAG2AA-Conformance.html">
             WCAG compliance
-          </a>{" "}
+          </StyledExternalLink>{" "}
           and select which level your library will support (aim for at least
           level AA)
         </StyledCheckbox>
@@ -202,12 +198,14 @@ const DSChecklist = () => {
         </HeadingWrapper>
         <StyledCheckbox>
           Choose whether to store your components in a{" "}
-          <Link to="/monorepo-or-multirepo">monorepo or a multi-repo</Link>
+          <StyledGatsbyLink to="/monorepo-or-multirepo">
+            monorepo or a multi-repo
+          </StyledGatsbyLink>
         </StyledCheckbox>
         <StyledList>
           <em>
             If you choose a monorepo, decide whether to use{" "}
-            <Link to="/what-is-lerna">Lerna</Link>
+            <StyledGatsbyLink to="/what-is-lerna">Lerna</StyledGatsbyLink>
           </em>
         </StyledList>
         <StyledCheckbox>
@@ -215,7 +213,9 @@ const DSChecklist = () => {
         </StyledCheckbox>
         <StyledCheckbox>
           Learn about{" "}
-          <Link to="/short-explanation-of-semver">semantic versioning</Link>
+          <StyledGatsbyLink to="/short-explanation-of-semver">
+            semantic versioning
+          </StyledGatsbyLink>
         </StyledCheckbox>
         <StyledCheckbox>
           Decide what <strong>registry</strong> to publish your components to (
@@ -235,7 +235,7 @@ const DSChecklist = () => {
         </HeadingWrapper>
         <StyledCheckbox>
           Work with designers to agree on{" "}
-          <Link to="/design-tokens">design tokens</Link>
+          <StyledGatsbyLink to="/design-tokens">design tokens</StyledGatsbyLink>
         </StyledCheckbox>
         <StyledCheckbox>
           Align with designers on language to describe the layers of your design
@@ -293,7 +293,10 @@ const DSChecklist = () => {
           Create a slack channel to answer questions
         </StyledCheckbox>
         <StyledCheckbox>
-          Configure and deploy <a href="https://storybook.js.org/">Storybook</a>
+          Configure and deploy{" "}
+          <StyledExternalLink href="https://storybook.js.org/">
+            Storybook
+          </StyledExternalLink>
         </StyledCheckbox>
         <StyledCheckbox>Write documentation for each component</StyledCheckbox>
         <StyledCheckbox>Hold office hours</StyledCheckbox>
@@ -304,8 +307,10 @@ const DSChecklist = () => {
           <Text>
             I hope this checklist has been helpful. If you've found anything
             confusing about this subject, send me a DM on Twitter{" "}
-            <a href="https://twitter.com/MCapoz">@MCapoz</a> and I'll do my best
-            to answer your question!
+            <StyledExternalLink href="https://twitter.com/MCapoz">
+              @MCapoz
+            </StyledExternalLink>{" "}
+            and I'll do my best to answer your question!
           </Text>
         </Section>
       </Main>
