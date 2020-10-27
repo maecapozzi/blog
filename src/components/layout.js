@@ -14,9 +14,10 @@ const List = styled.ul`
 `;
 
 const NavLink = styled(Link)`
+  text-align: center;
   color: ${(props) => props.theme.colors.text};
   font-size: ${(props) => props.theme.fontSizes[`${props.fontSize}`]};
-  padding-right: 8px;
+  padding-right: 24px;
   font-family: ${(props) => props.theme.fonts.primary};
 `;
 
@@ -56,6 +57,12 @@ const Layout = ({ children }) => {
         <Nav>
           <NavLink to="/blog" fontSize="3">
             Posts
+          </NavLink>
+          <NavLink
+            to="/getting-started-with-design-systems-checklist"
+            fontSize="3"
+          >
+            Design Systems Checklist
           </NavLink>
           <NavLink to="/newsletter" fontSize="3">
             Newsletter

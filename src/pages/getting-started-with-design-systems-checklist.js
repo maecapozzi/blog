@@ -6,23 +6,20 @@ import { Main } from "../components/Main";
 import { Text } from "../components/Text";
 import { StyledGatsbyLink, StyledExternalLink } from "../components/Link";
 
-const Checkbox = ({ children }) => {
+const StyledCheckbox = ({ children }) => {
   return (
-    <div>
+    <Section>
       <Text>
         <label>
           <input type="checkbox" /> {children}
         </label>
       </Text>
-    </div>
+    </Section>
   );
 };
 
 const Section = styled("div")`
   margin-top: 16px;
-`;
-const StyledCheckbox = styled(Checkbox)`
-  margin: 20px;
 `;
 
 const StyledList = styled("li")`
@@ -44,6 +41,16 @@ const DSChecklist = () => {
         <HeadingWrapper>
           <Header>Getting Started with Design Systems Checklist</Header>
         </HeadingWrapper>
+
+        <Text>
+          <StyledExternalLink
+            target="_blank"
+            href="https://drive.google.com/file/d/17LgiuIuPsE_9KFFwtRbSE39gn_czQLOL/view?usp=sharing"
+          >
+            Download as PDF
+          </StyledExternalLink>
+        </Text>
+        <br></br>
         <Text>
           When I first started working on design systems, I didn't know where to
           start. Googling "what is a design system" only got me so far!
@@ -80,6 +87,9 @@ const DSChecklist = () => {
           Find out if your company will invest in a design system
         </StyledCheckbox>
         <StyledCheckbox>
+          Convince the designers to invest in a design system
+        </StyledCheckbox>
+        <StyledCheckbox>
           Convince the developers to invest in a design system
         </StyledCheckbox>
         <StyledCheckbox>
@@ -100,7 +110,7 @@ const DSChecklist = () => {
           </StyledGatsbyLink>{" "}
           and decide which layers you need to support
         </StyledCheckbox>
-        <StyledCheckbox> Research Accessibility</StyledCheckbox>
+        <StyledCheckbox> Research accessibility</StyledCheckbox>
         <StyledList>
           Read my{" "}
           <StyledExternalLink href="https://madalyn.dev/blog/a11y-testing-coffee/">
