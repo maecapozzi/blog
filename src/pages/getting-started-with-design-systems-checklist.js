@@ -23,10 +23,26 @@ const Section = styled("div")`
 `;
 const StyledCheckbox = styled(Checkbox)`
   margin: 20px;
+
+  a {
+    color: ${(props) => props.theme.colors.highlight};
+
+    &:hover {
+      color: ${(props) => props.theme.colors.secondary};
+    }
+  }
 `;
 
 const StyledList = styled("li")`
   margin-bottom: 0px;
+
+  a {
+    color: ${(props) => props.theme.colors.highlight};
+
+    &:hover {
+      color: ${(props) => props.theme.colors.secondary};
+    }
+  }
 `;
 
 const DSChecklist = () => {
