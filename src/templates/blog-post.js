@@ -7,8 +7,8 @@ import { Date } from "../components/Date";
 import { HeadingWrapper } from "../components/Header";
 import { Text } from "../components/Text";
 import { NewsletterSignup } from "../components/NewsletterSignup";
-import { Grid } from "../components/Grid";
-import { Main } from "../components/Main";
+import { LayoutGrid, GridColumn } from "../components/Grid";
+
 import { Title, Badge } from "../components/Card";
 
 const StyledLink = styled(Link)`
@@ -67,9 +67,12 @@ const BlogPostTemplate = (props) => {
     }
 
     return (
-      <Grid>
-        <Main>
-          <SEO title={title} description={post.excerpt} />
+      <LayoutGrid>
+        <SEO title={title} description={post.excerpt} />
+        <GridColumn
+          columnStart={["3", "5", "10"]}
+          columnEnd={["24", "22", "17"]}
+        >
           <HeadingWrapper>
             <Title>{title}</Title>
             <Date>{date}</Date>
@@ -110,8 +113,8 @@ const BlogPostTemplate = (props) => {
               )}
             </li>
           </ul>
-        </Main>
-      </Grid>
+        </GridColumn>
+      </LayoutGrid>
     );
   }
 

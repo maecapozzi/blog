@@ -1,13 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 import { Text } from "../components/Text";
-import { StyledGatsbyLink, StyledExternalLink } from "../components/Link";
+import { StyledExternalLink } from "../components/Link";
+import { LayoutGrid, GridColumn } from "../components/Grid";
 
-const BioWrapper = styled.div``;
+const StyledImage = styled(Img)`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 16px;
+`;
 
 const Wrapper = styled.div`
   margin: 24px 0px;
+`;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const OrderedList = styled.ol`
@@ -25,16 +37,21 @@ function Bio() {
     <StaticQuery
       query={bioQuery}
       render={(data) => {
+        const img = data.fileName.childImageSharp.fluid;
         return (
-          <>
-            <BioWrapper>
+          <LayoutGrid>
+            <GridColumn
+              columnStart={["3", "5", "10"]}
+              columnEnd={["24", "22", "17"]}
+            >
               <Wrapper>
                 <Text>
-                  <span>
+                  <ImageWrapper>
+                    <StyledImage fluid={img} />
                     <h1>
                       Hey, I'm Mae<Pink>.</Pink>
                     </h1>
-                  </span>
+                  </ImageWrapper>
                 </Text>
               </Wrapper>
               <Wrapper>
@@ -62,20 +79,18 @@ function Bio() {
               </Wrapper>
               <Wrapper>
                 <Text>
-                  <b>Let's chat.</b> You can reach me on {` `}
+                  Let's chat. You can reach me on{" "}
                   <StyledExternalLink href="https://twitter.com/MCapoz">
                     Twitter
                   </StyledExternalLink>
                   . Or if you're just interested in being notified when I post,
-                  sign up for my{` `}
-                  <StyledGatsbyLink to="/newsletter">
-                    newsletter
-                  </StyledGatsbyLink>
-                  . I'll do my best to get back to you as soon as I can.
+                  sign up for my newsletter. I'll do my best to get back to you
+                  as soon as I can.
                 </Text>
               </Wrapper>
-            </BioWrapper>
-          </>
+            </GridColumn>
+            <div />
+          </LayoutGrid>
         );
       }}
     />
@@ -87,6 +102,13 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
+      }
+    }
+    fileName: file(relativePath: { eq: "profile-pic.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

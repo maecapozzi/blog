@@ -1,22 +1,26 @@
 import React from "react";
 import Bio from "../components/bio";
 import SEO from "../components/seo";
-import { Main } from "../components/Main";
 import { NewsletterSignup } from "../components/NewsletterSignup";
-import { Grid } from "../components/Grid";
+import { LayoutGrid, GridColumn } from "../components/Grid";
 
 const Index = () => {
   return (
-    <Grid>
-      <Main>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
-        />
-        <Bio />
-        <NewsletterSignup />
-      </Main>
-    </Grid>
+    <>
+      <SEO
+        title="Home"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
+      />
+      <Bio />
+      <LayoutGrid>
+        <GridColumn
+          columnStart={["3", "5", "10"]}
+          columnEnd={["24", "22", "17"]}
+        >
+          <NewsletterSignup />
+        </GridColumn>
+      </LayoutGrid>
+    </>
   );
 };
 

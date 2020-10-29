@@ -3,10 +3,9 @@ import { Link } from "gatsby";
 import styled, { ThemeProvider } from "styled-components";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
-import { GridStyles } from "../components/Grid";
+import { LayoutGrid, GridColumn, Grid } from "../components/Grid";
 
 const List = styled.ul`
-  ${GridStyles};
   list-style-type: none;
   margin: 0px;
   padding: 0px;
@@ -48,27 +47,35 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={themes.tosh}>
       <GlobalStyle />
-      <List>
-        <Logo>
-          <NavLink to="/" fontSize="3">
-            Mae Capozzi
-          </NavLink>
-        </Logo>
-        <Nav>
-          <NavLink to="/blog" fontSize="3">
-            Posts
-          </NavLink>
-          <NavLink
-            to="/getting-started-with-design-systems-checklist"
-            fontSize="3"
-          >
-            Design Systems Checklist
-          </NavLink>
-          <NavLink to="/newsletter" fontSize="3">
-            Newsletter
-          </NavLink>
-        </Nav>
-      </List>
+      <LayoutGrid>
+        <GridColumn
+          columnStart={["3", "5", "10"]}
+          columnEnd={["24", "22", "17"]}
+        >
+          <List>
+            <Logo>
+              <NavLink to="/" fontSize="3">
+                Mae Capozzi
+              </NavLink>
+            </Logo>
+            <Nav>
+              <NavLink to="/blog" fontSize="3">
+                Posts
+              </NavLink>
+              <NavLink
+                to="/getting-started-with-design-systems-checklist"
+                fontSize="3"
+              >
+                Design Systems Checklist
+              </NavLink>
+              <NavLink to="/newsletter" fontSize="3">
+                Newsletter
+              </NavLink>
+            </Nav>
+          </List>
+        </GridColumn>
+      </LayoutGrid>
+
       {children}
       <Footer>All content © Mae Capozzi</Footer>
     </ThemeProvider>
