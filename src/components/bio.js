@@ -5,12 +5,13 @@ import { StaticQuery, graphql } from "gatsby";
 import { Text } from "../components/Text";
 import { StyledExternalLink } from "../components/Link";
 import { LayoutGrid, GridColumn } from "../components/Grid";
+import { Header } from "../components/Header";
 
 const StyledImage = styled(Img)`
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  min-width: 150px;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-right: 36px;
 `;
 
 const Wrapper = styled.div`
@@ -20,6 +21,7 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const OrderedList = styled.ol`
@@ -48,15 +50,15 @@ function Bio() {
                 <Text>
                   <ImageWrapper>
                     <StyledImage fluid={img} />
-                    <h1>
-                      Hey, I'm Mae<Pink>.</Pink>
-                    </h1>
+                    <Header>
+                      Hey, I'm Mae<Pink>.</Pink> I’m a software developer,
+                      writer, and design systems advocate.
+                    </Header>
                   </ImageWrapper>
                 </Text>
               </Wrapper>
               <Wrapper>
                 <Text>
-                  I’m a software developer, writer, and design systems advocate.
                   If the title existed, I’d call myself a{" "}
                   <b>frontend infrastructure engineeer</b>. This is my personal
                   blog where I write about problems that meet two requirements.

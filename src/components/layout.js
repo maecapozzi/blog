@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled, { ThemeProvider } from "styled-components";
 import { themes } from "../styles/theme";
 import { GlobalStyle } from "../components/GlobalStyle";
-import { LayoutGrid, GridColumn, Grid } from "../components/Grid";
+import { LayoutGrid, GridColumn } from "../components/Grid";
 
 const List = styled.ul`
   list-style-type: none;
