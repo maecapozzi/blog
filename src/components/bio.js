@@ -41,8 +41,8 @@ function Bio() {
         return (
           <LayoutGrid>
             <GridColumn
-              columnStart={["3", "5", "10"]}
-              columnEnd={["24", "22", "17"]}
+              columnStart={["3", "5", "8"]}
+              columnEnd={["24", "22", "19"]}
             >
               <Wrapper>
                 <Text>

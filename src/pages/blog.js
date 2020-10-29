@@ -1,7 +1,6 @@
 import React from "react";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
-import { Main } from "../components/Main";
 import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { LayoutGrid, GridColumn } from "../components/Grid";
@@ -44,7 +43,7 @@ const BlogIndex = (props) => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
       />
 
-      <GridColumn columnStart={["3", "8", "10"]} columnEnd={["24", "22", "17"]}>
+      <GridColumn columnStart={["3", "5", "8"]} columnEnd={["24", "22", "19"]}>
         {loopThroughPosts(preNewsletterPosts, images)}
         <NewsletterSignup />
         {loopThroughPosts(postNewsletterPosts, images)}

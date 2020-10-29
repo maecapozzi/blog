@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Header, HeadingWrapper } from "../components/Header";
 import { LayoutGrid, GridColumn } from "../components/Grid";
-import { Main } from "../components/Main";
 import { Text } from "../components/Text";
 import { StyledGatsbyLink, StyledExternalLink } from "../components/Link";
 
@@ -37,7 +36,7 @@ const StyledList = styled("li")`
 const DSChecklist = () => {
   return (
     <LayoutGrid>
-      <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "17"]}>
+      <GridColumn columnStart={["3", "5", "8"]} columnEnd={["24", "22", "19"]}>
         <HeadingWrapper>
           <Header>Getting Started with Design Systems Checklist</Header>
         </HeadingWrapper>
