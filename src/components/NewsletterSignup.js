@@ -4,11 +4,11 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 import { Formik } from "formik";
 
 const FormWrapper = styled.div`
-  background: ${(props) => props.theme.colors.gray1};
+  background: ${(props) => props.theme.colors.highlight};
   margin: 40px 0px;
   border-radius: 5px;
   padding: 40px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.primary};
   box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.1),
     0 4px 6px 1px rgba(0, 0, 0, 0.05);
@@ -60,12 +60,12 @@ const ButtonWrapper = styled.div`
 export const StyledButton = styled.button`
   font-family: ${(props) => props.theme.fonts.primary};
   cursor: pointer;
-  color: white;
+  color: ${(props) => props.theme.colors.highlight};
   border-radius: 5px;
   width: 88px;
   padding: 8px;
   border: none;
-  background-color: ${(props) => props.theme.colors.highlight};
+  background-color: ${(props) => props.theme.colors.background};
   font-size: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
@@ -154,9 +154,8 @@ export const NewsletterSignup = () => {
         <FormWrapper>
           <NewsletterHeader>Let's talk coding.</NewsletterHeader>
           <NewsletterText>
-            I send articles about working as a software engineer, tips and
-            tricks about React and building component libraries, and the
-            occasional personal post. You can unsubscribe at any time.
+            If you like what you're reading, I send out a newsletter whenever I
+            publish a new post. You can always unsubscribe.
           </NewsletterText>
           {message !== null && <StyledMessage>{message}</StyledMessage>}
           <StyledForm onSubmit={handleSubmit}>
@@ -175,7 +174,7 @@ export const NewsletterSignup = () => {
             />
 
             <Wrapper>
-              <StyledLabel>Email</StyledLabel>
+              <StyledLabel>Email Address</StyledLabel>
               {errors.email && touched.email && <Error>{errors.email}</Error>}
             </Wrapper>
             <StyledInput

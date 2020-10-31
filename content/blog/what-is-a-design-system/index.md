@@ -6,7 +6,7 @@ excerpt: "A design system is a set of rules, documentation, processes, and encod
 tags: [{ name: "design systems" }]
 ---
 
-Design systems are exploding in popularity across the industry. [IBM](https://www.carbondesignsystem.com/), [Google](https://material.io/design/), [Uber](https://baseweb.design/), [Shopify](https://polaris.shopify.com/), and [Atlassian](https://atlaskit.atlassian.com/) all have them. Smaller, pre-IPO companies are beginning to wonder whether they need to get in on the action. But let's talk about what a component library actually _is_ before we decide whether or not your company should invest in one.
+Design systems are exploding in popularity across the industry. [IBM](https://www.carbondesignsystem.com/), [Google](https://material.io/design/), [Uber](https://baseweb.design/), [Shopify](https://polaris.shopify.com/), and [Atlassian](https://atlaskit.atlassian.com/) all have them. Smaller, pre-IPO companies are beginning to wonder whether they need to get in on the action. But let's talk about what a design system actually _is_ before we decide whether or not your company should invest in one.
 
 **A design system is a set of rules, documentation, processes, and encoded decisions that guide the creation of one or more web applications.**
 

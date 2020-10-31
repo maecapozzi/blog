@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 import { Text } from "../components/Text";
-import { StyledExternalLink } from "../components/Link";
+import { StyledExternalLink, StyledGatsbyLink } from "../components/Link";
 import { LayoutGrid, GridColumn } from "../components/Grid";
 import { Header } from "../components/Header";
 
@@ -24,16 +24,6 @@ const ImageWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const OrderedList = styled.ol`
-  font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["3"]};
-  margin-bottom: 0px;
-`;
-
-const Pink = styled.span`
-  color: ${(props) => props.theme.colors.highlight};
-`;
-
 function Bio() {
   return (
     <StaticQuery
@@ -51,33 +41,42 @@ function Bio() {
                   <ImageWrapper>
                     <StyledImage fluid={img} />
                     <Header>
-                      Hey, I'm Mae<Pink>.</Pink> I’m a software developer,
-                      writer, and design systems advocate.
+                      Hi, I'm Mae. I'm a software engineer who has spent the
+                      last few years working on design systems.
                     </Header>
                   </ImageWrapper>
                 </Text>
               </Wrapper>
               <Wrapper>
                 <Text>
-                  If the title existed, I’d call myself a{" "}
-                  <b>frontend infrastructure engineeer</b>. This is my personal
-                  blog where I write about problems that meet two requirements.
+                  Welcome to my{" "}
+                  <StyledExternalLink href="https://joelhooks.com/digital-garden">
+                    digital garden
+                  </StyledExternalLink>{" "}
+                  🌱. I try to post often and I’m not too precious about my
+                  drafts. Sometimes you’ll see unfinished work or something
+                  won’t look quite right. I spend a lot of time writing sturdy
+                  code for my day job. This blog is my space to explore and
+                  share ideas.
                 </Text>
               </Wrapper>
               <Wrapper>
-                <OrderedList>1. The problem interests me.</OrderedList>
-                <OrderedList>
-                  2. One or more people have expressed they have the problem on
-                  the internet.
-                </OrderedList>
-              </Wrapper>
-              <Wrapper>
-                <Text>
-                  I try to post often and I’m not too precious about my drafts.
-                  Sometimes you’ll see unfinished work, or something won’t look
-                  quite right. I spend a lot of time writing sturdy code for
-                  better.com. This blog is my space to explore and share ideas.
-                </Text>
+                <h2>Top posts</h2>
+                <li>
+                  <StyledGatsbyLink to="/getting-started-with-design-systems-checklist/">
+                    Getting Started with Design Systems Checklist
+                  </StyledGatsbyLink>
+                </li>
+                <li>
+                  <StyledGatsbyLink to="/progressive-disclosure-of-complexity/">
+                    Building a multi-brand design system in layers
+                  </StyledGatsbyLink>
+                </li>
+                <li>
+                  <StyledGatsbyLink to="/layers-of-abstraction-in-design-systems/">
+                    The 5 layers of a design system
+                  </StyledGatsbyLink>
+                </li>
               </Wrapper>
               <Wrapper>
                 <Text>
