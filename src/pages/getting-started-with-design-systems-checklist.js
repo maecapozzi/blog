@@ -36,7 +36,7 @@ const StyledList = styled("li")`
 const DSChecklist = () => {
   return (
     <LayoutGrid>
-      <GridColumn columnStart={["3", "5", "8"]} columnEnd={["24", "22", "19"]}>
+      <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "17"]}>
         <HeadingWrapper>
           <Header>Getting Started with Design Systems Checklist</Header>
         </HeadingWrapper>
