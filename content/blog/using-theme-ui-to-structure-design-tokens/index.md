@@ -76,7 +76,7 @@ Another feature of Theme UI that I love is the `merge` function. It allows you t
 
 There are many other great features in Theme UI that you should explore if this blog post has piqued your interest: MDX support, a `useThemeUI` hook, and a whole component library! Even if you don't end up using the library, I think anyone would draw inspiration for their own design token implementation from this project.
 
-### Hungry for more?
+## Hungry for more?
 
 - [Design Tokens](/design-tokens)
 - [Where to start with design tokens](/where-to-start-with-design-tokens)

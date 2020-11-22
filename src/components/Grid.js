@@ -7,6 +7,7 @@ export const LayoutGrid = styled("div")`
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin: 0px;
 `;
 
 export const GridColumn = styled("div")`

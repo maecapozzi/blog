@@ -29,7 +29,7 @@ const StyledLabel = styled.label`
   font-family: ${(props) => props.theme.fonts.primary};
   margin-top: 16px;
   font-weight: ${(props) => props.theme.fontWeights.regular};
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["5"]};
 `;
 
 const StyledInput = styled.input`
@@ -84,8 +84,8 @@ const StyledMessage = styled.div`
 
 const Error = styled.div`
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["2"]};
-  color: ${(props) => props.theme.colors.secondary};
+  font-size: ${(props) => props.theme.fontSizes["4"]};
+  color: ${(props) => props.theme.colors.tertiary};
 `;
 
 const Wrapper = styled.div`
@@ -95,7 +95,7 @@ const Wrapper = styled.div`
 `;
 
 const NewsletterText = styled.p`
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["5"]};
 `;
 
 export const NewsletterSignup = () => {

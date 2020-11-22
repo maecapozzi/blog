@@ -18,17 +18,16 @@ const StyledLink = styled(Link)`
 const BodyWrapper = styled("div")`
   margin-top: ${(props) => props.theme.spacings["7"]};
   color: ${(props) => props.theme.colors.text};
-  font-family: ${(props) => props.theme.fonts.secondary};
+  font-family: ${(props) => props.theme.fonts.primary};
 
   h2 {
-    margin-top: 62px;
-    font-family: ${(props) => props.theme.fonts.primary};
+    font-family: ${(props) => props.theme.fonts.secondary};
     font-size: ${(props) => props.theme.fontSizes["7"]};
   }
 
   h3 {
     margin-top: 62px;
-    font-family: ${(props) => props.theme.fonts.primary};
+    font-family: ${(props) => props.theme.fonts.secondary};
   }
 
   a {
@@ -41,8 +40,10 @@ const BodyWrapper = styled("div")`
 
   p,
   ol,
-  li {
-    font-size: ${(props) => props.theme.fontSizes["3"]};
+  li,
+  a {
+    font-size: ${(props) => props.theme.fontSizes["5"]};
+    font-family: ${(props) => props.theme.fonts.primary};
     line-height: 1.5;
   }
 

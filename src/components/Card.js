@@ -21,12 +21,12 @@ const TitleWrapper = styled.div`
   padding: ${(props) => `${props.theme.spacings["6"]} 0 0 0`};
 `;
 
-export const Title = styled(`h2`)`
-  font-weight: ${(props) => props.theme.fontWeights.heavy};
+export const Title = styled(`h1`)`
+  font-weight: ${(props) => props.theme.fontWeights.medium};
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["7"]};
+  font-size: ${(props) => props.theme.fontSizes["9"]};
   color: ${(props) => props.theme.colors.primary};
-  font-family: ${(props) => props.theme.fonts.primary};
+  font-family: ${(props) => props.theme.fonts.secondary};
 
   &:hover {
     color: ${(props) => props.theme.colors.highlight};
@@ -36,7 +36,7 @@ export const Title = styled(`h2`)`
 const Content = styled(`p`)`
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["5"]};
   margin-top: ${(props) => props.theme.spacings["4"]};
   margin-bottom: 0;
 `;
@@ -48,7 +48,7 @@ const StyledLink = styled(Link)`
 const ReadMoreLink = styled(Link)`
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["3"]};
+  font-size: ${(props) => props.theme.fontSizes["5"]};
   color: ${(props) => props.theme.colors.highlight};
   text-decoration: none;
 `;
@@ -60,7 +60,7 @@ export const Badge = styled("span")`
     ${(props) => props.theme.spacings["3"]};
   border-radius: ${(props) => props.theme.spacings["1"]};
   font-weight: ${(props) => props.theme.fontWeights.light};
-  font-family: ${(props) => props.theme.fonts.primary};
+  font-family: ${(props) => props.theme.fonts.secondary};
   font-size: ${(props) => props.theme.fontSizes["3"]};
   color: ${(props) => props.theme.colors.highlight};
 `;

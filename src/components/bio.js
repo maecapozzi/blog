@@ -6,13 +6,7 @@ import { Text } from "../components/Text";
 import { StyledExternalLink, StyledGatsbyLink } from "../components/Link";
 import { LayoutGrid, GridColumn } from "../components/Grid";
 import { Header } from "../components/Header";
-
-const StyledImage = styled(Img)`
-  height: 150px;
-  min-width: 150px;
-  border-radius: 50%;
-  margin-right: 36px;
-`;
+import { Title } from "../components/Card";
 
 const Wrapper = styled.div`
   margin: 24px 0px;
@@ -21,7 +15,7 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 function Bio() {
@@ -37,15 +31,10 @@ function Bio() {
               columnEnd={["24", "22", "17"]}
             >
               <Wrapper>
-                <Text>
-                  <ImageWrapper>
-                    <StyledImage fluid={img} />
-                    <Header>
-                      Hi, I'm Mae. I'm a software engineer who has spent the
-                      last few years working on design systems.
-                    </Header>
-                  </ImageWrapper>
-                </Text>
+                <Title>
+                  Hi, I'm Mae. I'm a software engineer who has spent the last
+                  few years working on design systems.
+                </Title>
               </Wrapper>
               <Wrapper>
                 <Text>

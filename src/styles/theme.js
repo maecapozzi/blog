@@ -253,8 +253,8 @@ export const tosh = {
     heavy: 700,
   },
   fonts: {
-    primary: `Inter`,
-    secondary: `Inter`,
+    primary: `Piazzolla`,
+    secondary: `system-ui`,
   },
 };
 
@@ -305,8 +305,8 @@ export const dark = {
     heavy: 700,
   },
   fonts: {
-    primary: `Inter`,
-    secondary: `Inter`,
+    primary: `Piazzolla`,
+    secondary: `system-ui`,
   },
 };
 
