@@ -2,7 +2,7 @@
 path: "/emulate-vision-deficiencies-in-dev-tools"
 date: "2020-12-20"
 title: "How to emulate vision deficiencies in Chrome Developer Tools"
-excerpt: ""
+excerpt: "Chrome Dev tools now offers a feature that lets you emulate different vision deficiencies."
 tags: [{ name: "accessibility" }]
 ---
 
