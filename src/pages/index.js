@@ -15,7 +15,7 @@ const Index = () => {
       <LayoutGrid>
         <GridColumn
           columnStart={["3", "5", "10"]}
-          columnEnd={["24", "22", "17"]}
+          columnEnd={["24", "22", "20"]}
         >
           <NewsletterSignup />
         </GridColumn>

@@ -43,7 +43,7 @@ const BlogIndex = (props) => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
       />
 
-      <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "17"]}>
+      <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "20"]}>
         {loopThroughPosts(preNewsletterPosts, images)}
         <NewsletterSignup />
         {loopThroughPosts(postNewsletterPosts, images)}
