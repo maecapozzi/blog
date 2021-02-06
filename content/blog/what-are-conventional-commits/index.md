@@ -12,7 +12,7 @@ tags:
 
 If you've looked through any open-source repositories recently, you've likely seen commits that look like this:
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9a8df8f-cfc9-45c7-ad1e-a555e1d18259/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9a8df8f-cfc9-45c7-ad1e-a555e1d18259/Untitled.png)
+![github commits](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c9a8df8f-cfc9-45c7-ad1e-a555e1d18259/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210206T142950Z&X-Amz-Expires=86400&X-Amz-Signature=fda5aeb017d369e4ccac5a22dcd4ff314a0b25a2ccd240393fd237a9752b9002&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 The commit messages are prefixed with a "tag" like `fix` or `feat` . This commit message specification is called [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), and it's a powerful way to write commit messages that are human and machine-readable.
 
