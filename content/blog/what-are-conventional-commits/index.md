@@ -1,8 +1,8 @@
 ---
 path: "/what-are-conventional-commits"
 date: "2021-02-06"
-title: "What are conventional commits"
-excerpt: "Conventional commits is a powerful specification that makes it possible to automate some of the more annoying parts of your versioning and publishing workflow."
+title: "What are Conventional Commits?"
+excerpt: "Conventional commits are a powerful specification that makes it possible to automate some of the more annoying parts of your versioning and publishing workflow."
 tags:
   [
     { name: "component libraries" },
@@ -17,7 +17,7 @@ If you've looked through any open-source repositories recently, you've likely se
 
 The commit messages are prefixed with a "tag" like `fix` or `feat` . This commit message specification is called [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), and it's a powerful way to write commit messages that are human and machine-readable.
 
-Conventional commits is a powerful specification that makes it possible to automate some of the more annoying parts of your versioning and publishing workflow. For example, you can use conventional commits to auto-version new releases of your library.
+Conventional commits are a powerful specification that makes it possible to automate some of the more annoying parts of your versioning and publishing workflow. For example, you can use conventional commits to auto-version new releases of your library.
 
 Because conventional commits are machine-readable, plenty of open source tools leverage them. For example, lerna has a `--conventional-commits` flag that checks your commit messages and recommends a semantic version for you.
 
