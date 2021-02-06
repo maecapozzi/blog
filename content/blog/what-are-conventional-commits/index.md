@@ -2,6 +2,7 @@
 path: "/what-are-conventional-commits"
 date: "2021-02-06"
 title: "What are conventional commits"
+excerpt: "Conventional commits is a powerful specification that makes it possible to automate some of the more annoying parts of your versioning and publishing workflow."
 tags:
   [
     { name: "component libraries" },

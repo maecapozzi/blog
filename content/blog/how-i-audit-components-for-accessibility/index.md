@@ -2,6 +2,7 @@
 path: "/how-i-audit-components-for-accessibility"
 date: "2021-02-01"
 title: "How I audit components for accessibility"
+excerpt: "Over the past few years working on design systems, I've picked up some tips and tricks that can help me ensure a higher level of accessibility in the components I build. This blog post is for you if you want to build more accessible components, and you're not sure where to start."
 tags: [{ name: "react" }, { name: "accessibility" }]
 ---
 

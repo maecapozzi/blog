@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 import { Text } from "../components/Text";
 import { StyledExternalLink, StyledGatsbyLink } from "../components/Link";
 import { LayoutGrid, GridColumn } from "../components/Grid";
-import { Header } from "../components/Header";
 import { Title } from "../components/Card";
 
 const Wrapper = styled.div`
