@@ -89,9 +89,9 @@ const BlogPostTemplate = (props) => {
             <div dangerouslySetInnerHTML={parseHtml()} />
           </BodyWrapper>
           <hr />
-          <NewsletterSignup />
           <ul
             style={{
+              margin: `0px`,
               display: `flex`,
               listStyle: `none`,
               justifyContent: `space-between`,
@@ -108,12 +108,15 @@ const BlogPostTemplate = (props) => {
             </li>
             <li>
               {next && (
-                <StyledLink to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </StyledLink>
+                <Text>
+                  <StyledLink to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </StyledLink>
+                </Text>
               )}
             </li>
           </ul>
+          <NewsletterSignup />
         </GridColumn>
       </LayoutGrid>
     );
