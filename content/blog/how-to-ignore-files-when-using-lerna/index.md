@@ -33,8 +33,8 @@ If you'd prefer, you can add an `ignore` key in the `lerna.json` file.
 
 ## Hungry for more?
 
-- [Before you build a component library: monorepo versioning](./lerna-monorepo-versioning)
-- [Should you version components separately or as a unified system?](./version-bundling)
-- [4 tools to help you version your component library](./4-tools-to-help-you-version-your-component-library)
-- [Before you build a component library: versioning](./library-versioning)
-- [What is Lerna?](./what-is-lerna)
+- [Before you build a component library: monorepo versioning](/lerna-monorepo-versioning)
+- [Should you version components separately or as a unified system?](/version-bundling)
+- [4 tools to help you version your component library](/4-tools-to-help-you-version-your-component-library)
+- [Before you build a component library: versioning](/library-versioning)
+- [What is Lerna?](/what-is-lerna)

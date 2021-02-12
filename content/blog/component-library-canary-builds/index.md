@@ -8,7 +8,7 @@ tags: [{ name: "component libraries" }]
 
 Most product teams in engineering organizations control multiple environments. It's common to have a dev, a staging, and a production environment. Teams use these environments to validate that the code they are shipping to production is high-quality, and to reduce the number of bugs being shipped. If you're a component library maintainer, you can apply this practice to your releases by publishing **canary builds** of your packages that you choose not to share with all/many of your consumers.
 
-Imagine you're a component library maintainer using lerna. (I'm sure you could figure out a way to do this without using lerna, but that's what I'm going to talk about today. If you don't know what lerna is, you can learn more about it in this blog post: [https://maecapozzi.com/what-is-lerna/](https://maecapozzi.com/what-is-lerna/).).
+Imagine you're a component library maintainer using lerna. (I'm sure you could figure out a way to do this without using lerna, but that's what I'm going to talk about today. If you don't know what lerna is, you can learn more about it in this blog post: [https://maecapozzi.com/what-is-lerna/](/what-is-lerna).).
 
 Let's say that you have a button component called `@my-awesome-library/button@1.0.0`. You are trying to make an additive change to the component's API, so you want to eventually bump the version to `1.1.0`. Before you release it to everyone though, you've asked a few friends to test the new version in their apps.
 
