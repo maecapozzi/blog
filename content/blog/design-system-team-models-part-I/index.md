@@ -18,6 +18,6 @@ The first engineer will make the critical early decisions about how [flexible th
 
 The second engineer should be an expert on versioning and publishing, bundlers, and automation. This person's job is to speed up and improve the release quality of everything the first engineer does.
 
-Versioning and publishing prevents your team from from becoming responsible for the quality of everyone else's codebase. And automation allows your team to ship new components more quickly because they are not wasting time on manual steps
+Versioning and publishing prevent your team from becoming responsible for the quality of everyone else's codebase. And automation allows your team to ship new components more quickly because they are not wasting time on manual steps
 
 As the team grows, it may naturally break into two pods, each led by one of the original two engineers. One team can manage design tokens and build components, while the other would work on automation tools and metrics collection.
