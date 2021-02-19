@@ -10,18 +10,23 @@ const Wrapper = styled.div`
   margin: 24px 0px;
 `;
 
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const H2 = styled.h2`
+  color: ${(props) => props.theme.colors.secondary};
 `;
+
+const BulletList = ({ title, href }) => {
+  return (
+    <li>
+      <StyledGatsbyLink to={href}>{title}</StyledGatsbyLink>
+    </li>
+  );
+};
 
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={(data) => {
-        const img = data.fileName.childImageSharp.fluid;
         return (
           <LayoutGrid>
             <GridColumn
@@ -29,10 +34,17 @@ function Bio() {
               columnEnd={["24", "22", "20"]}
             >
               <Wrapper>
-                <Title>
-                  Hi, I'm Mae. I'm a software engineer who has spent the last
-                  few years working on design systems.
-                </Title>
+                <H2>
+                  Hi, I'm Mae 👋. I'm a software engineer who has spent the last
+                  4 years working on design systems.
+                </H2>
+              </Wrapper>
+              <Wrapper>
+                <Text>
+                  I've been writing code professionally for 6 years. In the last
+                  4 years, I've worked on design systems and component libraries
+                  for companies like American Express, Harry's, and Better.com.
+                </Text>
               </Wrapper>
               <Wrapper>
                 <Text>
@@ -40,30 +52,52 @@ function Bio() {
                   <StyledExternalLink href="https://joelhooks.com/digital-garden">
                     digital garden
                   </StyledExternalLink>{" "}
-                  🌱. I try to post often and I’m not too precious about my
-                  drafts. Sometimes you’ll see unfinished work or something
-                  won’t look quite right. I spend a lot of time writing sturdy
-                  code for my day job. This blog is my space to explore and
-                  share ideas.
+                  🌱.
                 </Text>
               </Wrapper>
               <Wrapper>
-                <h2>Top posts</h2>
-                <li>
-                  <StyledGatsbyLink to="/getting-started-with-design-systems-checklist/">
-                    Getting Started with Design Systems Checklist
-                  </StyledGatsbyLink>
-                </li>
-                <li>
-                  <StyledGatsbyLink to="/progressive-disclosure-of-complexity/">
-                    Building a multi-brand design system in layers
-                  </StyledGatsbyLink>
-                </li>
-                <li>
-                  <StyledGatsbyLink to="/layers-of-abstraction-in-design-systems/">
-                    The 5 layers of a design system
-                  </StyledGatsbyLink>
-                </li>
+                <Text>
+                  I believe that design systems thinking is a powerful way to
+                  improve a product's consistency, accessibility, and speed to
+                  market. I love sharing what I know with other developers and
+                  engineering managers so that they can also build lasting,
+                  robust design systems artifacts, like component libraries,
+                  design assets, processes, and automation.
+                </Text>
+              </Wrapper>
+              <Wrapper>
+                <h2>Design systems architecture</h2>
+                <BulletList
+                  title="Building a multi-brand design system in layers"
+                  href="/progressive-disclosure-of-complexity/"
+                ></BulletList>
+                <BulletList
+                  title="The 5 layers of a design system"
+                  href="/layers-of-abstraction-in-design-systems/"
+                ></BulletList>
+                <BulletList
+                  title="Where to Start with Design Tokens"
+                  href="/where-to-start-with-design-tokens/"
+                ></BulletList>
+
+                <h2>Frontend infrastructure</h2>
+                <BulletList
+                  title="How to Ignore Changed Files when Publishing with Lerna"
+                  href="/how-to-ignore-files-when-using-lerna/"
+                ></BulletList>
+                <BulletList
+                  title="What are Conventional Commits?"
+                  href="/what-are-conventional-commits/"
+                ></BulletList>
+                <BulletList
+                  title="Do you Need to Version your Component Library?"
+                  href="/do-you-need-to-version-your-component-library/"
+                ></BulletList>
+                <h2>Team models and governance</h2>
+                <BulletList
+                  title="Design System Team Models: The First Engineering Hires"
+                  href="/design-system-team-models-part-I/"
+                ></BulletList>
               </Wrapper>
               <Wrapper>
                 <Text>

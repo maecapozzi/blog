@@ -208,12 +208,12 @@
 
 export const tosh = {
   colors: {
-    text: `#131415`,
-    background: `#FFFFFF`,
-    primary: `#131415`,
-    secondary: `#544d89`,
-    muted: `#011627`,
-    highlight: `#7766d7`,
+    text: `rgba(255,255,255,.75)`,
+    background: `rgb(25, 28, 32)`,
+    primary: `#40A9FF`,
+    secondary: `#e3e9f0`,
+    muted: `#22262b`,
+    highlight: `#40A9FF`,
     gray1: `#ececec`,
   },
   spacings: {

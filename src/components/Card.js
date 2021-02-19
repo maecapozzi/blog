@@ -25,7 +25,7 @@ export const Title = styled(`h1`)`
   font-weight: ${(props) => props.theme.fontWeights.medium};
   margin: 0;
   font-size: ${(props) => props.theme.fontSizes["9"]};
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
   font-family: ${(props) => props.theme.fonts.secondary};
 
   &:hover {
@@ -54,7 +54,7 @@ const ReadMoreLink = styled(Link)`
 `;
 
 export const Badge = styled("span")`
-  background: ${(props) => props.theme.colors.gray1};
+  background: ${(props) => props.theme.colors.highlight};
   margin-right: ${(props) => props.theme.spacings["3"]};
   padding: ${(props) => props.theme.spacings["1"]}
     ${(props) => props.theme.spacings["3"]};
@@ -62,7 +62,7 @@ export const Badge = styled("span")`
   font-weight: ${(props) => props.theme.fontWeights.light};
   font-family: ${(props) => props.theme.fonts.secondary};
   font-size: ${(props) => props.theme.fontSizes["3"]};
-  color: ${(props) => props.theme.colors.highlight};
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const Card = ({ img, title, content, slug, date, tags }) => {

@@ -4,11 +4,11 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 import { Formik } from "formik";
 
 const FormWrapper = styled.div`
-  background: ${(props) => props.theme.colors.highlight};
+  background: ${(props) => props.theme.colors.muted};
   margin: 40px 0px;
   border-radius: 5px;
   padding: 40px;
-  color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fonts.primary};
   box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.1),
     0 4px 6px 1px rgba(0, 0, 0, 0.05);
@@ -60,16 +60,16 @@ const ButtonWrapper = styled.div`
 export const StyledButton = styled.button`
   font-family: ${(props) => props.theme.fonts.primary};
   cursor: pointer;
-  color: ${(props) => props.theme.colors.highlight};
+  color: ${(props) => props.theme.colors.text};
   border-radius: 5px;
   width: 88px;
   padding: 8px;
   border: none;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.highlight};
   font-size: ${(props) => props.theme.fontSizes["2"]};
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.secondary};
+    background-color: ${(props) => props.theme.colors.primary};
   }
 `;
 
@@ -152,10 +152,15 @@ export const NewsletterSignup = () => {
         /* and other goodies */
       }) => (
         <FormWrapper>
-          <NewsletterHeader>Let's talk coding.</NewsletterHeader>
+          <NewsletterHeader>
+            Get the free design systems newsletter
+          </NewsletterHeader>
           <NewsletterText>
-            If you like what you're reading, I send out a newsletter whenever I
-            publish a new post. You can always unsubscribe.
+            Whether you're new to design systems or a seasoned pro, this
+            newsletter is for you.
+          </NewsletterText>
+          <NewsletterText>
+            Join over 50 developers learning about design systems now:
           </NewsletterText>
           {message !== null && <StyledMessage>{message}</StyledMessage>}
           <StyledForm onSubmit={handleSubmit}>
