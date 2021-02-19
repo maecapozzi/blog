@@ -42,7 +42,7 @@ const BodyWrapper = styled("div")`
   ol,
   li,
   a {
-    font-size: ${(props) => props.theme.fontSizes["5"]};
+    font-size: ${(props) => props.theme.fontSizes["6"]};
     font-family: ${(props) => props.theme.fonts.primary};
     line-height: 1.5;
   }
