@@ -98,6 +98,14 @@ function Bio() {
                   title="Design System Team Models: The First Engineering Hires"
                   href="/design-system-team-models-part-I/"
                 ></BulletList>
+                <BulletList
+                  title="Design System Team Models: How to Hire a Frontend-of-the-Frontend Engineer"
+                  href="/design-system-team-models-part-II/"
+                ></BulletList>
+                <BulletList
+                  title="Design System Team Models: How to Hire a Frontend Infrastructure Engineer"
+                  href="/design-system-team-models-part-III/"
+                ></BulletList>
               </Wrapper>
               <Wrapper>
                 <Text>
