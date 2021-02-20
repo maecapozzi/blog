@@ -128,7 +128,6 @@ export const NewsletterSignup = () => {
           email_address: values.email,
           first_name: values.firstName,
         }).then((data) => {
-          console.log(data);
           if (data.status === 200) {
             setMessage(`You've signed up successfully!`);
           } else {
