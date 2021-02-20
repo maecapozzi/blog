@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import addToMailchimp from "gatsby-plugin-mailchimp";
 import { Formik } from "formik";
 
 const FormWrapper = styled.div`
@@ -39,22 +38,9 @@ const StyledInput = styled.input`
   drop-shadow: none;
   border: none;
   border-radius: 5px;
-  font-size: ${(props) => props.theme.fontSizes["2"]};
-`;
-
-const StyledTextArea = styled.textarea`
-  font-family: ${(props) => props.theme.fonts.primary};
-  padding: 8px;
-  margin: 8px 0px;
-  drop-shadow: none;
-  border: none;
-  border-radius: 5px;
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 16px;
+  width: 100%;
+  height: ${(props) => props.theme.spacings["7"]};
+  font-size: ${(props) => props.theme.fontSizes["4"]};
 `;
 
 export const StyledButton = styled.button`
@@ -62,11 +48,13 @@ export const StyledButton = styled.button`
   cursor: pointer;
   color: ${(props) => props.theme.colors.text};
   border-radius: 5px;
-  width: 88px;
-  padding: 8px;
+
+  margin: 16px;
   border: none;
   background-color: ${(props) => props.theme.colors.highlight};
-  font-size: ${(props) => props.theme.fontSizes["2"]};
+  font-size: ${(props) => props.theme.fontSizes["5"]};
+  height: ${(props) => props.theme.spacings["7"]};
+  width: ${(props) => props.theme.spacings["10"]};
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
@@ -75,17 +63,14 @@ export const StyledButton = styled.button`
 
 const StyledMessage = styled.div`
   font-family: ${(props) => props.theme.fonts.primary};
-  background-color: ${(props) => props.theme.colors.highlight};
-  padding: 8px;
+  color: ${(props) => props.theme.colors.primary};
   border-radius: 5px;
-  margin: 16px 0;
-  text-align: center;
 `;
 
 const Error = styled.div`
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: ${(props) => props.theme.fontSizes["4"]};
-  color: ${(props) => props.theme.colors.tertiary};
+  font-size: ${(props) => props.theme.fontSizes["3"]};
+  color: "red";
 `;
 
 const Wrapper = styled.div`
@@ -112,32 +97,47 @@ export const NewsletterSignup = () => {
         const errors = {};
 
         if (!values.email) {
-          errors.email = "Required";
+          errors.email = "Email address is required.";
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
-          errors.email = "Invalid email address";
-        }
-
-        if (!values.firstName) {
-          errors.firstName = "Required";
+          errors.email = "Invalid email address.";
         }
 
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        addToMailchimp(values.email, {
-          FIRST_NAME: values.firstName,
-          TOPICS: values.interests,
-        }).then((data) => {
-          if (data.result === "error") {
-            setMessage(`Looks like you've already signed up!`);
-          }
+        async function postData(url = "", data = {}) {
+          const response = await fetch(url, {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            redirect: "follow",
+            referrerPolicy: "no-referrer",
+            body: JSON.stringify(data),
+          });
 
-          if (data.result === "success") {
+          return response;
+        }
+
+        postData("https://app.convertkit.com/forms/2055370/subscriptions", {
+          email_address: values.email,
+          first_name: values.firstName,
+        }).then((data) => {
+          console.log(data);
+          if (data.status === 200) {
             setMessage(`You've signed up successfully!`);
+          } else {
+            setMessage(
+              `Looks like something went wrong. I'm sorry about that!`
+            );
           }
         });
+
         setSubmitting(false);
       }}
     >
@@ -162,48 +162,26 @@ export const NewsletterSignup = () => {
           <NewsletterText>
             Join over 50 developers learning about design systems now:
           </NewsletterText>
-          {message !== null && <StyledMessage>{message}</StyledMessage>}
+
           <StyledForm onSubmit={handleSubmit}>
             <Wrapper>
-              <StyledLabel>First name</StyledLabel>
-              {errors.firstName && touched.firstName && (
-                <Error>{errors.firstName}</Error>
-              )}
-            </Wrapper>
-            <StyledInput
-              type="firstName"
-              name="firstName"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.firstName}
-            />
-
-            <Wrapper>
               <StyledLabel>Email Address</StyledLabel>
-              {errors.email && touched.email && <Error>{errors.email}</Error>}
             </Wrapper>
-            <StyledInput
-              type="email"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-            <StyledLabel>
-              What topics are you interested in hearing about?
-            </StyledLabel>
-            <StyledTextArea
-              type="interests"
-              name="interests"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.interests}
-            />
-            <ButtonWrapper>
+            <Wrapper>
+              <StyledInput
+                type="email"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+              />
+
               <StyledButton type="submit" disabled={isSubmitting}>
                 Submit
               </StyledButton>
-            </ButtonWrapper>
+            </Wrapper>
+            {errors.email && touched.email && <Error>{errors.email}</Error>}
+            {message !== null && <StyledMessage>{message}</StyledMessage>}
           </StyledForm>
         </FormWrapper>
       )}
