@@ -2,6 +2,7 @@
 path: "/design-system-team-models-part-I"
 date: "2021-02-11"
 title: "Design System Team Models: The First Engineering Hires"
+excerpt: "Companies are buying into the promise of design systems in 2021. But what does a design systems team look like? And how do you make strategic engineering hires for that team?"
 tags: [{ name: "team structure" }, { name: "hiring" }]
 ---
 
@@ -21,3 +22,10 @@ The second engineer should be an expert on versioning and publishing, bundlers, 
 Versioning and publishing prevent your team from becoming responsible for the quality of everyone else's codebase. And automation allows your team to ship new components more quickly because they are not wasting time on manual steps
 
 As the team grows, it may naturally break into two pods, each led by one of the original two engineers. One team can manage design tokens and build components, while the other would work on automation tools and metrics collection.
+
+---
+
+### Like what you just read?
+
+Read the next essay in the series: [Design System Team Models: How to Hire a Frontend-of-the-Frontend Engineer
+](/design-system-team-models-part-II/)
