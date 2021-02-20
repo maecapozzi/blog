@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Formik } from "formik";
+import mediaQueries from "../utils/mediaQueries";
 
 const FormWrapper = styled.div`
   background: ${(props) => props.theme.colors.muted};
-  margin: 40px 0px;
   border-radius: 5px;
   padding: 40px;
   color: ${(props) => props.theme.colors.text};
@@ -48,13 +48,14 @@ export const StyledButton = styled.button`
   cursor: pointer;
   color: ${(props) => props.theme.colors.text};
   border-radius: 5px;
-
-  margin: 16px;
   border: none;
   background-color: ${(props) => props.theme.colors.highlight};
   font-size: ${(props) => props.theme.fontSizes["5"]};
   height: ${(props) => props.theme.spacings["7"]};
-  width: ${(props) => props.theme.spacings["10"]};
+  width: 100%;
+  ${mediaQueries.TABLET_PORTRAIT`
+    width: ${(props) => props.theme.spacings["10"]};
+  `}
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
@@ -70,7 +71,9 @@ const StyledMessage = styled.div`
 const Error = styled.div`
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: ${(props) => props.theme.fontSizes["3"]};
-  color: "red";
+  color: red;
+  padding-top: ${(props) => props.theme.spacings["1"]};
+  padding-bottom: ${(props) => props.theme.spacings["3"]};
 `;
 
 const Wrapper = styled.div`
@@ -79,6 +82,14 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
+const ButtonWrapper = styled.div`
+  ${mediaQueries.TABLET_PORTRAIT`
+    width: ${(props) => props.theme.spacings["10"]};
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  `}
+`;
 const NewsletterText = styled.p`
   font-size: ${(props) => props.theme.fontSizes["5"]};
 `;
@@ -174,12 +185,14 @@ export const NewsletterSignup = () => {
                 onBlur={handleBlur}
                 value={values.email}
               />
-
+            </Wrapper>
+            {errors.email && touched.email && <Error>{errors.email}</Error>}
+            <ButtonWrapper>
               <StyledButton type="submit" disabled={isSubmitting}>
                 Submit
               </StyledButton>
-            </Wrapper>
-            {errors.email && touched.email && <Error>{errors.email}</Error>}
+            </ButtonWrapper>
+
             {message !== null && <StyledMessage>{message}</StyledMessage>}
           </StyledForm>
         </FormWrapper>
