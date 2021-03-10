@@ -1,8 +1,9 @@
 import React from "react";
+import getShareImage from "@jlengstorf/get-share-image";
+import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
-import SEO from "../components/seo";
 import { Date } from "../components/Date";
 import { HeadingWrapper } from "../components/Header";
 import { Text } from "../components/Text";
@@ -59,7 +60,7 @@ const BodyWrapper = styled("div")`
 const BlogPostTemplate = (props) => {
   if (props.data.markdownRemark) {
     const post = props.data.markdownRemark;
-    const { previous, next } = props.pageContext;
+    const { previous, next, socialImage } = props.pageContext;
     const { title, img, date, tags } = post.frontmatter;
     const { edges } = props.data.allImageSharp;
 
@@ -67,9 +68,30 @@ const BlogPostTemplate = (props) => {
       return { __html: post.html };
     }
 
+    console.log(socialImage);
+
     return (
       <LayoutGrid>
-        <SEO title={title} description={post.excerpt} />
+        <Helmet>
+          <title>{post.title}</title>
+          <meta name="description" content={post.excerpt} />
+          <meta name="image" content={socialImage} />
+
+          {/* OpenGraph tags */}
+          <meta
+            property="og:url"
+            content={`https://maecapozzi.com${post.slug}`}
+          />
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={post.title} />
+          <meta property="og:description" content={post.excerpt} />
+          <meta property="og:image" content={socialImage} />
+
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@MCapoz" />
+          <meta name="twitter:creator" content="@MCapoz" />
+        </Helmet>
         <GridColumn
           columnStart={["3", "5", "10"]}
           columnEnd={["24", "22", "20"]}
