@@ -2,7 +2,7 @@
 path: "/composition-vs-configuration"
 date: "2021-03-16"
 title: "Designing Component Interfaces: Composition vs. Configuration"
-excerpt: "What to do when TypeScript complains about the return type of your custom hook."
+excerpt: "Design systems teams need to agree on the API they will offer to their consumers, and they generally have two choices: configuration or composition."
 tags: [{ name: "design systems" }, { name: "component library" }]
 ---
 
