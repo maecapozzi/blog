@@ -170,7 +170,7 @@ export const NewsletterSignup = () => {
             newsletter is for you.
           </NewsletterText>
           <NewsletterText>
-            Join over 50 developers learning about design systems now:
+            Join over 70 developers learning about design systems now:
           </NewsletterText>
 
           <StyledForm onSubmit={handleSubmit}>
