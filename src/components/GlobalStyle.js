@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
   blockquote {
     font-style: italic;
     border-left: 3px solid ${(props) => props.theme.colors.highlight};
-    background-color: ${(props) => props.theme.colors.gray1};
     margin: 2em 10px;
     padding: 0.5em 10px;
   }
