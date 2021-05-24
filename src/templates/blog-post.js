@@ -56,6 +56,9 @@ const BodyWrapper = styled("div")`
   }
 `;
 
+const ImgWrapper = styled.div`
+  margin-top: ${(props) => props.theme.spacings["4"]};
+`;
 const BlogPostTemplate = (props) => {
   if (props.data.markdownRemark) {
     const post = props.data.markdownRemark;
@@ -81,7 +84,11 @@ const BlogPostTemplate = (props) => {
           </HeadingWrapper>
           {edges.map((image) => {
             if (image.node.fluid.originalName === img) {
-              return <Img key={img} fluid={image.node.fluid} />;
+              return (
+                <ImgWrapper>
+                  <Img key={img} fluid={image.node.fluid} />
+                </ImgWrapper>
+              );
             }
             return undefined;
           })}
