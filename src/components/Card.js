@@ -25,7 +25,7 @@ export const Title = styled(`h1`)`
   font-weight: ${(props) => props.theme.fontWeights.medium};
   margin: 0;
   font-size: ${(props) => props.theme.fontSizes["9"]};
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fonts.secondary};
 
   &:hover {
@@ -62,7 +62,7 @@ export const Badge = styled("span")`
   font-weight: ${(props) => props.theme.fontWeights.medium};
   font-family: ${(props) => props.theme.fonts.secondary};
   font-size: ${(props) => props.theme.fontSizes["3"]};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 export const Card = ({ img, title, content, slug, date, tags }) => {

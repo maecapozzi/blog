@@ -7,7 +7,7 @@ const FormWrapper = styled.div`
   background: ${(props) => props.theme.colors.muted};
   border-radius: 5px;
   padding: 40px;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.secondary};
   font-family: ${(props) => props.theme.fonts.primary};
   box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.1),
     0 4px 6px 1px rgba(0, 0, 0, 0.05);
@@ -46,7 +46,7 @@ const StyledInput = styled.input`
 export const StyledButton = styled.button`
   font-family: ${(props) => props.theme.fonts.primary};
   cursor: pointer;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.secondary};
   border-radius: 5px;
   border: none;
   background-color: ${(props) => props.theme.colors.highlight};
@@ -170,7 +170,7 @@ export const NewsletterSignup = () => {
             newsletter is for you.
           </NewsletterText>
           <NewsletterText>
-            Join over 80 developers learning about design systems now:
+            Join over 90 developers learning about design systems now:
           </NewsletterText>
 
           <StyledForm onSubmit={handleSubmit}>

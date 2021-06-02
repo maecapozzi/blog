@@ -7,7 +7,7 @@ tags: [{ name: "design systems" }, { name: "systems thinking" }]
 img: "forest-systems-thinking.jpg"
 ---
 
-Donella Meadows, the author of _Thinking in Systems: A Primer_ defines a system as "an interconnected set of elements that is coherently organized in a way that achieves something."
+Donella Meadows, the author of [_Thinking in Systems: A Primer_](https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557) defines a system as "an interconnected set of elements that is coherently organized in a way that achieves something."
 
 All systems consist of three parts: **elements**, **interconnections**, and a **function or purpose**.
 

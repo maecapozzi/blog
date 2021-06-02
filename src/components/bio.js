@@ -4,14 +4,13 @@ import { StaticQuery, graphql } from "gatsby";
 import { Text } from "../components/Text";
 import { StyledExternalLink, StyledGatsbyLink } from "../components/Link";
 import { LayoutGrid, GridColumn } from "../components/Grid";
-import { Title } from "../components/Card";
 
 const Wrapper = styled.div`
   margin: 24px 0px;
 `;
 
 const H2 = styled.h2`
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const BulletList = ({ title, href }) => {
