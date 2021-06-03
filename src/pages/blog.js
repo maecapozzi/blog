@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { LayoutGrid, GridColumn } from "../components/Grid";
+import { Header } from "../components/Header";
 
 export const loopThroughPosts = (posts, images) => {
   return posts.map(({ node }) => {
@@ -50,6 +51,7 @@ const BlogIndex = (props) => {
       />
 
       <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "20"]}>
+        <Header>Blog</Header>
         {loopThroughPosts(preNewsletterPosts, images)}
         <NewsletterSignup />
         {loopThroughPosts(postNewsletterPosts, images)}

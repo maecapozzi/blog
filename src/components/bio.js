@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const H2 = styled.h2`
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.text};
 `;
 
 const BulletList = ({ title, href }) => {

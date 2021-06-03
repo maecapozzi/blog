@@ -96,33 +96,6 @@ const BlogPostTemplate = (props) => {
             <div dangerouslySetInnerHTML={parseHtml()} />
           </BodyWrapper>
           <hr />
-          <ul
-            style={{
-              margin: `0px`,
-              display: `flex`,
-              listStyle: `none`,
-              justifyContent: `space-between`,
-            }}
-          >
-            <li>
-              {previous && (
-                <Text>
-                  <StyledLink to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </StyledLink>
-                </Text>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Text>
-                  <StyledLink to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </StyledLink>
-                </Text>
-              )}
-            </li>
-          </ul>
           <NewsletterSignup />
         </GridColumn>
       </LayoutGrid>

@@ -6,8 +6,10 @@ import { Date } from "../components/Date";
 
 export const CardWrapper = styled(`div`)`
   margin: ${(props) =>
-    `${props.theme.spacings["4"]} 0 ${props.theme.spacings["2"]} 0`};
+    `${props.theme.spacings["4"]} 0 ${props.theme.spacings["6"]} 0`};
   background: ${(props) => props.theme.colors.background};
+  padding-bottom: ${(props) => props.theme.spacings["6"]};
+  border-bottom: 1px solid ${(props) => props.theme.colors.gray2};
 `;
 
 const StyledImage = styled(Img)`
@@ -23,8 +25,7 @@ const TitleWrapper = styled.div`
 
 export const Title = styled(`h1`)`
   font-weight: ${(props) => props.theme.fontWeights.medium};
-  margin: 0;
-  font-size: ${(props) => props.theme.fontSizes["9"]};
+  font-size: ${(props) => props.theme.fontSizes["7"]};
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fonts.secondary};
 
@@ -81,7 +82,6 @@ export const Card = ({ img, title, content, slug, date, tags }) => {
       </TitleWrapper>
       {tags && tags.map((tag) => <Badge>{tag.name}</Badge>)}
       <Content>{content}</Content>
-      <ReadMoreLink to={slug}>Read more</ReadMoreLink>
     </CardWrapper>
   );
 };

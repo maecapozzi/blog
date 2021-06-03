@@ -184,11 +184,13 @@ li {
 
 h1 {
   font-family: Inter;
+  margin-bottom: 0px;
 }
 
 h2 {
   font-family: Inter;
   font-size: ${(props) => props.theme.fontSizes["7"]}
+  margin-bottom: 0px;
 }
 
 h3 {
