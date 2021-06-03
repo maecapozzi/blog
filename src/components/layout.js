@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
       </List>
 
       {children}
-      <Footer>All content © Mae Capozzi</Footer>
+      <Footer>© Mae Capozzi's Website 2021</Footer>
     </ThemeProvider>
   );
 };
