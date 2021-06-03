@@ -5,7 +5,7 @@ import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { LayoutGrid, GridColumn } from "../components/Grid";
 
-const loopThroughPosts = (posts, images) => {
+export const loopThroughPosts = (posts, images) => {
   return posts.map(({ node }) => {
     let headerImage;
     images.forEach((image) => {
@@ -40,7 +40,13 @@ const BlogIndex = (props) => {
     <LayoutGrid>
       <SEO
         title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`, `gatsby`]}
+        keywords={[
+          `design systems`,
+          `design tokens`,
+          `component libraries`,
+          `semantic versioning`,
+          `lerna`,
+        ]}
       />
 
       <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "20"]}>
@@ -61,7 +67,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 300)

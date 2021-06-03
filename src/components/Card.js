@@ -25,7 +25,7 @@ export const Title = styled(`h1`)`
   font-weight: ${(props) => props.theme.fontWeights.medium};
   margin: 0;
   font-size: ${(props) => props.theme.fontSizes["9"]};
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fonts.secondary};
 
   &:hover {

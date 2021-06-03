@@ -28,7 +28,7 @@ const StyledList = styled("li")`
     color: ${(props) => props.theme.colors.highlight};
 
     &:hover {
-      color: ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 `;
@@ -42,14 +42,19 @@ const DSChecklist = () => {
         </HeadingWrapper>
 
         <Text>
-          <StyledExternalLink
-            target="_blank"
-            href="https://drive.google.com/file/d/17LgiuIuPsE_9KFFwtRbSE39gn_czQLOL/view?usp=sharing"
-          >
-            Download as PDF
-          </StyledExternalLink>
+          Are you interested in design systems, but don't know where to start?
         </Text>
-        <br></br>
+        <Text>
+          Do you wish you had a better sense of everything that building a
+          design system might entail?
+        </Text>
+        <StyledExternalLink
+          target="_blank"
+          href="https://drive.google.com/file/d/17LgiuIuPsE_9KFFwtRbSE39gn_czQLOL/view?usp=sharing"
+        >
+          Download as PDF
+        </StyledExternalLink>
+        {/* <br></br>
         <Text>
           When I first started working on design systems, I didn't know where to
           start. Googling "what is a design system" only got me so far!
@@ -321,7 +326,7 @@ const DSChecklist = () => {
             </StyledExternalLink>{" "}
             and I'll do my best to answer your question!
           </Text>
-        </Section>
+        </Section> */}
       </GridColumn>
     </LayoutGrid>
   );
