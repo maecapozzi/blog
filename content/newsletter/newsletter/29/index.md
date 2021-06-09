@@ -34,8 +34,6 @@ Now, you're expected to:
 - Focus on testing and stability
 - Evaluate your team's success based on adoption
 
-Have you had trouble making this mindset shift? Reply to this email and let me know. And as always, send me an email with questions you'd like answered in future newsletters.
-
 Talk soon,
 Mae
 
