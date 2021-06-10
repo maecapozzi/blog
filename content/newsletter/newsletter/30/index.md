@@ -13,9 +13,7 @@ _If you haven't read the email yet, you can read it [on my blog](../29)._
 
 [Jimmy](https://twitter.com/jimmynotjim) asked me a great follow-up question and I wanted to take a moment to share my answer publicly so that we can all learn together.
 
-> I’m not struggling with the DS work I do now but I certainly did when I first started. I’m definitely seeing it in my teammates though, especially those that are still in both worlds.
-
-> I’m curious if you have any ideas for helping guide folks new to this, that’s where I’m struggling these days. The only solution I’ve had so far is to ensure them our pace is fine and I expect to hit some bumps in the road.
+> I’m not struggling with the DS work I do now but I certainly did when I first started. I’m definitely seeing it in my teammates though, especially those that are still in both worlds. I’m curious if you have any ideas for helping guide folks new to this, that’s where I’m struggling these days. The only solution I’ve had so far is to ensure them our pace is fine and I expect to hit some bumps in the road.
 
 Anxiety about designing and building too slowly can be caused by either internal or external forces. It's important to determine what is triggering feelings of anxiety for your teammates.
 
