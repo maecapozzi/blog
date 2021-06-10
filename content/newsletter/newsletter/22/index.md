@@ -2,6 +2,7 @@
 path: "/issue-22"
 date: "2021-03-09"
 title: "🛠️ Tips for interviewing a frontend infrastructure engineer (#22)"
+tags: [{ name: "newsletter" }]
 ---
 
 ## Quick Refresher

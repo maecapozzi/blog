@@ -2,6 +2,7 @@
 path: "/issue-21"
 date: "2021-03-02"
 title: "✅ Interview a 'frontend-of-the-frontend' engineer (#21)"
+tags: [{ name: "newsletter" }]
 ---
 
 Last week, we talked about how to strategically hire engineers to work on your design system. If you want to refresh your memory, or you’re new to the newsletter, you can read essay #1 on my blog.

@@ -2,6 +2,7 @@
 path: "/issue-26"
 date: "2021-05-18"
 title: "🌳 Design systems and systems thinking (#26)"
+tags: [{ name: "newsletter" }]
 ---
 
 Hi!

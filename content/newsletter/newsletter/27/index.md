@@ -2,6 +2,7 @@
 path: "/issue-27"
 date: "2021-06-01"
 title: "💄 How to handle customization in a multi-product design system (#27)"
+tags: [{ name: "newsletter" }]
 ---
 
 While scrolling through Twitter the other day, I came across this tweet: https://twitter.com/markboulton/status/1397544012224073736​

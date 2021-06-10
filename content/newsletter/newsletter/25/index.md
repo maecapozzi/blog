@@ -2,6 +2,7 @@
 path: "/issue-25"
 date: "2021-04-27"
 title: "💡 Don't over-emphasize adoption in early stage design systems (#25)"
+tags: [{ name: "newsletter" }]
 ---
 
 Many design systems teams track adoption as a key performance indicator. This makes a lot of sense -- what's the value of a design system if no one uses it? Adoption is undoubtedly one of the most important metrics that the team can quantify.

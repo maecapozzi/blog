@@ -2,6 +2,7 @@
 path: "/issue-20"
 date: "2021-02-23"
 title: "🔥 Fire up your design systems team with strategic engineering hires (#20)"
+tags: [{ name: "newsletter" }]
 ---
 
 Companies are buying into the promise of design systems in 2021.

@@ -2,6 +2,7 @@
 path: "/issue-24"
 date: "2021-04-06"
 title: "🎂 The 5 layers of a design system (#24)"
+tags: [{ name: "newsletter" }]
 ---
 
 Picture a fully-fledged design system. You can bootstrap a new project, pull a bunch of components from the system, and have a page in minutes instead of days. When you're first starting to build your own, it seems too good to be true. You might be asking yourself, "how do I get from _nothing_ to a system that supports multiple teams and hundreds of happy engineers?"

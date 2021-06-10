@@ -2,6 +2,7 @@
 path: "/issue-29"
 date: "2021-06-09"
 title: "🕒 Why is design systems work so slow? (#29)"
+tags: [{ name: "newsletter" }]
 ---
 
 Hi!

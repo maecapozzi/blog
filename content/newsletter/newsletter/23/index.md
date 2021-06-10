@@ -2,6 +2,7 @@
 path: "/issue-23"
 date: "2021-03-16"
 title: "📦 How to build better components for your design system (#23)"
+tags: [{ name: "newsletter" }]
 ---
 
 Have you ever been reading proposals for a new component and seen this conversation play out?

@@ -2,7 +2,7 @@
 path: "/how-to-handle-customization-in-a-multibrand-system"
 date: "2021-06-02"
 title: "How to Handle Customization in a Multibrand Design System"
-excerpt: "How to make a multi-brand design system flexible?"
+excerpt: "How to make a multi-brand design system flexible"
 tags: [{ name: "react" }, { name: "accessibility" }]
 ---
 

@@ -2,6 +2,7 @@
 path: "/issue-30"
 date: "2021-06-10"
 title: "📦 Platform work takes longer (#30)"
+tags: [{ name: "newsletter" }]
 ---
 
 Hi!
@@ -36,6 +37,7 @@ Here's how you do it:
 The key to this exercise is explaining that the ratio of effort to value is very similar between the two cases. A Button designed for a specific use case is significantly less valuable than a Button that works across use cases, so the amount of effort the designer puts into a design system button _should be higher_.
 
 **External Source of Anxiety**
+
 Even if your teammates know that design systems work should take longer, there can still be external pressure from stakeholders to ship quickly. Those stakeholders usually have a different set of incentives from your team. This is the classic tension between platform teams and product teams.
 
 In this case, it's really important to try to alleviate the pressure from those stakeholders so that your team can focus on what's really important -- building the design system.

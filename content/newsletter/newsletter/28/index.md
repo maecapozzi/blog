@@ -2,6 +2,7 @@
 path: "/issue-28"
 date: "2021-06-08"
 title: "👋 Just saying hey (#28)"
+tags: [{ name: "newsletter" }]
 ---
 
 Hey there!
