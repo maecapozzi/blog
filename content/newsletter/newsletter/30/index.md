@@ -1,6 +1,6 @@
 ---
-path: "/issue-29"
-date: "2021-06-09"
+path: "/issue-30"
+date: "2021-06-10"
 title: "📦 Platform work takes longer (#30)"
 ---
 
