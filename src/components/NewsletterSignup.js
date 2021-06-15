@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Formik } from "formik";
 import mediaQueries from "../utils/mediaQueries";
+import { console } from "window-or-global";
 
 const FormWrapper = styled.div`
   background: ${(props) => props.theme.colors.muted};
@@ -108,13 +109,13 @@ export const NewsletterSignup = () => {
     const load = async () => {
       const amplitude = await import("amplitude-js");
       const instance = amplitude.getInstance();
-      
-      if (process.env.AMPLITUDE_API_KEY) {
-        instance.init(process.env.AMPLITUDE_API_KEY);
+
+      if (process.env.GATSBY_AMPLITUDE_API_KEY) {
+        instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
       } else {
-        throw new Error(`amplitude api key is undefined`)
+        throw new Error(`amplitude api key is undefined`);
       }
-      
+
       dataToLog.current.forEach((args) => {
         instance.logEvent(...args);
       });
@@ -168,6 +169,7 @@ export const NewsletterSignup = () => {
           first_name: values.firstName,
         }).then((data) => {
           if (data.status === 200) {
+            amplitudeInstance.logEvent("newsletter signup");
             setMessage(`You've signed up successfully!`);
           } else {
             setMessage(
@@ -215,17 +217,8 @@ export const NewsletterSignup = () => {
               />
             </Wrapper>
             {errors.email && touched.email && <Error>{errors.email}</Error>}
-
             <ButtonWrapper>
-              <StyledButton
-                type="submit"
-                onClick={() => {
-                  amplitudeInstance.logEvent(
-                    "attempted newsletter signup"
-                  );
-                }}
-                disabled={isSubmitting}
-              >
+              <StyledButton type="submit" disabled={isSubmitting}>
                 Submit
               </StyledButton>
             </ButtonWrapper>
