@@ -108,7 +108,13 @@ export const NewsletterSignup = () => {
     const load = async () => {
       const amplitude = await import("amplitude-js");
       const instance = amplitude.getInstance();
-      instance.init(process.env.AMPLITUDE_API_KEY);
+      
+      if (process.env.AMPLITUDE_API_KEY) {
+        instance.init(process.env.AMPLITUDE_API_KEY);
+      } else {
+        throw new Error(`amplitude api key is undefined`)
+      }
+      
       dataToLog.current.forEach((args) => {
         instance.logEvent(...args);
       });
