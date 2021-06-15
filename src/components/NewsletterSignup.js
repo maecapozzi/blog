@@ -96,6 +96,28 @@ const NewsletterText = styled.p`
 
 export const NewsletterSignup = () => {
   const [message, setMessage] = useState(null);
+
+  const dataToLog = React.useRef([]);
+  const [amplitudeInstance, setAmplitudeInstance] = React.useState({
+    logEvent: (...args) => {
+      dataToLog.current.push(args);
+    },
+  });
+
+  React.useEffect(() => {
+    const load = async () => {
+      const amplitude = await import("amplitude-js");
+      const instance = amplitude.getInstance();
+      instance.init(process.env.AMPLITUDE_API_KEY);
+      dataToLog.current.forEach((args) => {
+        instance.logEvent(...args);
+      });
+      dataToLog.current = [];
+      setAmplitudeInstance(instance);
+    };
+    load();
+  }, []);
+
   return (
     <Formik
       initialValues={{
@@ -187,8 +209,17 @@ export const NewsletterSignup = () => {
               />
             </Wrapper>
             {errors.email && touched.email && <Error>{errors.email}</Error>}
+
             <ButtonWrapper>
-              <StyledButton type="submit" disabled={isSubmitting}>
+              <StyledButton
+                type="submit"
+                onClick={() => {
+                  amplitudeInstance.logEvent(
+                    "attempted newsletter signup"
+                  );
+                }}
+                disabled={isSubmitting}
+              >
                 Submit
               </StyledButton>
             </ButtonWrapper>
