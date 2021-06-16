@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Formik } from "formik";
 import mediaQueries from "../utils/mediaQueries";
+import { console } from "window-or-global";
 
 const FormWrapper = styled.div`
   background: ${(props) => props.theme.colors.muted};
@@ -96,6 +97,34 @@ const NewsletterText = styled.p`
 
 export const NewsletterSignup = () => {
   const [message, setMessage] = useState(null);
+
+  const dataToLog = React.useRef([]);
+  const [amplitudeInstance, setAmplitudeInstance] = React.useState({
+    logEvent: (...args) => {
+      dataToLog.current.push(args);
+    },
+  });
+
+  React.useEffect(() => {
+    const load = async () => {
+      const amplitude = await import("amplitude-js");
+      const instance = amplitude.getInstance();
+
+      if (process.env.GATSBY_AMPLITUDE_API_KEY) {
+        instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
+      } else {
+        throw new Error(`amplitude api key is undefined`);
+      }
+
+      dataToLog.current.forEach((args) => {
+        instance.logEvent(...args);
+      });
+      dataToLog.current = [];
+      setAmplitudeInstance(instance);
+    };
+    load();
+  }, []);
+
   return (
     <Formik
       initialValues={{
@@ -140,6 +169,7 @@ export const NewsletterSignup = () => {
           first_name: values.firstName,
         }).then((data) => {
           if (data.status === 200) {
+            amplitudeInstance.logEvent("newsletter signup");
             setMessage(`You've signed up successfully!`);
           } else {
             setMessage(
