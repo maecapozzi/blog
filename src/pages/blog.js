@@ -53,7 +53,7 @@ const BlogIndex = (props) => {
       <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "20"]}>
         <Header>Blog</Header>
         {loopThroughPosts(preNewsletterPosts, images)}
-        <NewsletterSignup />
+        <NewsletterSignup slug={props.path} />
         {loopThroughPosts(postNewsletterPosts, images)}
       </GridColumn>
     </LayoutGrid>

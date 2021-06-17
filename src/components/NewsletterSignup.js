@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Formik } from "formik";
 import mediaQueries from "../utils/mediaQueries";
-import { console } from "window-or-global";
 
 const FormWrapper = styled.div`
   background: ${(props) => props.theme.colors.muted};
@@ -95,7 +94,7 @@ const NewsletterText = styled.p`
   font-size: ${(props) => props.theme.fontSizes["5"]};
 `;
 
-export const NewsletterSignup = () => {
+export const NewsletterSignup = ({ slug }) => {
   const [message, setMessage] = useState(null);
 
   const dataToLog = React.useRef([]);
@@ -109,6 +108,8 @@ export const NewsletterSignup = () => {
     const load = async () => {
       const amplitude = await import("amplitude-js");
       const instance = amplitude.getInstance();
+
+      console.log(process.env.GATSBY_AMPLITUDE_API_KEY);
 
       if (process.env.GATSBY_AMPLITUDE_API_KEY) {
         instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
@@ -169,7 +170,7 @@ export const NewsletterSignup = () => {
           first_name: values.firstName,
         }).then((data) => {
           if (data.status === 200) {
-            amplitudeInstance.logEvent("newsletter signup");
+            amplitudeInstance.logEvent(`newsletter signup from ${slug}`);
             setMessage(`You've signed up successfully!`);
           } else {
             setMessage(

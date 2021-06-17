@@ -47,7 +47,7 @@ const Newsletter = (props) => {
             ></Card>
           );
         })}
-        <NewsletterSignup />
+        <NewsletterSignup slug={props.path} />
       </GridColumn>
     </LayoutGrid>
   );

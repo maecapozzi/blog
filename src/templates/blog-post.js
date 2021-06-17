@@ -96,7 +96,7 @@ const BlogPostTemplate = (props) => {
             <div dangerouslySetInnerHTML={parseHtml()} />
           </BodyWrapper>
           <hr />
-          <NewsletterSignup />
+          <NewsletterSignup slug={props.path} />
         </GridColumn>
       </LayoutGrid>
     );
