@@ -201,7 +201,7 @@ export const NewsletterSignup = ({ slug }) => {
             newsletter is for you.
           </NewsletterText>
           <NewsletterText>
-            Join over 90 developers learning about design systems now:
+            Join over 110 developers learning about design systems now:
           </NewsletterText>
 
           <StyledForm onSubmit={handleSubmit}>
