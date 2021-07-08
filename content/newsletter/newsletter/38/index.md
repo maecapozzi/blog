@@ -7,7 +7,7 @@ tags: [{ name: "newsletter" }]
 
 If you've looked through any open-source repositories recently, you've likely seen commits that look like this:
 
-![github commits](../../assets/conventional-commits.png)
+![github commits](../../../assets/conventional-commits.png)
 
 The commit messages are prefixed with a "tag" like `fix` or `feat` . This commit message specification is called [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), and it's a powerful way to write commit messages that are human and machine-readable.
 
