@@ -37,6 +37,9 @@ const Newsletter = (props) => {
           Read past issues of the newsletter, or sign up for the next issue
           below.
         </Text>
+        <Wrapper>
+          <NewsletterSignup slug={props.path} />
+        </Wrapper>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (

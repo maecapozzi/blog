@@ -200,10 +200,6 @@ export const NewsletterSignup = ({ slug }) => {
             Whether you're new to design systems or a seasoned pro, this
             newsletter is for you.
           </NewsletterText>
-          <NewsletterText>
-            Join over 110 developers learning about design systems now:
-          </NewsletterText>
-
           <StyledForm onSubmit={handleSubmit}>
             <Wrapper>
               <StyledLabel>Email Address</StyledLabel>
