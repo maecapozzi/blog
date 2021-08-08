@@ -32,7 +32,12 @@ const Logo = styled(NavLink)`
 `;
 
 const Footer = styled.footer`
-  text-align: center;
+  display: flex;
+  background-color: ${(props) => props.theme.colors.background};
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
   padding: ${(props) => props.theme.spacings["4"]};
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: ${(props) => props.theme.fontSizes["2"]};
@@ -64,7 +69,7 @@ const Layout = ({ children }) => {
                 to="/getting-started-with-design-systems-checklist"
                 fontSize="4"
               >
-                Design Systems Checklist
+                Design Sytems Checklist
               </NavLink> */}
               <NavLink to="/newsletter" fontSize="4">
                 Newsletter

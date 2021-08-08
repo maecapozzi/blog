@@ -21,7 +21,7 @@ Gusto is a modern, online people platform that helps small businesses take care 
 
 ## [​Workday | Product Designer, Design System​](https://workday.wd5.myworkdayjobs.com/Workday/job/USA-CA-San-Francisco/Product-Designer---Design-System_JR-53027)
 
-On the Canvas Design System team, we work across multiple Workday product areas, alongside specialized application designers and engineers. Our job is to consider things at a system level, ensuring consistency and coherence while solving the specific user problem at hand. We work with our Canvas Kit (React/HTML/CSS) development teams to contribute to the library of components, consult on features and patterns, maintain documentation libraries -- and a lot of other exciting stuff.
+On the Canvas Design System team, we work across multiple Workday product areas, alongside specialized application designers and engineers. Our job is to consider things at a system level, ensuring consistency and coherence while solving the specific user problem at hand. We work with our Canvas Kit (React/HTML/CSS) development teams to contribute to the library of components, consult on features and patterns, maintain documentation libraries -- and a lot of other exciting stuff. 
 
 ## [​Codecademy | Senior Frontend Engineer: Internal Tools​](https://www.codecademy.com/about/jobs?gh_jid=5425949002)
 

@@ -47,6 +47,7 @@ const BlogIndex = (props) => {
           `component libraries`,
           `semantic versioning`,
           `lerna`,
+          `react`,
         ]}
       />
 

@@ -21,11 +21,12 @@ const Newsletter = (props) => {
       <SEO
         title="Newsletter Issues"
         keywords={[
-          `blog`,
           `design systems`,
-          `design systems newsletter`,
           `design tokens`,
           `component libraries`,
+          `semantic versioning`,
+          `lerna`,
+          `react`,
         ]}
       />
 

@@ -1,7 +1,6 @@
 import React from "react";
-import Bio from "../components/bio";
 import SEO from "../components/seo";
-import { NewsletterSignup } from "../components/NewsletterSignup";
+import { Text } from "../components/Text";
 import { LayoutGrid, GridColumn } from "../components/Grid";
 
 const Index = (props) => {
@@ -18,13 +17,14 @@ const Index = (props) => {
           `react`,
         ]}
       />
-      <Bio />
       <LayoutGrid>
         <GridColumn
           columnStart={["3", "5", "10"]}
           columnEnd={["24", "22", "20"]}
         >
-          <NewsletterSignup slug={props.path} />
+          <Text>
+            I'll share your email with companies you're interested in shortly!
+          </Text>
         </GridColumn>
       </LayoutGrid>
     </>
