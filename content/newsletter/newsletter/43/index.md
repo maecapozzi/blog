@@ -29,7 +29,7 @@ In this second example, there should be a TypeScript warning:
 
 The best way to accomplish building this type of component is using TypeScript generics. If you're unfamiliar or uncomfortable with generics, read this post first.
 
-And if you'd like to try your hand at building polymorphic components in TypeScript, give this fantastic post by Ben Ilegbodu a read.
+And if you'd like to try your hand at building polymorphic components in TypeScript, give this [fantastic post](https://www.benmvp.com/blog/polymorphic-react-components-typescript/) by Ben Ilegbodu a read.
 
 If your company is hiring (and you think it's a great company that you'd tell your friends to work at), fill out this [form](https://forms.gle/tCRpGy7PMfQGqu5B9)!
 
