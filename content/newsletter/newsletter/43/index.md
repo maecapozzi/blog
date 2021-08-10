@@ -27,7 +27,7 @@ In this second example, there should be a TypeScript warning:
 <Button as="button" href="www.google.com" /> // TypeScript warning
 ```
 
-The best way to accomplish building this type of component is using TypeScript generics. If you're unfamiliar or uncomfortable with generics, read this post first.
+The best way to accomplish building this type of component is using TypeScript generics. If you're unfamiliar or uncomfortable with generics, read [this post](https://ts.chibicode.com/generics) first.
 
 And if you'd like to try your hand at building polymorphic components in TypeScript, give this [fantastic post](https://www.benmvp.com/blog/polymorphic-react-components-typescript/) by Ben Ilegbodu a read.
 
