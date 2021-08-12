@@ -109,8 +109,6 @@ export const NewsletterSignup = ({ slug }) => {
       const amplitude = await import("amplitude-js");
       const instance = amplitude.getInstance();
 
-      console.log(process.env.GATSBY_AMPLITUDE_API_KEY);
-
       if (process.env.GATSBY_AMPLITUDE_API_KEY) {
         instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
       } else {
@@ -130,12 +128,14 @@ export const NewsletterSignup = ({ slug }) => {
     <Formik
       initialValues={{
         firstName: "",
-        lastName: "",
         email: "",
-        interests: "",
       }}
       validate={(values) => {
         const errors = {};
+
+        if (!values.firstName) {
+          errors.firstName = "First name is required.";
+        }
 
         if (!values.email) {
           errors.email = "Email address is required.";
@@ -201,6 +201,21 @@ export const NewsletterSignup = ({ slug }) => {
             newsletter is for you.
           </NewsletterText>
           <StyledForm onSubmit={handleSubmit}>
+            <Wrapper>
+              <StyledLabel>First Name</StyledLabel>
+            </Wrapper>
+            <Wrapper>
+              <StyledInput
+                type="text"
+                name="firstName"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.firstName}
+              />
+            </Wrapper>
+            {errors.firstName && touched.firstName && (
+              <Error>{errors.firstName}</Error>
+            )}
             <Wrapper>
               <StyledLabel>Email Address</StyledLabel>
             </Wrapper>
