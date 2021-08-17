@@ -1,18 +1,15 @@
 ---
 path: "/issue-44"
-date: "2021-08-12"
-title: "⚡ This week in design systems jobs (#44)"
+date: "2021-08-19"
+title: "⚡ This week in design systems jobs (#47)"
 tags: [{ name: "newsletter" }]
 ---
 
 Happy Thursday!
 
-Welcome the second _Jobs_ edition of the Design Systems Newsletter.
+Welcome the third _Jobs_ edition of the Design Systems Newsletter.
 
-Have you been having trouble finding a new design systems job? You're much more likely to get an interview if you have a connection at the company.
-Send me an email at mae@maecapozzi.com and I can connect you.
-
-**If you're interested in any of these jobs, fill out [this form](https://forms.gle/ZJnVacMuz9Dt4p3GA) and I'll connect you with employers.**
+Have you been having trouble finding a new design systems job? You're much more likely to get an interview if you have a connection at the company. **If you're interested in any of these jobs, fill out [this form](https://forms.gle/ZJnVacMuz9Dt4p3GA) and I'll connect you with employers.**
 
 --
 
