@@ -11,7 +11,8 @@ I'll be sending out more job opportunities on Thursday! If your company is hirin
 
 I've already connected some of you with potential employers -- let's keep it going!
 
---
+---
+
 Last week I wrote about building polymorphic components for your design system, and about the very particular challenges of building polymorphic components in TypeScript.
 If you missed it, you can catch up [here](maecapozzi.com/newsletter/42/).
 
@@ -33,7 +34,8 @@ I reached out to Ben and asked him if/how he'd solved this problem at Stitch Fix
 
 Try out his solution and let me know what you think. Does your team have a good solution to typing polymorphic components that supports React.forwardRef? Share it with me, I'd love to see how you're approaching the problem,
 
---
+---
+
 If you like this [newsletter](https://maecapozzi.com/newsletter/) it would really help me if you shared it with your friends. Tweet about it, post on LinkedIn, and share in slack channels. Building this community can lead all of us to more job opportunities, guest posts, and connections.
 ​
 
