@@ -14,7 +14,7 @@ I've already connected some of you with potential employers -- let's keep it goi
 ---
 
 Last week I wrote about building polymorphic components for your design system, and about the very particular challenges of building polymorphic components in TypeScript.
-If you missed it, you can catch up [here](maecapozzi.com/newsletter/42/).
+If you missed it, you can catch up [here](/newsletter/42).
 
 Ben Ilegbodu wrote one of the best blog posts about this topic. I rely on his approach heavily when I try to build polymorphic components in TypeScript.
 
