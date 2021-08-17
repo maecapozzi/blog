@@ -1,5 +1,5 @@
 ---
-path: "/issue-44"
+path: "/issue-47"
 date: "2021-08-19"
 title: "⚡ This week in design systems jobs (#47)"
 tags: [{ name: "newsletter" }]
