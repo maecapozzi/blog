@@ -36,7 +36,7 @@ Try out his solution and let me know what you think. Does your team have a good 
 
 ---
 
-If you like this [newsletter](https://maecapozzi.com/newsletter/) it would really help me if you shared it with your friends. Tweet about it, post on LinkedIn, and share in slack channels. Building this community can lead all of us to more job opportunities, guest posts, and connections.
+If you like this newsletter it would really help me if you shared the link [https://maecapozzi.com/newsletter/](https://maecapozzi.com/newsletter/) with your friends. Tweet about it, post on LinkedIn, and share in slack channels. Building this community can lead all of us to more job opportunities, guest posts, and connections.
 ​
 
 Talk soon,
