@@ -15,6 +15,20 @@ If your company is hiring (and you think it's a great company that you'd tell yo
 
 --
 
+## [Vistaprint | Principal Designer, Design Systems](https://www.linkedin.com/jobs/view/2626942765/)
+
+**Remote opportunity**
+
+Vistaprint's Customer Experience and Marketing organization serves, inspires and delights customers – and helps others in our organization do the same. From the simplest interaction on our website to how people take in our advertising and communications we are obsessed with delivering value. We know our customers' needs, and we strive to exceed their expectations. Touching every element of the business, we're here to grow and build the Vistaprint brand, reach new audiences and offer the best possible experience for every customer.
+
+## [Juno Medical |Senior Software Engineer, Frontend](https://jobs.lever.co/junomedical/5c2e3dbe-b6a4-4daa-8768-628a84fca279)
+
+**Remote opportunity**
+
+Juno Medical is an entirely new kind of doctor’s office. We provide a one-stop solution for you and your family’s everyday care needs that features exceptional hospitality, modern technology, and transparent prices that won’t break the bank.
+
+Juno brings the best of high-quality pediatrics, adult primary care, women’s health, and same-day care under one roof — with labs, imaging, and wellness also on-site.
+
 ## [Atlassian | Product Designer, Design System](https://jobs.lever.co/atlassian/04c69d75-11d2-455b-b4db-9557670651e9?lever-via=mchz33OSqn)
 
 **Remote opportunity**
@@ -26,12 +40,6 @@ The Atlassian Design System allows our product teams to move fast and build fami
 **Remote opportunity**
 
 The Atlassian Design System allows our product teams to move fast and build familiar quality experiences that users know and love. As a designer on the team, you will work on initiatives to improve the experience of the end users of our products as well as improving how product teams design and build day-to-day.
-
-## [Vistaprint | Principal Designer, Design Systems](https://www.linkedin.com/jobs/view/2626942765/)
-
-**Remote opportunity**
-
-Vistaprint's Customer Experience and Marketing organization serves, inspires and delights customers – and helps others in our organization do the same. From the simplest interaction on our website to how people take in our advertising and communications we are obsessed with delivering value. We know our customers' needs, and we strive to exceed their expectations. Touching every element of the business, we're here to grow and build the Vistaprint brand, reach new audiences and offer the best possible experience for every customer.
 
 ---
 
