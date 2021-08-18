@@ -21,13 +21,17 @@ If your company is hiring (and you think it's a great company that you'd tell yo
 
 Vistaprint's Customer Experience and Marketing organization serves, inspires and delights customers – and helps others in our organization do the same. From the simplest interaction on our website to how people take in our advertising and communications we are obsessed with delivering value. We know our customers' needs, and we strive to exceed their expectations. Touching every element of the business, we're here to grow and build the Vistaprint brand, reach new audiences and offer the best possible experience for every customer.
 
-## [Juno Medical |Senior Software Engineer, Frontend](https://jobs.lever.co/junomedical/5c2e3dbe-b6a4-4daa-8768-628a84fca279)
+## [Juno Medical | Senior Software Engineer, Frontend](https://jobs.lever.co/junomedical/5c2e3dbe-b6a4-4daa-8768-628a84fca279)
 
 **Remote opportunity**
 
 Juno Medical is an entirely new kind of doctor’s office. We provide a one-stop solution for you and your family’s everyday care needs that features exceptional hospitality, modern technology, and transparent prices that won’t break the bank.
 
 Juno brings the best of high-quality pediatrics, adult primary care, women’s health, and same-day care under one roof — with labs, imaging, and wellness also on-site.
+
+## [Sprout Social | Creative Technologist](https://sproutsocial.com/careers/open-positions/?amp#/2953236/creative-technologist)
+
+From our employee experience to our products, design matters at Sprout Social. We’re looking for a Creative Technologist to join our team as we advance our design system, [Seeds](https://sproutsocial.com/careers/open-positions/?amp#/2953236/creative-technologist), to facilitate the development of beautiful, helpful, and easy-to-use software that powers human connection. Seeds is home to all of the tools and resources needed to understand the Sprout brand, express it creatively, and inspire meaningful customer experiences.
 
 ## [Atlassian | Product Designer, Design System](https://jobs.lever.co/atlassian/04c69d75-11d2-455b-b4db-9557670651e9?lever-via=mchz33OSqn)
 
