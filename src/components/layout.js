@@ -65,6 +65,9 @@ const Layout = ({ children }) => {
               <NavLink to="/blog" fontSize="4">
                 Posts
               </NavLink>
+              <NavLink to="/open-jobs" fontSize="4">
+                Open Jobs
+              </NavLink>
               {/* <NavLink
                 to="/getting-started-with-design-systems-checklist"
                 fontSize="4"
