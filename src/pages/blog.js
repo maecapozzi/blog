@@ -5,6 +5,7 @@ import { Card } from "../components/Card";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { LayoutGrid, GridColumn } from "../components/Grid";
 import { Header } from "../components/Header";
+import { Page } from "../components/Page";
 
 export const loopThroughPosts = (posts, images) => {
   return posts.map(({ node }) => {
@@ -38,26 +39,12 @@ const BlogIndex = (props) => {
   const postNewsletterPosts = posts.slice(3);
 
   return (
-    <LayoutGrid>
-      <SEO
-        title="All posts"
-        keywords={[
-          `design systems`,
-          `design tokens`,
-          `component libraries`,
-          `semantic versioning`,
-          `lerna`,
-          `react`,
-        ]}
-      />
-
-      <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "20"]}>
-        <Header>Blog</Header>
-        {loopThroughPosts(preNewsletterPosts, images)}
-        <NewsletterSignup slug={props.path} />
-        {loopThroughPosts(postNewsletterPosts, images)}
-      </GridColumn>
-    </LayoutGrid>
+    <Page seoTitle="All posts">
+      <Header>Blog</Header>
+      {loopThroughPosts(preNewsletterPosts, images)}
+      <NewsletterSignup slug={props.path} />
+      {loopThroughPosts(postNewsletterPosts, images)}
+    </Page>
   );
 };
 
