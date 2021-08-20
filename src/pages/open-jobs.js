@@ -1,13 +1,12 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { LayoutGrid, GridColumn } from "../components/Grid";
+import { Page } from "../components/Page";
 import { Header } from "../components/Header";
-import SEO from "../components/seo";
 import { Date } from "../components/Date";
+import { NewsletterSignup } from "../components/NewsletterSignup";
 
 const JobPosting = styled.div`
-  margin-bottom: 200px;
   && {
     a {
       text-decoration: none;
@@ -41,59 +40,12 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
-  const dataToLog = React.useRef([]);
-  const [amplitudeInstance, setAmplitudeInstance] = React.useState({
-    logEvent: (...args) => {
-      dataToLog.current.push(args);
-    },
-  });
-
-  React.useEffect(() => {
-    const load = async () => {
-      const amplitude = await import("amplitude-js");
-      const instance = amplitude.getInstance();
-
-      if (process.env.GATSBY_AMPLITUDE_API_KEY) {
-        instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
-      } else {
-        throw `amplitude api key is undefined`;
-      }
-
-      dataToLog.current.forEach((args) => {
-        instance.logEvent(...args);
-      });
-      dataToLog.current = [];
-      setAmplitudeInstance(instance);
-    };
-    load();
-  }, []);
   return (
-    <LayoutGrid>
-      <SEO
-        title="Open Jobs"
-        keywords={[
-          `design systems`,
-          `design systems jobs`,
-          `jobs`,
-          `design tokens`,
-          `component libraries`,
-          `semantic versioning`,
-          `lerna`,
-          `react`,
-        ]}
-      />
-
-      <GridColumn columnStart={["3", "5", "10"]} columnEnd={["24", "22", "20"]}>
-        <Header>{frontmatter.title}</Header>
-        <Date>Last updated {frontmatter.date}</Date>
-        <JobPosting
-          onMouseOver={() =>
-            amplitudeInstance.logEvent(`interact with open jobs`)
-          }
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </GridColumn>
-    </LayoutGrid>
+    <Page seoTitle="Design systems jobs">
+      <Header>{frontmatter.title}</Header>
+      <Date>Last updated {frontmatter.date}</Date>
+      <JobPosting dangerouslySetInnerHTML={{ __html: html }} />
+    </Page>
   );
 }
 export const pageQuery = graphql`
