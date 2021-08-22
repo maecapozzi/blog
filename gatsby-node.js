@@ -5,11 +5,11 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const openJobs = path.resolve(`./src/pages/open-jobs.js`);
   return graphql(
     `
       {
         allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/content/blog/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -42,17 +42,28 @@ exports.createPages = ({ graphql, actions }) => {
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          img: post.node.frontmatter.img,
-          tags: post.node.frontmatter.tags,
-          previous,
-          next,
-        },
-      });
+      if (post.slug === "/open-jobs") {
+        createPage({
+          path: post.node.fields.slug,
+          component: openJobs,
+          context: {
+            slug: post.node.fields.slug,
+            tags: post.node.frontmatter.tags,
+          },
+        });
+      } else {
+        createPage({
+          path: post.node.fields.slug,
+          component: blogPost,
+          context: {
+            slug: post.node.fields.slug,
+            tags: post.node.frontmatter.tags,
+            img: post.node.frontmatter.img,
+            previous,
+            next,
+          },
+        });
+      }
     });
   });
 };
