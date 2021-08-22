@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Page } from "../components/Page";
 import { Header } from "../components/Header";
 import { Date } from "../components/Date";
-import { NewsletterSignup } from "../components/NewsletterSignup";
 
 const JobPosting = styled.div`
   && {
