@@ -9,8 +9,6 @@ Happy Tuesday!
 
 Yesterday, I wrote to you about whether your design system should allow style overrides. Like most questions in design systems, the answer is "it depends."
 
-Today, I want to talk about how to decide whether your library should support style overrides or not.
-
 ## How to decide whether to allow style overrides on design system components
 
 There are benefits and pitfalls to both approaches. It's critical to understand the business case for the library before making a call.

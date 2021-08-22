@@ -1,15 +1,13 @@
 ---
 path: "/issue-48"
 date: "2021-08-23"
-title: "🧑🏾‍🎨 Should you allow style overrides on design system components? (#48)"
+title: "🧑🏾‍🎨 Should you allow style overrides? (#48)"
 tags: [{ name: "newsletter" }]
 ---
 
 Happy Monday!
 
 I'll be sending out more job opportunities on Thursday! If your company is hiring (and you think it's a great company that you'd tell your friends to work at), fill out this [form](https://forms.gle/tCRpGy7PMfQGqu5B9)!
-
-Also, if you want to check out all currently open jobs, you can find that [here](/open-jobs).
 
 ---
 
