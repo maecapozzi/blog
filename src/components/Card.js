@@ -66,7 +66,7 @@ export const Badge = styled("span")`
   color: ${(props) => props.theme.colors.secondary};
 `;
 
-export const Card = ({ img, title, content, slug, date, tags }) => {
+export const Card = ({ img, title, content, slug, date, tags, emoji }) => {
   return (
     <CardWrapper>
       {img && (

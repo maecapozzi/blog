@@ -23,6 +23,7 @@ export const loopThroughPosts = (posts, images) => {
         slug={node.fields.slug}
         date={node.frontmatter.date}
         tags={node.frontmatter.tags}
+        emoji={node.frontmatter.emoji}
       ></Card>
     );
   });
@@ -36,10 +37,12 @@ export const Page = (props) => {
   const {
     children,
     seoTitle,
+    seoDescription,
     seoKeywords = [
+      `typescript`,
+      `javascript`,
       `design systems`,
       `design systems jobs`,
-      `jobs`,
       `design tokens`,
       `component libraries`,
       `semantic versioning`,
@@ -51,7 +54,11 @@ export const Page = (props) => {
   return (
     <Wrapper>
       <LayoutGrid>
-        <SEO title={seoTitle} keywords={seoKeywords} />
+        <SEO
+          title={seoTitle}
+          keywords={seoKeywords}
+          description={seoDescription}
+        />
 
         <GridColumn
           columnStart={["3", "5", "10"]}

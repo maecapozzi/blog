@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const newsletterIssue = path.resolve(`./src/templates/newsletter-issue.js`);
   const openJobs = path.resolve(`./src/pages/open-jobs.js`);
   return graphql(
     `
@@ -49,6 +50,18 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: post.node.fields.slug,
             tags: post.node.frontmatter.tags,
+          },
+        });
+      } else if (post.slug === "/newsletter") {
+        createPage({
+          path: post.node.fields.slug,
+          component: newsletterIssue,
+          context: {
+            slug: post.node.fields.slug,
+            tags: post.node.frontmatter.tags,
+            img: post.node.frontmatter.img,
+            previous,
+            next,
           },
         });
       } else {

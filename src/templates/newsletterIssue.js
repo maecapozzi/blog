@@ -53,7 +53,7 @@ const ImgWrapper = styled.div`
   margin-top: ${(props) => props.theme.spacings["4"]};
 `;
 
-const BlogPostTemplate = (props) => {
+const NewsletterIssue = (props) => {
   if (props.data.markdownRemark) {
     const post = props.data.markdownRemark;
     const { title, img, date, tags } = post.frontmatter;
@@ -91,10 +91,10 @@ const BlogPostTemplate = (props) => {
   return null;
 };
 
-export default BlogPostTemplate;
+export default NewsletterIssue;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query NewsletterBySlug($slug: String!) {
     site {
       siteMetadata {
         title

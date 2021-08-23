@@ -26,6 +26,8 @@ const Newsletter = (props) => {
       </Wrapper>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
+
+        console.log("slug", node.fields.slug);
         return (
           <Card
             title={title}
@@ -60,6 +62,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            path
             img
             excerpt
             tags {
