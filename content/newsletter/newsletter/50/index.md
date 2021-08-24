@@ -11,7 +11,7 @@ I know that looking for jobs can be frustrating and exhausting. Hours of scrolli
 
 Unfortunately, I can't help you out with the 8-stage interviews you'll inevitably have to pass. But I can definitely help you get started!
 
-**Last week, I added a new [Open Jobs](https://maecapozzi.com/open-jobs/) page to https://maecapozzi.com!**
+**Last week, I added a new [Open Jobs](https://maecapozzi.com/open-jobs/) page to the site!**
 
 Take a look and see if any of these open roles strike you as interesting. And as always, reach out if you need help.
 
