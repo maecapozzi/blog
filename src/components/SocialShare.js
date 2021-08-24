@@ -51,7 +51,11 @@ export const SocialShare = (props) => {
   let hackerNewsLink;
   let redditLink;
 
-  if (post.frontmatter.tags[0].name === "newsletter") {
+  if (
+    post.frontmatter.tags &&
+    post.frontmatter.tags[0] &&
+    post.frontmatter.tags[0].name === "newsletter"
+  ) {
     const title = post.frontmatter.title.replace(/[0-9-()#]/g, "");
 
     twitterLink = `https://twitter.com/share?text=${title} @MCapoz&url=${process.env.GATSBY_SITE_URL}/newsletter${post.frontmatter.path}/`;
