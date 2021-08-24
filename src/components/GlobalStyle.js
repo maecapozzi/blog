@@ -176,6 +176,10 @@ pre[data-line] {
 
 }
 
+.gatsby-resp-image-wrapper {
+  max-width: 100% !important;
+}
+
 li {
   margin-left: 24px;
   font-family: Inter;
