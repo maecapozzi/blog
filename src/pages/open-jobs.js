@@ -19,6 +19,7 @@ const JobPosting = styled.div`
       font-family: ${(props) => props.theme.fonts.primary};
       font-size: ${(props) => props.theme.fontSizes["8"]};
       margin-bottom: ${(props) => props.theme.spacings["6"]};
+      margin-top: ${(props) => props.theme.spacings["8"]};
     }
 
     h3 {
