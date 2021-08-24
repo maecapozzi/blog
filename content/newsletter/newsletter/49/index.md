@@ -27,7 +27,7 @@ If your team's design system supports multiple codebases that need to look like 
 
 This type of system works best if design inconsistency is frequently revealed and resolved. By making components difficult to override, you encourage a feedback loop between developers, designers, and the design system team.
 
-INSERT DIAGRAM
+![A chart that visually describes the text below.](../../../assets/feedback-loop.png)
 
 1. Product developers realize that they cannot implement a product designer's one-off design with existing components.
 
@@ -45,8 +45,4 @@ When building multi-brand systems where design consistency is less critical, but
 
 In this case, you must allow style overrides. Ideally, your components have little to no style opinion.
 
-You'll likely introduce multiple layers of abstraction, with the base layer being a library of unstyled, unopinionated, behavior-driven components.
-
-On top of that you might have multiple opinionated libraries that restrict style overrides.
-
-I've written about this topic in more depth here
+You'll likely introduce multiple layers of abstraction, with the base layer being a library of unstyled, unopinionated, behavior-driven components. On top of that you might have multiple opinionated libraries that restrict style overrides
