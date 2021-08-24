@@ -19,7 +19,7 @@ At the time of this writing, 168 people have voted on this [Twitter poll](https:
 
 Like most design systems questions -- I think that it depends heavily on the business needs the design system is trying to solve.
 
-| Title                                                              | Topic                                                                    |
+| Restrict style overrides                                                              | Allow style overrides                                                                    |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | - You want to enforce design consistency across multiple codebases | - You need to support vastly different visual, multi-product experiences |
 | - You want to raise design inconsistency to the DS maintainers     | - You are building foundational components anyone can use                |
