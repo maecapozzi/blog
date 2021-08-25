@@ -38,7 +38,7 @@ From there, different platforms need different libraries. **Encore Web** contain
 
 **Encore Mobile** is used with mobile tech. These components are generic and reusable by many different teams.
 
-For a lot of companies, architecture this complex might be overkill.But when it comes to massive companies with later stage design systems, a new need has arisen.
+For a lot of companies, architecture this complex might be overkill. But when it comes to massive companies with later stage design systems, a new need has arisen.
 
 Companies like Spotify have codebases that are "tailored for specific products or audiences", that need product-specific complex components built on top of Encore Web or Encore Mobile.
 
