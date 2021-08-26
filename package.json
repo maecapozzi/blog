@@ -8,7 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=12.13.0"
   },
   "dependencies": {
     "amplitude-js": "^8.3.1",
