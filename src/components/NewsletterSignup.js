@@ -94,6 +94,14 @@ const NewsletterText = styled.p`
   font-size: ${(props) => props.theme.fontSizes["5"]};
 `;
 
+const AdblockerText = styled.p`
+  font-size: ${(props) => props.theme.fontSizes["3"]};
+  margin-top: ${(props) => props.theme.spacings["3"]};
+`;
+
+const Spacer = styled.div`
+  margin: ${(props) => props.theme.spacings["4"]} 0;
+`;
 export const NewsletterSignup = ({ slug }) => {
   const [message, setMessage] = useState(null);
 
@@ -194,12 +202,14 @@ export const NewsletterSignup = ({ slug }) => {
       }) => (
         <FormWrapper>
           <NewsletterHeader>
-            Get the free design systems newsletter
+            Want frequent design systems tips, articles, and jobs sent right to
+            your inbox?
           </NewsletterHeader>
-          <NewsletterText>
-            Whether you're new to design systems or a seasoned pro, this
-            newsletter is for you.
-          </NewsletterText>
+          <Spacer>
+            <NewsletterText>
+              Sign up for the Design Systems Newsletter today!
+            </NewsletterText>
+          </Spacer>
           <StyledForm onSubmit={handleSubmit}>
             <Wrapper>
               <StyledLabel>First Name</StyledLabel>
@@ -236,6 +246,11 @@ export const NewsletterSignup = ({ slug }) => {
             </ButtonWrapper>
 
             {message !== null && <StyledMessage>{message}</StyledMessage>}
+
+            <AdblockerText>
+              If you're unable to sign up, please turn off your ad blocker and
+              try again.
+            </AdblockerText>
           </StyledForm>
         </FormWrapper>
       )}
