@@ -26,8 +26,6 @@ const Newsletter = (props) => {
       </Wrapper>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
-
-        console.log("slug", node.fields.slug);
         return (
           <Card
             title={title}
