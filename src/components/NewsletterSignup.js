@@ -112,7 +112,7 @@ export const NewsletterSignup = ({ slug }) => {
       if (process.env.GATSBY_AMPLITUDE_API_KEY) {
         instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
       } else {
-        throw `amplitude api key is undefined`;
+        console.log(`amplitude api key is undefined`);
       }
 
       dataToLog.current.forEach((args) => {
