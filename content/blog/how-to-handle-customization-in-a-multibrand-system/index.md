@@ -6,7 +6,7 @@ excerpt: "How to make a multi-brand design system flexible"
 tags: [{ name: "react" }, { name: "accessibility" }]
 ---
 
-While scrolling through Twitter the other day, I came across this tweet: https://twitter.com/markboulton/status/1397544012224073736​
+While scrolling through Twitter the other day, I came across this tweet: [https://twitter.com/markboulton/status/1397544012224073736​](https://twitter.com/markboulton/status/1397544012224073736)
 
 ![](../../assets/markboulton.png)
 
