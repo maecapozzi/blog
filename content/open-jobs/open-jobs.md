@@ -58,10 +58,6 @@ HashiCorp
 
 HashiCorp
 
-### [Product Designer, Design System​](https://workday.wd5.myworkdayjobs.com/Workday/job/USA-CA-San-Francisco/Product-Designer---Design-System_JR-53027)
-
-​Workday
-
 ## Engineering Jobs
 
 ### [Software Engineer (Front / Back)](https://apply.workable.com/specify/j/3C39D6D6E5/)
