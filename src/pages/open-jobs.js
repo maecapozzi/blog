@@ -12,6 +12,7 @@ const JobPosting = styled.div`
     a {
       text-decoration: none;
       color: ${(props) => props.theme.colors.text};
+
       &:hover {
         color: ${(props) => props.theme.colors.primary};
       }
@@ -25,6 +26,7 @@ const JobPosting = styled.div`
     }
 
     h3 {
+      color: ${(props) => props.theme.colors.text};
       font-family: ${(props) => props.theme.fonts.secondary};
       font-size: ${(props) => props.theme.fontSizes["6"]};
       margin-bottom: 0px;

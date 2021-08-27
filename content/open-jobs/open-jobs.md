@@ -1,10 +1,14 @@
 ---
 path: "/open-jobs"
-date: "2021-08-25"
+date: "2021-08-26"
 title: "Open Design Systems Jobs"
 ---
 
 ## Design Jobs
+
+### [Senior Systems Designer](https://dyte.freshteam.com/jobs/IhXiQVOvlESW/product-designer-b2b-remote)
+
+Dyte
 
 ### [Senior Systems Designer](https://jobs.lever.co/goodrx/cf6bcedb-a9f8-46e0-96f9-388152d96c8d)
 
@@ -64,6 +68,10 @@ HashiCorp
 
 ## Engineering Jobs
 
+### [Software Engineer (Front / Back)](https://apply.workable.com/specify/j/3C39D6D6E5/)
+
+Specify
+
 ### [Senior UX Engineer](https://www.myrocketcareer.com/ShowJob/JobId/483089/SeniorUXEngineer)
 
 RocketMortgage
@@ -97,6 +105,10 @@ Booking.com
 Amplitude
 
 ## Product Management Jobs
+
+### [Program Manager, Design Systems](https://www.basicagency.com/careers/8433ae2b-9d5a-49bb-a6df-339696950f43)
+
+BASIC
 
 ### [Principal Product Manager, Analytics](https://lnkd.in/dEf8-w3b)
 

@@ -18,6 +18,10 @@ const NavLink = styled(Link)`
   font-size: ${(props) => props.theme.fontSizes[`${props.fontSize}`]};
   font-family: ${(props) => props.theme.fonts.secondary};
   text-decoration: none;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 const ExternalNavLink = styled.a`
