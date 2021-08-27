@@ -70,7 +70,11 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <Page seoTitle="Design systems jobs">
+    <Page
+      seoTitle="Design systems jobs"
+      twitterImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/DS-Job-Board-Twitter-image.jpg"
+      twitterImageAlt="Design Systems Jobs, a collection of design systems jobs for developers, designers, and product managers."
+    >
       <Header>{frontmatter.title}</Header>
       <Date>Last updated {frontmatter.date}</Date>
       <Stack />
