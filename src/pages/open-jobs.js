@@ -71,6 +71,7 @@ export default function Template({ data }) {
 
   return (
     <Page
+      description="A collection of design systems jobs for developers, designers, and product managers"
       seoTitle="Design systems jobs"
       twitterImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/DS-Job-Board-Twitter-image.jpg"
       twitterImageAlt="Design Systems Jobs, a collection of design systems jobs for developers, designers, and product managers."
