@@ -41,9 +41,10 @@ function SEO({
                 property: `og:type`,
                 content: `website`,
               },
+              // Twitter-specific meta tags
               {
                 name: `twitter:card`,
-                content: `summary`,
+                content: `summary_large_image`,
               },
               { name: `twitter:site`, content: "@MCapoz" },
               {
