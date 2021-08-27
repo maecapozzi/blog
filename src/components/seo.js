@@ -7,7 +7,7 @@ function SEO({
   keywords,
   lang,
   meta,
-  metaImage
+  metaImage,
   title,
   twitterImage,
   twitterImageAlt,
