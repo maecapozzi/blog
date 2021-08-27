@@ -43,7 +43,9 @@
     "typography": "^0.16.18",
     "window-or-global": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@netlify/plugin-gatsby": "^1.0.3"
+  },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
