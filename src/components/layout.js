@@ -20,6 +20,15 @@ const NavLink = styled(Link)`
   text-decoration: none;
 `;
 
+const ExternalNavLink = styled.a`
+  font-weight: ${(props) => props.theme.fontWeights.light};
+  color: ${(props) => props.theme.colors.text};
+  margin-right: ${(props) => props.theme.spacings["8"]};
+  font-size: ${(props) => props.theme.fontSizes[`${props.fontSize}`]};
+  font-family: ${(props) => props.theme.fonts.secondary};
+  text-decoration: none;
+`;
+
 const Nav = styled(`div`)`
   display: flex;
   @media (max-width: 768px) {
@@ -68,12 +77,12 @@ const Layout = ({ children }) => {
               <NavLink to="/open-jobs" fontSize="4">
                 Open Jobs
               </NavLink>
-              {/* <NavLink
-                to="/getting-started-with-design-systems-checklist"
+              <ExternalNavLink
+                href="https://forms.gle/S4tXVLDMz6F8BBm29"
                 fontSize="4"
               >
-                Design Sytems Checklist
-              </NavLink> */}
+                Post a job
+              </ExternalNavLink>
               <NavLink to="/newsletter" fontSize="4">
                 Newsletter
               </NavLink>

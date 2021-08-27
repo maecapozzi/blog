@@ -1,6 +1,6 @@
 ---
 path: "/open-jobs"
-date: "2021-08-20"
+date: "2021-08-25"
 title: "Open Design Systems Jobs"
 ---
 
