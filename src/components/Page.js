@@ -40,6 +40,7 @@ export const Page = (props) => {
     seoDescription,
     twitterImage,
     twitterImageAlt,
+    metaImage,
     seoKeywords = [
       `typescript`,
       `javascript`,
@@ -57,11 +58,12 @@ export const Page = (props) => {
     <Wrapper>
       <LayoutGrid>
         <SEO
+          description={seoDescription}
+          keywords={seoKeywords}
+          metaImage={metaImage}
           title={seoTitle}
           twitterImage={twitterImage}
           twitterImageAlt={twitterImageAlt}
-          keywords={seoKeywords}
-          description={seoDescription}
         />
 
         <GridColumn
