@@ -38,6 +38,8 @@ export const Page = (props) => {
     children,
     seoTitle,
     seoDescription,
+    twitterImage,
+    twitterImageAlt,
     seoKeywords = [
       `typescript`,
       `javascript`,
@@ -56,6 +58,8 @@ export const Page = (props) => {
       <LayoutGrid>
         <SEO
           title={seoTitle}
+          twitterImage={twitterImage}
+          twitterImageAlt={twitterImageAlt}
           keywords={seoKeywords}
           description={seoDescription}
         />
