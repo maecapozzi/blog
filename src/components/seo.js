@@ -7,6 +7,7 @@ function SEO({
   keywords,
   lang,
   meta,
+  metaImage
   title,
   twitterImage,
   twitterImageAlt,
@@ -37,6 +38,7 @@ function SEO({
                 property: `og:description`,
                 content: metaDescription,
               },
+              { property: `og:image`, content: metaImage },
               {
                 property: `og:type`,
                 content: `website`,
