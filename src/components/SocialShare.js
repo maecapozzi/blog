@@ -87,7 +87,7 @@ export const SocialShare = (props) => {
 
   return (
     <div>
-      {/* <hr />
+      <hr />
       <StyledDiv>
         <Text>If you liked this post, please consider sharing it!</Text>
       </StyledDiv>
@@ -116,7 +116,7 @@ export const SocialShare = (props) => {
             Share on Reddit
           </StyledExternalLink>
         </SocialShareIcon>
-      </StyledUl> */}
+      </StyledUl>
     </div>
   );
 };
