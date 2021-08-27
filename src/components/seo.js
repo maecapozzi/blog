@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-
 function SEO({
   description,
+  keywords,
   lang,
   meta,
-  keywords,
   title,
   twitterImage,
   twitterImageAlt,
@@ -42,11 +41,11 @@ function SEO({
                 property: `og:type`,
                 content: `website`,
               },
-              { name: `twitter:site`, content: "@MCapoz" },
               {
                 name: `twitter:card`,
-                content: `summary_large_image`,
+                content: `summary`,
               },
+              { name: `twitter:site`, content: "@MCapoz" },
               {
                 name: `twitter:creator`,
                 content: data.site.siteMetadata.author,
