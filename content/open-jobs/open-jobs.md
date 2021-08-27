@@ -30,10 +30,6 @@ project44
 
 project44
 
-### [Senior Systems Designer](https://jobs.lever.co/goodrx/cf6bcedb-a9f8-46e0-96f9-388152d96c8d)
-
-GoodRx
-
 ### [Principal Designer, Design Systems](https://www.linkedin.com/jobs/view/2626942765/)
 
 Vistaprint
