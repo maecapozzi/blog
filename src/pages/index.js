@@ -7,8 +7,8 @@ const Index = (props) => {
     <Page
       seoDescription="Design systems blog posts, jobs, and newsletter issues."
       seoTitle="Mae Capozzi's website"
-      metaImage="s3://maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
-      twitterImage="s3://maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+      metaImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
+      twitterImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
       twitterImageAlt="Design systems blog posts, jobs, and newsletter issues."
     >
       <Bio />
