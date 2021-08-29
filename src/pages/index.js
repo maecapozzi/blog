@@ -4,7 +4,13 @@ import { Page } from "../components/Page";
 
 const Index = (props) => {
   return (
-    <Page seoTitle="Mae Capozzi's Website">
+    <Page
+      seoDescription="Design systems blog posts, jobs, and newsletter issues."
+      seoTitle="Mae Capozzi's website"
+      metaImage="s3://maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+      twitterImage="s3://maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+      twitterImageAlt="Design systems blog posts, jobs, and newsletter issues."
+    >
       <Bio />
     </Page>
   );
