@@ -19,9 +19,9 @@ const Newsletter = (props) => {
     <Page
       seoDescription="Design systems tips and jobs sent right to your inbox"
       seoTitle="Design Systems Newsletter"
-      metaImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
-      twitterImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
-      twitterImageAlt="Design Systems Newsletter, design systems tips and jobs sent right to your inbox."
+      metaImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/DS-Newsletter.jpg"
+      twitterImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/DS-Newsletter.jpg"
+      https:twitterImageAlt="Design Systems Newsletter, design systems tips and jobs sent right to your inbox." //s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
     >
       <Header>Newsletter</Header>
       <Text>
