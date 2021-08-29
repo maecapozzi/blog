@@ -58,12 +58,24 @@ export const Page = (props) => {
     <Wrapper>
       <LayoutGrid>
         <SEO
-          description={seoDescription}
+          description={
+            seoDescription ||
+            "Design systems blog posts, jobs, and newsletter issues."
+          }
           keywords={seoKeywords}
-          metaImage={metaImage}
-          title={seoTitle}
-          twitterImage={twitterImage}
-          twitterImageAlt={twitterImageAlt}
+          metaImage={
+            metaImage ||
+            "https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+          }
+          title={seoTitle || "Mae Capozzi's website"}
+          twitterImage={
+            twitterImage ||
+            "https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+          }
+          twitterImageAlt={
+            twitterImageAlt ||
+            "Design systems blog posts, jobs, and newsletter issues."
+          }
         />
 
         <GridColumn
