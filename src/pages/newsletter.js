@@ -16,7 +16,13 @@ const Newsletter = (props) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Page seoTitle="Newsletter Issues">
+    <Page
+      seoDescription="Design systems tips and jobs sent right to your inbox"
+      seoTitle="Design Systems Newsletter"
+      metaImage="s3://maecapozzi.com/twitter-images/DS-newsletter-twitter.jpg"
+      twitterImage="s3://maecapozzi.com/twitter-images/DS-newsletter-twitter.jpg"
+      twitterImageAlt="Design Systems Newsletter, design systems tips and jobs sent right to your inbox."
+    >
       <Header>Newsletter</Header>
       <Text>
         Read past issues of the newsletter, or sign up for the next issue below.
