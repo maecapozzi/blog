@@ -65,12 +65,12 @@ export const Page = (props) => {
           keywords={seoKeywords}
           metaImage={
             metaImage ||
-            "https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+            "https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
           }
           title={seoTitle || "Mae Capozzi's website"}
           twitterImage={
             twitterImage ||
-            "https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/maecapozzi.com-twitter.jpg"
+            "https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/Default-twitter-image.jpg"
           }
           twitterImageAlt={
             twitterImageAlt ||
