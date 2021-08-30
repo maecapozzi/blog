@@ -9,7 +9,7 @@ Happy Monday!
 
 Design tokens, a term originally coined by [@jina](https://twitter.com/jina), describes a common artifact of design systems thinking. It's such an important concept that there is a [W3C Community Group](https://www.designtokens.org/) working to design a common specification around how to implement design tokens.
 
-There are also some startups in the space like [Knapsack](https://www.knapsack.cloud/) and [Arcade](https://usearcade.com/) working on solutions to help design systems teams interact with, manage, and store their design tokens.
+There are also some startups in the space like [Specify](https://specifyapp.com/), [Knapsack](https://www.knapsack.cloud/) and [Arcade](https://usearcade.com/) working on solutions to help design systems teams interact with, manage, and store their design tokens.
 
 But, like many design systems artifacts, every team seems to be solving the design tokens problem differently.
 
