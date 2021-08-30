@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
-  const newsletterIssue = path.resolve(`./src/templates/newsletter-issue.js`);
+  const newsletterIssue = path.resolve(`./src/templates/newsletterIssue.js`);
   const openJobs = path.resolve(`./src/pages/open-jobs.js`);
   return graphql(
     `
@@ -42,8 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
-
-      if (post.slug === "/open-jobs") {
+      if (post.node.fields.slug === "/open-jobs") {
         createPage({
           path: post.node.fields.slug,
           component: openJobs,
@@ -52,7 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
             tags: post.node.frontmatter.tags,
           },
         });
-      } else if (post.slug === "/newsletter") {
+      } else if (post.node.fields.slug.includes(`newsletter/`)) {
         createPage({
           path: post.node.fields.slug,
           component: newsletterIssue,

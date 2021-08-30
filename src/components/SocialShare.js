@@ -52,37 +52,19 @@ export const SocialShare = (props) => {
   const [redditLink, setRedditLink] = React.useState();
 
   React.useEffect(() => {
-    if (
-      post.frontmatter.tags &&
-      post.frontmatter.tags[0] &&
-      post.frontmatter.tags[0].name === "newsletter"
-    ) {
-      const title = post.frontmatter.title.replace(/[0-9-()#]/g, "");
+    const title = post.frontmatter.title.replace(/[0-9-()#]/g, "");
 
-      setTwitterLink(
-        `https://twitter.com/share?text=${title} @MCapoz&url=${process.env.GATSBY_SITE_URL}/newsletter${post.frontmatter.path}/`
-      );
+    setTwitterLink(
+      `https://twitter.com/share?text=${title} @MCapoz&url=${process.env.GATSBY_SITE_URL}${post.fields.slug}`
+    );
 
-      setHackerNewsLink(
-        `https://news.ycombinator.com/submitlink?t=${title}&u=${process.env.GATSBY_SITE_URL}/newsletter${post.frontmatter.path}/`
-      );
+    setHackerNewsLink(
+      `https://news.ycombinator.com/submitlink?t=${title}&u=${process.env.GATSBY_SITE_URL}${post.fields.slug}`
+    );
 
-      setRedditLink(
-        `http://www.reddit.com/submit?title=${title}&url=${process.env.GATSBY_SITE_URL}/newsletter${post.frontmatter.path}/`
-      );
-    } else {
-      setTwitterLink(
-        `https://twitter.com/share?text=${post.frontmatter.title} @MCapoz&url=${process.env.GATSBY_SITE_URL}${post.frontmatter.path}/`
-      );
-
-      setHackerNewsLink(
-        `https://news.ycombinator.com/submitlink?t=${post.frontmatter.title}&u=${process.env.GATSBY_SITE_URL}${post.frontmatter.path}/`
-      );
-
-      setRedditLink(
-        `http://www.reddit.com/submit?title=${post.frontmatter.title}&url=${process.env.GATSBY_SITE_URL}${post.frontmatter.path}/`
-      );
-    }
+    setRedditLink(
+      `http://www.reddit.com/submit?title=${title}&url=${process.env.GATSBY_SITE_URL}${post.fields.slug}`
+    );
   }, [post]);
 
   return (

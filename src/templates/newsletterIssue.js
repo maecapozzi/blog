@@ -64,7 +64,13 @@ const NewsletterIssue = (props) => {
     }
 
     return (
-      <Page seoTitle={post.frontmatter.title} seoDescription={post.excerpt}>
+      <Page
+        seoTitle={post.frontmatter.title}
+        seoDescription={post.excerpt}
+        metaImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/DS-Newsletter.jpg"
+        twitterImage="https://s3.us-east-2.amazonaws.com/maecapozzi.com/twitter-images/DS-Newsletter.jpg"
+        twitterImageAlt="Design Systems Newsletter, design systems tips and jobs sent right to your inbox."
+      >
         <HeadingWrapper>
           <Title>{title}</Title>
           <Date>{date}</Date>
@@ -105,6 +111,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 250)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
