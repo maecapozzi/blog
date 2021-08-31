@@ -1,7 +1,7 @@
 ---
 path: "/issue-53"
 date: "2021-08-31"
-title: "How designers can catch edge cases (#53)"
+title: "🧗 How to catch edge cases in your designs (#53)"
 tags: [{ name: "newsletter" }]
 ---
 
