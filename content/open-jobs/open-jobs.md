@@ -1,6 +1,6 @@
 ---
 path: "/open-jobs"
-date: "2021-08-26"
+date: "2021-09-03"
 title: "Open Design Systems Jobs"
 ---
 
@@ -64,6 +64,10 @@ HashiCorp
 
 ## Engineering Jobs
 
+### [Senior Software Engineer](https://www.vonage.com/careers/job-details/5350678002/)
+
+Vonage
+
 ### [React Native Engineer](https://www.linkedin.com/jobs/view/2705317691/?refId=VuoYQ0Vu5PjmkyMG0b2tZw%3D%3D&trackingId=kilUcqbEFDDCafMD6I30sg%3D%3D)
 
 Real
@@ -74,7 +78,7 @@ Specify
 
 ### [Senior UX Engineer](https://www.myrocketcareer.com/ShowJob/JobId/483089/SeniorUXEngineer)
 
-RocketMortgage
+Rocket Mortgage
 
 ### [Senior Software Engineer, Frontend](https://jobs.lever.co/junomedical/5c2e3dbe-b6a4-4daa-8768-628a84fca279)
 
