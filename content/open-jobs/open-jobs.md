@@ -6,6 +6,10 @@ title: "Open Design Systems Jobs"
 
 ## Design Jobs
 
+### [Product Designer, Design Systems](https://boards.greenhouse.io/gusto)
+
+Gusto
+
 ### [Senior Design Program Manager](https://lnkd.in/gRZhxgtU)
 
 Zillow
@@ -86,19 +90,15 @@ Juno Medical
 
 ### [Senior Front End Engineer, Design Systems](https://www.seek.com.au/job/53019326)
 
-Latitude Financial Services
-
-### [Senior Software Engineer (Frontend) - Design Systems](https://www.exploretock.com/join/careers/senior-software-engineer-frontend-design-systems)
-
 Tock
 
-### [​Frontend Engineer, Design Systems​](https://boards.greenhouse.io/gusto/jobs/3155237)
+### [​Frontend Engineer, Design Systems​](https://boards.greenhouse.io/gusto/jobs/3441393)
 
 Gusto​
 
-### [Senior Frontend Engineer: Internal Tools​](https://www.codecademy.com/about/jobs?gh_jid=5425949002)
+### [​Head of Design Systems Engineering​](https://boards.greenhouse.io/gusto/jobs/3224615)
 
-​Codecademy
+Gusto​
 
 ### [​Engineering Manager Design System (Front end) - Accommodation​](https://jobs.booking.com/careers?pid=562949954490438)
 
@@ -121,3 +121,14 @@ BASIC
 ### [Principal Product Manager, Analytics](https://lnkd.in/dEf8-w3b)
 
 Amplitude
+
+## Operations
+
+### [People Operations Manager](https://apply.workable.com/specify/j/8AF5280540/)
+
+Specify
+
+## Marketing
+
+### [Product Marketing Manager](https://apply.workable.com/specify/j/D81B9BCEFF/)
+
