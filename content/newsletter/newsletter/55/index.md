@@ -25,6 +25,8 @@ If your company is hiring (and you think it's a great company that you'd tell yo
 
 - [Zillow | Principal Operations Program Manager, PMO](https://lnkd.in/geyzKSNZ)
 
+---
+
 If you like this [newsletter](https://maecapozzi.com/newsletter/) it would really help me if you shared it with your friends. Tweet about it, post on LinkedIn, and share in slack channels. Building this community can lead all of us to more job opportunities, guest posts, and connections.
 
 Talk soon,
