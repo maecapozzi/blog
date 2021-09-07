@@ -110,7 +110,7 @@ Amplitude
 
 ## Product Management Jobs
 
-## [Principal Operations Program Manager, PMO](https://lnkd.in/geyzKSNZ)
+### [Principal Operations Program Manager, PMO](https://lnkd.in/geyzKSNZ)
 
 Zillow
 
@@ -132,3 +132,4 @@ Specify
 
 ### [Product Marketing Manager](https://apply.workable.com/specify/j/D81B9BCEFF/)
 
+Specify
