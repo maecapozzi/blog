@@ -69,6 +69,33 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
+  const dataToLog = React.useRef([]);
+  const [amplitudeInstance, setAmplitudeInstance] = React.useState({
+    logEvent: (...args) => {
+      dataToLog.current.push(args);
+    },
+  });
+
+  React.useEffect(() => {
+    const load = async () => {
+      const amplitude = await import("amplitude-js");
+      const instance = amplitude.getInstance();
+
+      if (process.env.GATSBY_AMPLITUDE_API_KEY) {
+        instance.init(process.env.GATSBY_AMPLITUDE_API_KEY);
+      } else {
+        console.log(`amplitude api key is undefined`);
+      }
+
+      dataToLog.current.forEach((args) => {
+        instance.logEvent(...args);
+      });
+      dataToLog.current = [];
+      setAmplitudeInstance(instance);
+    };
+    load();
+  }, []);
+
   return (
     <Page
       seoDescription="A collection of design systems jobs for developers, designers, and product managers"
@@ -80,8 +107,14 @@ export default function Template({ data }) {
       <Header>{frontmatter.title}</Header>
       <Date>Last updated {frontmatter.date}</Date>
       <Stack />
-      <ButtonLink as="a" href="https://forms.gle/2XRp4K8kcC6wGvvh9">
-        Do you want to post a job?
+      <ButtonLink
+        onClick={() =>
+          amplitudeInstance.logEvent(`click post a job button on /open-jobs`)
+        }
+        as="a"
+        href="https://forms.gle/2XRp4K8kcC6wGvvh9"
+      >
+        Post a job!
       </ButtonLink>
       <JobPosting dangerouslySetInnerHTML={{ __html: html }} />
     </Page>
