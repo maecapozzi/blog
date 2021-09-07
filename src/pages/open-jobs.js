@@ -8,6 +8,7 @@ import { Date } from "../components/Date";
 import mediaQueries from "../utils/mediaQueries";
 
 const JobPosting = styled.div`
+  margin-bottom: ${(props) => props.theme.spacings["4"]};
   && {
     a {
       text-decoration: none;

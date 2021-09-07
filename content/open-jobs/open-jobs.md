@@ -122,13 +122,13 @@ BASIC
 
 Amplitude
 
-## Operations
+## Operations Jobs
 
 ### [People Operations Manager](https://apply.workable.com/specify/j/8AF5280540/)
 
 Specify
 
-## Marketing
+## Marketing Jobs
 
 ### [Product Marketing Manager](https://apply.workable.com/specify/j/D81B9BCEFF/)
 
