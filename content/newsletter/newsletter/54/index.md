@@ -33,7 +33,7 @@ Although we only have two weights for our typeface, we still use the weight scal
 
 Other token naming ideas we decided not to use were; size and weight — 12pt Medium, 16pt Book, etc., use case — Heading 1, Action, Body, etc., and font name and size of the type — Sans12, Serif16, etc.,
 
-Reply to this email t if you’re open to sharing how you name type tokens in your design system!
+Reply to this email if you’re open to sharing how you name type tokens in your design system!
 
 To read more about why headings aren’t style elements, [check out this article](https://www.boia.org/blog/why-headings-arent-simply-style-elements) by the Bureau of Internet Accessibility.
 
