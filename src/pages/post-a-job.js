@@ -68,7 +68,7 @@ const PitchWrapper = styled.div`
   padding: 0 16px;
   margin-bottom: 200px;
 
-  ${mediaQueries.TABLET_PORTRAIT`
+  ${mediaQueries.DESKTOP`
     padding: 0 25%;
   `}
 `;
@@ -78,12 +78,12 @@ const Card = styled.div`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  margin: ${(props) => props.theme.spacings["4"]};
+  margin: ${(props) => props.theme.spacings["2"]};
   min-width: 250px;
-  max-width: 400px;
-  height: 250px;
+  max-width: 500px;
+  height: 300px;
 
-  border-top: ${(props) =>
+  border-left: ${(props) =>
     props.highlight && `5px solid ${props.theme.colors.highlight}`};
 
   padding: ${(props) => props.theme.spacings["6"]};
@@ -102,19 +102,17 @@ const Card = styled.div`
     }
   }
 
-  ${mediaQueries.TABLET_PORTRAIT`
-    width: ${(props) => {
-      if (props.size === "sm") {
-        return `300px`;
-      }
-      return `300px`;
-    }};
+  ${mediaQueries.DESKTOP`
+    width: 400px;
+    border-left: none;
+    border-top: ${(props) =>
+      props.highlight && `5px solid ${props.theme.colors.highlight}`};
 
     height: ${(props) => {
       if (props.size === "sm") {
-        return `370px`;
+        return `300px`;
       }
-      return `400px`;
+      return `350px`;
     }};
 
   `}
@@ -132,7 +130,7 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${mediaQueries.TABLET_PORTRAIT`
+  ${mediaQueries.DESKTOP`
     flex-direction: row;
     align-items: center;
   `}
