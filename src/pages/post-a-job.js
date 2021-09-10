@@ -112,9 +112,9 @@ const Card = styled.div`
 
     height: ${(props) => {
       if (props.size === "sm") {
-        return `350px`;
+        return `375px`;
       }
-      return `375px`;
+      return `400px`;
     }};
 
   `}
