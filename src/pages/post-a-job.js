@@ -105,14 +105,14 @@ const Card = styled.div`
   ${mediaQueries.TABLET_PORTRAIT`
     width: ${(props) => {
       if (props.size === "sm") {
-        return `250px`;
+        return `300px`;
       }
       return `300px`;
     }};
 
     height: ${(props) => {
       if (props.size === "sm") {
-        return `375px`;
+        return `370px`;
       }
       return `400px`;
     }};
@@ -231,15 +231,19 @@ export default function Template() {
                 <SubtleStyledGatsbyLink to="/newsletter">
                   Design Systems Newsletter
                 </SubtleStyledGatsbyLink>{" "}
-                <Emphasis>
-                  <b>the Thursday after posting</b>
-                </Emphasis>
               </li>
             </ul>
           </Card>
           <Card size="sm">
             <h2>Enterprise ($199)</h2>
             <ul>
+              <li>
+                Job description posted on the{" "}
+                <SubtleStyledGatsbyLink to="/open-jobs">
+                  Design Systems Job Board
+                </SubtleStyledGatsbyLink>{" "}
+                for 30 days
+              </li>
               <li>
                 Job description{" "}
                 <Emphasis>
@@ -249,7 +253,6 @@ export default function Template() {
                 <SubtleStyledGatsbyLink to="/open-jobs">
                   Design Systems Job Board
                 </SubtleStyledGatsbyLink>{" "}
-                for 30 days
               </li>
               <li>
                 Shared with 300+ design systems experts in the{" "}
@@ -257,7 +260,7 @@ export default function Template() {
                   Design Systems Newsletter
                 </SubtleStyledGatsbyLink>{" "}
                 <Emphasis>
-                  <b>every Thursday until the job is filled</b>
+                  <b>once a week until the job is filled</b>
                 </Emphasis>
               </li>
             </ul>
