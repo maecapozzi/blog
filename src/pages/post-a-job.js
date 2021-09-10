@@ -5,7 +5,10 @@ import { seoKeywords } from "../components/Page";
 import { Text } from "../components/Text";
 import { LayoutGrid, GridColumn } from "../components/Grid";
 import SEO from "../components/seo";
-import { SubtleStyledGatsbyLink, StyledGatsbyLink } from "../components/Link";
+import {
+  SubtleStyledGatsbyLink,
+  SubtleStyledExternalLink,
+} from "../components/Link";
 import mediaQueries from "../utils/mediaQueries";
 
 const ButtonLink = styled(ReakitButton)`
@@ -76,9 +79,9 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${(props) => props.theme.spacings["4"]};
-  min-width: 300px;
-  max-width: 600px;
-  height: 300px;
+  min-width: 250px;
+  max-width: 400px;
+  height: 250px;
 
   border-top: ${(props) =>
     props.highlight && `5px solid ${props.theme.colors.highlight}`};
@@ -93,31 +96,43 @@ const Card = styled.div`
     ul {
       margin-left: 0px;
     }
+    p {
+      font-family: "Inter";
+      font-size: 14px;
+    }
   }
 
-  ${mediaQueries.DESKTOP`
-    max-width: ${(props) => {
+  ${mediaQueries.TABLET_PORTRAIT`
+    width: ${(props) => {
       if (props.size === "sm") {
-        return `400px`;
+        return `250px`;
       }
-      return `450px`;
+      return `300px`;
     }};
 
     height: ${(props) => {
       if (props.size === "sm") {
-        return `300px`;
+        return `350px`;
       }
-      return `350px`;
+      return `375px`;
     }};
 
   `}
+`;
+
+const TestimonialCard = styled(Card)`
+  && {
+    h2 {
+      text-align: left;
+    }
+  }
 `;
 
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${mediaQueries.DESKTOP`
+  ${mediaQueries.TABLET_PORTRAIT`
     flex-direction: row;
     align-items: center;
   `}
@@ -192,36 +207,59 @@ export default function Template() {
           <Card size="sm">
             <h2>Basic ($39)</h2>
             <ul>
-              <li>Shown on the job board for 30 days</li>
-              <li>Promoted on Twitter</li>
+              <li>
+                Job description posted on the{" "}
+                <SubtleStyledGatsbyLink to="/open-jobs">
+                  Design Systems Job Board
+                </SubtleStyledGatsbyLink>{" "}
+                for 30 days
+              </li>
             </ul>
           </Card>
           <Card size="md" highlight>
             <h2>Most Popular ($89)</h2>
             <ul>
-              <li>Shown on the job board for 30 days</li>
+              <li>
+                Job description posted on the{" "}
+                <SubtleStyledGatsbyLink to="/open-jobs">
+                  Design Systems Job Board
+                </SubtleStyledGatsbyLink>{" "}
+                for 30 days
+              </li>
               <li>
                 Shared with 300+ design systems experts in the{" "}
                 <SubtleStyledGatsbyLink to="/newsletter">
                   Design Systems Newsletter
                 </SubtleStyledGatsbyLink>{" "}
-                1x
+                <Emphasis>
+                  <b>the Thursday after posting</b>
+                </Emphasis>
               </li>
-              <li>Promoted on Twitter</li>
             </ul>
           </Card>
           <Card size="sm">
             <h2>Enterprise ($199)</h2>
             <ul>
-              <li>Shown on the job board for 30 days</li>
               <li>
-                Shared with 300 + design systems experts in the{" "}
+                Job description{" "}
+                <Emphasis>
+                  <b>featured at the top</b>
+                </Emphasis>{" "}
+                of the{" "}
+                <SubtleStyledGatsbyLink to="/open-jobs">
+                  Design Systems Job Board
+                </SubtleStyledGatsbyLink>{" "}
+                for 30 days
+              </li>
+              <li>
+                Shared with 300+ design systems experts in the{" "}
                 <SubtleStyledGatsbyLink to="/newsletter">
                   Design Systems Newsletter
                 </SubtleStyledGatsbyLink>{" "}
-                4x
+                <Emphasis>
+                  <b>every Thursday until the job is filled</b>
+                </Emphasis>
               </li>
-              <li>Promoted on Twitter</li>
             </ul>
           </Card>
         </CardWrapper>
@@ -295,6 +333,23 @@ export default function Template() {
           </ButtonLink>
         </ButtonWrapper>
       </PitchWrapper>
+      <Jumbo>
+        <PitchHeader>Testimonials from happy users</PitchHeader>
+        <TestimonialCard size="sm">
+          <h2>
+            Derek Torsani,{" "}
+            <SubtleStyledExternalLink to="https://gusto.com/">
+              Gusto
+            </SubtleStyledExternalLink>
+          </h2>
+          <p>
+            The Design Systems Job Board has been so great for our design
+            systems team at Gusto. Since posting our jobs, we've had a variety
+            of great candidates apply and enter the interview process. Will
+            definitely be using this as our go to design systems job board.
+          </p>
+        </TestimonialCard>
+      </Jumbo>
     </LandingPage>
   );
 }
