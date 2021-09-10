@@ -33,6 +33,21 @@ const Wrapper = styled.div`
   margin-bottom: 200px;
 `;
 
+export const seoKeywords = [
+  `typescript`,
+  `javascript`,
+  `design systems`,
+  `design systems jobs`,
+  `design systems jobs engineering`,
+  `design systems jobs designer`,
+  `design systems jobs product manager`,
+  `design tokens`,
+  `component libraries`,
+  `semantic versioning`,
+  `lerna`,
+  `react`,
+];
+
 export const Page = (props) => {
   const {
     children,
@@ -41,20 +56,7 @@ export const Page = (props) => {
     twitterImage,
     twitterImageAlt,
     metaImage,
-    seoKeywords = [
-      `typescript`,
-      `javascript`,
-      `design systems`,
-      `design systems jobs`,
-      `design systems jobs engineering`,
-      `design systems jobs designer`,
-      `design systems jobs product manager`,
-      `design tokens`,
-      `component libraries`,
-      `semantic versioning`,
-      `lerna`,
-      `react`,
-    ],
+    seoKeywords = seoKeywords,
   } = props;
 
   return (

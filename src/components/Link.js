@@ -22,3 +22,10 @@ export const StyledExternalLink = styled("a")`
     color: ${(props) => props.theme.colors.primary};
   }
 `;
+
+export const SubtleStyledGatsbyLink = styled(Link)`
+  color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`;
