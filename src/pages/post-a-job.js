@@ -136,6 +136,17 @@ const CardWrapper = styled.div`
   `}
 `;
 
+const TestimonialCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: ${(props) => props.theme.spacings["6"]};
+
+  ${mediaQueries.DESKTOP`
+    flex-direction: row;
+    align-items: center;
+  `};
+`;
+
 const LandingPage = ({ children }) => (
   <LayoutGrid>
     <SEO
@@ -336,20 +347,50 @@ export default function Template() {
       </PitchWrapper>
       <Jumbo>
         <PitchHeader>Testimonials from happy users</PitchHeader>
-        <TestimonialCard size="sm">
-          <h2>
-            Derek Torsani,{" "}
-            <SubtleStyledExternalLink to="https://gusto.com/">
-              Gusto
-            </SubtleStyledExternalLink>
-          </h2>
-          <p>
-            The Design Systems Job Board has been so great for our design
-            systems team at Gusto. Since posting our jobs, we've had a variety
-            of great candidates apply and enter the interview process. Will
-            definitely be using this as our go to design systems job board.
-          </p>
-        </TestimonialCard>
+        <TestimonialCardWrapper>
+          <TestimonialCard size="sm">
+            <h2>
+              Derek Torsani,{" "}
+              <SubtleStyledExternalLink to="https://gusto.com/">
+                Gusto
+              </SubtleStyledExternalLink>
+            </h2>
+            <p>
+              The Design Systems Job Board has been so great for our design
+              systems team at Gusto. Since posting our jobs, we've had a variety
+              of great candidates apply and enter the interview process. Will
+              definitely be using this as our go to design systems job board.
+            </p>
+          </TestimonialCard>
+          <TestimonialCard size="sm">
+            <h2>
+              Derek Torsani,{" "}
+              <SubtleStyledExternalLink to="https://gusto.com/">
+                Gusto
+              </SubtleStyledExternalLink>
+            </h2>
+            <p>
+              The Design Systems Job Board has been so great for our design
+              systems team at Gusto. Since posting our jobs, we've had a variety
+              of great candidates apply and enter the interview process. Will
+              definitely be using this as our go to design systems job board.
+            </p>
+          </TestimonialCard>
+          <TestimonialCard size="sm">
+            <h2>
+              Derek Torsani,{" "}
+              <SubtleStyledExternalLink to="https://gusto.com/">
+                Gusto
+              </SubtleStyledExternalLink>
+            </h2>
+            <p>
+              The Design Systems Job Board has been so great for our design
+              systems team at Gusto. Since posting our jobs, we've had a variety
+              of great candidates apply and enter the interview process. Will
+              definitely be using this as our go to design systems job board.
+            </p>
+          </TestimonialCard>
+        </TestimonialCardWrapper>
       </Jumbo>
     </LandingPage>
   );
