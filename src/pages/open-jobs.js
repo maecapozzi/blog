@@ -6,6 +6,7 @@ import { Page } from "../components/Page";
 import { Header } from "../components/Header";
 import { Date } from "../components/Date";
 import mediaQueries from "../utils/mediaQueries";
+import { SubtleStyledGatsbyLink } from "../components/Link";
 
 const JobPosting = styled.div`
   margin-bottom: ${(props) => props.theme.spacings["4"]};
@@ -117,6 +118,10 @@ export default function Template({ data }) {
       >
         Post a job!
       </ButtonLink>
+      <Stack />
+      <SubtleStyledGatsbyLink to="/post-a-job">
+        Hiring? Post a job on the job board
+      </SubtleStyledGatsbyLink>
       <JobPosting dangerouslySetInnerHTML={{ __html: html }} />
     </Page>
   );

@@ -345,7 +345,7 @@ export default function Template() {
           </ButtonLink>
         </ButtonWrapper>
       </PitchWrapper>
-      <Jumbo>
+      {/* <Jumbo>
         <PitchHeader>Testimonials from happy users</PitchHeader>
         <TestimonialCardWrapper>
           <TestimonialCard size="sm">
@@ -391,7 +391,7 @@ export default function Template() {
             </p>
           </TestimonialCard>
         </TestimonialCardWrapper>
-      </Jumbo>
+      </Jumbo> */}
     </LandingPage>
   );
 }
