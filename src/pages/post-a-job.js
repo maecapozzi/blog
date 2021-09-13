@@ -81,7 +81,7 @@ const Card = styled.div`
   margin: ${(props) => props.theme.spacings["2"]};
   min-width: 250px;
   max-width: 500px;
-  height: 300px;
+  height: 350px;
 
   border-left: ${(props) =>
     props.highlight && `5px solid ${props.theme.colors.highlight}`};
@@ -110,9 +110,9 @@ const Card = styled.div`
 
     height: ${(props) => {
       if (props.size === "sm") {
-        return `300px`;
+        return `350px`;
       }
-      return `350px`;
+      return `400px`;
     }};
 
   `}
@@ -196,7 +196,7 @@ export default function Template() {
     <LandingPage>
       <Jumbo>
         <PitchHeader>
-          Reach hundreds of designers, engineers, and product managers with{" "}
+          Reach 300+ designers, engineers, and product managers with{" "}
           <Emphasis>design systems experience.</Emphasis>
         </PitchHeader>
         <ButtonWrapper>
@@ -223,6 +223,12 @@ export default function Template() {
                 </SubtleStyledGatsbyLink>{" "}
                 for 30 days
               </li>
+              <li>
+                Job description shared on{" "}
+                <SubtleStyledGatsbyLink to="https://twitter.com/DSJobBoard">
+                  Twitter
+                </SubtleStyledGatsbyLink>{" "}
+              </li>
             </ul>
           </Card>
           <Card size="md" highlight>
@@ -239,6 +245,12 @@ export default function Template() {
                 Shared with 300+ design systems experts in the{" "}
                 <SubtleStyledGatsbyLink to="/newsletter">
                   Design Systems Newsletter
+                </SubtleStyledGatsbyLink>{" "}
+              </li>
+              <li>
+                Job description shared on{" "}
+                <SubtleStyledGatsbyLink to="https://twitter.com/DSJobBoard">
+                  Twitter
                 </SubtleStyledGatsbyLink>{" "}
               </li>
             </ul>
@@ -271,6 +283,12 @@ export default function Template() {
                 <Emphasis>
                   <b>once a week until the job is filled</b>
                 </Emphasis>
+              </li>
+              <li>
+                Job description shared on{" "}
+                <SubtleStyledGatsbyLink to="https://twitter.com/DSJobBoard">
+                  Twitter
+                </SubtleStyledGatsbyLink>{" "}
               </li>
             </ul>
           </Card>
