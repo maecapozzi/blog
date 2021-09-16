@@ -1,6 +1,6 @@
 ---
 path: "/issue-60"
-date: "2021-09-15"
+date: "2021-09-16"
 title: "⚡ This week in design systems jobs (#60)"
 tags: [{ name: "newsletter" }]
 ---

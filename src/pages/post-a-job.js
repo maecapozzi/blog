@@ -363,7 +363,7 @@ export default function Template() {
           </ButtonLink>
         </ButtonWrapper>
       </PitchWrapper>
-      {/* <Jumbo>
+      <Jumbo>
         <PitchHeader>Testimonials from happy users</PitchHeader>
         <TestimonialCardWrapper>
           <TestimonialCard size="sm">
@@ -382,34 +382,21 @@ export default function Template() {
           </TestimonialCard>
           <TestimonialCard size="sm">
             <h2>
-              Derek Torsani,{" "}
-              <SubtleStyledExternalLink to="https://gusto.com/">
-                Gusto
+              Dmitry Belyaev,{" "}
+              <SubtleStyledExternalLink to="https://booking.com/">
+                Booking.com
               </SubtleStyledExternalLink>
             </h2>
             <p>
-              The Design Systems Job Board has been so great for our design
-              systems team at Gusto. Since posting our jobs, we've had a variety
-              of great candidates apply and enter the interview process. Will
-              definitely be using this as our go to design systems job board.
-            </p>
-          </TestimonialCard>
-          <TestimonialCard size="sm">
-            <h2>
-              Derek Torsani,{" "}
-              <SubtleStyledExternalLink to="https://gusto.com/">
-                Gusto
-              </SubtleStyledExternalLink>
-            </h2>
-            <p>
-              The Design Systems Job Board has been so great for our design
-              systems team at Gusto. Since posting our jobs, we've had a variety
-              of great candidates apply and enter the interview process. Will
-              definitely be using this as our go to design systems job board.
+              That was lucky for us to find Mae's design system-oriented job
+              board the moment we've opened an engineering manager position in
+              our team. Having the candidates coming from her design system
+              newsletter plays a great role in getting people that are already
+              experienced in the topic
             </p>
           </TestimonialCard>
         </TestimonialCardWrapper>
-      </Jumbo> */}
+      </Jumbo>
     </LandingPage>
   );
 }
