@@ -6,6 +6,10 @@ title: "Open Design Systems Jobs"
 
 ## Design Jobs
 
+### [Product Designer](https://www.carvana.com/careers/apply?gh_jid=2413984)
+
+Carvana
+
 ### [Product Designer, Design Systems](https://boards.greenhouse.io/gusto)
 
 Gusto
