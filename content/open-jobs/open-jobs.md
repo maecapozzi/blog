@@ -1,10 +1,14 @@
 ---
 path: "/open-jobs"
-date: "2021-09-03"
+date: "2021-09-20"
 title: "Open Design Systems Jobs"
 ---
 
 ## Design Jobs
+
+### [Lead Product Designer, Design Systems](https://www.stitchfix.com/careers/jobs?gh_jid=3488432&gh_jid=3488432)
+
+Stitch Fix
 
 ### [Product Designer](https://www.carvana.com/careers/apply?gh_jid=2413984)
 
