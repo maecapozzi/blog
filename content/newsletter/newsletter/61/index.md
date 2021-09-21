@@ -1,5 +1,5 @@
 ---
-path: "/design-systems-and-systems-thinking"
+path: "/issue-61"
 date: "2021-09-20"
 title: "🌌 Design Systems and Systems Thinking (#61)"
 excerpt: ""
