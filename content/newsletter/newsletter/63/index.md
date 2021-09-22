@@ -1,13 +1,13 @@
 ---
 path: "/issue-63"
 date: "2021-09-22"
-title: "💍 Common design system artifacts (#63)"
+title: "💍 Common design system outputs (#63)"
 tags: [{ name: "newsletter" }]
 ---
 
 Happy Wednesday!
 
-Yesterday, [I shared some community definitions](./newsletter/62/) to the term "design system."
+Yesterday, [I shared some community definitions](/newsletter/62/) to the term "design system."
 
 Christina Chen and Ted Barnes responded with their own definitions!
 
@@ -17,7 +17,7 @@ Ted's definition:
 
 Christina's definition:
 
-> i don't have a great definition but i've always had an "interview answer" prepared in my notes -
+> I don't have a great definition but I've always had an "interview answer" prepared in my notes -
 
 > Design system: Helps design, product and engineering teams work together to build at scale, provide consistent & predictable experiences for users, and align with company vision. Comes in different shapes and sizes such as component libraries, documentation, fostering a space for community education and contribution, etc.
 
