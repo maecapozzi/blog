@@ -5,11 +5,13 @@ title: "💍 Common design system artifacts (#63)"
 tags: [{ name: "newsletter" }]
 ---
 
-Yesterday, I shared some community definitions to the term "design system."
+Happy Wednesday!
+
+Yesterday, [I shared some community definitions](./newsletter/62/) to the term "design system."
 
 Christina Chen and Ted Barnes responded with their own definitions!
 
-Ted:
+Ted's definition:
 
 > I tend to go with something closer to “design systems are how teams collaborate asynchronously” It keeps it open ended and works well with the DSaaS approach of delivering whatever the team needs. And makes it clear the system serves the teams — and should evolve with their needs — not a dictatorship.
 
@@ -36,7 +38,7 @@ Design systems tend to leverage the following artifacts to achieve system goals:
 7. Evangelization
 8. Governance
 
-Do you agree? **Reply to this email and let me know!**
+Do you agree? Am I missing something? **Reply to this email and let me know!**
 
 Talk soon,
 
