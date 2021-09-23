@@ -19,7 +19,7 @@ const BodyWrapper = styled("div")`
   }
 
   h3 {
-    margin-top: 62px;
+    margin-top: ${(props) => props.theme.spacings["4"]};
     font-family: ${(props) => props.theme.fonts.secondary};
   }
 

@@ -193,7 +193,7 @@ h1 {
 
 h2 {
   font-family: Inter;
-  font-size: ${(props) => props.theme.fontSizes["7"]}
+  font-size: ${(props) => props.theme.fontSizes["7"]};
   margin-bottom: 0px;
 }
 

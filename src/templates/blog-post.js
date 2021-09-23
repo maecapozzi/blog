@@ -14,12 +14,13 @@ const BodyWrapper = styled("div")`
   font-family: ${(props) => props.theme.fonts.primary};
 
   h2 {
+    margin-bottom: 0px;
     font-family: ${(props) => props.theme.fonts.secondary};
     font-size: ${(props) => props.theme.fontSizes["7"]};
   }
 
   h3 {
-    margin-top: 62px;
+    margin-top: ${(props) => props.theme.fontSizes["2"]};
     font-family: ${(props) => props.theme.fonts.secondary};
   }
 

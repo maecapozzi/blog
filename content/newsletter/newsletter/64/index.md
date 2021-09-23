@@ -13,25 +13,25 @@ If you're devoted to finding a new job before the end of the year, consider foll
 
 ---
 
-# Design
+## Design
 
-- ## [Stitch Fix | Sr. Product Design Manager, UI & Design Systems](https://www.stitchfix.com/careers/jobs?gh_jid=3488432&gh_jid=3488432)
+- ### [Stitch Fix | Sr. Product Design Manager, UI & Design Systems](https://www.stitchfix.com/careers/jobs?gh_jid=3488432&gh_jid=3488432)
 
-- ## [Gusto | Senior Product Designer, Design Systems](https://grnh.se/98eec46b1us)
+- ### [Gusto | Senior Product Designer, Design Systems](https://grnh.se/98eec46b1us)
 
-# Engineering
+## Engineering
 
-- ## [Gusto | Frontend Engineer, Design Systems](https://boards.greenhouse.io/gusto/jobs/3155237)
+- ### [Gusto | Frontend Engineer, Design Systems](https://boards.greenhouse.io/gusto/jobs/3155237)
 
-- ## [Creative Technologist | Sprout Social](https://sproutsocial.com/careers/open-positions/?amp#/2953236/creative-technologist)
+- ### [Creative Technologist | Sprout Social](https://sproutsocial.com/careers/open-positions/?amp#/2953236/creative-technologist)
 
-# Operations
+## Operations
 
-- ## [Specify | People Operations Manager](https://apply.workable.com/specify/j/8AF5280540/)
+- ### [Specify | People Operations Manager](https://apply.workable.com/specify/j/8AF5280540/)
 
-# Marketing
+## Marketing
 
-- ## [Specify | Product Marketing Manager](https://apply.workable.com/specify/j/D81B9BCEFF/)
+- ### [Specify | Product Marketing Manager](https://apply.workable.com/specify/j/D81B9BCEFF/)
 
 ---
 
