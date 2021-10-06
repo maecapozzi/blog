@@ -13,6 +13,8 @@ A while back, I wrote about why I think that a component library [should be vers
 
 ---
 
+SPONSORED BY ZEROHEIGHT
+
 Before we get into it, the team at [zeroheight](https://zeroheight.com/) is putting together a big report on the state of design system documentation in 2021. To make this happen, they’re asking folks to spend 15-20 minutes filling in a survey all about you and your design system. Would you mind taking some time out of your day to help them out by filling out [this survey](https://zeroheight.com/blog/how-we-document-the-design-system-documentation-survey/?utm_source=mae-capozzi&utm_medium=email&utm_campaign=hwd-newsletterad)?
 
 ---
