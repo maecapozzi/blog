@@ -13,6 +13,7 @@ const Container = styled.div`
     font-family: "Raleway";
     margin-bottom: 20px;
   }
+
   ul {
     font-family: "Raleway";
   }
