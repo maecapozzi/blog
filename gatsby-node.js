@@ -7,6 +7,8 @@ exports.createPages = ({ graphql, actions }) => {
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
   const newsletterIssue = path.resolve(`./src/templates/newsletterIssue.js`);
   const openJobs = path.resolve(`./src/pages/open-jobs.js`);
+  const christmas2021 = path.resolve(`./src/pages/christmas2021.js`);
+
   return graphql(
     `
       {
@@ -59,6 +61,16 @@ exports.createPages = ({ graphql, actions }) => {
             slug: post.node.fields.slug,
             tags: post.node.frontmatter.tags,
             img: post.node.frontmatter.img,
+            previous,
+            next,
+          },
+        });
+      } else if (post.node.fields.slug.includes(`christmas-2021/`)) {
+        createPage({
+          path: post.node.fields.slug,
+          component: christmas2021,
+          context: {
+            slug: post.node.fields.slug,
             previous,
             next,
           },
