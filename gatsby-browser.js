@@ -3,6 +3,7 @@ import Layout from "./src/components/layout";
 
 // custom typefaces
 import "typeface-piazzolla";
+import "@fontsource/raleway";
 
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
