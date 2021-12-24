@@ -120,7 +120,7 @@ export default function Template({ data }) {
             <h3>boulevardier</h3>
             <p>bourbon • sweet vermouth • campari • orange peel</p>
             <h3>whiskey sour</h3>
-            <p>whiskey • lemon • egg white*</p>
+            <p>whiskey • simple syrup • lemon • egg white*</p>
           </Section>
 
           <Section>
