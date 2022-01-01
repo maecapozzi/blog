@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
       </List>
 
       {children}
-      <Footer>© Mae Capozzi's Website 2021</Footer>
+      <Footer>© Mae Capozzi's Website 2022</Footer>
     </ThemeProvider>
   );
 };
