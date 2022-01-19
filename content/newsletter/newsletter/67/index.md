@@ -16,8 +16,11 @@ Integration work is when members of the DS team replace existing application cod
 An important part of design systems work is creating positive feedback loops. By integrating the components themselves, a design systems team can:
 
 a) increase the % of adopted components and therefore prove the team's value to stakeholders,
+
 b) put example code in place that application engineers can copy when they inevitably need to reuse the component,
+
 c) build trust with their teammates and consumers, and
+
 d) dogfood their own code.
 
 --
