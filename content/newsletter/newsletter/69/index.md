@@ -22,6 +22,7 @@ You'll get a list of commits that used the legacy button, which you can use to f
 The intent behind using this command isn't to shame your colleagues for not using your new components! It's to better understand use cases that the new component doesn't support yet so that you can improve your library for its users.
 
 --
+
 Talk soon,
 
 Mae
